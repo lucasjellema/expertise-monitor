@@ -1,7 +1,7 @@
 <template>
-    <h1>Raw Expertise</h1>   
+    <h1>Raw Expertise</h1>
     <v-btn @click="copyToClipboard">Copy to clipboard</v-btn>
-    <code class="language-json">{{ JSON.stringify(expertise) }}</code>
+    <code class="language-json">{{ JSON.stringify(expertiseCleaned) }}</code>
 
 </template>
 
@@ -10,10 +10,36 @@ import { useAppStore } from "@/stores/app";
 import { useRoute } from 'vue-router';
 const appStore = useAppStore()
 const expertise = appStore.getExpertise()
-
+const expertiseCleaned = ref(null)
 const copyToClipboard = () => {
-    navigator.clipboard.writeText(JSON.stringify(expertise));
+    navigator.clipboard.writeText(JSON.stringify(expertiseCleaned));
 }
+
+onMounted(() => {
+    // clone expertise
+    const e = { ...expertise.value }
+    // remove circular references
+
+    // remove organization property from organizationMemberships
+    // remove memberOrganizations property from organizations
+
+    const organization = e.organization
+    for (const org of organization) {
+        // remove property memberOrganizations from org
+        delete org.memberOrganizations
+        if (org.organizationMemberships && org.organizationMemberships.length > 0) {
+            for (const membership of org.organizationMemberships) {
+                delete membership.organization
+            }
+        }
+        if (org.expertiseClaims && org.expertiseClaims.length > 0) {
+            for (const claim of org.expertiseClaims) {
+                delete claim.expertise
+            }
+        }
+    }
+    expertiseCleaned.value = e
+})
 
 
 </script>

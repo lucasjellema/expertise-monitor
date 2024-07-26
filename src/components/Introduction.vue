@@ -10,7 +10,7 @@
                                 <v-col cols="6">
                                     <p>Deze applicatie geeft een overzicht van de expertise in het ecosysteem, per organisatieeenheid (zowel bedrijven als domeinen).
                                         <br />
-                                        {{ appStore.getExpertise() }}
+
                                     <p class="text-caption" style="color: red">Deze applicatie is nog in ontwikkeling.
                                         Je kunt tegen fouten
                                         aanlopen. Ook is het mogelijk dat data die je hebt

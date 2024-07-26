@@ -6,6 +6,7 @@ import expertiseDB from '../data/expertise.json'
 
 export const useAppStore = defineStore('app', () => {
 
+  const expertiseTags = ref(new Set(['database']))
 
 
   const preAuthenticatedRequestURL = ref(null)
@@ -156,12 +157,29 @@ export const useAppStore = defineStore('app', () => {
           }
 
         }
+      }
+      if (org.expertiseClaims && org.expertiseClaims.length > 0) {
+        for (const claim of org.expertiseClaims) {
+          claim.expertise = getExpertise().value.expertise.find(e => e.id === claim.expertiseId)
+        }
+      }
+    }
 
+    initializeTags()
+  }
+
+  const initializeTags = () => {
+    // loop over all expertise
+    for (const expertise of getExpertise().value.expertise) {
+      try {
+        for (const tag of expertise.tags) {
+          expertiseTags.value.add(tag)
+        }
+      } catch (error) {
+        console.log("caught tags error", error)
       }
     }
   }
-
-
 
   const getExpertise = () => {
     if (!dataIsPrepared) {
@@ -218,6 +236,6 @@ export const useAppStore = defineStore('app', () => {
   }
 
   return {
-    setPAR, getExpertise, consolideerDeltafiles, saveExpertise
+    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags
   }
 })

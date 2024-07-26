@@ -231,6 +231,23 @@
                     "description": "Toegepast in drie applicaties voor Klant A",
                     "asOf": "2024-06-15",
                     "count": 12
+                },{
+                    "expertiseId": "11",
+                    "description": "Toegepast in twee applicaties voor Klant B",
+                    "asOf": "2024-04-15",
+                    "count": 9
+                },
+                {
+                    "expertiseId": "9",
+                    "description": "R&D",
+                    "asOf": "2024-07-15",
+                    "count": 3
+                }
+            ],
+            "organizationMemberships": [
+                {
+                    "organizationId": "6",
+                    "description": "onderdeel van domein"
                 }
             ]
         },
@@ -252,7 +269,6 @@
             "type": "domain",
             "url": "https://www.conclusion.nl/experience"
         },
-        
         {
             "id": "4",
             "name": "UI Team @ theFactor.e",
@@ -262,6 +278,148 @@
                 {
                     "organizationId": "2",
                     "description": "onderdeel van company"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Conclusion Intelligence",
+            "type": "domain",
+            "url": "https://www.conclusion.nl/intelligence"
+        },
+        {
+            "id": "6",
+            "name": "Enterprise Applications",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "7",
+            "name": "Business Platforms",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "8",
+            "name": "Strategy Enablement",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "9",
+            "name": "Mission Critical",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "10",
+            "name": "Cloud Native Enterprise",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "11",
+            "name": "Custom Software & Integration",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "12",
+            "name": "Smart Technology",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "13",
+            "name": "Zorgdomein",
+            "type": "domain",
+            "url": ""
+        },
+        {
+            "id": "20",
+            "name": "ArlaNet",
+            "type": "company",
+            "url": "https://www.arlanet.nl/",
+            "organizationMemberships": [
+                {
+                    "organizationId": "3",
+                    "description": "onderdeel van domein"
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "name": "BrightAlley",
+            "type": "company",
+            "url": "https://www.conclusion.nl/bright-alley",
+            "organizationMemberships": [
+                {
+                    "organizationId": "3",
+                    "description": "onderdeel van domein"
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "name": "Bikkelhart",
+            "type": "company",
+            "url": "https://www.bikkelhart.com/",
+            "organizationMemberships": [
+                {
+                    "organizationId": "3",
+                    "description": "onderdeel van domein"
+                }
+            ]
+        },
+        {
+            "id": "30",
+            "name": "AMIS",
+            "type": "company",
+            "url": "https://www.conclusion.nl/amis",
+            "organizationMemberships": [
+                {
+                    "organizationId": "5",
+                    "description": "onderdeel van domein"
+                }
+            ]
+        },
+        {
+            "id": "31",
+            "name": "Hot ITem",
+            "type": "company",
+            "url": "https://www.hotitem.nl/",
+            "organizationMemberships": [
+                {
+                    "organizationId": "5",
+                    "description": "onderdeel van domein"
+                }
+            ]
+        },
+        {
+            "id": "33",
+            "name": "Conclusion Enablement",
+            "type": "company",
+            "url": "https://www.conclusion.nl/enablement",
+            "organizationMemberships": [
+                {
+                    "organizationId": "10",
+                    "description": "onderdeel van domein"
+                }
+            ]
+        },
+        {
+            "id": "34",
+            "name": "Morgens",
+            "type": "company",
+            "url": "https://www.conclusion.nl/morgens",
+            "organizationMemberships": [
+                {
+                    "organizationId": "13",
+                    "description": "onderdeel van domein"
+                },
+                {
+                    "organizationId": "8",
+                    "description": "onderdeel van domein"
                 }
             ]
         }

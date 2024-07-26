@@ -49,6 +49,8 @@
 
 
 <script setup>
+import { useAppStore } from "@/stores/app";
+const appStore = useAppStore()
 
 const props = defineProps({
     expertise: {
@@ -62,7 +64,7 @@ onMounted(() => {
     myselectedTags.value = [...props.expertise.tags]
 
 })
-const mytags = ref(['oo', 'web'])
+const mytags = ref(Array.from(appStore.expertiseTags))
 const myselectedTags = ref([])
 const expertiseToEdit = ref({ ...props.expertise })
 

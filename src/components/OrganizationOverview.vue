@@ -17,6 +17,11 @@
                                             <v-btn prepend-icon="mdi-dots-horizontal" text
                                                 @click="generateOrganizationDialog(item)">{{ item.name }}</v-btn>
                                         </template>
+                                        <template v-slot:item.details="{ item, index }">
+                                            <v-icon 
+                                                @click="organizationExpertise(item)">mdi-school</v-icon>
+                                            
+                                        </template>
                                         <template v-slot:item.url="{ item, index }">
                                             <a :href="item.url" target="_blank">web site</a>
                                         </template>
@@ -57,6 +62,12 @@
 import { useAppStore } from "@/stores/app";
 const appStore = useAppStore()
 
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const router = useRouter()
+
 const props = defineProps({
     organization: {
         type: Array,
@@ -84,11 +95,16 @@ const saveorganization = () => {
     appStore.saveorganization(organizationInProgress.value)
 }
 
+const organizationExpertise = (organization) => {
+    console.log(organization)
+    router.push({ name: 'organizationExpertise', params: { organizationId: organization.id } })
+}
+
 const organizationHeaders = [
     {
         title: 'Name',
         key: 'name'
-    }
+    }, { title: 'Details', key: 'details', sortable: false }
     , { title: 'Type', key: 'type', sortable: true }
     , { title: 'Onderdeel van', key: 'organizationMemberships' }
     , { title: 'Logo', key: 'logoURL', sortable: false }
