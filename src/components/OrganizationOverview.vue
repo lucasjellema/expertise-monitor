@@ -1,0 +1,105 @@
+<template>
+    <v-responsive>
+        <v-container fluid tag="section" aria-labelledby="title">
+            <v-main>
+                <v-row>
+                    <v-col cols="11" >
+                        <v-container fluid>
+                            <v-row>
+                                <v-col>
+                                    <OrganizationMap :organization="props.organization" />
+                                    </v-col>
+                            </v-row>
+                            <v-row>
+                                <v-col>
+                                    <v-data-table :headers="organizationHeaders" :items="props.organization">
+                                        <template v-slot:item.name="{ item, index }">
+                                            <v-btn prepend-icon="mdi-dots-horizontal" text
+                                                @click="generateOrganizationDialog(item)">{{ item.name }}</v-btn>
+                                        </template>
+                                        <template v-slot:item.url="{ item, index }">
+                                            <a :href="item.url" target="_blank">web site</a>
+                                        </template>
+                                        <template v-slot:item.organizationMemberships="{ item, index }">
+                                            <div v-if="item.organizationMemberships?.length > 0">
+                                                <v-chip v-for="org in item.organizationMemberships" class="ma-2" size="small">
+                                                    {{ org.description }} {{ org.organization?.name }}
+                                                </v-chip>
+                                            </div>
+                                        </template>
+                                        <template v-slot:item.logoURL="{ item, index }">
+                                            <v-img :src="item.logoURL" height="50"></v-img>
+                                        </template>
+                                    </v-data-table>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+                    </v-col>
+                </v-row>
+            </v-main>
+        </v-container>
+    </v-responsive>
+    <v-dialog v-model="organizationDialog" width="1000" @afterLeave="editOrganization = false">
+        <v-card>
+            <v-card-title>
+                <v-btn @click="editOrganization = true" v-if="!editOrganization">Bewerken</v-btn>
+                <v-btn @click="saveorganization" v-if="editOrganization">Opslaan</v-btn>
+            </v-card-title>
+            <!-- <OrganizationDetails :organization="organizationToShow" v-if="!editOrganization" />
+            <Editorganization :organization="organizationToShow" @organizationChanged="handleorganizationUpdate"
+                v-if="editOrganization" /> -->
+        </v-card>
+    </v-dialog>
+</template>
+
+
+<script setup>
+import { useAppStore } from "@/stores/app";
+const appStore = useAppStore()
+
+const props = defineProps({
+    organization: {
+        type: Array,
+        required: true
+    }
+})
+
+const organizationToShow = ref(null)
+const organizationDialog = ref(false)
+const generateorganizationDialog = (organization) => {
+    organizationToShow.value = { ...organization }
+    organizationDialog.value = true
+}
+const editOrganization = ref(false)
+
+const organizationInProgress = ref(null)
+const handleorganizationUpdate = (e) => {
+    console.log("organization updated", e)
+    organizationInProgress.value = e.value
+}
+
+const saveorganization = () => {
+    editOrganization.value = false
+    organizationDialog.value = false
+    appStore.saveorganization(organizationInProgress.value)
+}
+
+const organizationHeaders = [
+    {
+        title: 'Name',
+        key: 'name'
+    }
+    , { title: 'Type', key: 'type', sortable: true }
+    , { title: 'Onderdeel van', key: 'organizationMemberships' }
+    , { title: 'Logo', key: 'logoURL', sortable: false }
+
+]
+
+onMounted(() => {
+
+})
+
+
+
+</script>
+<style scoped></style>
