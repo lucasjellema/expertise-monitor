@@ -6,13 +6,23 @@
                     <v-col cols="10" offset="1">
 
                         <div id="app">
-                            <ExpertiseUnit :unit="expertiseStructure" />
+                            <ExpertiseUnit :unit="expertiseStructure"
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
                         </div>
                     </v-col>
                 </v-row>
             </v-main>
         </v-container>
     </v-responsive>
+    <v-dialog v-model="editOrganizationExpertiseDialog" width="1400">
+        <v-card>
+            <v-card-title>
+                <!-- <v-btn @click="saveOrganizationExpertise">Opslaan</v-btn> -->
+            </v-card-title>
+            <EditOrganizationExpertise :organizationUnit="organizationUnit" :tag="tagToEditExpertiseFor"
+                @expertiseChanged="handleExpertiseChanged" />
+        </v-card>
+    </v-dialog>
 
 </template>
 
@@ -21,6 +31,10 @@
 import { useAppStore } from "@/stores/app";
 const appStore = useAppStore()
 
+const editOrganizationExpertiseDialog = ref(false)
+const tagToEditExpertiseFor = ref(null)
+
+const organizationUnit = ref(null)
 
 
 //import { useIconsLibrary } from '@/composables/useIconsLibrary';
@@ -34,6 +48,8 @@ const props = defineProps({
     }
 })
 
+const emits = defineEmits(['expertiseChanged'])
+
 const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
     // if (organizationUnit?.expertiseClaims && organizationUnit.expertiseClaims.length > 0) {
     //     for (const claim of organizationUnit?.expertiseClaims) {
@@ -46,21 +62,23 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
     // create childnodes for all tags - and set the count from the tagClaimMap
     const allTags = appStore.expertiseTags
     for (const tag of allTags) {
-        const newExpertiseNode = { name: tag, children: [], logo: null, count: 0 }
+        const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag' }
         if (tagClaimMap[tag]) {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: null, count: expertise.count })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: null, count: expertise.count, type: 'expertise', expertise: expertise.expertise })
                 }
             }
         }
+        // TODO check if filter allows inclusion of this tag - depending on the tag, the total and the ( number of) children
         expertiseNode.children.push(newExpertiseNode)
-    
-    }}
+
+    }
+}
 
 let expertiseClaimMap = {}
-    let tagClaimMap = {}
+let tagClaimMap = {}
 
 // build a map with all expertise claims of the organization and its children
 const buildExpertiseClaimMap = (organizationUnit) => {
@@ -76,10 +94,10 @@ const buildExpertiseClaimMap = (organizationUnit) => {
             if (claim.expertise.tags && claim.expertise.tags.length > 0) {
                 for (const tag of claim.expertise.tags) {
                     if (!tagClaimMap[tag]) {
-                        tagClaimMap[tag] = {total: claim.count, expertise: [{expertise: claim.expertise, count: claim.count}]}
+                        tagClaimMap[tag] = { total: claim.count, expertise: [{ expertise: claim.expertise, count: claim.count }] }
                     } else {
-                        tagClaimMap[tag].total +=  claim.count
-                        tagClaimMap[tag].expertise.push( {expertise: claim.expertise, count: claim.count})
+                        tagClaimMap[tag].total += claim.count
+                        tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: claim.count })
                     }
                 }
             }
@@ -92,10 +110,9 @@ const buildExpertiseClaimMap = (organizationUnit) => {
 
 const expertiseStructure = ref(null)
 
-onMounted(() => {
-    
+const initializeExperiseStructure = () => {
     expertiseStructure.value = {
-        name: 'Expertise van ' + props.organizationUnit.name, logo: null, count: 817,
+        name: 'Expertise van ' + organizationUnit.value.name, logo: null, count: 0,
         children: []
     }
 
@@ -104,11 +121,59 @@ onMounted(() => {
     // prepare claims for all tags (and all expertises that have that tag) that are not disqualified
     // depending on toggle: include tags with no expertise claims
 
-    prepareExpertiseClaimData(expertiseStructure.value, props.organizationUnit)
+    prepareExpertiseClaimData(expertiseStructure.value, organizationUnit.value)
 
+}
+
+onMounted(() => {
+    organizationUnit.value = props.organizationUnit
+initializeExperiseStructure()    
 
 })
 
+
+const handleEditOrganizationExpertiseRequested = (expertise) => {
+    console.log('editOrganizationExpertiseRequested', expertise)
+
+    //TODO handle case of the expertise.type == expertise i/o tag
+    tagToEditExpertiseFor.value = expertise.name
+    editOrganizationExpertiseDialog.value = true
+
+
+}
+
+const handleExpertiseChanged = (newAndUpdatedClaims) => {
+    console.log('newAndUpdatedClaims', newAndUpdatedClaims)
+    editOrganizationExpertiseDialog.value = false // close dialog
+
+    for (const item of newAndUpdatedClaims) {
+
+
+        const existingClaim = organizationUnit.value.expertiseClaims.find(claim => claim.expertiseId === item.expertiseId)
+        // // TODO update timestamp and author
+        if (existingClaim) {
+            existingClaim.count = ensureNumeric(item.count) // item.count
+            existingClaim.notes = item.notes
+        } else {
+            organizationUnit.value.expertiseClaims.push({ expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise })
+        }
+    }
+    // TODO update the expertiseClaimMap
+    // TODO update the expertiseStructure
+    // TODO emit the change in the organization unit
+    emits('expertiseChanged', organizationUnit.value)
+    initializeExperiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
+}
+
+function ensureNumeric(value) {
+  // Check if the value is a string and if it represents a valid number
+  if (typeof value === 'string' && !isNaN(value) && !isNaN(parseFloat(value))) {
+    // Convert the string to a number
+    return Number(value);
+  }
+  // If the value is already a number, or it's not a valid number string, return it as is
+  return value;
+}
 
 
 </script>

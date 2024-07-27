@@ -1,10 +1,10 @@
 <template>
     <div class="expertise-unit">
       <div class="header" @click="toggle">
-        <span>{{ unit.name }}
+        <span>{{ unit.name }}<v-icon @click="emit('editOrganizationExpertiseRequested', unit)" >mdi-pencil-outline</v-icon>
            <v-img :src="unit.logoURL" height="50px"></v-img>
         </span>
-        <h3>{{ unit.count }}</h3>
+        <h3 >{{ unit.count }}</h3>
         <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
       </div>
       <div class="children" v-show="expanded">
@@ -12,34 +12,32 @@
           v-for="(child, index) in unit.children"
           :key="index"
           :unit="child"
+          @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
         />
       </div>
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'OrgUnit',
-    props: {
-      unit: Object,
-    },
-    data() {
-      return {
-        expanded: false,
-      };
-    },
-    computed: {
-      hasChildren() {
-        return this.unit.children && this.unit.children.length > 0;
-      },
-    },
-    methods: {
-      toggle() {
-        this.expanded = !this.expanded;
-      },
-    },
-  };
-  </script>
+  <script setup>
+
+const props = defineProps({
+  unit: Object,
+})
+
+const emit = defineEmits(['editOrganizationExpertiseRequested'])
+const expanded = ref(false)
+const hasChildren = computed(() => {
+  return props.unit.children && props.unit.children.length > 0;
+})
+
+const toggle = () => {
+  expanded.value = !expanded.value;
+}
+
+const handleEditOrganizationExpertiseRequested = (expertise) => {
+    emit('editOrganizationExpertiseRequested', expertise)
+}
+</script>
   <style scoped>
   .expertise-unit {
     border: 1px solid #ccc;

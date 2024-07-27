@@ -141,7 +141,8 @@ export const useAppStore = defineStore('app', () => {
     // TODO - prepare data : create memberOrganizations under all organizations for the organizations that are members of them
     console.log('TODO prepare data : create memberOrganizations under all organizations for the organizations that are members of them')
     // loop over all organization units; if they have organizationMemberships, then create an entry in memberOrganizations under the organization they are a member of
-    const organization = getExpertise().value.organization
+//    const expertiseObject = getExpertise().value
+    const organization = expertiseJSON.value.organization
     for (const org of organization) {
       if (org.organizationMemberships && org.organizationMemberships.length > 0) {
         for (const membership of org.organizationMemberships) {
@@ -160,7 +161,7 @@ export const useAppStore = defineStore('app', () => {
       }
       if (org.expertiseClaims && org.expertiseClaims.length > 0) {
         for (const claim of org.expertiseClaims) {
-          claim.expertise = getExpertise().value.expertise.find(e => e.id === claim.expertiseId)
+          claim.expertise = expertiseJSON.value.expertise.find(e => e.id === claim.expertiseId)
         }
       }
     }
@@ -168,23 +169,31 @@ export const useAppStore = defineStore('app', () => {
     initializeTags()
   }
 
+
+  const tagExpertiseMap = ref({}) // mapping tag to an array of all expertises that have that tag
   const initializeTags = () => {
     // loop over all expertise
-    for (const expertise of getExpertise().value.expertise) {
+    for (const expertise of expertiseJSON.value.expertise) {
       try {
         for (const tag of expertise.tags) {
           expertiseTags.value.add(tag)
+
+          if (!tagExpertiseMap.value[tag]) {
+            tagExpertiseMap.value[tag] = []
+          }
+          tagExpertiseMap.value[tag].push(expertise)
         }
       } catch (error) {
         console.log("caught tags error", error)
       }
     }
+    console.log('tagExpertiseMap', tagExpertiseMap, tagExpertiseMap.value)
   }
 
   const getExpertise = () => {
     if (!dataIsPrepared) {
       dataIsPrepared = true
-      prepareData()
+      prepareData(expertiseJSON.value)
       
     }
     return expertiseJSON
@@ -236,6 +245,6 @@ export const useAppStore = defineStore('app', () => {
   }
 
   return {
-    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags
+    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap
   }
 })

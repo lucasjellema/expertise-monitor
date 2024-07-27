@@ -4,9 +4,8 @@
             <v-main>
                 <v-row>
                     <v-col cols="10" offset="1">
-
                         <div id="app">
-                            <OrganizationUnit :unit="orgStructure" />
+                            <OrganizationUnit :unit="orgStructure" @organizationExpertiseRequested="handleOrganizationExpertiseRequested"/>
                         </div>
                     </v-col>
                 </v-row>
@@ -20,6 +19,9 @@
 <script setup>
 import { useAppStore } from "@/stores/app";
 const appStore = useAppStore()
+import { useRoute } from 'vue-router';
+
+const router = useRouter()
 
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos } = useIconsLibrary();
@@ -31,6 +33,12 @@ const props = defineProps({
         required: true
     }
 })
+
+
+const handleOrganizationExpertiseRequested = (organization) => {
+    console.log(organization)
+    router.push({ name: 'organizationExpertise', params: { organizationId: organization.id } })
+}
 
 const addOrganizationChildren = (organizationUnit, organizationNode) => {
     if (organizationUnit.memberOrganizations && organizationUnit.memberOrganizations.length > 0) {

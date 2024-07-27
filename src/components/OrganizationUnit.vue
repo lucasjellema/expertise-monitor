@@ -1,33 +1,35 @@
 <template>
   <div class="org-unit">
     <div class="header" @click="toggle">
-      <span>{{ unit.name }} <v-icon @click="organizationExpertise(unit)" v-if="unit.id">mdi-school</v-icon>
+      <span>{{ unit.name }} <v-icon @click="emit('organizationExpertiseRequested', unit)" v-if="unit.id">mdi-school</v-icon>
         <v-img :src="unit.logo" height="50px"></v-img>
       </span>
       <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
     </div>
     <div class="children" v-show="expanded">
-      <OrganizationUnit v-for="(child, index) in unit.children" :key="index" :unit="child" />
+      <OrganizationUnit v-for="(child, index) in unit.children" :key="index" :unit="child" @organizationExpertiseRequested="handleOrganizationExpertiseRequested"/>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
+// import { useRoute } from 'vue-router';
 
-const router = useRouter()
+// const router = useRouter()
 const props = defineProps({
   unit: Object,
 })
+
+const emit = defineEmits(['organizationExpertiseRequested'])
 const expanded = ref(false)
 const hasChildren = computed(() => {
-
   return props.unit.children && props.unit.children.length > 0;
 })
 
-const organizationExpertise = (organization) => {
+const handleOrganizationExpertiseRequested = (organization) => {
     console.log(organization)
-    router.push({ name: 'organizationExpertise', params: { organizationId: organization.id } })
+    emit('organizationExpertiseRequested', organization)
+//    router.push({ name: 'organizationExpertise', params: { organizationId: organization.id } })
 }
 
 const toggle = () => {
