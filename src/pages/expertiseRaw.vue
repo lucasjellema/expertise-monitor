@@ -12,7 +12,7 @@ const appStore = useAppStore()
 const expertise = appStore.getExpertise()
 const expertiseCleaned = ref(null)
 const copyToClipboard = () => {
-    navigator.clipboard.writeText(JSON.stringify(expertiseCleaned));
+    navigator.clipboard.writeText(JSON.stringify(expertiseCleaned.value));
 }
 
 onMounted(() => {
