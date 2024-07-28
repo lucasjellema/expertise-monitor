@@ -3,8 +3,9 @@
     <v-app-bar app>
       <v-toolbar-title @click="gotoIntro()">Expertise Monitor</v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn  text prepend-icon="mdi-map-search" to="/expertiseBrowse" >Expertise in Ecosysteem</v-btn>
+      <v-btn  text prepend-icon="mdi-account-group" to="/organization" >Organization & Expertise</v-btn>
       <v-btn  text prepend-icon="mdi-brain" to="/expertise" >Expertise Catalog</v-btn>
-      <v-btn  text prepend-icon="mdi-account-group" to="/organization" >Organization</v-btn>
       <v-btn  text prepend-icon="mdi-export" to="/expertiseRaw" >Expertise Raw Dump</v-btn>
       <!-- <v-btn prepend-icon="mdi-star-plus-outline" text to="/newtip" v-if="appStore.ingechecktLid != null">Nieuwe Tip</v-btn>
       <v-btn  text @click="appStore.ingechecktLid=null" v-if="appStore.ingechecktLid != null">Checkout</v-btn>

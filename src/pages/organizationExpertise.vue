@@ -1,6 +1,6 @@
 <template>
     <h1>Expertise in {{ organization?.type }} {{ organization?.name }}</h1>
-    <ExpertiseMap :organizationUnit="organization" v-if="organization" @expertiseChanged ="handleExpertiseChanged" :key="refreshIndicator"/>
+    <OrganizationExpertiseMap :organizationUnit="organization" v-if="organization" @expertiseChanged ="handleExpertiseChanged" :key="refreshIndicator"/>
 
 </template>
 

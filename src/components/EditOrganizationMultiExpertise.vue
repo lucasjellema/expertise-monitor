@@ -67,24 +67,29 @@ const eclaims = ref([])
 onMounted(() => {
     console.log('***** EditOrganizationExpertise Mounted!!')
     // create collection with all expertise under tag
-    const m = appStore.tagExpertiseMap.value ||appStore.tagExpertiseMap
+    const m = appStore.tagExpertiseMap.value || appStore.tagExpertiseMap
     const expertisesUnderTag = m[props.tag]
     console.log('expertisesUnderTag', expertisesUnderTag)
-    for (const expertise of expertisesUnderTag) {
+    // if map m contains the tag
 
-        const newClaim = { name: expertise.name, expertiseId: expertise.id, expertise: expertise, count: 0, notes: '', updated: false }
-        // find expertise in claims for this organization unit
+    if (expertisesUnderTag) {
+        const organizationHasAnyClaims = props.organizationUnit.expertiseClaims && props.organizationUnit.expertiseClaims.length > 0
+        for (const expertise of expertisesUnderTag) {
 
-        const existingClaim = props.organizationUnit.expertiseClaims.find(claim => claim.expertiseId === newClaim.expertiseId)
+            const newClaim = { name: expertise.name, expertiseId: expertise.id, expertise: expertise, count: 0, notes: '', updated: false }
+            // find expertise in claims for this organization unit
+            if (organizationHasAnyClaims) {
+                const existingClaim = props.organizationUnit.expertiseClaims.find(claim => claim.expertiseId === newClaim.expertiseId)
 
-        if (existingClaim) {
-            newClaim.count = existingClaim.count
-            newClaim.notes = existingClaim.notes
+                if (existingClaim) {
+                    newClaim.count = existingClaim.count
+                    newClaim.notes = existingClaim.notes
+                }
+            }
+
+
+            eclaims.value.push(newClaim)
         }
-
-
-
-        eclaims.value.push(newClaim)
     }
     // then update from the expertise claims for the organization unit for these expertises
 

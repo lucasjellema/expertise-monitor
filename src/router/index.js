@@ -11,6 +11,7 @@ import { routes } from 'vue-router/auto-routes'
 import index from '@/pages/index.vue';
 // import editTip from '@/pages/editTip.vue';
 import expertise from '@/pages/expertise.vue';
+import expertiseBrowse from '@/pages/expertiseBrowse.vue';
 import expertiseRaw from '@/pages/expertiseRaw.vue';
 import organization from '@/pages/organization.vue';
 import organizationExpertise from '@/pages/organizationExpertise.vue';
@@ -21,6 +22,7 @@ const createRoutes = () => {
   r.push({ path: '/organizationExpertise/:organizationId',name: 'organizationExpertise', component: organizationExpertise })
   r.push({ path: '',name: 'intro', component: index })
   r.push({ path: '/expertise',name: 'expertise', component: expertise })
+  r.push({ path: '/expertiseBrowse',name: 'expertiseBrowse', component: expertiseBrowse })
   r.push({ path: '/expertiseRaw',name: 'expertiseRaw', component: expertiseRaw })
   r.push({ path: '/organization',name: 'organization', component: organization })
   //r.push({ path: '/editTip/:tipId',name: 'editTip', component: editTip })

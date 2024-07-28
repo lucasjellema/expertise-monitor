@@ -4,7 +4,7 @@
         <span>{{ unit.name }}<v-icon @click="emit('editOrganizationExpertiseRequested', unit)" >mdi-pencil-outline</v-icon>
            <v-img :src="unit.logoURL" height="50px"></v-img>
         </span>
-        <h3 >{{ unit.count }}</h3>
+        <h3 >{{ unit.count }}</h3> <span v-if="unit.children && unit.children.length > 0">(in {{ unit.children.length }})</span>  
         <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
       </div>
       <div class="children" v-show="expanded">
