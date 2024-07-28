@@ -20,9 +20,8 @@
 
 </v-data-table> -->
                         <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
-                            return-object label="Search" multiple clearable 
-                            ref="searchSuggestionSelect"
-                            >
+                            return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
+                            :item-props="selectItemProps">
                             <template v-slot:prepend-item>
                                 <v-list-item title="Select All" @click="toggle">
                                     <!-- <template v-slot:prepend>
@@ -62,12 +61,15 @@
                         </v-chip-group>
                         <v-btn @click="checkedTags = []" icon="mdi-cancel" title="Clear all tags"></v-btn> </v-col>
                 </v-row>
-
                 <v-row>
                     <v-col cols="10" offset="1">
                         <div id="app">
-                            <ExpertiseUnit :unit="initializeExperiseStructure(tag)"
+                            <ExpertiseUnit :unit="initializeExperiseStructureForTag(tag)"
                                 v-for="tag in checkedTags.map(tag => availableTags[tag])" :key="tag" />
+                        </div>
+                        <div id="app2">
+                            <ExpertiseUnit :unit="initializeExperiseStructureForExpertise(suggestion.expertise)"
+                                v-for="suggestion in selectedSearchSuggestions" :key="suggestion" />
                         </div>
                     </v-col>
                 </v-row>
@@ -114,6 +116,13 @@ const toggle = () => {
         selectedSearchSuggestions.value = searchSuggestions.value
     }
 }
+const selectItemProps = (item) => {
+    return {
+        title: item.name,
+        subtitle: item.type,
+    }
+}
+
 const handleSearchChange = (e) => {
     console.log('new search on ', search.value, e)
     console.log(selectedSearchSuggestions.value, searchSuggestions.value)
@@ -132,7 +141,7 @@ const handleSearchChange = (e) => {
         if (filteredExpertise.length > 0) {
             searchSuggestions.value = filteredExpertise.map(expertise => { return { name: expertise.name, expertise: expertise, type: 'expertise' } })
         }
-        
+
         searchSuggestionSelect.value.menu = true
     }
 }
@@ -170,7 +179,7 @@ const buildExpertiseClaimMap = () => {
 
 
 const expertiseStructure = ref(null)
-const initializeExperiseStructure = (tag) => {
+const initializeExperiseStructureForTag = (tag) => {
     const expertiseStructure = ref(null)
     expertiseStructure.value = {
         name: tag, count: 0,
@@ -203,55 +212,31 @@ const initializeExperiseStructure = (tag) => {
     return expertiseStructure.value
 }
 
+const initializeExperiseStructureForExpertise = (expertise) => {
+    const expertiseStructure = ref(null)
+    expertiseStructure.value = {
+        name: expertise.name, count: 0,
+        children: [], expertise: expertise
+    }
+    const e = expertiseClaimMap[expertise.id]
+    if (e) {
+        expertiseStructure.value.count = e.total
+        for (const claim of e.expertise) {
+            const orgNode = { name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization }
+            expertiseStructure.value.children.push(orgNode)
+        }
+    }
+
+    return expertiseStructure.value
+}
+
+
 onMounted(() => {
     availableTags.value = [...appStore.expertiseTags]
     buildExpertiseClaimMap()
-    // initializeExperiseStructure()
-
 })
 
 
-// const handleEditOrganizationExpertiseRequested = (expertise) => {
-//     console.log('editOrganizationExpertiseRequested', expertise)
-
-//     //TODO handle case of the expertise.type == expertise i/o tag
-//     if (expertise.type == 'tag') {
-
-
-//         tagToEditExpertiseFor.value = expertise.name
-//         editOrganizationExpertiseDialog.value = true
-//     }
-
-// }
-
-// const handleExpertiseChanged = (newAndUpdatedClaims) => {
-//     console.log('newAndUpdatedClaims', newAndUpdatedClaims)
-//     editOrganizationExpertiseDialog.value = false // close dialog
-
-//     const organizationHasAnyClaims = organizationUnit.value.expertiseClaims && organizationUnit.value.expertiseClaims.length > 0
-//     for (const item of newAndUpdatedClaims) {
-//         if (organizationHasAnyClaims) {
-//             const existingClaim = organizationUnit.value.expertiseClaims.find(claim => claim.expertiseId === item.expertiseId)
-//             // // TODO update timestamp and author
-//             if (existingClaim) {
-//                 existingClaim.count = ensureNumeric(item.count) // item.count
-//                 existingClaim.notes = item.notes
-//             } else {
-//                 organizationUnit.value.expertiseClaims.push({ expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise })
-//             }
-//         } else {
-//             if (!organizationUnit.value.expertiseClaims) {
-//                 organizationUnit.value.expertiseClaims=[]
-//             }
-//             organizationUnit.value.expertiseClaims.push({ expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise })
-//         }
-//     }
-//     // TODO update the expertiseClaimMap
-//     // TODO update the expertiseStructure
-//     // TODO emit the change in the organization unit
-//     emits('expertiseChanged', organizationUnit.value)
-//     initializeExperiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
-// }
 
 function ensureNumeric(value) {
     // Check if the value is a string and if it represents a valid number
@@ -267,9 +252,12 @@ function ensureNumeric(value) {
 </script>
 <style scoped>
 .always-open-select .v-input__control {
-  pointer-events: none; /* Disable pointer events to prevent clicks */
+    pointer-events: none;
+    /* Disable pointer events to prevent clicks */
 }
+
 .always-open-select .v-select__selections {
-  display: none; /* Hide the default selection display */
+    display: none;
+    /* Hide the default selection display */
 }
 </style>
