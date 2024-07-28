@@ -37,7 +37,7 @@ npm run dev
 
 # Add Deployment to GitHub Pages
 
-Static web applications such as the OCI File Manager can be published and accessed on GitHub Pages. This is an easy way to share the application with a wider audience. Deployment to GitHub pages can be done from the development environment on the command line using npm after a few simple actions.
+Static web applications can be published and accessed on GitHub Pages. This is an easy way to share the application with a wider audience. Deployment to GitHub pages can be done from the development environment on the command line using npm after a few simple actions.
 
 Install npm module gh-pages
 ```
@@ -74,7 +74,7 @@ To resolve errors "Dynamic import error, reloading page did not fix it TypeError
 
 npm i @vueup/vue-quill --save
 
-Now the QuillEditor can be used for allowing rich text editing, for example like this (in newtip.vue):
+Now the QuillEditor can be used for allowing rich text editing, for example like this :
 
         <v-sheet class="flex-1-1-100  ma-0 pa-0 mb-3">
           <QuillEditor theme="snow" toolbar="essential" v-model:content="beschrijving" contentType="delta" />
@@ -85,7 +85,4 @@ Now the QuillEditor can be used for allowing rich text editing, for example like
 
 npm install leaflet --save
 
-# add exifr
-
-npm install exifr --save
 
