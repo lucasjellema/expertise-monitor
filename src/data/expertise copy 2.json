@@ -1,0 +1,881 @@
+{
+    "__v_isShallow": false,
+    "dep": {},
+    "__v_isRef": true,
+    "_rawValue": {
+        "expertise": [
+            {
+                "id": "15",
+                "name": "C++",
+                "description": "3G general purpose programmeertaal (eerste release: 1985), initieel een OO extensie van C.",
+                "icon": "mdi-language-cpp",
+                "webpage": "https://en.wikipedia.org/wiki/C%2B%2B",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/C%2B%2B_logo.svg/1200px-C%2B%2B_logo.svg.png",
+                "tags": [
+                    "programming language",
+                    "3g",
+                    "object oriented"
+                ]
+            },
+            {
+                "id": "14",
+                "name": "C#",
+                "description": "C# is een object-oriented programming taal. Het is de basis van de .NET Framework. ",
+                "icon": "mdi-language-csharp",
+                "webpage": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/C_Sharp_wordmark.svg/1200px-C_Sharp_wordmark.svg.png",
+                "tags": [
+                    "programming language",
+                    "object oriented"
+                ]
+            },
+            {
+                "id": "13",
+                "name": "Java",
+                "description": "Java is een object-oriented programming taal. In mei 1995 verscheen de eerste release, vanuit Sun Microsystems.  ",
+                "icon": "mdi-language-java",
+                "webpage": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/121px-Java_programming_language_logo.svg.png",
+                "tags": [
+                    "programming language",
+                    "object oriented"
+                ]
+            },
+            {
+                "id": "12",
+                "name": "Python",
+                "description": "Python is een general purpose programmeertaal - die vooral onder data scientists en data engineers wordt gebruikt en ook in Machine Learning en AI gerelateerde activiteiten veruit de meest gebruikte technologie is. In januari 1991 verscheen de eerste release, vanuit Python Software Foundation. ",
+                "icon": "mdi-language-python",
+                "webpage": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png",
+                "tags": [
+                    "programming language",
+                    "ai",
+                    "data science"
+                ]
+            },
+            {
+                "id": "11",
+                "name": "SQL Server",
+                "description": "SQL Server is a relational database management system. The first release appeared in January 1998, from Microsoft.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/SQL_Server",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/SQL_Server_Logo.svg/1200px-SQL_Server_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "relational"
+                ]
+            },
+            {
+                "id": "10",
+                "name": "DuckDB",
+                "description": "DuckDB is an in-process analytical database. The first release appeared in January 2021 from DuckDB, a technology initiated in the Netherlands. V1.0 was released in June 2024.",
+                "icon": "mdi-database",
+                "webpage": "https://duckdb.org/",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/DuckDB_Logo.svg/1200px-DuckDB_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "olap",
+                    "data analysis"
+                ]
+            },
+            {
+                "id": "9",
+                "name": "MySQL",
+                "description": "MySQL is an open-source relational database management system. The first release was in 1995 by MySQL AB.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/MySQL",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "open source"
+                ]
+            },
+            {
+                "id": "8",
+                "name": "PostgreSQL",
+                "description": "PostgreSQL is an open-source relational database management system emphasizing extensibility and SQL compliance. It was initially released in 1996.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/PostgreSQL",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "open source"
+                ]
+            },
+            {
+                "id": "7",
+                "name": "MongoDB",
+                "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, it uses JSON-like documents with optional schemas.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/MongoDB",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1200px-MongoDB-Logo.svg.png",
+                "tags": [
+                    "database",
+                    "nosql",
+                    "document",
+                    "json"
+                ]
+            },
+            {
+                "id": "6",
+                "name": "Oracle Database",
+                "description": "Oracle Database is a multi-model database management system produced and marketed by Oracle Corporation. It was first released in 1979.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Oracle_Database",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Oracle_logo.svg/1200px-Oracle_logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "multi model"
+                ]
+            },
+            {
+                "id": "5",
+                "name": "Cassandra",
+                "description": "Apache Cassandra is a free and open-source, distributed, wide column store, NoSQL database management system. It was initially released in 2008.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Apache_Cassandra",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/1200px-Cassandra_logo.svg.png",
+                "tags": [
+                    "database",
+                    "nosql",
+                    "distributed",
+                    "wide column"
+                ]
+            },
+            {
+                "id": "4",
+                "name": "DB2",
+                "description": "IBM Db2 is a family of data management products, including database servers, developed by IBM. The first release was in 1983.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/IBM_Db2",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/IBM_DB2_logo.svg/1200px-IBM_DB2_logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "ibm"
+                ]
+            },
+            {
+                "id": "3",
+                "name": "Sybase",
+                "description": "Sybase is a relational database management system, originally developed by Sybase Inc. The first release was in 1987.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Sybase",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/SAP_Sybase_logo.svg/1200px-SAP_Sybase_logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "sap"
+                ]
+            },
+            {
+                "id": "2",
+                "name": "Redshift",
+                "description": "Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud. It was first released in 2013.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Amazon_Redshift",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "data warehouse",
+                    "cloud"
+                ]
+            },
+            {
+                "id": "1",
+                "name": "HANA",
+                "description": "SAP HANA is an in-memory, column-oriented, relational database management system developed and marketed by SAP SE. It was first released in 2010.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/SAP_HANA",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/SAP2011.svg/1200px-SAP2011.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "in-memory",
+                    "sap"
+                ]
+            },
+            {
+                "id": "21",
+                "name": "Snowflake",
+                "description": "Snowflake Inc. is a cloud computing–based data cloud company. The Snowflake data platform provides data warehouse-as-a-service and was first released in 2014.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Snowflake_Inc.",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/220px-Snowflake_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "cloud",
+                    "data warehouse"
+                ]
+            }
+        ],
+        "organization": [
+            {
+                "id": "1",
+                "name": "Conclusion Low Code Company",
+                "type": "company",
+                "url": "https://www.conclusion.nl/en/low-code-company",
+                "expertiseClaims": [
+                    {
+                        "expertiseId": "10",
+                        "description": "Toegepast in drie applicaties voor Klant A",
+                        "asOf": "2024-06-15",
+                        "count": 12
+                    },
+                    {
+                        "expertiseId": "11",
+                        "description": "Toegepast in twee applicaties voor Klant B",
+                        "asOf": "2024-04-15",
+                        "count": 9
+                    },
+                    {
+                        "expertiseId": "9",
+                        "description": "R&D",
+                        "asOf": "2024-07-15",
+                        "count": 3
+                    },
+                    {
+                        "expertiseId": "13",
+                        "count": 5,
+                        "notes": "Eline, Anthony"
+                    },
+                    {
+                        "expertiseId": "12",
+                        "count": 3,
+                        "notes": "Jos"
+                    }
+                ],
+                "organizationMemberships": [
+                    {
+                        "organizationId": "6",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "name": "theFactor.e",
+                "type": "company",
+                "url": "https://tfe.nl/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "name": "Conclusion Experience",
+                "type": "domain",
+                "url": "https://www.conclusion.nl/experience"
+            },
+            {
+                "id": "4",
+                "name": "UI Team @ theFactor.e",
+                "type": "team",
+                "url": "",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "2",
+                        "description": "onderdeel van company"
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "name": "Conclusion Intelligence",
+                "type": "domain",
+                "url": "https://www.conclusion.nl/intelligence"
+            },
+            {
+                "id": "6",
+                "name": "Enterprise Applications",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "7",
+                "name": "Business Platforms",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "8",
+                "name": "Strategy Enablement",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "9",
+                "name": "Mission Critical",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "10",
+                "name": "Cloud Native Enterprise",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "11",
+                "name": "Custom Software & Integration",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "12",
+                "name": "Smart Technology",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "13",
+                "name": "Zorgdomein",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "20",
+                "name": "ArlaNet",
+                "type": "company",
+                "url": "https://www.arlanet.nl/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "21",
+                "name": "BrightAlley",
+                "type": "company",
+                "url": "https://www.conclusion.nl/bright-alley",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "22",
+                "name": "Bikkelhart",
+                "type": "company",
+                "url": "https://www.bikkelhart.com/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "30",
+                "name": "AMIS",
+                "type": "company",
+                "url": "https://www.conclusion.nl/amis",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "5",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "31",
+                "name": "Hot ITem",
+                "type": "company",
+                "url": "https://www.hotitem.nl/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "5",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "33",
+                "name": "Conclusion Enablement",
+                "type": "company",
+                "url": "https://www.conclusion.nl/enablement",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "10",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "34",
+                "name": "Morgens",
+                "type": "company",
+                "url": "https://www.conclusion.nl/morgens",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "13",
+                        "description": "onderdeel van domein"
+                    },
+                    {
+                        "organizationId": "8",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            }
+        ]
+    },
+    "_value": {
+        "expertise": [
+            {
+                "id": "15",
+                "name": "C++",
+                "description": "3G general purpose programmeertaal (eerste release: 1985), initieel een OO extensie van C.",
+                "icon": "mdi-language-cpp",
+                "webpage": "https://en.wikipedia.org/wiki/C%2B%2B",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/C%2B%2B_logo.svg/1200px-C%2B%2B_logo.svg.png",
+                "tags": [
+                    "programming language",
+                    "3g",
+                    "object oriented"
+                ]
+            },
+            {
+                "id": "14",
+                "name": "C#",
+                "description": "C# is een object-oriented programming taal. Het is de basis van de .NET Framework. ",
+                "icon": "mdi-language-csharp",
+                "webpage": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/C_Sharp_wordmark.svg/1200px-C_Sharp_wordmark.svg.png",
+                "tags": [
+                    "programming language",
+                    "object oriented"
+                ]
+            },
+            {
+                "id": "13",
+                "name": "Java",
+                "description": "Java is een object-oriented programming taal. In mei 1995 verscheen de eerste release, vanuit Sun Microsystems.  ",
+                "icon": "mdi-language-java",
+                "webpage": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/121px-Java_programming_language_logo.svg.png",
+                "tags": [
+                    "programming language",
+                    "object oriented"
+                ]
+            },
+            {
+                "id": "12",
+                "name": "Python",
+                "description": "Python is een general purpose programmeertaal - die vooral onder data scientists en data engineers wordt gebruikt en ook in Machine Learning en AI gerelateerde activiteiten veruit de meest gebruikte technologie is. In januari 1991 verscheen de eerste release, vanuit Python Software Foundation. ",
+                "icon": "mdi-language-python",
+                "webpage": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png",
+                "tags": [
+                    "programming language",
+                    "ai",
+                    "data science"
+                ]
+            },
+            {
+                "id": "11",
+                "name": "SQL Server",
+                "description": "SQL Server is a relational database management system. The first release appeared in January 1998, from Microsoft.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/SQL_Server",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/SQL_Server_Logo.svg/1200px-SQL_Server_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "relational"
+                ]
+            },
+            {
+                "id": "10",
+                "name": "DuckDB",
+                "description": "DuckDB is an in-process analytical database. The first release appeared in January 2021 from DuckDB, a technology initiated in the Netherlands. V1.0 was released in June 2024.",
+                "icon": "mdi-database",
+                "webpage": "https://duckdb.org/",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/DuckDB_Logo.svg/1200px-DuckDB_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "olap",
+                    "data analysis"
+                ]
+            },
+            {
+                "id": "9",
+                "name": "MySQL",
+                "description": "MySQL is an open-source relational database management system. The first release was in 1995 by MySQL AB.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/MySQL",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "open source"
+                ]
+            },
+            {
+                "id": "8",
+                "name": "PostgreSQL",
+                "description": "PostgreSQL is an open-source relational database management system emphasizing extensibility and SQL compliance. It was initially released in 1996.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/PostgreSQL",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "open source"
+                ]
+            },
+            {
+                "id": "7",
+                "name": "MongoDB",
+                "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, it uses JSON-like documents with optional schemas.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/MongoDB",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1200px-MongoDB-Logo.svg.png",
+                "tags": [
+                    "database",
+                    "nosql",
+                    "document",
+                    "json"
+                ]
+            },
+            {
+                "id": "6",
+                "name": "Oracle Database",
+                "description": "Oracle Database is a multi-model database management system produced and marketed by Oracle Corporation. It was first released in 1979.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Oracle_Database",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Oracle_logo.svg/1200px-Oracle_logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "multi model"
+                ]
+            },
+            {
+                "id": "5",
+                "name": "Cassandra",
+                "description": "Apache Cassandra is a free and open-source, distributed, wide column store, NoSQL database management system. It was initially released in 2008.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Apache_Cassandra",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/1200px-Cassandra_logo.svg.png",
+                "tags": [
+                    "database",
+                    "nosql",
+                    "distributed",
+                    "wide column"
+                ]
+            },
+            {
+                "id": "4",
+                "name": "DB2",
+                "description": "IBM Db2 is a family of data management products, including database servers, developed by IBM. The first release was in 1983.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/IBM_Db2",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/IBM_DB2_logo.svg/1200px-IBM_DB2_logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "ibm"
+                ]
+            },
+            {
+                "id": "3",
+                "name": "Sybase",
+                "description": "Sybase is a relational database management system, originally developed by Sybase Inc. The first release was in 1987.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Sybase",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/SAP_Sybase_logo.svg/1200px-SAP_Sybase_logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "rdbms",
+                    "sap"
+                ]
+            },
+            {
+                "id": "2",
+                "name": "Redshift",
+                "description": "Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud. It was first released in 2013.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Amazon_Redshift",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "data warehouse",
+                    "cloud"
+                ]
+            },
+            {
+                "id": "1",
+                "name": "HANA",
+                "description": "SAP HANA is an in-memory, column-oriented, relational database management system developed and marketed by SAP SE. It was first released in 2010.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/SAP_HANA",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/SAP2011.svg/1200px-SAP2011.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "in-memory",
+                    "sap"
+                ]
+            },
+            {
+                "id": "21",
+                "name": "Snowflake",
+                "description": "Snowflake Inc. is a cloud computing–based data cloud company. The Snowflake data platform provides data warehouse-as-a-service and was first released in 2014.",
+                "icon": "mdi-database",
+                "webpage": "https://en.wikipedia.org/wiki/Snowflake_Inc.",
+                "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/220px-Snowflake_Logo.svg.png",
+                "tags": [
+                    "database",
+                    "sql",
+                    "cloud",
+                    "data warehouse"
+                ]
+            }
+        ],
+        "organization": [
+            {
+                "id": "1",
+                "name": "Conclusion Low Code Company",
+                "type": "company",
+                "url": "https://www.conclusion.nl/en/low-code-company",
+                "expertiseClaims": [
+                    {
+                        "expertiseId": "10",
+                        "description": "Toegepast in drie applicaties voor Klant A",
+                        "asOf": "2024-06-15",
+                        "count": 12
+                    },
+                    {
+                        "expertiseId": "11",
+                        "description": "Toegepast in twee applicaties voor Klant B",
+                        "asOf": "2024-04-15",
+                        "count": 9
+                    },
+                    {
+                        "expertiseId": "9",
+                        "description": "R&D",
+                        "asOf": "2024-07-15",
+                        "count": 3
+                    },
+                    {
+                        "expertiseId": "13",
+                        "count": 5,
+                        "notes": "Eline, Anthony"
+                    },
+                    {
+                        "expertiseId": "12",
+                        "count": 3,
+                        "notes": "Jos"
+                    }
+                ],
+                "organizationMemberships": [
+                    {
+                        "organizationId": "6",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "name": "theFactor.e",
+                "type": "company",
+                "url": "https://tfe.nl/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "name": "Conclusion Experience",
+                "type": "domain",
+                "url": "https://www.conclusion.nl/experience"
+            },
+            {
+                "id": "4",
+                "name": "UI Team @ theFactor.e",
+                "type": "team",
+                "url": "",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "2",
+                        "description": "onderdeel van company"
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "name": "Conclusion Intelligence",
+                "type": "domain",
+                "url": "https://www.conclusion.nl/intelligence"
+            },
+            {
+                "id": "6",
+                "name": "Enterprise Applications",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "7",
+                "name": "Business Platforms",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "8",
+                "name": "Strategy Enablement",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "9",
+                "name": "Mission Critical",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "10",
+                "name": "Cloud Native Enterprise",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "11",
+                "name": "Custom Software & Integration",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "12",
+                "name": "Smart Technology",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "13",
+                "name": "Zorgdomein",
+                "type": "domain",
+                "url": ""
+            },
+            {
+                "id": "20",
+                "name": "ArlaNet",
+                "type": "company",
+                "url": "https://www.arlanet.nl/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "21",
+                "name": "BrightAlley",
+                "type": "company",
+                "url": "https://www.conclusion.nl/bright-alley",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "22",
+                "name": "Bikkelhart",
+                "type": "company",
+                "url": "https://www.bikkelhart.com/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "3",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "30",
+                "name": "AMIS",
+                "type": "company",
+                "url": "https://www.conclusion.nl/amis",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "5",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "31",
+                "name": "Hot ITem",
+                "type": "company",
+                "url": "https://www.hotitem.nl/",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "5",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "33",
+                "name": "Conclusion Enablement",
+                "type": "company",
+                "url": "https://www.conclusion.nl/enablement",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "10",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            },
+            {
+                "id": "34",
+                "name": "Morgens",
+                "type": "company",
+                "url": "https://www.conclusion.nl/morgens",
+                "organizationMemberships": [
+                    {
+                        "organizationId": "13",
+                        "description": "onderdeel van domein"
+                    },
+                    {
+                        "organizationId": "8",
+                        "description": "onderdeel van domein"
+                    }
+                ]
+            }
+        ]
+    }
+}
