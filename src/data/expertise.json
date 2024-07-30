@@ -1,5 +1,6 @@
 {
     "expertise": [
+
         {
             "id": "15",
             "name": "C++",
@@ -22,7 +23,7 @@
             "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/C_Sharp_wordmark.svg/1200px-C_Sharp_wordmark.svg.png",
             "tags": [
                 "programming language",
-                "object oriented"
+                "object oriented", ".Net"
             ]
         },
         {
@@ -217,7 +218,334 @@
                 "cloud",
                 "data warehouse"
             ]
+        }  ,  {
+            "id": "116",
+            "name": "JavaScript",
+            "description": "JavaScript is a versatile programming language commonly used in web development for creating interactive effects within web browsers.",
+            "icon": "mdi-language-javascript",
+            "webpage": "https://en.wikipedia.org/wiki/JavaScript",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+            "tags": [
+                "programming language",
+                "web development",
+                "dynamic"
+            ]
+        },
+        {
+            "id": "117",
+            "name": "Kubernetes",
+            "description": "Kubernetes is an open-source platform for automating the deployment, scaling, and management of containerized applications.",
+            "icon": "mdi-kubernetes",
+            "webpage": "https://en.wikipedia.org/wiki/Kubernetes",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg",
+            "tags": [
+                "container orchestration",
+                "open-source",
+                "cloud-native"
+            ]
+        },
+        {
+            "id": "118",
+            "name": "OutSystems",
+            "description": "OutSystems is a modern application platform enabling organizations to build applications fast, right, and for the future.",
+            "icon": "mdi-application",
+            "webpage": "https://en.wikipedia.org/wiki/OutSystems",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/70/OutSystems_2018_logo.png",
+            "tags": [
+                "low-code",
+                "application development",
+                "enterprise"
+            ]
+        },
+        {
+            "id": "119",
+            "name": "Mendix",
+            "description": "Mendix is a low-code development platform that helps you build and continuously improve mobile and web applications at scale.",
+            "icon": "mdi-application",
+            "webpage": "https://en.wikipedia.org/wiki/Mendix",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/68/Mendix_logo.png",
+            "tags": [
+                "low-code",
+                "application development",
+                "enterprise"
+            ]
+        },
+        {
+            "id": "120",
+            "name": "Power Platform",
+            "description": "Microsoft Power Platform is a line of business intelligence, app development, and app connectivity software applications.",
+            "icon": "mdi-microsoft",
+            "webpage": "https://en.wikipedia.org/wiki/Microsoft_Power_Platform",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Power_Platform_logo.png",
+            "tags": [
+                "business intelligence",
+                "app development",
+                "microsoft"
+            ]
+        },
+        {
+            "id": "121",
+            "name": "Dynatrace",
+            "description": "Dynatrace provides software intelligence to simplify enterprise cloud complexity and accelerate digital transformation.",
+            "icon": "mdi-database",
+            "webpage": "https://en.wikipedia.org/wiki/Dynatrace",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Dynatrace_Logo.png",
+            "tags": [
+                "application performance management",
+                "cloud monitoring",
+                "digital transformation"
+            ]
+        },
+        {
+            "id": "122",
+            "name": "Elastic Stack",
+            "description": "Elastic Stack, also known as the ELK Stack, is a set of tools from Elastic for searching, analyzing, and visualizing data in real-time.",
+            "icon": "mdi-elastic",
+            "webpage": "https://en.wikipedia.org/wiki/ELK_Stack",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Elastic_Logo.png",
+            "tags": [
+                "data search",
+                "real-time analytics",
+                "log management"
+            ]
+        },
+        {
+            "id": "123",
+            "name": "Azure",
+            "description": "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
+            "icon": "mdi-microsoft-azure",
+            "webpage": "https://en.wikipedia.org/wiki/Microsoft_Azure",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+            "tags": [
+                "cloud computing",
+                "microsoft",
+                "platform as a service"
+            ]
+        },
+        {
+            "id": "124",
+            "name": "AWS",
+            "description": "Amazon Web Services (AWS) is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.",
+            "icon": "mdi-aws",
+            "webpage": "https://en.wikipedia.org/wiki/Amazon_Web_Services",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+            "tags": [
+                "cloud computing",
+                "amazon",
+                "infrastructure as a service"
+            ]
+        },
+        {
+            "id": "125",
+            "name": "GCP",
+            "description": "Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google that runs on the same infrastructure that Google uses internally for its end-user products.",
+            "icon": "mdi-google-cloud",
+            "webpage": "https://en.wikipedia.org/wiki/Google_Cloud_Platform",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Cloud_Logo.png",
+            "tags": [
+                "cloud computing",
+                "google",
+                "platform as a service"
+            ]
+        },
+        {
+            "id": "126",
+            "name": "IBM Cloud",
+            "description": "IBM Cloud includes infrastructure as a service (IaaS), software as a service (SaaS), and platform as a service (PaaS) offered through public, private, and hybrid cloud delivery models.",
+            "icon": "mdi-ibm",
+            "webpage": "https://en.wikipedia.org/wiki/IBM_Cloud",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+            "tags": [
+                "cloud computing",
+                "ibm",
+                "hybrid cloud"
+            ]
+        },
+        {
+            "id": "127",
+            "name": "Oracle Cloud Infrastructure",
+            "description": "Oracle Cloud Infrastructure (OCI) offers high-performance computing and low-cost cloud storage solutions.",
+            "icon": "mdi-oracle",
+            "webpage": "https://en.wikipedia.org/wiki/Oracle_Cloud",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Oracle_Logo.png",
+            "tags": [
+                "cloud computing",
+                "oracle",
+                "infrastructure as a service"
+            ]
+        },
+        {
+            "id": "128",
+            "name": "Optimizely",
+            "description": "Optimizely is a digital experience platform providing A/B testing and personalization for websites and mobile apps.",
+            "icon": "mdi-web",
+            "webpage": "https://en.wikipedia.org/wiki/Optimizely",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Optimizely_logo.png",
+            "tags": [
+                "A/B testing",
+                "personalization",
+                "digital experience"
+            ]
+        },
+        {
+            "id": "129",
+            "name": "Adobe Commerce (with Magento)",
+            "description": "Adobe Commerce, powered by Magento, is an open-source e-commerce platform for building and managing online stores.",
+            "icon": "mdi-shopping",
+            "webpage": "https://en.wikipedia.org/wiki/Magento",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Magento_Logo.svg",
+            "tags": [
+                "e-commerce",
+                "open-source",
+                "online store"
+            ]
+        },
+        {
+            "id": "130",
+            "name": "Commercetools",
+            "description": "Commercetools is a cloud-based headless commerce platform providing APIs for building custom e-commerce solutions.",
+            "icon": "mdi-cloud",
+            "webpage": "https://en.wikipedia.org/wiki/Commercetools",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Commercetools_logo.png",
+            "tags": [
+                "headless commerce",
+                "API",
+                "cloud-based"
+            ]
+        },
+        {
+            "id": "131",
+            "name": "LS Retail",
+            "description": "LS Retail offers end-to-end retail solutions and POS systems for managing retail, hospitality, and forecourt businesses.",
+            "icon": "mdi-store",
+            "webpage": "https://en.wikipedia.org/wiki/LS_Retail",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a9/LS_Retail_Logo.png",
+            "tags": [
+                "retail solutions",
+                "POS systems",
+                "end-to-end"
+            ]
+        },
+        {
+            "id": "132",
+            "name": "Salesforce",
+            "description": "Salesforce is a cloud-based customer relationship management (CRM) platform designed to manage customer interactions and business processes.",
+            "icon": "mdi-salesforce",
+            "webpage": "https://en.wikipedia.org/wiki/Salesforce",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Salesforce_logo.svg",
+            "tags": [
+                "CRM",
+                "cloud computing",
+                "customer management"
+            ]
+        },
+        {
+            "id": "133",
+            "name": "Umbraco",
+            "description": "Umbraco is an open-source content management system (CMS) built on the Microsoft .NET framework for creating and managing websites.",
+            "icon": "mdi-web",
+            "webpage": "https://en.wikipedia.org/wiki/Umbraco",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/10/Umbraco_logo.svg",
+            "tags": [
+                "CMS",
+                "open-source",
+                "web development"
+            ]
+        },
+        {
+            "id": "134",
+            "name": "Sitecore",
+            "description": "Sitecore is a digital experience platform that provides CMS and marketing automation software for managing personalized content and customer experiences.",
+            "icon": "mdi-web",
+            "webpage": "https://en.wikipedia.org/wiki/Sitecore",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Sitecore_logo.svg",
+            "tags": [
+                "digital experience",
+                "CMS",
+                "marketing automation"
+            ]
+        },
+        {
+            "id": "135",
+            "name": "HubSpot",
+            "description": "HubSpot is a developer and marketer of software products for inbound marketing, sales, and customer service.",
+            "icon": "mdi-hubspot",
+            "webpage": "https://en.wikipedia.org/wiki/HubSpot",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/HubSpot_Logo.svg",
+            "tags": [
+                "inbound marketing",
+                "sales",
+                "customer service"
+            ]
+        },
+        {
+            "id": "136",
+            "name": "Bloomreach",
+            "description": "Bloomreach is a digital experience platform that combines content management, site search, and personalization tools to drive business growth.",
+            "icon": "mdi-web",
+            "webpage": "https://en.wikipedia.org/wiki/Bloomreach",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bloomreach_logo.png",
+            "tags": [
+                "digital experience",
+                "content management",
+                "personalization"
+            ]
+        },
+        {
+            "id": "137",
+            "name": "SAP",
+            "description": "SAP is a multinational software corporation that makes enterprise software to manage business operations and customer relations.",
+            "icon": "mdi-sap",
+            "webpage": "https://en.wikipedia.org/wiki/SAP",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
+            "tags": [
+                "enterprise software",
+                "business operations",
+                "customer relations"
+            ]
+        },
+        {
+            "id": "138",
+            "name": "AFAS",
+            "description": "AFAS Software develops enterprise resource planning (ERP) software solutions for businesses to streamline their operations.",
+            "icon": "mdi-office",
+            "webpage": "https://en.wikipedia.org/wiki/AFAS_Software",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/55/AFAS_Software_logo.png",
+            "tags": [
+                "ERP",
+                "enterprise software",
+                "business operations"
+            ]
+        },
+        {
+            "id": "139",
+            "name": "Microsoft Dynamics",
+            "description": "Microsoft Dynamics is a line of enterprise resource planning (ERP) and customer relationship management (CRM) software applications.",
+            "icon": "mdi-microsoft",
+            "webpage": "https://en.wikipedia.org/wiki/Microsoft_Dynamics",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Microsoft_Dynamics_logo.svg",
+            "tags": [
+                "ERP",
+                "CRM",
+                "enterprise software"
+            ]
+        },
+        {
+            "id": "140",
+            "name": "Oracle ERP",
+            "description": "Oracle ERP Cloud is a complete, innovative, and proven solution suite that provides end-to-end ERP capabilities.",
+            "icon": "mdi-oracle",
+            "webpage": "https://en.wikipedia.org/wiki/Oracle_ERP",
+            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Oracle_Logo.png",
+            "tags": [
+                "ERP",
+                "cloud computing",
+                "enterprise software"
+            ]
         }
+    
+    
+    
     ],
     "organization": [
         {

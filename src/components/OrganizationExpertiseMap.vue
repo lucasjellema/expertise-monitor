@@ -73,8 +73,11 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
         }
         // TODO check if filter allows inclusion of this tag - depending on the tag, the total and the ( number of) children
         expertiseNode.children.push(newExpertiseNode)
-
     }
+    // sort 
+    expertiseNode.children.sort((a, b) => {
+        return b.count - a.count    
+    })
 }
 
 let expertiseClaimMap = {}
@@ -110,7 +113,7 @@ const buildExpertiseClaimMap = (organizationUnit) => {
 
 const expertiseStructure = ref(null)
 
-const initializeExperiseStructure = () => {
+const initializeExpertiseStructure = () => {
     expertiseStructure.value = {
         name: 'Expertise van ' + organizationUnit.value.name, logo: null, count: 0,
         children: []
@@ -127,7 +130,7 @@ const initializeExperiseStructure = () => {
 
 onMounted(() => {
     organizationUnit.value = props.organizationUnit
-    initializeExperiseStructure()
+    initializeExpertiseStructure()
 
 })
 
@@ -171,7 +174,7 @@ const handleExpertiseChanged = (newAndUpdatedClaims) => {
     // TODO update the expertiseStructure
     // TODO emit the change in the organization unit
     emits('expertiseChanged', organizationUnit.value)
-    initializeExperiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
+    initializeExpertiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
 }
 
 function ensureNumeric(value) {

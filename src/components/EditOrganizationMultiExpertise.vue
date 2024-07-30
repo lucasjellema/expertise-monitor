@@ -76,7 +76,7 @@ onMounted(() => {
         const organizationHasAnyClaims = props.organizationUnit.expertiseClaims && props.organizationUnit.expertiseClaims.length > 0
         for (const expertise of expertisesUnderTag) {
 
-            const newClaim = { name: expertise.name, expertiseId: expertise.id, expertise: expertise, count: 0, notes: '', updated: false }
+            const newClaim = { name: expertise.name, expertiseId: expertise.id, expertise: expertise, count: 0, notes: '', updated: false, new:true }
             // find expertise in claims for this organization unit
             if (organizationHasAnyClaims) {
                 const existingClaim = props.organizationUnit.expertiseClaims.find(claim => claim.expertiseId === newClaim.expertiseId)
@@ -84,6 +84,7 @@ onMounted(() => {
                 if (existingClaim) {
                     newClaim.count = existingClaim.count
                     newClaim.notes = existingClaim.notes
+                    newClaim.new = false
                 }
             }
 

@@ -7,46 +7,19 @@
                     <v-col cols="3">
                         <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details
                             @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
-                        <!-- TODO show list of expertises (and tags?) that match the search -->
-                        <!-- 
-                        <v-data-table :headers="headers" :items="searchSuggestions" item-value="id" item-key="id"
-                            v-model="selectedSearchSuggestions" class="elevation-1 dense-table row-height-50"
-                            show-select dense v-if="searchSuggestions.length > 0" return-object>
-                            <template v-slot:top>
-                                <v-toolbar flat>
-                                    <v-toolbar-title>Search Suggestions</v-toolbar-title>
-                                </v-toolbar>
-                            </template>
 
-</v-data-table> -->
                         <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
                             return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
                             :item-props="selectItemProps">
                             <template v-slot:prepend-item>
                                 <v-list-item title="Select All" @click="toggle">
-                                    <!-- <template v-slot:prepend>
-          <v-checkbox-btn
-            :model-value="likesAllFruit"
-          ></v-checkbox-btn>
-        </template> -->
+
                                 </v-list-item>
 
                                 <v-divider class="mt-2"></v-divider>
                             </template>
 
-                            <!-- <template v-slot:append-item>
-      <v-divider class="mb-2"></v-divider>
 
-      <v-list-item
-        :subtitle="subtitle"
-        :title="title"
-        disabled
-      >
-        <template v-slot:prepend>
-          <v-avatar color="primary" icon="mdi-food-apple"></v-avatar>
-        </template>
-      </v-list-item>
-    </template> -->
                         </v-select>
 
 
@@ -64,18 +37,31 @@
                 <v-row>
                     <v-col cols="10" offset="1">
                         <div id="app">
-                            <ExpertiseUnit :unit="initializeExperiseStructureForTag(tag)"
-                                v-for="tag in checkedTags.map(tag => availableTags[tag])" :key="tag" />
+                            <ExpertiseUnit :unit="initializeExpertiseStructureForTag(tag)"
+                                v-for="tag in checkedTags.map(tag => availableTags[tag])" :key="changeIndicator"
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
                         </div>
                         <div id="app2">
-                            <ExpertiseUnit :unit="initializeExperiseStructureForExpertise(suggestion.expertise)"
-                                v-for="suggestion in selectedSearchSuggestions" :key="suggestion" />
+                            <ExpertiseUnit
+                                :unit="suggestion.type == 'expertise' ? initializeExpertiseStructureForExpertise(suggestion.expertise) : initializeExpertiseStructureForTag(suggestion.tag)"
+                                v-for="suggestion in selectedSearchSuggestions" :key="changeIndicator"
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
                         </div>
                     </v-col>
                 </v-row>
             </v-main>
         </v-container>
     </v-responsive>
+    <v-dialog v-model="editExpertiseClaimsDialog" width="1400">
+        <v-card>
+            <v-card-title>
+                <!-- <v-btn @click="saveOrganizationExpertise">Opslaan</v-btn> -->
+            </v-card-title>
+            <EditExpertiseMultiOrganizationClaim :expertise="expertiseToEditClaimsFor"
+                @expertiseChanged="handleExpertiseClaimsChanged" />
+        </v-card>
+    </v-dialog>
+
 
 </template>
 
@@ -89,11 +75,12 @@ const props = defineProps({
     }
 })
 import { useAppStore } from "@/stores/app";
+import EditExpertiseMultiOrganizationClaim from "./EditExpertiseMultiOrganizationClaim.vue";
 const appStore = useAppStore()
 
 const selectedTags = ref(appStore.expertiseTags)
-let expertiseClaimMap = {}
-let tagClaimMap = {}
+let expertiseClaimMap = ref({})
+let tagClaimMap = ref({})
 const checkedTags = ref([])
 const availableTags = ref([])
 const search = ref('')
@@ -101,6 +88,9 @@ const searchSuggestions = ref([])
 const selectedSearchSuggestions = ref([])
 
 const searchSuggestionSelect = ref(null)
+const editExpertiseClaimsDialog = ref(false)
+const expertiseToEditClaimsFor = ref(null)
+const changeIndicator = ref(0)
 
 const
     headers = ref([
@@ -123,6 +113,19 @@ const selectItemProps = (item) => {
     }
 }
 
+const handleEditOrganizationExpertiseRequested = (e) => {
+    console.log('handleEditOrganizationExpertiseRequested', e)
+    // TODO open edit dialog for editing the expertise e.expertise (in case e.type == 'expertise'))
+    // show all organizations that have a claim already and add new empty claims for other organizations
+    if (e.type == 'expertise') {
+
+
+        expertiseToEditClaimsFor.value = e.expertise
+        editExpertiseClaimsDialog.value = true
+    }
+
+}
+
 const handleSearchChange = (e) => {
     console.log('new search on ', search.value, e)
     console.log(selectedSearchSuggestions.value, searchSuggestions.value)
@@ -142,22 +145,29 @@ const handleSearchChange = (e) => {
             searchSuggestions.value = filteredExpertise.map(expertise => { return { name: expertise.name, expertise: expertise, type: 'expertise' } })
         }
 
+        const filteredTags = availableTags.value.filter(tag => tag.toLowerCase().includes(search.value.toLowerCase()))
+        console.log("filtered, checked", filteredTags, checkedTags.value)
+        //  checkedTags.value = filteredTags
+        if (filteredTags.length > 0) {
+            searchSuggestions.value = searchSuggestions.value.concat(filteredTags.map(tag => { return { name: tag, type: 'tag', tag: tag } }))
+        }
+
         searchSuggestionSelect.value.menu = true
     }
 }
 
 // build a map with all expertise claims of all organizations 
 const buildExpertiseClaimMap = () => {
-    expertiseClaimMap = {}
+    expertiseClaimMap.value = {}
     tagClaimMap = {}
     for (const org of props.organization) {
         if (org?.expertiseClaims && org.expertiseClaims.length > 0) {
             for (const claim of org.expertiseClaims) {
-                if (!expertiseClaimMap[claim.expertiseId]) {
-                    expertiseClaimMap[claim.expertiseId] = { total: ensureNumeric(claim.count), expertise: [{ ...claim, organization: org }] } // claim.count
+                if (!expertiseClaimMap.value[claim.expertiseId]) {
+                    expertiseClaimMap.value[claim.expertiseId] = { total: ensureNumeric(claim.count), expertise: [{ ...claim, organization: org }] } // claim.count
                 } else {
-                    expertiseClaimMap[claim.expertiseId].total += ensureNumeric(claim.count)
-                    expertiseClaimMap[claim.expertiseId].expertise.push({ ...claim, organization: org })
+                    expertiseClaimMap.value[claim.expertiseId].total += ensureNumeric(claim.count)
+                    expertiseClaimMap.value[claim.expertiseId].expertise.push({ ...claim, organization: org })
 
                 }
                 // if (claim.expertise.tags && claim.expertise.tags.length > 0) {
@@ -173,13 +183,13 @@ const buildExpertiseClaimMap = () => {
             }
         }
     }
-    console.log('expertiseClaimMap', expertiseClaimMap)
+    console.log('expertiseClaimMap', expertiseClaimMap.value)
     console.log('tagClaimMap', tagClaimMap)
 }
 
 
 const expertiseStructure = ref(null)
-const initializeExperiseStructureForTag = (tag) => {
+const initializeExpertiseStructureForTag = (tag) => {
     const expertiseStructure = ref(null)
     expertiseStructure.value = {
         name: tag, count: 0,
@@ -191,7 +201,7 @@ const initializeExperiseStructureForTag = (tag) => {
     if (expertisesUnderTag) {
         let countForTag = 0;
         for (const expertise of expertisesUnderTag) {
-            const e = expertiseClaimMap[expertise.id]
+            const e = expertiseClaimMap.value[expertise.id]
             if (e) {
                 const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise }
                 countForTag += ensureNumeric(e.total)
@@ -212,13 +222,13 @@ const initializeExperiseStructureForTag = (tag) => {
     return expertiseStructure.value
 }
 
-const initializeExperiseStructureForExpertise = (expertise) => {
+const initializeExpertiseStructureForExpertise = (expertise) => {
     const expertiseStructure = ref(null)
     expertiseStructure.value = {
         name: expertise.name, count: 0,
-        children: [], expertise: expertise
+        children: [], expertise: expertise, type: 'expertise'
     }
-    const e = expertiseClaimMap[expertise.id]
+    const e = expertiseClaimMap.value[expertise.id]
     if (e) {
         expertiseStructure.value.count = e.total
         for (const claim of e.expertise) {
@@ -236,7 +246,31 @@ onMounted(() => {
     buildExpertiseClaimMap()
 })
 
+const handleExpertiseClaimsChanged = (newAndUpdatedClaims) => {
+    console.log('handleExpertiseClaimsChanged from the multi row table editor', newAndUpdatedClaims)
+    editExpertiseClaimsDialog.value = false
 
+    for (const claim of newAndUpdatedClaims) {
+        if (claim.new) {
+            const newClaim = { ...claim }
+            // remove properties updated, new, organization, name
+            delete newClaim.new
+            delete newClaim.updated
+            delete newClaim.organization
+            delete newClaim.name
+            newClaim.count = ensureNumeric(claim.count) 
+            if (!claim.organization.expertiseClaims) claim.organization.expertiseClaims=[]
+            claim.organization.expertiseClaims.push(newClaim)
+        } else {
+            claim.originalClaim.count = ensureNumeric(claim.count) 
+            claim.originalClaim.notes = claim.notes
+        }
+    }
+
+    buildExpertiseClaimMap()
+    changeIndicator.value++ 
+
+}
 
 function ensureNumeric(value) {
     // Check if the value is a string and if it represents a valid number

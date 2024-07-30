@@ -188,6 +188,8 @@ export const useAppStore = defineStore('app', () => {
       }
     }
     console.log('tagExpertiseMap', tagExpertiseMap, tagExpertiseMap.value)
+    
+    expertiseTags.value = Array.from(expertiseTags.value).sort()
   }
 
   const getExpertise = () => {
