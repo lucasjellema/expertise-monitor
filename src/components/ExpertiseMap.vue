@@ -27,8 +27,6 @@
                     </v-col>
                     <v-col cols="7" offset="0">
                         <!-- TODO add toggle: AND / OR (at least one tag must apply or all selected tags must apply) -->
-
-
                         <v-chip-group v-model="checkedTags" column multiple>
                             <v-chip v-for="tag in availableTags" :key="tag" :text="tag" filter></v-chip>
                         </v-chip-group>
@@ -95,6 +93,22 @@ const searchSuggestionSelect = ref(null)
 const editExpertiseClaimsDialog = ref(false)
 const expertiseToEditClaimsFor = ref(null)
 const changeIndicator = ref(0)
+
+watch(selectedSearchSuggestions   , (newValue, oldValue) => {
+    console.log('selectedSearchSuggestions', newValue, oldValue)
+    // make sure that any entries in the newValue array of type tag are included in checkTags (but first find their index in avaialbleTags)
+    for (const suggestion of newValue) {
+            console.log('search suggestion', suggestion.type, suggestion.tag)
+            if (suggestion.type == 'tag') {
+                
+                const index = availableTags.value.indexOf(suggestion.tag)
+                if (index > -1) {
+                    if (!checkedTags.value.includes(index))
+                        checkedTags.value.push(index)
+                }
+            }
+    }
+})
 
 const
     headers = ref([
