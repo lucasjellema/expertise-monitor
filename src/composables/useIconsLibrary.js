@@ -26,6 +26,18 @@ import brightalleyLogo from '@/assets/brightalleyLogo.jpeg'
 import thefactoreLogo from '@/assets/thefactorElogo.png'
 import arlanetLogo from '@/assets/arlanetLogo.png'
 
+import netvliesLogo from '@/assets/netvliesLogo.png'
+import nextfieldsLogo from '@/assets/nextfieldsLogo.png'
+import the4netLogo from '@/assets/4netLogo.png'
+import brainbrothersLogo from '@/assets/brainbrothersLogo.png'
+import nexworkLogo from '@/assets/nexworkLogo.png'
+import blauweMonstersLogo from '@/assets/blauwe-monstersLogo.png'
+
+import possibilitLogo from '@/assets/possibilitLogo.png'
+import bikkelhartLogo from '@/assets/bikkelhartLogo.png'
+
+
+
 export function useIconsLibrary() {
 
   const companyLogos = {
@@ -57,6 +69,16 @@ export function useIconsLibrary() {
     , 'BrightAlley': brightalleyLogo
     , 'theFactor.e': thefactoreLogo
     , 'ArlaNet': arlanetLogo
+
+    , 'Netvlies': netvliesLogo
+    , 'NextFields': nextfieldsLogo
+    , '4Net': the4netLogo
+    , 'BrainBrothers': brainbrothersLogo
+    , 'Nexwork.': nexworkLogo
+    , 'Blauwe Monsters': blauweMonstersLogo
+
+    , 'PossibilIT': possibilitLogo
+    , 'Bikkelhart': bikkelhartLogo
   }
 
 
