@@ -37,8 +37,8 @@ const tagToEditExpertiseFor = ref(null)
 const organizationUnit = ref(null)
 
 
-//import { useIconsLibrary } from '@/composables/useIconsLibrary';
-//const { companyLogos } = useIconsLibrary();
+import { useIconsLibrary } from '@/composables/useIconsLibrary';
+const { companyLogos } = useIconsLibrary();
 
 
 const props = defineProps({
@@ -51,13 +51,6 @@ const props = defineProps({
 const emits = defineEmits(['expertiseChanged'])
 
 const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
-    // if (organizationUnit?.expertiseClaims && organizationUnit.expertiseClaims.length > 0) {
-    //     for (const claim of organizationUnit?.expertiseClaims) {
-    //         const newExpertiseNode = { name: claim.expertiseId, children: [], logo: null, count: 231 }
-    //         //addOrganizationChildren(org, newOrgNode) 
-    //         expertiseNode.children.push(newExpertiseNode)
-    //     }
-    // }
     buildExpertiseClaimMap(organizationUnit)
     // create childnodes for all tags - and set the count from the tagClaimMap
     const allTags = appStore.expertiseTags
@@ -67,7 +60,7 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: null, count: expertise.count, type: 'expertise', expertise: expertise.expertise })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise })
                 }
             }
         }
@@ -115,7 +108,7 @@ const expertiseStructure = ref(null)
 
 const initializeExpertiseStructure = () => {
     expertiseStructure.value = {
-        name: 'Expertise van ' + organizationUnit.value.name, logo: null, count: 0,
+        name: 'Expertise van ' + organizationUnit.value.name, logo: companyLogos[organizationUnit.value.name], count: 0,
         children: []
     }
 
