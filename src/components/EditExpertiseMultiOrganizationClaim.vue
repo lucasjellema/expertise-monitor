@@ -1,22 +1,7 @@
 <template>
     <v-container>
-
-
-
         <v-card flat>
-
-
             <v-divider></v-divider>
-            <!-- <template v-slot:text>
-      <v-text-field
-        v-model="search"
-        label="Search"
-        prepend-inner-icon="mdi-magnify"
-        variant="outlined"
-        hide-details
-        single-line
-      ></v-text-field>
-    </template> -->
             <v-data-table :headers="headers" :items="eclaims" item-value="id" item-key="id" :search="search"
                 class="elevation-1 dense-table row-height-50" show-select dense>
 
