@@ -78,6 +78,10 @@ import { useAppStore } from "@/stores/app";
 import EditExpertiseMultiOrganizationClaim from "./EditExpertiseMultiOrganizationClaim.vue";
 const appStore = useAppStore()
 
+import { useIconsLibrary } from '@/composables/useIconsLibrary';
+const { companyLogos } = useIconsLibrary();
+
+
 const selectedTags = ref(appStore.expertiseTags)
 let expertiseClaimMap = ref({})
 let tagClaimMap = ref({})
@@ -203,11 +207,14 @@ const initializeExpertiseStructureForTag = (tag) => {
         for (const expertise of expertisesUnderTag) {
             const e = expertiseClaimMap.value[expertise.id]
             if (e) {
-                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise }
+                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise , logo:expertise.logoURL}
                 countForTag += ensureNumeric(e.total)
                 expertiseStructure.value.children.push(node)
                 for (const claim of e.expertise) {
-                    const orgNode = { name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization }
+                    const orgNode = { name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization 
+                    ,logo: companyLogos[claim.organization.name]
+
+                    }
                     node.children.push(orgNode)
                 }
             }
@@ -226,13 +233,15 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
     const expertiseStructure = ref(null)
     expertiseStructure.value = {
         name: expertise.name, count: 0,
-        children: [], expertise: expertise, type: 'expertise'
+        children: [], expertise: expertise, type: 'expertise', logo:expertise.logoURL
     }
     const e = expertiseClaimMap.value[expertise.id]
     if (e) {
         expertiseStructure.value.count = e.total
         for (const claim of e.expertise) {
-            const orgNode = { name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization }
+            const orgNode = { name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization 
+                ,logo: companyLogos[claim.organization.name]
+            }
             expertiseStructure.value.children.push(orgNode)
         }
     }

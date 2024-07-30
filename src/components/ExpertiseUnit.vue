@@ -1,8 +1,9 @@
 <template>
     <div class="expertise-unit">
       <div class="header" @click="toggle">
+        
         <span>{{ unit.name }}<v-icon @click="(e) => {console.log('clik');emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit" >mdi-pencil-outline</v-icon>
-           <v-img :src="unit.logoURL" height="50px"></v-img>
+           <v-img :src="unit.logo" height="50px"></v-img>
         </span>
         <h3 >{{ unit.count }}</h3> <span v-if="unit.children && unit.children.length > 0">(in {{ unit.children.length }})</span>  
         <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
