@@ -12,9 +12,13 @@
                                     <v-btn color="primary" @click="saveChanges" class="mb-4">Save Changes</v-btn>
                                     <v-text-field v-model="claim.count" label="Count"></v-text-field>
                                     <v-text-field v-model="claim.notes" label="Notes"></v-text-field>
-                                    <v-text-field v-model="claim.ambition" label="Ambition"
-                                        hint="Outlook of company regarding this expertise"></v-text-field>
-                                    <!-- <v-radio ></v-radio> -->
+                                    
+                                    <v-radio-group v-model="claim.ambition" row mandatory inline label="Ambition" hint="Outlook of company regarding this expertise">
+                                        <v-radio label="No Focus" value="0"></v-radio>
+                                        <v-radio label="Maintain" value="1"></v-radio>
+                                        <v-radio label="Grow" value="2"></v-radio>
+                                        <v-radio label="Explore" value="3"></v-radio>
+                                    </v-radio-group>
                                     <v-text-field v-model="claim.author" label="Author"></v-text-field>
                                     <v-text-field v-model="claim.timestamp" label="Timestamp"></v-text-field>
                                 </v-col>
