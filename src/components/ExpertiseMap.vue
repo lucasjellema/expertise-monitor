@@ -21,7 +21,10 @@
 
 
                         </v-select>
-
+                        <v-checkbox v-model="showZeroCountTags" label="Show tags without any company expertise" dense
+                            hide-details class="mt-0" />
+                            <v-checkbox v-model="showZeroCountExpertise" label="Show topics without any company expertise" dense
+                            hide-details class="mt-0" />
 
                         <!-- TODO search in notes? author? domein/company? -->
                     </v-col>
@@ -35,9 +38,11 @@
                 <v-row>
                     <v-col cols="10" offset="1">
                         <div id="app">
-                            <ExpertiseUnit :unit="initializeExpertiseStructureForTag(tag)"
-                                v-for="tag in checkedTags.map(tag => availableTags[tag])" :key="changeIndicator"
-                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
+                            <div v-for="tag in checkedTags.map(tag => availableTags[tag])">
+                                <ExpertiseUnit :unit="initializeExpertiseStructureForTag(tag)" :key="changeIndicator"
+                                    @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
+                                    v-if="showZeroCountTags || tagHasExpertise(tag)" />
+                            </div>
                         </div>
                         <div id="app2">
                             <ExpertiseUnit
@@ -88,7 +93,8 @@ const appStore = useAppStore()
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos } = useIconsLibrary();
 
-
+const showZeroCountTags = ref(false)
+const showZeroCountExpertise = ref(false)
 const selectedTags = ref(appStore.expertiseTags)
 let expertiseClaimMap = ref({})
 let tagClaimMap = ref({})
@@ -122,6 +128,12 @@ const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
         changeIndicator.value++
     }
 }
+
+watch([showZeroCountTags, showZeroCountExpertise], async (newValue, oldValue) => {
+
+    changeIndicator.value++
+
+})
 
 watch(selectedSearchSuggestions, (newValue, oldValue) => {
     console.log('selectedSearchSuggestions', newValue, oldValue)
@@ -237,6 +249,25 @@ const buildExpertiseClaimMap = () => {
 
 
 const expertiseStructure = ref(null)
+
+const tagHasExpertise = (tag) => {
+    let hasExpertise = false
+    const m = appStore.tagExpertiseMap.value || appStore.tagExpertiseMap
+    const expertisesUnderTag = m[tag]
+    if (expertisesUnderTag) {
+        let countForTag = 0;
+        for (const expertise of expertisesUnderTag) {
+            const e = expertiseClaimMap.value[expertise.id]
+            if (e) {
+                if (e.total > 0) {
+                    hasExpertise = true
+                    break
+                }
+            }
+        }
+    }
+    return hasExpertise
+}
 const initializeExpertiseStructureForTag = (tag) => {
     const expertiseStructure = ref(null)
     expertiseStructure.value = {
@@ -264,7 +295,7 @@ const initializeExpertiseStructureForTag = (tag) => {
                 }
             }
             // else no claims for this expertise, not currently available in the ecosystem; include a node for this expertise?
-            else {
+            else if (showZeroCountExpertise.value) {
                 const node = { name: expertise.name, children: [], count: 0, type: 'expertise', expertise: expertise }
                 expertiseStructure.value.children.push(node)
             }

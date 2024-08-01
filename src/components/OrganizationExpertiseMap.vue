@@ -4,7 +4,7 @@
             <v-main>
                 <v-row>
                     <v-col cols="10" offset="1">
-
+                        <v-checkbox v-model="showZeroCountTags" label="Show tags without any expertise in company" dense hide-details class="mt-0" />
                         <div id="app">
                             <ExpertiseUnit :unit="expertiseStructure"
                                 @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
@@ -60,6 +60,12 @@ const props = defineProps({
 })
 
 const emits = defineEmits(['expertiseChanged'])
+const showZeroCountTags = ref(false)
+
+
+watch(showZeroCountTags, async (newValue, oldValue) => {
+    await initializeExpertiseStructure()
+})
 
 const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
     buildExpertiseClaimMap(organizationUnit)
@@ -76,7 +82,9 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
             }
         }
         // TODO check if filter allows inclusion of this tag - depending on the tag, the total and the ( number of) children
-        expertiseNode.children.push(newExpertiseNode)
+        if (newExpertiseNode.count > 0 || showZeroCountTags.value) {
+            expertiseNode.children.push(newExpertiseNode)            
+        }
     }
     // sort 
     expertiseNode.children.sort((a, b) => {
@@ -119,7 +127,7 @@ const expertiseStructure = ref(null)
 
 const initializeExpertiseStructure = () => {
     expertiseStructure.value = {
-        name: 'Expertise van ' + organizationUnit.value.name, logo: companyLogos[organizationUnit.value.name], count: 0,
+        name: 'Expertise van ' + organizationUnit.value.name, logo: companyLogos[organizationUnit.value.name], count: null,
         children: []
     }
 
