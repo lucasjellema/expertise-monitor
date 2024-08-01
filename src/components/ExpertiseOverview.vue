@@ -8,7 +8,17 @@
                         <v-container fluid>
                             <v-row>
                                 <v-col>
-                                    <v-data-table :headers="expertiseHeaders" :items="props.expertise">
+                                    <v-data-table :headers="expertiseHeaders" :items="props.expertise" :search="search">
+                                        <template v-slot:top>
+                    <v-toolbar flat>
+                        <v-toolbar-title>Expertise Catalog</v-toolbar-title>
+                        <v-divider class="mx-4" inset vertical></v-divider>
+                        <v-text-field v-model="search" density="compact" label="Search" prepend-inner-icon="mdi-magnify"
+                            variant="solo-filled" flat hide-details single-line></v-text-field>
+                        <v-spacer></v-spacer>
+                        <v-btn color="primary" @click="addExpertise">Add Expertise</v-btn>
+                    </v-toolbar>
+                </template>
                                         <template v-slot:item.name="{ item, index }">
                                             <v-btn prepend-icon="mdi-dots-horizontal" text
                                                 @click="generateExpertiseDialog(item)">{{ item.name }}</v-btn>
@@ -60,6 +70,7 @@ const props = defineProps({
     }
 })
 
+const search = ref('')
 const expertiseToShow = ref(null)
 const expertiseDialog = ref(false)
 const generateExpertiseDialog = (expertise) => {
@@ -73,6 +84,16 @@ const handleExpertiseUpdate = (e) => {
     console.log("expertise updated", e)
     expertiseInProgress.value = e.value
 }
+
+const addExpertise = () => {
+    expertiseToShow.value = {
+        name: "",        
+        tags: []
+    }
+    editExpertise.value = true
+    expertiseDialog.value = true
+    
+} 
 
 const saveExpertise = () => {
     editExpertise.value = false
