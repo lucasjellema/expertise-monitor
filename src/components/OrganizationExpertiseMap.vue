@@ -23,6 +23,16 @@
                 @expertiseChanged="handleExpertiseChanged" />
         </v-card>
     </v-dialog>
+    <v-dialog v-model="openExpertiseClaimDialog" width="1400">
+        <v-card>
+            <v-card-title>
+                <!-- <v-btn @click="saveOrganizationExpertise">Opslaan</v-btn> -->
+            </v-card-title>
+            <EditExpertiseClaim :expertiseClaim="expertiseClaimToEdit"
+                @singleExpertiseClaimChanged="handleSingleExpertiseClaimChanged" />
+        </v-card>
+    </v-dialog>
+
 
 </template>
 
@@ -35,7 +45,8 @@ const editOrganizationExpertiseDialog = ref(false)
 const tagToEditExpertiseFor = ref(null)
 
 const organizationUnit = ref(null)
-
+const openExpertiseClaimDialog = ref(false)
+const expertiseClaimToEdit = ref(null)
 
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos } = useIconsLibrary();
@@ -60,7 +71,7 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim:expertise.claim })
                 }
             }
         }
@@ -90,10 +101,10 @@ const buildExpertiseClaimMap = (organizationUnit) => {
             if (claim.expertise.tags && claim.expertise.tags.length > 0) {
                 for (const tag of claim.expertise.tags) {
                     if (!tagClaimMap[tag]) {
-                        tagClaimMap[tag] = { total: claim.count, expertise: [{ expertise: claim.expertise, count: claim.count }] }
+                        tagClaimMap[tag] = { total: claim.count, expertise: [{ expertise: claim.expertise, count: claim.count, claim:claim }] }
                     } else {
                         tagClaimMap[tag].total += claim.count
-                        tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: claim.count })
+                        tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: claim.count, claim:claim })
                     }
                 }
             }
@@ -137,6 +148,10 @@ const handleEditOrganizationExpertiseRequested = (expertise) => {
 
         tagToEditExpertiseFor.value = expertise.name
         editOrganizationExpertiseDialog.value = true
+    } else if (expertise.type == 'expertise') {
+        expertiseClaimToEdit.value = expertise.claim
+        expertiseClaimToEdit.value.organization = organizationUnit.value
+        openExpertiseClaimDialog.value = true
     }
 
 }
@@ -168,6 +183,24 @@ const handleExpertiseChanged = (newAndUpdatedClaims) => {
     // TODO emit the change in the organization unit
     emits('expertiseChanged', organizationUnit.value)
     initializeExpertiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
+}
+
+const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
+    openExpertiseClaimDialog.value = false
+    console.log('handleSingleExpertiseClaimChanged', expertiseClaim)
+    const existingClaim = expertiseClaimToEdit.value.organization.expertiseClaims.find(claim => claim.expertiseId === expertiseClaim.expertise.id)
+    // update existing claim from expertiseClaim
+    if (existingClaim) {
+        console.log(`found existing claim`, existingClaim)
+        existingClaim.count = ensureNumeric(expertiseClaim.count)
+        existingClaim.notes = expertiseClaim.notes
+        existingClaim.author = expertiseClaim.author
+        //existingClaim.asOf = expertiseClaim.timestamp 
+        existingClaim.ambition = expertiseClaim.ambition
+
+        emits('expertiseChanged', organizationUnit.value)
+    initializeExpertiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
+   }
 }
 
 function ensureNumeric(value) {
