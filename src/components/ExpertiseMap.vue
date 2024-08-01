@@ -60,6 +60,15 @@
         </v-card>
     </v-dialog>
 
+    <v-dialog v-model="openExpertiseClaimDialog" width="1400">
+        <v-card>
+            <v-card-title>
+                <!-- <v-btn @click="saveOrganizationExpertise">Opslaan</v-btn> -->
+            </v-card-title>
+            <EditExpertiseClaim :expertiseClaim="expertiseClaimToEdit"
+                @singleExpertiseClaimChanged="handleSingleExpertiseClaimChanged" />
+        </v-card>
+    </v-dialog>
 
 </template>
 
@@ -94,19 +103,39 @@ const editExpertiseClaimsDialog = ref(false)
 const expertiseToEditClaimsFor = ref(null)
 const changeIndicator = ref(0)
 
-watch(selectedSearchSuggestions   , (newValue, oldValue) => {
+const openExpertiseClaimDialog = ref(false)
+const expertiseClaimToEdit = ref(null)
+const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
+    openExpertiseClaimDialog.value = false
+    console.log('handleSingleExpertiseClaimChanged', expertiseClaim)
+    const existingClaim = expertiseClaimToEdit.value.organization.expertiseClaims.find(claim => claim.expertiseId === expertiseClaim.expertise.id)
+    // update existing claim from expertiseClaim
+    if (existingClaim) {
+        console.log(`found existing claim`, existingClaim)
+        existingClaim.count = ensureNumeric(expertiseClaim.count)
+        existingClaim.notes = expertiseClaim.notes
+        existingClaim.author = expertiseClaim.author
+        //existingClaim.asOf = expertiseClaim.timestamp 
+        existingClaim.ambition = expertiseClaim.ambition
+
+        buildExpertiseClaimMap()
+        changeIndicator.value++
+    }
+}
+
+watch(selectedSearchSuggestions, (newValue, oldValue) => {
     console.log('selectedSearchSuggestions', newValue, oldValue)
     // make sure that any entries in the newValue array of type tag are included in checkTags (but first find their index in avaialbleTags)
     for (const suggestion of newValue) {
-            console.log('search suggestion', suggestion.type, suggestion.tag)
-            if (suggestion.type == 'tag') {
-                
-                const index = availableTags.value.indexOf(suggestion.tag)
-                if (index > -1) {
-                    if (!checkedTags.value.includes(index))
-                        checkedTags.value.push(index)
-                }
+        console.log('search suggestion', suggestion.type, suggestion.tag)
+        if (suggestion.type == 'tag') {
+
+            const index = availableTags.value.indexOf(suggestion.tag)
+            if (index > -1) {
+                if (!checkedTags.value.includes(index))
+                    checkedTags.value.push(index)
             }
+        }
     }
 })
 
@@ -133,13 +162,14 @@ const selectItemProps = (item) => {
 
 const handleEditOrganizationExpertiseRequested = (e) => {
     console.log('handleEditOrganizationExpertiseRequested', e)
-    // TODO open edit dialog for editing the expertise e.expertise (in case e.type == 'expertise'))
-    // show all organizations that have a claim already and add new empty claims for other organizations
+
     if (e.type == 'expertise') {
-
-
         expertiseToEditClaimsFor.value = e.expertise
         editExpertiseClaimsDialog.value = true
+    }
+    if (e.type == 'expertiseClaim') {
+        expertiseClaimToEdit.value = e.claim
+        openExpertiseClaimDialog.value = true
     }
 
 }
@@ -221,12 +251,13 @@ const initializeExpertiseStructureForTag = (tag) => {
         for (const expertise of expertisesUnderTag) {
             const e = expertiseClaimMap.value[expertise.id]
             if (e) {
-                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise , logo:expertise.logoURL}
+                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise, logo: expertise.logoURL }
                 countForTag += ensureNumeric(e.total)
                 expertiseStructure.value.children.push(node)
                 for (const claim of e.expertise) {
-                    const orgNode = { name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization 
-                    ,logo: companyLogos[claim.organization.name]
+                    const orgNode = {
+                        name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
+                        , logo: companyLogos[claim.organization.name], claim: claim
 
                     }
                     node.children.push(orgNode)
@@ -247,14 +278,15 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
     const expertiseStructure = ref(null)
     expertiseStructure.value = {
         name: expertise.name, count: 0,
-        children: [], expertise: expertise, type: 'expertise', logo:expertise.logoURL
+        children: [], expertise: expertise, type: 'expertise', logo: expertise.logoURL
     }
     const e = expertiseClaimMap.value[expertise.id]
     if (e) {
         expertiseStructure.value.count = e.total
         for (const claim of e.expertise) {
-            const orgNode = { name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization 
-                ,logo: companyLogos[claim.organization.name]
+            const orgNode = {
+                name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
+                , logo: companyLogos[claim.organization.name]
             }
             expertiseStructure.value.children.push(orgNode)
         }
@@ -281,17 +313,17 @@ const handleExpertiseClaimsChanged = (newAndUpdatedClaims) => {
             delete newClaim.updated
             delete newClaim.organization
             delete newClaim.name
-            newClaim.count = ensureNumeric(claim.count) 
-            if (!claim.organization.expertiseClaims) claim.organization.expertiseClaims=[]
+            newClaim.count = ensureNumeric(claim.count)
+            if (!claim.organization.expertiseClaims) claim.organization.expertiseClaims = []
             claim.organization.expertiseClaims.push(newClaim)
         } else {
-            claim.originalClaim.count = ensureNumeric(claim.count) 
+            claim.originalClaim.count = ensureNumeric(claim.count)
             claim.originalClaim.notes = claim.notes
         }
     }
 
     buildExpertiseClaimMap()
-    changeIndicator.value++ 
+    changeIndicator.value++
 
 }
 
