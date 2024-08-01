@@ -286,7 +286,7 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
         for (const claim of e.expertise) {
             const orgNode = {
                 name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
-                , logo: companyLogos[claim.organization.name]
+                , logo: companyLogos[claim.organization.name], claim: claim
             }
             expertiseStructure.value.children.push(orgNode)
         }
