@@ -12,7 +12,18 @@
                             </v-row>
                             <v-row>
                                 <v-col>
-                                    <v-data-table :headers="organizationHeaders" :items="props.organization">
+                                    <v-data-table :headers="organizationHeaders" :items="props.organization" :search="search">
+                                        <template v-slot:top>
+                                            <v-toolbar flat>
+                                                <v-toolbar-title>Conclusion Organizations</v-toolbar-title>
+                                                <v-divider class="mx-4" inset vertical></v-divider>
+                                                <v-text-field v-model="search" density="compact" label="Search"
+                                                    prepend-inner-icon="mdi-magnify" variant="solo-filled" flat
+                                                    hide-details single-line></v-text-field>
+                                                <!-- <v-spacer></v-spacer>
+                                                <v-btn color="primary" @click="addExpertise">Add Expertise</v-btn> -->
+                                            </v-toolbar>
+                                        </template>
                                         <template v-slot:item.name="{ item, index }">
                                             <v-btn prepend-icon="mdi-dots-horizontal" text
                                                 @click="generateOrganizationDialog(item)">{{ item.name }}</v-btn>
@@ -74,7 +85,7 @@ const props = defineProps({
         required: true
     }
 })
-
+const search = ref('')
 const organizationToShow = ref(null)
 const organizationDialog = ref(false)
 const generateorganizationDialog = (organization) => {
