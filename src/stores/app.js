@@ -173,6 +173,7 @@ export const useAppStore = defineStore('app', () => {
   const tagExpertiseMap = ref({}) // mapping tag to an array of all expertises that have that tag
   const initializeTags = () => {
     // loop over all expertise
+    tagExpertiseMap.value = {}
     for (const expertise of expertiseJSON.value.expertise) {
       try {
         for (const tag of expertise.tags) {
@@ -214,6 +215,9 @@ export const useAppStore = defineStore('app', () => {
       expertise.id = new Date().getTime()
       expertiseData.value.expertise.push(expertise)
     }
+    // TODO update expertise under tags 
+
+    initializeTags()
   }
 
 
