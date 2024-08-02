@@ -1,13 +1,15 @@
 <template>
     <v-container>
 
-        <v-data-table :headers="headers" :items="eclaims" item-value="id" item-key="id"
+        <v-data-table :headers="headers" :items="eclaims" item-value="id" item-key="id" :search="search"
             class="elevation-1 dense-table row-height-50" show-select dense>
             <template v-slot:top>
                 <v-toolbar flat>
                     <v-toolbar-title>Expertise on {{ tag }}
                         in {{ organizationUnit.name }}</v-toolbar-title>
                     <v-divider class="mx-4" inset vertical></v-divider>
+                    <v-text-field v-model="search" density="compact" label="Search" prepend-inner-icon="mdi-magnify"
+                    variant="solo-filled" flat hide-details single-line></v-text-field>
                     <v-spacer></v-spacer>
                     <v-btn color="primary" @click="saveChanges">Save Changes</v-btn>
                 </v-toolbar>
@@ -39,10 +41,11 @@ const props = defineProps({
     tag: { type: String, required: true }
 })
 
+const search = ref('')
 const
     headers = ref([
         { title: 'Expertise', value: 'name', sortable: true, width: '180px' },
-        { title: 'Count', value: 'count', width: '100px' },
+        { title: 'Count', value: 'count', width: '100px' , sortable: true },
         { title: 'Notes', value: 'notes' }
     ])
 
