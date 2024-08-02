@@ -79,6 +79,9 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
                 for (const expertise of tagClaimMap[tag].expertise) {
                     newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim:expertise.claim })
                 }
+                newExpertiseNode.children.sort((a, b) => {
+                    return b.count - a.count
+                })                
             }
         }
         // TODO check if filter allows inclusion of this tag - depending on the tag, the total and the ( number of) children
@@ -106,17 +109,11 @@ const buildExpertiseClaimMap = (organizationUnit) => {
             } else {
                 expertiseClaimMap[claim.expertiseId] = expertiseClaimMap[claim.expertiseId] + claim.count
             }
-            if (expertise && expertise.id && appStore.expertiseFilter.includes(expertise.id)) {
-                if (!expertiseClaimMap[claim.expertiseId]) {
-                    expertiseClaimMap[claim.expertiseId] = claim.count
-                } else {
-                    expertiseClaimMap[claim.expertiseId] = expertiseClaimMap[claim.expertiseId] + claim.count
-                }
+            if (!claim.expertise) {
+                const E = appStore.getExpertise()
+                const Exp = E.value.expertise
+                claim.expertise=  Exp.find(e => e.id === claim.expertiseId)
             }
-            else {
-                continue;
-            }
-            if (!claim.expertise) claim.expertise=  appStore.getExpertise().expertise.find(e => e.id === claim.expertiseId)
             if (claim.expertise.tags && claim.expertise.tags.length > 0) {
                 for (const tag of claim.expertise.tags) {
                     if (!tagClaimMap[tag]) {
