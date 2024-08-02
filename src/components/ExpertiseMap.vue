@@ -22,9 +22,9 @@
 
                         </v-select>
                         <v-checkbox v-model="showZeroCountTags" label="Show tags without any company expertise" dense
-                            hide-details class="mt-0" />
-                            <v-checkbox v-model="showZeroCountExpertise" label="Show topics without any company expertise" dense
-                            hide-details class="mt-0" />
+                            hide-details class="mt-0 mb-0" />
+                        <v-checkbox v-model="showZeroCountExpertise" label="Show topics without any company expertise"
+                            dense hide-details class="mt-0" />
 
                         <!-- TODO search in notes? author? domein/company? -->
                     </v-col>
@@ -38,10 +38,12 @@
                 <v-row>
                     <v-col cols="10" offset="1">
                         <div id="app">
-                            <div v-for="tag in checkedTags.map(tag => availableTags[tag])">
-                                <ExpertiseUnit :unit="initializeExpertiseStructureForTag(tag)" :key="changeIndicator"
+                            <div v-for="tag in checkedTags.map(tag => availableTags[tag])" >
+                                
+                                <ExpertiseUnit :unit="initializeExpertiseStructureForTag(tag)" :key="changeIndicator" 
                                     @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
-                                    v-if="showZeroCountTags || tagHasExpertise(tag)" />
+                                    v-if="showZeroCountTags || tagHasExpertise(tag)" 
+                                    />
                             </div>
                         </div>
                         <div id="app2">
@@ -144,8 +146,9 @@ watch(selectedSearchSuggestions, (newValue, oldValue) => {
 
             const index = availableTags.value.indexOf(suggestion.tag)
             if (index > -1) {
-                if (!checkedTags.value.includes(index))
-                    checkedTags.value.push(index)
+                // TODO if tag is selected should it also be checked??
+                // if (!checkedTags.value.includes(index))
+                //     checkedTags.value.push(index)
             }
         }
     }
@@ -269,8 +272,8 @@ const tagHasExpertise = (tag) => {
     return hasExpertise
 }
 const initializeExpertiseStructureForTag = (tag) => {
-    const expertiseStructure = ref(null)
-    expertiseStructure.value = {
+    //const expertiseStructure = ref(null)
+    const expertiseStructure  = {
         name: tag, count: 0,
         children: []
     }
@@ -284,7 +287,7 @@ const initializeExpertiseStructureForTag = (tag) => {
             if (e) {
                 const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise, logo: expertise.logoURL }
                 countForTag += ensureNumeric(e.total)
-                expertiseStructure.value.children.push(node)
+                expertiseStructure.children.push(node)
                 for (const claim of e.expertise) {
                     const orgNode = {
                         name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
@@ -293,37 +296,45 @@ const initializeExpertiseStructureForTag = (tag) => {
                     }
                     node.children.push(orgNode)
                 }
+                node.children.sort((a, b) => {
+                    return b.count - a.count
+                })
             }
             // else no claims for this expertise, not currently available in the ecosystem; include a node for this expertise?
             else if (showZeroCountExpertise.value) {
                 const node = { name: expertise.name, children: [], count: 0, type: 'expertise', expertise: expertise }
-                expertiseStructure.value.children.push(node)
+                expertiseStructure.children.push(node)
             }
         }
-        expertiseStructure.value.count = countForTag
+        expertiseStructure.count = countForTag
+        expertiseStructure.children.sort((a, b) => {
+            return b.count - a.count
+        })
     }
-    return expertiseStructure.value
+    return expertiseStructure
 }
 
 const initializeExpertiseStructureForExpertise = (expertise) => {
-    const expertiseStructure = ref(null)
-    expertiseStructure.value = {
+    const expertiseStructure = {
         name: expertise.name, count: 0,
         children: [], expertise: expertise, type: 'expertise', logo: expertise.logoURL
     }
     const e = expertiseClaimMap.value[expertise.id]
     if (e) {
-        expertiseStructure.value.count = e.total
+        expertiseStructure.count = e.total
         for (const claim of e.expertise) {
             const orgNode = {
                 name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
                 , logo: companyLogos[claim.organization.name], claim: claim
             }
-            expertiseStructure.value.children.push(orgNode)
+            expertiseStructure.children.push(orgNode)
         }
+        expertiseStructure.children.sort((a, b) => {
+                    return b.count - a.count
+                })
     }
 
-    return expertiseStructure.value
+    return expertiseStructure
 }
 
 
