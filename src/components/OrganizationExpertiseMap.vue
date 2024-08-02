@@ -106,6 +106,17 @@ const buildExpertiseClaimMap = (organizationUnit) => {
             } else {
                 expertiseClaimMap[claim.expertiseId] = expertiseClaimMap[claim.expertiseId] + claim.count
             }
+            if (expertise && expertise.id && appStore.expertiseFilter.includes(expertise.id)) {
+                if (!expertiseClaimMap[claim.expertiseId]) {
+                    expertiseClaimMap[claim.expertiseId] = claim.count
+                } else {
+                    expertiseClaimMap[claim.expertiseId] = expertiseClaimMap[claim.expertiseId] + claim.count
+                }
+            }
+            else {
+                continue;
+            }
+            if (!claim.expertise) claim.expertise=  appStore.getExpertise().expertise.find(e => e.id === claim.expertiseId)
             if (claim.expertise.tags && claim.expertise.tags.length > 0) {
                 for (const tag of claim.expertise.tags) {
                     if (!tagClaimMap[tag]) {
