@@ -174,6 +174,7 @@ export const useAppStore = defineStore('app', () => {
   const initializeTags = () => {
     // loop over all expertise
     tagExpertiseMap.value = {}
+    expertiseTags.value = new Set(['database'])
     for (const expertise of expertiseJSON.value.expertise) {
       try {
         for (const tag of expertise.tags) {
