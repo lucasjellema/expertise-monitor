@@ -12,14 +12,9 @@
                             return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
                             :item-props="selectItemProps">
                             <template v-slot:prepend-item>
-                                <v-list-item title="Select All" @click="toggle">
-
-                                </v-list-item>
-
+                                <v-list-item title="Select All" @click="toggle"></v-list-item>
                                 <v-divider class="mt-2"></v-divider>
                             </template>
-
-
                         </v-select>
                         <v-checkbox v-model="showZeroCountTags" label="Show tags without any company expertise" dense
                             hide-details class="mt-0 mb-0" />
@@ -29,24 +24,22 @@
                         <!-- TODO search in notes? author? domein/company? -->
                     </v-col>
                     <v-col cols="7" offset="0">
+                
                         <!-- TODO add toggle: AND / OR (at least one tag must apply or all selected tags must apply) -->
                         <v-chip-group v-model="checkedTags" column multiple>
-                            <v-chip v-for="tag in availableTags" :key="tag" :text="tag" filter></v-chip>
+                            <div  v-for="tag in availableTags">                                
+                            <v-chip :key="tag" :text="tag" filter v-if="!showZeroCountTags || tagCount[tag]"   variant="outlined"
+                            :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'large':'default' ): (checkedTagStrings.includes(tag) ? 'default' : 'x-small')"
+                            
+                            ></v-chip>
+                            </div>
                         </v-chip-group>
                         <v-btn @click="checkedTags = []" icon="mdi-cancel" title="Clear all tags"></v-btn> </v-col>
                 </v-row>
                 <v-row>
                     <v-col cols="10" offset="1">
                         <div id="app">
-                            <div v-for="tag in checkedTags.map(tag => availableTags[tag])" >
-                                
-                                <ExpertiseUnit :unit="initializeExpertiseStructureForTag(tag)" :key="changeIndicator" 
-                                    @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
-                                    v-if="showZeroCountTags || tagHasExpertise(tag)" 
-                                    />
-                            </div>
-                        </div>
-                        <div id="app2">
+
                             <ExpertiseUnit
                                 :unit="suggestion.type == 'expertise' ? initializeExpertiseStructureForExpertise(suggestion.expertise) : initializeExpertiseStructureForTag(suggestion.tag)"
                                 v-for="suggestion in selectedSearchSuggestions" :key="changeIndicator"
@@ -92,6 +85,16 @@ import { useAppStore } from "@/stores/app";
 import EditExpertiseMultiOrganizationClaim from "./EditExpertiseMultiOrganizationClaim.vue";
 const appStore = useAppStore()
 
+
+const availableTags = computed(() => {
+    return allTags.value //.filter(tag =>  tag.toLowerCase().includes(search.value.toLowerCase())) 
+})
+
+const checkedTagStrings = computed(() => {
+    return checkedTags.value.map(key => allTags.value[key])
+
+})
+
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos } = useIconsLibrary();
 
@@ -101,7 +104,7 @@ const selectedTags = ref(appStore.expertiseTags)
 let expertiseClaimMap = ref({})
 let tagClaimMap = ref({})
 const checkedTags = ref([])
-const availableTags = ref([])
+const allTags = ref([])
 const search = ref('')
 const searchSuggestions = ref([])
 const selectedSearchSuggestions = ref([])
@@ -132,24 +135,43 @@ const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
 }
 
 watch([showZeroCountTags, showZeroCountExpertise], async (newValue, oldValue) => {
-
     changeIndicator.value++
-
 })
 
 watch(selectedSearchSuggestions, (newValue, oldValue) => {
     console.log('selectedSearchSuggestions', newValue, oldValue)
-    // make sure that any entries in the newValue array of type tag are included in checkTags (but first find their index in avaialbleTags)
+    // make sure that any entries in the newValue array of type tag are included in checkTags (but first find their index in availableTags)
     for (const suggestion of newValue) {
         console.log('search suggestion', suggestion.type, suggestion.tag)
         if (suggestion.type == 'tag') {
-
-            const index = availableTags.value.indexOf(suggestion.tag)
+            const index = allTags.value.indexOf(suggestion.tag)
             if (index > -1) {
                 // TODO if tag is selected should it also be checked??
-                // if (!checkedTags.value.includes(index))
-                //     checkedTags.value.push(index)
+                if (!checkedTags.value.includes(index))
+                    checkedTags.value.push(index)
             }
+        }
+    }    
+
+    // find and remove all tags from checkedTags for which there is no entry in selectedSearchSuggestions
+    const toRemove = checkedTags.value.filter(tag => !newValue.map(suggestion => suggestion.tag).includes(allTags.value[tag]))
+    for (const tag of toRemove) {
+        checkedTags.value.splice(checkedTags.value.indexOf(tag), 1)
+    }    
+})
+
+watch(checkedTags, (newValue, oldValue) => {
+    console.log('checkedTags', newValue, oldValue)
+
+    const tags = checkedTags.value.map(tag => allTags.value[tag])
+    selectedSearchSuggestions.value = searchSuggestions.value.filter(suggestion => tags.includes(suggestion.tag) || suggestion.type == 'expertise') // remove suggestions for which the tag is no longer selected
+
+    // find all tags for which there is no entry in selectedSearchSuggestions
+    const newTags = tags.filter(tag => !selectedSearchSuggestions.value.map(suggestion => suggestion.tag).includes(tag))
+    // add entries to selectSearchSuggestions for new checked tags 
+    if (newTags.length > 0) {
+        for (const tag of newTags) {
+            selectedSearchSuggestions.value.push({ name:tag, type: 'tag', tag: tag })
         }
     }
 })
@@ -208,7 +230,7 @@ const handleSearchChange = (e) => {
             searchSuggestions.value = filteredExpertise.map(expertise => { return { name: expertise.name, expertise: expertise, type: 'expertise' } })
         }
 
-        const filteredTags = availableTags.value.filter(tag => tag.toLowerCase().includes(search.value.toLowerCase()))
+        const filteredTags = allTags.value.filter(tag => tag.toLowerCase().includes(search.value.toLowerCase()))
         console.log("filtered, checked", filteredTags, checkedTags.value)
         //  checkedTags.value = filteredTags
         if (filteredTags.length > 0) {
@@ -339,7 +361,7 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
 
 
 onMounted(() => {
-    availableTags.value = [...appStore.expertiseTags]
+    allTags.value = [...appStore.expertiseTags]
     buildExpertiseClaimMap()
 })
 
