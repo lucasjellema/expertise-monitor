@@ -12,12 +12,36 @@
                                     <v-btn color="primary" @click="saveChanges" class="mb-4">Save Changes</v-btn>
                                     <v-text-field v-model="claim.count" label="Count"></v-text-field>
                                     <v-text-field v-model="claim.notes" label="Notes"></v-text-field>
-                                    
-                                    <v-radio-group v-model="claim.ambition" row mandatory inline label="Ambition" hint="Outlook of company regarding this expertise">
-                                        <v-radio label="No Focus" value="0"></v-radio>
-                                        <v-radio label="Maintain" value="1"></v-radio>
-                                        <v-radio label="Grow" value="2"></v-radio>
-                                        <v-radio label="Explore" value="3"></v-radio>
+
+                                    <v-radio-group v-model="claim.ambition" row mandatory inline label="Ambition"
+                                        hint="Outlook of company regarding this expertise">
+                                        <v-radio value="-1">
+                                            <template v-slot:label>
+                                                <v-icon>mdi-arrow-bottom-right</v-icon>Deprecate
+                                            </template>
+                                        </v-radio>
+                                        <v-radio value="0">
+                                            <template v-slot:label>
+                                                <v-icon>mdi-eye-closed</v-icon>No Focus
+                                            </template>
+                                        </v-radio>
+                                        <v-radio value="1">
+                                            <template v-slot:label>
+                                                <v-icon>mdi-arrow-left-right</v-icon>Maintain
+                                            </template>
+                                        </v-radio>
+                                        <v-radio value="2">
+                                            <template v-slot:label>
+                                                <v-icon>mdi-rocket-launch</v-icon>Grow
+                                            </template>
+
+                                        </v-radio>
+                                        <v-radio value="3">
+                                            <template v-slot:label>
+                                                <v-icon>mdi-telescope</v-icon>Explore
+                                            </template>
+
+                                        </v-radio>
                                     </v-radio-group>
                                     <v-text-field v-model="claim.author" label="Author"></v-text-field>
                                     <v-text-field v-model="claim.timestamp" label="Timestamp"></v-text-field>
