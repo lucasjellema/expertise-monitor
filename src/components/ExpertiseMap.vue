@@ -9,7 +9,7 @@
                             @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
 
                         <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
-                            return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
+                            return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect" chips
                             :item-props="selectItemProps">
                             <template v-slot:prepend-item>
                                 <v-list-item title="Select All" @click="toggle"></v-list-item>
@@ -30,10 +30,7 @@
                             <div  v-for="tag in availableTags">                                
                             <v-chip :key="tag" :text="tag" filter v-if="!showZeroCountTags || tagCount[tag]"   variant="outlined"
                             :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'default':'default' ): (checkedTagStrings.includes(tag) ? 'large' : 'x-small') "
-                            
                             :style="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'':'' ): (checkedTagStrings.includes(tag) ? '' : 'display:none') "
-
-
                             ></v-chip>
                             </div>
                         </v-chip-group>
