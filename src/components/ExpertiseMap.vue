@@ -9,8 +9,13 @@
                             @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
 
                         <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
-                            return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect" chips
-                            :item-props="selectItemProps">
+                            return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
+                            :item-props="selectItemProps" @click:chip="removeItem">
+                            <template v-slot:selection="{ item, index }">
+                                <v-chip @click.stop="removeItem(item, index)">
+                                    {{ item.title }}
+                                </v-chip>
+                            </template>
                             <template v-slot:prepend-item>
                                 <v-list-item title="Select All" @click="toggle"></v-list-item>
                                 <v-divider class="mt-2"></v-divider>
@@ -24,14 +29,14 @@
                         <!-- TODO search in notes? author? domein/company? -->
                     </v-col>
                     <v-col cols="7" offset="0">
-                
+
                         <!-- TODO add toggle: AND / OR (at least one tag must apply or all selected tags must apply) -->
                         <v-chip-group v-model="checkedTags" column multiple>
-                            <div  v-for="tag in availableTags">                                
-                            <v-chip :key="tag" :text="tag" filter v-if="!showZeroCountTags || tagCount[tag]"   variant="outlined"
-                            :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'default':'default' ): (checkedTagStrings.includes(tag) ? 'large' : 'x-small') "
-                            :style="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'':'' ): (checkedTagStrings.includes(tag) ? '' : 'display:none') "
-                            ></v-chip>
+                            <div v-for="tag in availableTags">
+                                <v-chip :key="tag" :text="tag" filter v-if="!showZeroCountTags || tagCount[tag]"
+                                    variant="outlined"
+                                    :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? 'default' : 'default') : (checkedTagStrings.includes(tag) ? 'large' : 'x-small')"
+                                    :style="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? '' : '') : (checkedTagStrings.includes(tag) ? '' : 'display:none')"></v-chip>
                             </div>
                         </v-chip-group>
                         <v-btn @click="checkedTags = []" icon="mdi-cancel" title="Clear all tags"></v-btn> </v-col>
@@ -95,6 +100,11 @@ const checkedTagStrings = computed(() => {
 
 })
 
+const removeItem = (item, index) => {
+    selectedSearchSuggestions.value.splice(index, 1)
+    synchronizeSelectedSearchSuggestionsToCheckedTags(selectedSearchSuggestions.value)
+}
+
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos } = useIconsLibrary();
 
@@ -138,10 +148,8 @@ watch([showZeroCountTags, showZeroCountExpertise], async (newValue, oldValue) =>
     changeIndicator.value++
 })
 
-watch(selectedSearchSuggestions, (newValue, oldValue) => {
-    console.log('selectedSearchSuggestions', newValue, oldValue)
-    // make sure that any entries in the newValue array of type tag are included in checkTags (but first find their index in availableTags)
-    for (const suggestion of newValue) {
+const synchronizeSelectedSearchSuggestionsToCheckedTags = (searchSuggestions) => {
+    for (const suggestion of searchSuggestions) {
         console.log('search suggestion', suggestion.type, suggestion.tag)
         if (suggestion.type == 'tag') {
             const index = allTags.value.indexOf(suggestion.tag)
@@ -151,27 +159,31 @@ watch(selectedSearchSuggestions, (newValue, oldValue) => {
                     checkedTags.value.push(index)
             }
         }
-    }    
+    }
 
     // find and remove all tags from checkedTags for which there is no entry in selectedSearchSuggestions
-    const toRemove = checkedTags.value.filter(tag => !newValue.map(suggestion => suggestion.tag).includes(allTags.value[tag]))
+    const toRemove = checkedTags.value.filter(tag => !searchSuggestions.map(suggestion => suggestion.tag).includes(allTags.value[tag]))
     for (const tag of toRemove) {
         checkedTags.value.splice(checkedTags.value.indexOf(tag), 1)
-    }    
+    }
+}
+
+watch(selectedSearchSuggestions, (newValue, oldValue) => {
+    console.log('selectedSearchSuggestions', newValue, oldValue)
+    // make sure that any entries in the newValue array of type tag are included in checkTags (but first find their index in availableTags)
+    synchronizeSelectedSearchSuggestionsToCheckedTags(newValue)
 })
 
 watch(checkedTags, (newValue, oldValue) => {
-    console.log('checkedTags', newValue, oldValue)
-
     const tags = checkedTags.value.map(tag => allTags.value[tag])
-    selectedSearchSuggestions.value = searchSuggestions.value.filter(suggestion => tags.includes(suggestion.tag) || suggestion.type == 'expertise') // remove suggestions for which the tag is no longer selected
+    selectedSearchSuggestions.value = selectedSearchSuggestions.value.filter(suggestion => tags.includes(suggestion.tag) || suggestion.type == 'expertise') // remove suggestions for which the tag is no longer selected
 
     // find all tags for which there is no entry in selectedSearchSuggestions
     const newTags = tags.filter(tag => !selectedSearchSuggestions.value.map(suggestion => suggestion.tag).includes(tag))
     // add entries to selectSearchSuggestions for new checked tags 
     if (newTags.length > 0) {
         for (const tag of newTags) {
-            selectedSearchSuggestions.value.push({ name:tag, type: 'tag', tag: tag })
+            selectedSearchSuggestions.value.push({ name: tag, type: 'tag', tag: tag })
         }
     }
 })
@@ -295,7 +307,7 @@ const tagHasExpertise = (tag) => {
 }
 const initializeExpertiseStructureForTag = (tag) => {
     //const expertiseStructure = ref(null)
-    const expertiseStructure  = {
+    const expertiseStructure = {
         name: tag, count: 0,
         children: []
     }
@@ -352,8 +364,8 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
             expertiseStructure.children.push(orgNode)
         }
         expertiseStructure.children.sort((a, b) => {
-                    return b.count - a.count
-                })
+            return b.count - a.count
+        })
     }
 
     return expertiseStructure
