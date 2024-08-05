@@ -48,7 +48,9 @@
                             <ExpertiseUnit
                                 :unit="suggestion.type == 'expertise' ? initializeExpertiseStructureForExpertise(suggestion.expertise) : initializeExpertiseStructureForTag(suggestion.tag)"
                                 v-for="suggestion in selectedSearchSuggestions" :key="changeIndicator"
-                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" 
+                                @showExpertiseMapRequested="handleShowExpertiseMapRequested"
+                                />
                         </div>
                     </v-col>
                 </v-row>
@@ -96,6 +98,9 @@ import { useAppStore } from "@/stores/app";
 import EditExpertiseMultiOrganizationClaim from "./EditExpertiseMultiOrganizationClaim.vue";
 const appStore = useAppStore()
 
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const availableTags = computed(() => {
     return allTags.value //.filter(tag =>  tag.toLowerCase().includes(search.value.toLowerCase())) 
@@ -418,6 +423,13 @@ const handleExpertiseClaimsChanged = (newAndUpdatedClaims) => {
     changeIndicator.value++
 
 }
+
+const handleShowExpertiseMapRequested = (expertise) => {
+    console.log('handleShowExpertiseMapRequested', expertise)
+    if (expertise.type==='expertiseClaim') 
+    router.push({ name: 'organizationExpertise', params: { organizationId: expertise.organization.id } })
+}
+
 
 function ensureNumeric(value) {
     // Check if the value is a string and if it represents a valid number

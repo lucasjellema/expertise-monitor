@@ -6,7 +6,7 @@
                     <v-col cols="10" offset="1">
                         <v-checkbox v-model="showZeroCountTags" label="Show tags without any expertise in company" dense hide-details class="mt-0" />
                         <div id="app">
-                            <ExpertiseUnit :unit="expertiseStructure"
+                            <ExpertiseUnit :unit="expertiseStructure" @showExpertiseMapRequested="handleShowExpertiseMapRequested"
                                 @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
                         </div>
                     </v-col>
@@ -40,6 +40,8 @@
 <script setup>
 import { useAppStore } from "@/stores/app";
 const appStore = useAppStore()
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 const editOrganizationExpertiseDialog = ref(false)
 const tagToEditExpertiseFor = ref(null)
@@ -153,6 +155,16 @@ onMounted(() => {
     initializeExpertiseStructure()
 
 })
+
+const handleShowExpertiseMapRequested = (e) => {
+    console.log('handleShowExpertiseMapRequested', e)
+    if (e.type == 'tag') {
+        router.push({ name: 'expertiseBrowseTag', params: { tag: e.name } });        
+    } else if (e.type == 'expertise') {
+        router.push({ name: 'expertiseBrowseSpecific', params: { expertiseId: e.expertise.id } });
+        
+    }
+}
 
 
 const handleEditOrganizationExpertiseRequested = (expertise) => {

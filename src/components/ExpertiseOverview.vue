@@ -16,14 +16,14 @@
                                                 <v-text-field v-model="search" density="compact" label="Search"
                                                     prepend-inner-icon="mdi-magnify" variant="solo-filled" flat
                                                     hide-details single-line></v-text-field>
-                                                <v-spacer></v-spacer>
+                                                <v-spacer ></v-spacer>
                                                 <v-btn color="primary" @click="addExpertise">Add Expertise</v-btn>
                                             </v-toolbar>
                                         </template>
                                         <template v-slot:item.name="{ item, index }">
                                             <v-btn prepend-icon="mdi-dots-horizontal" text
                                                 @click="generateExpertiseDialog(item)">{{ item.name }}</v-btn>
-                                                <v-icon @click="gotoExpertise(item)">mdi-school</v-icon>
+                                                <v-icon @click="gotoExpertise(item)" small class="ml-2">mdi-school</v-icon>
                                         </template>
                                         <template v-slot:item.webpage="{ item, index }">
                                             <a :href="item.webpage" target="_blank">web page</a>

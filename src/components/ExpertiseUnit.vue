@@ -2,7 +2,9 @@
     <div class="expertise-unit">
       <div class="header" @click="toggle">
         
-        <span>{{ unit.name }}<v-icon @click="(e) => {console.log('clik');emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit" >mdi-pencil-outline</v-icon>
+        <span>{{ unit.name }}
+          <v-icon @click="(e) => {emit('showExpertiseMapRequested',unit); e.stopPropagation() }" small class="ml-2" v-if="unit?.type">mdi-school</v-icon>
+          <v-icon @click="(e) => {emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit" >mdi-pencil-outline</v-icon>
            <div class="logoContainer"><v-img :src="unit.logo" ></v-img></div>
 
         </span>
@@ -15,6 +17,8 @@
           :key="index"
           :unit="child"
           @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
+          @showExpertiseMapRequested="handleShowExpertiseMapRequested"
+          
         />
       </div>
     </div>
@@ -26,7 +30,7 @@ const props = defineProps({
   unit: Object,
 })
 
-const emit = defineEmits(['editOrganizationExpertiseRequested'])
+const emit = defineEmits(['editOrganizationExpertiseRequested', 'showExpertiseMapRequested'])
 const expanded = ref(false)
 const hasChildren = computed(() => {
   return props.unit.children && props.unit.children.length > 0;
@@ -39,6 +43,13 @@ const toggle = () => {
 const handleEditOrganizationExpertiseRequested = (expertise) => {
     emit('editOrganizationExpertiseRequested', expertise)
 }
+
+
+const handleShowExpertiseMapRequested = (expertise) => {
+    emit('showExpertiseMapRequested', expertise)
+}
+
+
 </script>
   <style scoped>
   .expertise-unit {
