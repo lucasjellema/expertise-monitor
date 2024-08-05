@@ -2,7 +2,7 @@
   <div class="org-unit">
     <div class="header" @click="toggle">
       <span>{{ unit.name }} <v-icon @click="emit('organizationExpertiseRequested', unit)" v-if="unit.id">mdi-school</v-icon>
-        <v-img :src="unit.logo" height="50px"></v-img>
+        <div class="logoContainer"><v-img :src="unit.logo" ></v-img></div>
       </span>
       <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
     </div>
@@ -56,4 +56,8 @@ const toggle = () => {
   gap: 10px;
   margin-top: 10px;
 }
+.logoContainer {
+    height: 50px;
+    width: 150px;
+  }
 </style>
