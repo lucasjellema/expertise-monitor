@@ -29,8 +29,11 @@
                         <v-chip-group v-model="checkedTags" column multiple>
                             <div  v-for="tag in availableTags">                                
                             <v-chip :key="tag" :text="tag" filter v-if="!showZeroCountTags || tagCount[tag]"   variant="outlined"
-                            :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'large':'default' ): (checkedTagStrings.includes(tag) ? 'default' : 'x-small')"
+                            :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'default':'default' ): (checkedTagStrings.includes(tag) ? 'large' : 'x-small') "
                             
+                            :style="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0?'':'' ): (checkedTagStrings.includes(tag) ? '' : 'display:none') "
+
+
                             ></v-chip>
                             </div>
                         </v-chip-group>
