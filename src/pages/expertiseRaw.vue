@@ -1,6 +1,8 @@
 <template>
     <h1>Raw Expertise</h1>
     <v-btn @click="copyToClipboard">Copy to clipboard</v-btn>
+    <v-btn @click="copyExpertiseCatalogToClipboard">Copy Expertise Catalog to clipboard</v-btn>
+    <v-btn @click="copyWithoutCatalogToClipboard">Copy Expertise Claims & Organization Structure to clipboard</v-btn>
     <code class="language-json">{{ JSON.stringify(expertiseCleaned) }}</code>
 
 </template>
@@ -13,6 +15,17 @@ const expertise = appStore.getExpertise()
 const expertiseCleaned = ref(null)
 const copyToClipboard = () => {
     navigator.clipboard.writeText(JSON.stringify(expertiseCleaned.value));
+}
+
+const copyExpertiseCatalogToClipboard= () => {
+    navigator.clipboard.writeText(`{"expertise": ${JSON.stringify(expertiseCleaned.value.expertise)}}`)
+}
+
+const copyWithoutCatalogToClipboard= () => {
+    const copyContent = JSON.parse(JSON.stringify(expertiseCleaned.value))
+    copyContent.expertise = []
+    navigator.clipboard.writeText(JSON.stringify(copyContent));
+    
 }
 
 onMounted(() => {
