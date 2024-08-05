@@ -821,14 +821,14 @@
       {
         "id": "413",
         "name": "Nexus",
-        "description": "Nexus provides data and analytics solutions, focusing on connecting and analyzing data across different systems to provide actionable insights.",
+        "description": "Unified Nexus Healthcare Solution. EHR solution, advanced Patient engagement module, Integration with outside medical entities, robust Billing and Financial module; all this supported by a top-quality Customer service team.",
         "icon": "mdi-database",
-        "webpage": "https://www.nexussystems.com",
-        "logoURL": "https://www.nexussystems.com/wp-content/uploads/2020/04/nexus-logo.png",
+        "webpage": "https://www.nexusclinical.com/",
+        "logoURL": "https://www.nexusclinical.com/wp-content/uploads/2022/08/Nexus-Logo_default-1.png",
         "tags": [
-          "data analytics",
-          "integration",
-          "insights"
+          "EHR",
+          "epd",
+          "healthcare"
         ]
       },
       {
@@ -3388,7 +3388,452 @@
             "RPA"
         ],
         "id": 1722584521723
-    }
+    },
+        {
+          "id": "517",
+          "name": "Maven",
+          "description": "Maven is a build automation tool used primarily for Java projects. It provides a uniform build system, project management capabilities, and documentation.",
+          "icon": "mdi-hammer",
+          "webpage": "https://maven.apache.org",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg",
+          "tags": [
+            "build automation",
+            "Java",
+            "project management"
+          ]
+        },
+        {
+          "id": "518",
+          "name": "Bitbucket",
+          "description": "Bitbucket is a Git-based source code repository hosting service owned by Atlassian, used for collaboration on code development and deployment.",
+          "icon": "mdi-git",
+          "webpage": "https://bitbucket.org",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Bitbucket_logo.png",
+          "tags": [
+            "version control",
+            "collaboration",
+            "CI/CD"
+          ]
+        },
+        {
+          "id": "519",
+          "name": "Jira",
+          "description": "Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.",
+          "icon": "mdi-ticket-confirmation",
+          "webpage": "https://www.atlassian.com/software/jira",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/en/8/82/JIRA_logo.svg",
+          "tags": [
+            "issue tracking",
+            "project management",
+            "agile"
+          ]
+        },
+        {
+          "id": "520",
+          "name": "Confluence",
+          "description": "Confluence is a collaboration tool developed by Atlassian for teams to create, share, and collaborate on projects and documentation.",
+          "icon": "mdi-notebook",
+          "webpage": "https://www.atlassian.com/software/confluence",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/8/85/Atlassian_Confluence_logo.png",
+          "tags": [
+            "collaboration",
+            "documentation",
+            "project management"
+          ]
+        },
+        {
+          "id": "521",
+          "name": "Ant",
+          "description": "Apache Ant is a Java library and command-line tool used for automating software build processes, which uses XML to describe the build process and its dependencies.",
+          "icon": "mdi-hammer",
+          "webpage": "https://ant.apache.org",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/75/Apache_Ant_logo.svg",
+          "tags": [
+            "build automation",
+            "Java",
+            "XML"
+          ]
+        },
+        {
+          "id": "522",
+          "name": "Bash",
+          "description": "Bash (Bourne Again SHell) is a Unix shell and command language written as a free software replacement for the Bourne shell.",
+          "icon": "mdi-console",
+          "webpage": "https://www.gnu.org/software/bash/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/39/Bash_Logo_Colored.svg",
+          "tags": [
+            "shell",
+            "scripting",
+            "Linux"
+          ]
+        },
+        {
+          "id": "523",
+          "name": "JUnit",
+          "description": "JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.",
+          "icon": "mdi-check-circle",
+          "webpage": "https://junit.org/junit5/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/26/JUnit_Logo.png",
+          "tags": [
+            "unit testing",
+            "Java",
+            "automation"
+          ]
+        },
+        {
+          "id": "524",
+          "name": "Selenium",
+          "description": "Selenium is a portable framework for testing web applications. It provides a playback tool for authoring functional tests without the need to learn a test scripting language.",
+          "icon": "mdi-web",
+          "webpage": "https://www.selenium.dev",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png",
+          "tags": [
+            "test automation",
+            "web development",
+            "open-source"
+          ]
+        },
+        {
+          "id": "525",
+          "name": "XQuery",
+          "description": "XQuery is a query and functional programming language that is designed to query and transform collections of structured and unstructured data, usually in the form of XML.",
+          "icon": "mdi-database-search",
+          "webpage": "https://www.w3.org/XML/Query/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
+          "tags": [
+            "query language",
+            "XML",
+            "data transformation"
+          ]
+        },
+        {
+          "id": "526",
+          "name": "XSLT",
+          "description": "XSLT (Extensible Stylesheet Language Transformations) is a language for transforming XML documents into other XML documents or other formats such as HTML for web pages, plain text, or XSL Formatting Objects.",
+          "icon": "mdi-file-code",
+          "webpage": "https://www.w3.org/TR/xslt/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
+          "tags": [
+            "transformation",
+            "XML",
+            "formatting"
+          ]
+        },
+        {
+          "id": "527",
+          "name": "XSD",
+          "description": "XSD (XML Schema Definition) is a schema language used to define the structure and validate the contents of XML documents.",
+          "icon": "mdi-file-code",
+          "webpage": "https://www.w3.org/XML/Schema",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
+          "tags": [
+            "schema",
+            "XML",
+            "validation"
+          ]
+        },
+        {
+          "id": "528",
+          "name": "WSDL",
+          "description": "WSDL (Web Services Description Language) is an XML-based interface definition language used for describing the functionality offered by a web service.",
+          "icon": "mdi-file-code",
+          "webpage": "https://www.w3.org/TR/wsdl/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
+          "tags": [
+            "web services",
+            "XML",
+            "interface"
+          ]
+        },
+        {
+          "id": "529",
+          "name": "Beacon",
+          "description": "Beacon is a small data payload sent by a web browser to a web server in the background, without affecting user interactions. It is typically used for analytics and monitoring purposes.",
+          "icon": "mdi-beacon",
+          "webpage": "https://w3c.github.io/beacon/",
+          "logoURL": "https://www.w3.org/favicon.ico",
+          "tags": [
+            "web development",
+            "analytics",
+            "monitoring"
+          ]
+        },
+        {
+          "id": "530",
+          "name": "Blockchain",
+          "description": "Blockchain is a distributed ledger technology that allows data to be stored globally on thousands of servers, while letting anyone on the network see everyone else's entries in real-time.",
+          "icon": "mdi-blockchain",
+          "webpage": "https://www.blockchain.com",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/64/Blockchain_logo.png",
+          "tags": [
+            "distributed ledger",
+            "cryptocurrency",
+            "decentralization"
+          ]
+        },
+        {
+          "id": "531",
+          "name": "Gherkin",
+          "description": "Gherkin is a business-readable, domain-specific language that describes the behavior of software through the use of structured natural language.",
+          "icon": "mdi-language",
+          "webpage": "https://cucumber.io/docs/gherkin/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cucumber_Logo.svg",
+          "tags": [
+            "BDD",
+            "testing",
+            "automation"
+          ]
+        },
+        {
+          "id": "532",
+          "name": "Artifactory",
+          "description": "Artifactory is a universal repository manager that supports all major packaging formats, build tools, and CI servers. It is used to manage binaries throughout the application lifecycle.",
+          "icon": "mdi-package-variant",
+          "webpage": "https://jfrog.com/artifactory/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Logo_Jfrog.png",
+          "tags": [
+            "repository management",
+            "DevOps",
+            "CI/CD"
+          ]
+        },
+        {
+          "id": "533",
+          "name": "Quay",
+          "description": "Quay is a container registry that enables you to build, store, and distribute your container images. It provides security features, automation, and a rich set of APIs.",
+          "icon": "mdi-docker",
+          "webpage": "https://quay.io",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/29/Quay_Logo.svg",
+          "tags": [
+            "container registry",
+            "DevOps",
+            "automation"
+          ]
+        },
+        {
+          "id": "534",
+          "name": "Cucumber",
+          "description": "Cucumber is a tool for running automated tests written in plain language. It is used for behavior-driven development (BDD) to write software requirements as executable tests.",
+          "icon": "mdi-cucumber",
+          "webpage": "https://cucumber.io",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cucumber_Logo.svg",
+          "tags": [
+            "BDD",
+            "testing",
+            "automation"
+          ]
+        },
+        {
+          "id": "535",
+          "name": "Jenkins",
+          "description": "Jenkins is an open-source automation server that helps to automate parts of the software development process with continuous integration and delivery.",
+          "icon": "mdi-jenkins",
+          "webpage": "https://www.jenkins.io",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg",
+          "tags": [
+            "CI/CD",
+            "automation",
+            "DevOps"
+          ]
+        },
+        {
+          "id": "536",
+          "name": "VS Code",
+          "description": "Visual Studio Code (VS Code) is a free source-code editor made by Microsoft for Windows, Linux, and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.",
+          "icon": "mdi-microsoft-visual-studio-code",
+          "webpage": "https://code.visualstudio.com",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Visual_Studio_Code_1.35_icon.svg",
+          "tags": [
+            "IDE",
+            "editor",
+            "developer tools"
+          ]
+        },
+        {
+          "id": "537",
+          "name": "Visual Studio",
+          "description": "Visual Studio is an integrated development environment (IDE) from Microsoft. It is used to develop computer programs, websites, web apps, web services, and mobile apps.",
+          "icon": "mdi-microsoft-visual-studio",
+          "webpage": "https://visualstudio.microsoft.com",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_2013_Logo.svg",
+          "tags": [
+            "IDE",
+            "developer tools",
+            "Microsoft"
+          ]
+        },
+        {
+          "id": "538",
+          "name": "Jupyter Notebook",
+          "description": "Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.",
+          "icon": "mdi-notebook",
+          "webpage": "https://jupyter.org",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg",
+          "tags": [
+            "data science",
+            "notebooks",
+            "Python"
+          ]
+        },
+        {
+          "id": "539",
+          "name": "Julia",
+          "description": "Julia is a high-level, high-performance dynamic programming language for technical computing, with syntax that is familiar to users of other technical computing environments.",
+          "icon": "mdi-language-julia",
+          "webpage": "https://julialang.org",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Julia_Programming_Language_Logo.svg",
+          "tags": [
+            "programming language",
+            "technical computing",
+            "high-performance"
+          ]
+        },
+        {
+          "id": "540",
+          "name": "R",
+          "description": "R is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing.",
+          "icon": "mdi-language-r",
+          "webpage": "https://www.r-project.org",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg",
+          "tags": [
+            "programming language",
+            "statistics",
+            "data analysis"
+          ]
+        }
+        ,    {
+          "id": "541",
+          "name": "Active Directory",
+          "description": "Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. It is included in most Windows Server operating systems as a set of processes and services.",
+          "icon": "mdi-microsoft",
+          "webpage": "https://docs.microsoft.com/windows-server/identity/active-directory",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Azure_Logo.svg",
+          "tags": [
+            "directory service",
+            "Microsoft",
+            "identity management"
+          ]
+        },
+        {
+          "id": "542",
+          "name": "Azure Entra ID",
+          "description": "Azure Entra ID, formerly known as Azure Active Directory, is a cloud-based identity and access management service by Microsoft, which helps employees sign in and access resources.",
+          "icon": "mdi-microsoft-azure",
+          "webpage": "https://azure.microsoft.com/services/active-directory/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+          "tags": [
+            "identity management",
+            "cloud",
+            "Microsoft"
+          ]
+        },
+        {
+          "id": "543",
+          "name": "Azure Vault",
+          "description": "Azure Key Vault is a cloud service for securely storing and accessing secrets. It provides a secure mechanism for managing cryptographic keys and other secrets used by cloud applications and services.",
+          "icon": "mdi-key-variant",
+          "webpage": "https://azure.microsoft.com/services/key-vault/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+          "tags": [
+            "security",
+            "key management",
+            "cloud"
+          ]
+        },
+        {
+          "id": "544",
+          "name": "Dapr",
+          "description": "Dapr (Distributed Application Runtime) is an open-source runtime that helps developers build resilient, microservice-oriented applications by providing best practices as reusable, independent building blocks.",
+          "icon": "mdi-cube-outline",
+          "webpage": "https://dapr.io",
+          "logoURL": "https://dapr.io/images/logo.svg",
+          "tags": [
+            "microservices",
+            "runtime",
+            "open-source"
+          ]
+        },
+        {
+          "id": "545",
+          "name": "Log4j",
+          "description": "Log4j is a popular Java-based logging utility used to log messages for a variety of software packages. It is part of the Apache Logging Services.",
+          "icon": "mdi-file-document-outline",
+          "webpage": "https://logging.apache.org/log4j/2.x/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Apache_Log4j_Logo.svg",
+          "tags": [
+            "logging",
+            "Java",
+            "open-source"
+          ]
+        },
+        {
+          "id": "546",
+          "name": "Sentry",
+          "description": "Sentry is an open-source error tracking tool that helps developers monitor and fix crashes in real-time, enhancing application performance and stability.",
+          "icon": "mdi-alert-circle-outline",
+          "webpage": "https://sentry.io",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Sentry_Logo.svg",
+          "tags": [
+            "error tracking",
+            "monitoring",
+            "open-source"
+          ]
+        },
+        {
+          "id": "547",
+          "name": "SigNoz",
+          "description": "SigNoz is an open-source application performance monitoring (APM) tool that helps you monitor metrics, traces, and logs from your application.",
+          "icon": "mdi-chart-line",
+          "webpage": "https://signoz.io",
+          "logoURL": "https://signoz.io/logo.svg",
+          "tags": [
+            "APM",
+            "monitoring",
+            "open-source"
+          ]
+        },
+        {
+          "id": "548",
+          "name": "Jaeger",
+          "description": "Jaeger is an open-source end-to-end distributed tracing system, used for monitoring and troubleshooting microservices-based distributed systems.",
+          "icon": "mdi-web",
+          "webpage": "https://www.jaegertracing.io",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/63/Jaeger_Logo.svg",
+          "tags": [
+            "tracing",
+            "monitoring",
+            "open-source"
+          ]
+        },
+        {
+          "id": "549",
+          "name": "Zipkin",
+          "description": "Zipkin is an open-source distributed tracing system that helps gather timing data needed to troubleshoot latency problems in microservice architectures.",
+          "icon": "mdi-timer-outline",
+          "webpage": "https://zipkin.io",
+          "logoURL": "https://zipkin.io/img/zipkin-logo-200x119.png",
+          "tags": [
+            "tracing",
+            "monitoring",
+            "open-source"
+          ]
+        },
+        {
+          "id": "550",
+          "name": "New Relic",
+          "description": "New Relic is a software analytics and performance monitoring tool that helps developers, IT operations, and business leaders understand the stories their data is telling them.",
+          "icon": "mdi-chart-areaspline",
+          "webpage": "https://newrelic.com",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d4/New_Relic_Logo.png",
+          "tags": [
+            "monitoring",
+            "analytics",
+            "performance"
+          ]
+        }
+      
+      
+    
     ]
   }
   
