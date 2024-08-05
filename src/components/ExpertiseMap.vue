@@ -84,6 +84,12 @@ const props = defineProps({
     organization: {
         type: Array,
         required: true
+    },
+    initialExpertise: {
+        type: String,
+    },
+    initialTag: {
+        type: String
     }
 })
 import { useAppStore } from "@/stores/app";
@@ -376,6 +382,14 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
 onMounted(() => {
     allTags.value = [...appStore.expertiseTags]
     buildExpertiseClaimMap()
+    if (props.initialTag) {
+        selectedSearchSuggestions.value.push({ name: props.initialTag, type: 'tag', tag: props.initialTag })        
+    }
+    if (props.initialExpertise) {
+        const ex =appStore.getExpertise().value.expertise
+        const expertise = appStore.getExpertise().value.expertise.find(e => e.id === props.initialExpertise)
+        if (expertise) selectedSearchSuggestions.value.push({ name: expertise.name, expertise: expertise, type: 'expertise' })
+    }
 })
 
 const handleExpertiseClaimsChanged = (newAndUpdatedClaims) => {

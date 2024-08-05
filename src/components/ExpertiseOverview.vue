@@ -23,13 +23,14 @@
                                         <template v-slot:item.name="{ item, index }">
                                             <v-btn prepend-icon="mdi-dots-horizontal" text
                                                 @click="generateExpertiseDialog(item)">{{ item.name }}</v-btn>
+                                                <v-icon @click="gotoExpertise(item)">mdi-school</v-icon>
                                         </template>
                                         <template v-slot:item.webpage="{ item, index }">
                                             <a :href="item.webpage" target="_blank">web page</a>
                                         </template>
                                         <template v-slot:item.tags="{ item, index }">
                                             <div v-if="item.tags?.length > 0">
-                                                <v-chip v-for="tag in item.tags" class="ma-2" size="small">
+                                                <v-chip v-for="tag in item.tags" class="ma-2" size="small" @click="gotoTag(tag)">
                                                     {{ tag }}
                                                 </v-chip>
                                             </div>
@@ -63,6 +64,11 @@
 <script setup>
 import { useAppStore } from "@/stores/app";
 const appStore = useAppStore()
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 
 const props = defineProps({
     expertise: {
@@ -112,6 +118,14 @@ const expertiseHeaders = [
     , { title: 'Logo', key: 'logoURL', sortable: false }
 
 ]
+
+const gotoExpertise = (item) => {
+    router.push({ name: 'expertiseBrowseSpecific', params: { expertiseId: item.id } });
+}
+
+const gotoTag = (tag) => {
+    router.push({ name: 'expertiseBrowseTag', params: { tag: tag } });
+}
 
 onMounted(() => {
 
