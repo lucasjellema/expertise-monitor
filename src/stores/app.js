@@ -8,7 +8,14 @@ import expertiseCatalogDB from '../data/expertiseCatalog.json'
 export const useAppStore = defineStore('app', () => {
 
   const expertiseTags = ref(new Set(['database']))
+  const readOnly = ref(true)
 
+  const toggleReadOnly = () => {
+    readOnly.value = !readOnly.value
+  }
+const getReadOnly = () => {
+  return readOnly.value
+}
 
   const preAuthenticatedRequestURL = ref(null)
 
@@ -257,6 +264,6 @@ export const useAppStore = defineStore('app', () => {
   }
 
   return {
-    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap
+    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap, getReadOnly,toggleReadOnly
   }
 })

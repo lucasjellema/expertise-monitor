@@ -51,6 +51,7 @@ const openExpertiseClaimDialog = ref(false)
 const expertiseClaimToEdit = ref(null)
 
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
+import { readonly } from "vue";
 const { companyLogos } = useIconsLibrary();
 
 
@@ -74,12 +75,12 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
     // create childnodes for all tags - and set the count from the tagClaimMap
     const allTags = appStore.expertiseTags
     for (const tag of allTags) {
-        const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag' }
+        const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag' , readOnly: appStore.getReadOnly() }
         if (tagClaimMap[tag]) {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim:expertise.claim })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim:expertise.claim,  readOnly: appStore.getReadOnly() })
                 }
                 newExpertiseNode.children.sort((a, b) => {
                     return b.count - a.count
@@ -138,7 +139,7 @@ const expertiseStructure = ref(null)
 const initializeExpertiseStructure = () => {
     expertiseStructure.value = {
         name: 'Expertise van ' + organizationUnit.value.name, logo: companyLogos[organizationUnit.value.name], count: null,
-        children: []
+        children: [], readOnly: true
     }
 
     // whenever the filter is changed:

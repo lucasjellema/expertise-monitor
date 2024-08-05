@@ -4,7 +4,6 @@
             <v-main>
                 <v-row>
                     <v-col cols="6" offset="1">
-                        <h1>Expertise Monitor</h1>
                         <v-container fluid>
                             <v-row>
                                 <v-col>
@@ -17,7 +16,7 @@
                                                     prepend-inner-icon="mdi-magnify" variant="solo-filled" flat
                                                     hide-details single-line></v-text-field>
                                                 <v-spacer ></v-spacer>
-                                                <v-btn color="primary" @click="addExpertise">Add Expertise</v-btn>
+                                                <v-btn color="primary" @click="addExpertise" v-if="!appStore.readOnly">Add Expertise</v-btn>
                                             </v-toolbar>
                                         </template>
                                         <template v-slot:item.name="{ item, index }">
@@ -50,7 +49,7 @@
     <v-dialog v-model="expertiseDialog" width="1000" @afterLeave="editExpertise = false">
         <v-card>
             <v-card-title>
-                <v-btn @click="editExpertise = true" v-if="!editExpertise">Bewerken</v-btn>
+                <v-btn @click="editExpertise = true" v-if="!editExpertise && !appStore.readOnly">Bewerken</v-btn>
                 <v-btn @click="saveExpertise" v-if="editExpertise">Opslaan</v-btn>
             </v-card-title>
             <ExpertiseDetails :expertise="expertiseToShow" v-if="!editExpertise" />

@@ -4,7 +4,8 @@
             <v-main>
 
                 <v-row>
-                    <v-col cols="3">
+                    <v-col cols="3">                        
+                        {{ appStore.getReadOnly() }}
                         <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details
                             @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
 
@@ -117,6 +118,7 @@ const removeItem = (item, index) => {
 }
 
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
+
 const { companyLogos } = useIconsLibrary();
 
 const showZeroCountTags = ref(false)
@@ -292,8 +294,6 @@ const buildExpertiseClaimMap = () => {
             }
         }
     }
-    console.log('expertiseClaimMap', expertiseClaimMap.value)
-    console.log('tagClaimMap', tagClaimMap)
 }
 
 
@@ -321,7 +321,7 @@ const initializeExpertiseStructureForTag = (tag) => {
     //const expertiseStructure = ref(null)
     const expertiseStructure = {
         name: tag, count: 0,
-        children: []
+        children: [], readOnly: true
     }
     // loop over all expertises in tag
     const m = appStore.tagExpertiseMap.value || appStore.tagExpertiseMap
@@ -331,13 +331,13 @@ const initializeExpertiseStructureForTag = (tag) => {
         for (const expertise of expertisesUnderTag) {
             const e = expertiseClaimMap.value[expertise.id]
             if (e) {
-                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise, logo: expertise.logoURL }
+                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise, logo: expertise.logoURL , readOnly: appStore.getReadOnly()}
                 countForTag += ensureNumeric(e.total)
                 expertiseStructure.children.push(node)
                 for (const claim of e.expertise) {
                     const orgNode = {
-                        name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
-                        , logo: companyLogos[claim.organization.name], claim: claim
+                        name: claim.organization.name , children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
+                        , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly()
 
                     }
                     node.children.push(orgNode)
@@ -363,7 +363,7 @@ const initializeExpertiseStructureForTag = (tag) => {
 const initializeExpertiseStructureForExpertise = (expertise) => {
     const expertiseStructure = {
         name: expertise.name, count: 0,
-        children: [], expertise: expertise, type: 'expertise', logo: expertise.logoURL
+        children: [], expertise: expertise, type: 'expertise', logo: expertise.logoURL,  readOnly: appStore.getReadOnly()
     }
     const e = expertiseClaimMap.value[expertise.id]
     if (e) {
@@ -371,7 +371,7 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
         for (const claim of e.expertise) {
             const orgNode = {
                 name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
-                , logo: companyLogos[claim.organization.name], claim: claim
+                , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly()
             }
             expertiseStructure.children.push(orgNode)
         }

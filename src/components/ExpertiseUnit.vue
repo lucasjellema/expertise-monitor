@@ -4,7 +4,7 @@
         
         <span>{{ unit.name }}
           <v-icon @click="(e) => {emit('showExpertiseMapRequested',unit); e.stopPropagation() }" small class="ml-2" v-if="unit?.type">mdi-school</v-icon>
-          <v-icon @click="(e) => {emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit" >mdi-pencil-outline</v-icon>
+          <v-icon @click="(e) => {emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit"  v-if="!unit.readOnly" >mdi-pencil-outline</v-icon>
            <div class="logoContainer"><v-img :src="unit.logo" ></v-img></div>
 
         </span>
