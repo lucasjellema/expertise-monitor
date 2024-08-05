@@ -384,6 +384,7 @@ onMounted(() => {
     buildExpertiseClaimMap()
     if (props.initialTag) {
         selectedSearchSuggestions.value.push({ name: props.initialTag, type: 'tag', tag: props.initialTag })        
+        synchronizeSelectedSearchSuggestionsToCheckedTags(selectedSearchSuggestions.value)
     }
     if (props.initialExpertise) {
         const ex =appStore.getExpertise().value.expertise

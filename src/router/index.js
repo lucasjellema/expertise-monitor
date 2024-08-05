@@ -24,7 +24,7 @@ const createRoutes = () => {
   r.push({ path: '/expertise',name: 'expertise', component: expertise })
   r.push({ path: '/expertiseBrowse',name: 'expertiseBrowse', component: expertiseBrowse })
   r.push({ path: '/expertiseBrowse/:expertiseId',name: 'expertiseBrowseSpecific', component: expertiseBrowse })
-  r.push({ path: '/expertiseBrowse/:tag',name: 'expertiseBrowseTag', component: expertiseBrowse })
+  r.push({ path: '/expertiseBrowseTag/:tag',name: 'expertiseBrowseTag', component: expertiseBrowse })
   r.push({ path: '/expertiseRaw',name: 'expertiseRaw', component: expertiseRaw })
   r.push({ path: '/organization',name: 'organization', component: organization })
   //r.push({ path: '/editTip/:tipId',name: 'editTip', component: editTip })
