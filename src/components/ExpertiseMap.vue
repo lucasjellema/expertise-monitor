@@ -13,7 +13,7 @@
                             :item-props="selectItemProps" @click:chip="removeItem">
                             <template v-slot:selection="{ item, index }">
                                 <v-chip @click.stop="removeItem(item, index)">
-                                    {{ item.title }}
+                                    {{ item.title }} 
                                 </v-chip>
                             </template>
                             <template v-slot:prepend-item>
@@ -33,10 +33,10 @@
                         <!-- TODO add toggle: AND / OR (at least one tag must apply or all selected tags must apply) -->
                         <v-chip-group v-model="checkedTags" column multiple>
                             <div v-for="tag in availableTags">
-                                <v-chip :key="tag" :text="tag" filter v-if="!showZeroCountTags || tagCount[tag]"
+                                <v-chip :key="tag" :text="tag" filter 
                                     variant="outlined"
-                                    :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? 'default' : 'default') : (checkedTagStrings.includes(tag) ? 'large' : 'x-small')"
-                                    :style="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? '' : '') : (checkedTagStrings.includes(tag) ? '' : 'display:none')"></v-chip>
+                                    :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? 'default' : 'small') : (checkedTagStrings.includes(tag) ? 'large' : 'x-small')"
+                                    :style="!showZeroCountTags && !(tagClaimMap[tag]?.companyCount > 0)?'display:none':   tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? '' : '') : (checkedTagStrings.includes(tag) ? '' : 'display:none')"></v-chip>
                             </div>
                         </v-chip-group>
                         <v-btn @click="checkedTags = []" icon="mdi-cancel" title="Clear all tags"></v-btn> </v-col>
@@ -267,16 +267,17 @@ const buildExpertiseClaimMap = () => {
                     expertiseClaimMap.value[claim.expertiseId].expertise.push({ ...claim, organization: org })
 
                 }
-                // if (claim.expertise.tags && claim.expertise.tags.length > 0) {
-                //     for (const tag of claim.expertise.tags) {
-                //         if (!tagClaimMap[tag]) {
-                //             tagClaimMap[tag] = { total: claim.count, expertise: [{ expertise: claim.expertise, count: claim.count }] }
-                //         } else {
-                //             tagClaimMap[tag].total += claim.count
-                //             tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: claim.count })
-                //         }
-                //     }
-                // }
+                if (claim.expertise.tags && claim.expertise.tags.length > 0) {
+                    for (const tag of claim.expertise.tags) {
+                        if (!tagClaimMap[tag]) {
+                            tagClaimMap[tag] = { total: claim.count, companyCount:1, expertise: [{ expertise: claim.expertise, count: claim.count }] }
+                        } else {
+                            tagClaimMap[tag].total += claim.count
+                            tagClaimMap[tag].companyCount++                            
+                            tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: claim.count })
+                        }
+                    }
+                }
             }
         }
     }
