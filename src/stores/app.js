@@ -2,6 +2,7 @@
 import { defineStore } from 'pinia'
 
 import expertiseDB from '../data/expertise.json'
+import expertiseCatalogDB from '../data/expertiseCatalog.json'
 
 
 export const useAppStore = defineStore('app', () => {
@@ -197,6 +198,10 @@ export const useAppStore = defineStore('app', () => {
   const getExpertise = () => {
     if (!dataIsPrepared) {
       dataIsPrepared = true
+      if (expertiseCatalogDB){
+        expertiseJSON.value.expertise = 
+         expertiseJSON.value.expertise.concat(expertiseCatalogDB.expertise) 
+      }
       prepareData(expertiseJSON.value)
       
     }
