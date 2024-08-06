@@ -3,6 +3,7 @@
       <div class="header" @click="toggle">
         
         <span>{{ unit.name }}
+          <v-icon v-if="unit?.type=='expertiseClaim' || unit.ambition" >{{ambitionIconMap[unit.ambition]}}</v-icon>
           <v-icon @click="(e) => {emit('showExpertiseMapRequested',unit); e.stopPropagation() }" small class="ml-2" v-if="unit?.type">mdi-school</v-icon>
           <v-icon @click="(e) => {emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit"  v-if="!unit.readOnly" >mdi-pencil-outline</v-icon>
            <div class="logoContainer"><v-img :src="unit.logo" ></v-img></div>
@@ -29,6 +30,9 @@
 const props = defineProps({
   unit: Object,
 })
+import { useIconsLibrary } from '@/composables/useIconsLibrary';
+const { companyLogos, ambitionIconMap } = useIconsLibrary();
+
 
 const emit = defineEmits(['editOrganizationExpertiseRequested', 'showExpertiseMapRequested'])
 const expanded = ref(false)
