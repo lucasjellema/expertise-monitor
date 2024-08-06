@@ -3719,7 +3719,60 @@
           ]
         }
       
-      
+,
+            {
+              "id": "551",
+              "name": "Cypress",
+              "description": "Cypress is a next-generation front-end testing tool built for the modern web. It enables fast, easy, and reliable testing for anything that runs in a browser.",
+              "icon": "mdi-web",
+              "webpage": "https://www.cypress.io",
+              "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Cypress.io_logo.svg",
+              "tags": [
+                "testing",
+                "automation",
+                "web development"
+              ]
+            },
+            {
+              "id": "552",
+              "name": "xUnit",
+              "description": "xUnit is a free, open-source, community-focused unit testing tool for the .NET Framework. It provides a simple, easy-to-use syntax for writing unit tests.",
+              "icon": "mdi-check-circle",
+              "webpage": "https://xunit.net",
+              "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0d/XUnit.net_logo.svg",
+              "tags": [
+                "unit testing",
+                ".NET",
+                "automation"
+              ]
+            },
+            {
+              "id": "553",
+              "name": "k6",
+              "description": "k6 is an open-source load testing tool and SaaS for engineering teams, used to test the performance of APIs, microservices, and websites.",
+              "icon": "mdi-speedometer",
+              "webpage": "https://k6.io",
+              "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/ab/K6_logo.svg",
+              "tags": [
+                "load testing",
+                "performance",
+                "open-source"
+              ]
+            },
+            {
+              "id": "554",
+              "name": "JMeter",
+              "description": "Apache JMeter is an open-source software designed to load test functional behavior and measure performance. It can be used to test performance both on static and dynamic resources.",
+              "icon": "mdi-gauge",
+              "webpage": "https://jmeter.apache.org",
+              "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e5/JMeter.png",
+              "tags": [
+                "load testing",
+                "performance",
+                "open-source"
+              ]
+            }
+            
     
     ]
   }
