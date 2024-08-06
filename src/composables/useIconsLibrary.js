@@ -83,11 +83,16 @@ export function useIconsLibrary() {
 
 
 
-  const tipTypeIconMap = {
-    verblijf: 'mdi-bed',
-    restaurant: 'mdi-silverware-fork-knife',
-    activiteit: 'mdi-walk'
+  const ambitionIconMap = {
+    '-1': 'mdi-arrow-bottom-right',
+    '0': 'mdi-eye-closed',
+    '1': 'mdi-arrow-left-right',
+    '2': 'mdi-rocket-launch',
+    '3': 'mdi-telescope'
+
   }
 
-  return { tipTypeIconMap, companyLogos };
+
+
+  return { companyLogos, ambitionIconMap };
 }

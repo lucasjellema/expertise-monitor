@@ -12,33 +12,33 @@
                                     <v-btn color="primary" @click="saveChanges" class="mb-4">Save Changes</v-btn>
                                     <v-text-field v-model="claim.count" label="Count"></v-text-field>
                                     <v-text-field v-model="claim.notes" label="Notes"></v-text-field>
-
                                     <v-radio-group v-model="claim.ambition" row mandatory inline label="Ambition"
                                         hint="Outlook of company regarding this expertise">
+   
                                         <v-radio value="-1">
                                             <template v-slot:label>
-                                                <v-icon>mdi-arrow-bottom-right</v-icon>Deprecate
+                                                <v-icon>{{ambitionIconMap[-1]}}</v-icon>Deprecate
                                             </template>
                                         </v-radio>
                                         <v-radio value="0">
                                             <template v-slot:label>
-                                                <v-icon>mdi-eye-closed</v-icon>No Focus
+                                                <v-icon>{{ambitionIconMap[0]}}</v-icon>No Focus
                                             </template>
                                         </v-radio>
                                         <v-radio value="1">
                                             <template v-slot:label>
-                                                <v-icon>mdi-arrow-left-right</v-icon>Maintain
+                                                <v-icon>{{ambitionIconMap[1]}}</v-icon>Maintain
                                             </template>
                                         </v-radio>
                                         <v-radio value="2">
                                             <template v-slot:label>
-                                                <v-icon>mdi-rocket-launch</v-icon>Grow
+                                                <v-icon>{{ambitionIconMap[2]}}</v-icon>Grow
                                             </template>
 
                                         </v-radio>
                                         <v-radio value="3">
                                             <template v-slot:label>
-                                                <v-icon>mdi-telescope</v-icon>Explore
+                                                <v-icon>{{ambitionIconMap[3]}}</v-icon>Explore
                                             </template>
 
                                         </v-radio>
@@ -82,7 +82,7 @@ const emits = defineEmits(['singleExpertiseClaimChanged'])
 const claim = ref({ ...props.expertiseClaim })
 
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
-const { companyLogos } = useIconsLibrary();
+const { companyLogos, ambitionIconMap } = useIconsLibrary();
 
 
 
