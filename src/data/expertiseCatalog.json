@@ -66,19 +66,6 @@
         ]
       },
       {
-        "id": "499",
-        "name": "Azure DevOps",
-        "description": "Azure DevOps provides developer services to support teams to plan work, collaborate on code development, and build and deploy applications.",
-        "icon": "mdi-dev-to",
-        "webpage": "https://azure.microsoft.com/services/devops",
-        "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Microsoft_Azure_DevOps_Logo.svg",
-        "tags": [
-          "DevOps",
-          "CI/CD",
-          "Azure"
-        ]
-      },
-      {
         "id": "500",
         "name": "MariaDB",
         "description": "MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system (RDBMS), intended to remain free under the GNU GPL.",
@@ -480,19 +467,7 @@
           "cloud"
         ]
       },
-      {
-        "id": "380",
-        "name": "Apache Airflow",
-        "description": "Apache Airflow is an open-source platform to programmatically author, schedule, and monitor workflows.",
-        "icon": "mdi-airflow",
-        "webpage": "https://airflow.apache.org",
-        "logoURL": "https://airflow.apache.org/docs/apache-airflow/stable/_images/pin_large.png",
-        "tags": [
-          "workflow",
-          "scheduling",
-          "open-source"
-        ]
-      },
+
       {
         "id": "381",
         "name": "Azure IoT Hub",
@@ -532,19 +507,7 @@
           "Azure"
         ]
       },
-      {
-        "id": "384",
-        "name": "Azure Service Bus",
-        "description": "Azure Service Bus is a fully managed enterprise message broker with message queues and publish-subscribe topics.",
-        "icon": "mdi-microsoft-azure",
-        "webpage": "https://azure.microsoft.com/services/service-bus",
-        "logoURL": "https://azurecomcdn.azureedge.net/cvt-4209c7378204a6b0055ba32c86d1e2c0cd4933bc2ffbff59777016710928a70a/images/page/services/service-bus/hero-service-bus.svg",
-        "tags": [
-          "messaging",
-          "integration",
-          "Azure"
-        ]
-      },
+
       {
         "id": "385",
         "name": "RabbitMQ",
@@ -1000,19 +963,7 @@
           "Google Cloud Platform"
         ]
       },
-      {
-        "id": "427",
-        "name": "Google BigQuery",
-        "description": "Google BigQuery is a serverless, highly scalable, and cost-effective multi-cloud data warehouse designed for business agility.",
-        "icon": "mdi-google-cloud",
-        "webpage": "https://cloud.google.com/bigquery",
-        "logoURL": "https://cloud.google.com/images/products/logos/bigquery.svg",
-        "tags": [
-          "data warehouse",
-          "cloud",
-          "Google Cloud Platform"
-        ]
-      },
+
       {
         "id": "428",
         "name": "Google Cloud Data Fusion",
@@ -1663,19 +1614,7 @@
       "frontend"
     ]
   },
-  {
-    "id": "469",
-    "name": "JavaScript",
-    "description": "JavaScript is a high-level, often just-in-time compiled, and multi-paradigm programming language that conforms to the ECMAScript specification.",
-    "icon": "mdi-language-javascript",
-    "webpage": "https://developer.mozilla.org/docs/Web/JavaScript",
-    "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-    "tags": [
-      "web development",
-      "programming language",
-      "frontend"
-    ]
-  },
+
   {
     "id": "470",
     "name": "CSS",
@@ -1845,19 +1784,7 @@
       "React"
     ]
   },
-  {
-    "id": "483",
-    "name": "Next.js",
-    "description": "Next.js is a React framework that enables server-side rendering and generating static websites for React-based web applications.",
-    "icon": "mdi-react",
-    "webpage": "https://nextjs.org",
-    "logoURL": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
-    "tags": [
-      "web development",
-      "server-side rendering",
-      "React"
-    ]
-  },
+
   {
     "id": "484",
     "name": "Nuxt.js",
@@ -3034,16 +2961,15 @@
     {
         "id": "116",
         "name": "JavaScript",
-        "description": "JavaScript is a versatile programming language commonly used in web development for creating interactive effects within web browsers.",
+        "description": "JavaScript is a high-level, often just-in-time compiled, and multi-paradigm programming language that conforms to the ECMAScript specification.",
         "icon": "mdi-language-javascript",
-        "webpage": "https://en.wikipedia.org/wiki/JavaScript",
+        "webpage": "https://developer.mozilla.org/docs/Web/JavaScript",
         "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
         "tags": [
-            "programming language",
-            "web development",
-            "dynamic"
-        ]
-    },
+          "web development",
+          "programming language",
+          "frontend"
+        ]    },
     {
         "id": "117",
         "name": "Kubernetes",
@@ -3055,45 +2981,6 @@
             "container orchestration",
             "open-source",
             "cloud-native"
-        ]
-    },
-    {
-        "id": "118",
-        "name": "OutSystems",
-        "description": "OutSystems is a modern application platform enabling organizations to build applications fast, right, and for the future.",
-        "icon": "mdi-application",
-        "webpage": "https://en.wikipedia.org/wiki/OutSystems",
-        "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/70/OutSystems_2018_logo.png",
-        "tags": [
-            "low-code",
-            "application development",
-            "enterprise"
-        ]
-    },
-    {
-        "id": "119",
-        "name": "Mendix",
-        "description": "Mendix is a low-code development platform that helps you build and continuously improve mobile and web applications at scale.",
-        "icon": "mdi-application",
-        "webpage": "https://en.wikipedia.org/wiki/Mendix",
-        "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/68/Mendix_logo.png",
-        "tags": [
-            "low-code",
-            "application development",
-            "enterprise"
-        ]
-    },
-    {
-        "id": "120",
-        "name": "Power Platform",
-        "description": "Microsoft Power Platform is a line of business intelligence, app development, and app connectivity software applications.",
-        "icon": "mdi-microsoft",
-        "webpage": "https://en.wikipedia.org/wiki/Microsoft_Power_Platform",
-        "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Power_Platform_logo.png",
-        "tags": [
-            "business intelligence",
-            "app development",
-            "microsoft"
         ]
     },
     {
