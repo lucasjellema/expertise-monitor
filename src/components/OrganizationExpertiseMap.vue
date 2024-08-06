@@ -23,16 +23,15 @@
                         <v-checkbox v-model="showZeroCountTags" label="Show tags without any expertise in company" dense
                             hide-details class="mt-0" />
                         <div id="app">
-                            <ExpertiseUnit :unit="expertiseStructure" v-if="selectedSearchSuggestions.length == 0 "
+                            <ExpertiseUnit :unit="expertiseStructure" v-if="selectedSearchSuggestions.length == 0"
                                 @showExpertiseMapRequested="handleShowExpertiseMapRequested"
                                 @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
 
-                                <ExpertiseUnit v-if="selectedSearchSuggestions.length > 0 "
+                            <ExpertiseUnit v-if="selectedSearchSuggestions.length > 0"
                                 :unit="suggestion.type == 'expertise' ? initializeExpertiseStructureForExpertise(suggestion.expertise) : initializeExpertiseStructureForTag(suggestion.tag)"
                                 v-for="suggestion in selectedSearchSuggestions" :key="changeIndicator"
-                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" 
-                                @showExpertiseMapRequested="handleShowExpertiseMapRequested"
-                                />
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
+                                @showExpertiseMapRequested="handleShowExpertiseMapRequested" />
                         </div>
                     </v-col>
                 </v-row>
@@ -144,13 +143,13 @@ const handleSearchChange = (e) => {
 
         searchSuggestionSelect.value.menu = true
     }
-    
+
 }
 
 const initializeExpertiseStructureForExpertise = (expertise) => {
     const expertiseStructure = {
         name: expertise.name, count: 0,
-        children: [], expertise: expertise, type: 'expertiseClaim', logo: expertise.logoURL,  readOnly: appStore.getReadOnly()
+        children: [], expertise: expertise, type: 'expertiseClaim', logo: expertise.logoURL, readOnly: appStore.getReadOnly()
     }
     const e = expertiseClaimMap[expertise.id]
     if (e) {
@@ -163,23 +162,25 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
     return expertiseStructure
 }
 
-const initializeExpertiseStructureForTag = (tag) =>{
+const initializeExpertiseStructureForTag = (tag) => {
     const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag', readOnly: appStore.getReadOnly() }
-        if (tagClaimMap[tag]) {
-            newExpertiseNode.count = tagClaimMap[tag].total
-            if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
-                for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: []
-                        , logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertiseClaim', expertise: expertise.expertise
-                        , claim: expertise.claim, readOnly: appStore.getReadOnly(), ambition:expertise.claim.ambition })
-                }
-                newExpertiseNode.children.sort((a, b) => {
-                    return b.count - a.count
+    if (tagClaimMap[tag]) {
+        newExpertiseNode.count = tagClaimMap[tag].total
+        if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
+            for (const expertise of tagClaimMap[tag].expertise) {
+                newExpertiseNode.children.push({
+                    name: expertise.expertise.name, children: []
+                    , logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertiseClaim', expertise: expertise.expertise
+                    , claim: expertise.claim, readOnly: appStore.getReadOnly(), ambition: expertise.claim.ambition
                 })
             }
+            newExpertiseNode.children.sort((a, b) => {
+                return b.count - a.count
+            })
         }
+    }
 
-        return newExpertiseNode
+    return newExpertiseNode
 }
 
 
@@ -188,12 +189,12 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
     // create childnodes for all tags - and set the count from the tagClaimMap
     let tagsToProcess
     if (selectedSearchSuggestions.value.length > 0) {
-        tagsToProcess =  selectedSearchSuggestions.value.filter(suggestion => suggestion.type === 'tag').map(suggestion => suggestion.tag)
+        tagsToProcess = selectedSearchSuggestions.value.filter(suggestion => suggestion.type === 'tag').map(suggestion => suggestion.tag)
 
     } else {
         tagsToProcess = allTags.value
     }
-    
+
 
     for (const tag of tagsToProcess) {
         const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag', readOnly: appStore.getReadOnly() }
@@ -201,7 +202,7 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim: expertise.claim, readOnly: appStore.getReadOnly() })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim: expertise.claim, readOnly: appStore.getReadOnly(),  ambition: expertise.claim.ambition })
                 }
                 newExpertiseNode.children.sort((a, b) => {
                     return b.count - a.count
@@ -229,10 +230,10 @@ const buildExpertiseClaimMap = (organizationUnit) => {
     if (organizationUnit?.expertiseClaims && organizationUnit.expertiseClaims.length > 0) {
         for (const claim of organizationUnit?.expertiseClaims) {
             if (!expertiseClaimMap[claim.expertiseId]) {
-                expertiseClaimMap[claim.expertiseId] = {count: ensureNumeric(claim.count), claim:claim}
+                expertiseClaimMap[claim.expertiseId] = { count: ensureNumeric(claim.count), claim: claim }
             } else {
                 console.error('Duplicate Expertise Claim for expertise ' + claim.expertiseId)
-                expertiseClaimMap[claim.expertiseId].count +=  ensureNumeric(claim.count)
+                expertiseClaimMap[claim.expertiseId].count += ensureNumeric(claim.count)
             }
             if (!claim.expertise) {
                 const E = appStore.getExpertise()
@@ -242,10 +243,10 @@ const buildExpertiseClaimMap = (organizationUnit) => {
             if (claim.expertise.tags && claim.expertise.tags.length > 0) {
                 for (const tag of claim.expertise.tags) {
                     if (!tagClaimMap[tag]) {
-                        tagClaimMap[tag] = { total: ensureNumeric(claim.count), expertise: [{ expertise: claim.expertise, count: ensureNumeric(claim.count), claim: claim , ambition: claim.ambition}] }
+                        tagClaimMap[tag] = { total: ensureNumeric(claim.count), expertise: [{ expertise: claim.expertise, count: ensureNumeric(claim.count), claim: claim, ambition: claim.ambition }] }
                     } else {
                         tagClaimMap[tag].total += claim.count
-                        tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: ensureNumeric(claim.count), claim: claim , ambition: claim.ambition})
+                        tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: ensureNumeric(claim.count), claim: claim, ambition: claim.ambition })
                     }
                 }
             }
@@ -298,7 +299,7 @@ const handleEditOrganizationExpertiseRequested = (expertise) => {
 
         tagToEditExpertiseFor.value = expertise.name
         editOrganizationExpertiseDialog.value = true
-    } else if (expertise.type == 'expertise' ||expertise.type == 'expertiseClaim') {
+    } else if (expertise.type == 'expertise' || expertise.type == 'expertiseClaim') {
         expertiseClaimToEdit.value = expertise.claim
         expertiseClaimToEdit.value.organization = organizationUnit.value
         openExpertiseClaimDialog.value = true
@@ -345,7 +346,9 @@ const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
         existingClaim.count = ensureNumeric(expertiseClaim.count)
         existingClaim.notes = expertiseClaim.notes
         existingClaim.author = expertiseClaim.author
-        //existingClaim.asOf = expertiseClaim.timestamp 
+        if (expertiseClaim.asOf) {
+            existingClaim.asOf = expertiseClaim.asOf
+        }
         existingClaim.ambition = expertiseClaim.ambition
 
         emits('expertiseChanged', organizationUnit.value)

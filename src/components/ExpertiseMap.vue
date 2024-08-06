@@ -148,7 +148,10 @@ const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
         existingClaim.count = ensureNumeric(expertiseClaim.count)
         existingClaim.notes = expertiseClaim.notes
         existingClaim.author = expertiseClaim.author
-        //existingClaim.asOf = expertiseClaim.timestamp 
+        if (expertiseClaim.asOf) {
+            existingClaim.asOf = expertiseClaim.asOf
+        }
+
         existingClaim.ambition = expertiseClaim.ambition
 
         buildExpertiseClaimMap()

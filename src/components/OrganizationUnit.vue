@@ -1,7 +1,10 @@
 <template>
   <div class="org-unit">
     <div class="header" @click="toggle">
-      <span>{{ unit.name }} <v-icon @click="emit('organizationExpertiseRequested', unit)" v-if="unit.id">mdi-school</v-icon>
+      <span>{{ unit.name }}
+        <v-icon v-if="unit?.type=='expertiseClaim'" >{{ambitionIconMap[unit.ambition]}}</v-icon>
+          
+        <v-icon @click="emit('organizationExpertiseRequested', unit)" v-if="unit.id">mdi-school</v-icon>
         <div class="logoContainer"><v-img :src="unit.logo" ></v-img></div>
       </span>
       <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
@@ -19,6 +22,9 @@
 const props = defineProps({
   unit: Object,
 })
+
+import { useIconsLibrary } from '@/composables/useIconsLibrary';
+const { companyLogos, ambitionIconMap } = useIconsLibrary();
 
 const emit = defineEmits(['organizationExpertiseRequested'])
 const expanded = ref(false)
