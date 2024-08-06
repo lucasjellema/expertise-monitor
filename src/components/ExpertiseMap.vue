@@ -5,7 +5,6 @@
 
                 <v-row>
                     <v-col cols="3">                        
-                        {{ appStore.getReadOnly() }}
                         <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details
                             @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
 
@@ -337,7 +336,7 @@ const initializeExpertiseStructureForTag = (tag) => {
                 for (const claim of e.expertise) {
                     const orgNode = {
                         name: claim.organization.name , children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
-                        , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly()
+                        , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly(), ambition:claim.ambition
 
                     }
                     node.children.push(orgNode)
@@ -371,7 +370,7 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
         for (const claim of e.expertise) {
             const orgNode = {
                 name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
-                , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly()
+                , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly(), ambition:claim.ambition
             }
             expertiseStructure.children.push(orgNode)
         }
