@@ -4,10 +4,35 @@
             <v-main>
                 <v-row>
                     <v-col cols="10" offset="1">
-                        <v-checkbox v-model="showZeroCountTags" label="Show tags without any expertise in company" dense hide-details class="mt-0" />
+                        <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details
+                            @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
+
+                        <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
+                            return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
+                            :item-props="selectItemProps" @click:chip="removeItem">
+                            <template v-slot:selection="{ item, index }">
+                                <v-chip @click.stop="removeItem(item, index)">
+                                    {{ item.title }}
+                                </v-chip>
+                            </template>
+                            <template v-slot:prepend-item>
+                                <v-list-item title="Select All" @click="toggle"></v-list-item>
+                                <v-divider class="mt-2"></v-divider>
+                            </template>
+                        </v-select>
+                        <v-checkbox v-model="showZeroCountTags" label="Show tags without any expertise in company" dense
+                            hide-details class="mt-0" />
                         <div id="app">
-                            <ExpertiseUnit :unit="expertiseStructure" @showExpertiseMapRequested="handleShowExpertiseMapRequested"
+                            <ExpertiseUnit :unit="expertiseStructure" v-if="selectedSearchSuggestions.length == 0 "
+                                @showExpertiseMapRequested="handleShowExpertiseMapRequested"
                                 @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
+
+                                <ExpertiseUnit v-if="selectedSearchSuggestions.length > 0 "
+                                :unit="suggestion.type == 'expertise' ? initializeExpertiseStructureForExpertise(suggestion.expertise) : initializeExpertiseStructureForTag(suggestion.tag)"
+                                v-for="suggestion in selectedSearchSuggestions" :key="changeIndicator"
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" 
+                                @showExpertiseMapRequested="handleShowExpertiseMapRequested"
+                                />
                         </div>
                     </v-col>
                 </v-row>
@@ -53,7 +78,7 @@ const expertiseClaimToEdit = ref(null)
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 import { readonly } from "vue";
 const { companyLogos } = useIconsLibrary();
-
+const changeIndicator = ref(0)
 
 const props = defineProps({
     organizationUnit: {
@@ -70,31 +95,127 @@ watch(showZeroCountTags, async (newValue, oldValue) => {
     await initializeExpertiseStructure()
 })
 
-const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
-    buildExpertiseClaimMap(organizationUnit)
-    // create childnodes for all tags - and set the count from the tagClaimMap
-    const allTags = appStore.expertiseTags
-    for (const tag of allTags) {
-        const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag' , readOnly: appStore.getReadOnly() }
+const search = ref('')
+const searchSuggestions = ref([])
+const selectedSearchSuggestions = ref([])
+const searchSuggestionSelect = ref(null)
+const allTags = ref([])
+
+const removeItem = (item, index) => {
+    selectedSearchSuggestions.value.splice(index, 1)
+}
+const toggle = () => {
+    if (selectedSearchSuggestions.value.length > 0) {
+        selectedSearchSuggestions.value = []
+    } else {
+        selectedSearchSuggestions.value = searchSuggestions.value
+    }
+}
+const selectItemProps = (item) => {
+    return {
+        title: item.name,
+        subtitle: item.type,
+    }
+}
+const handleSearchChange = (e) => {
+    console.log('new search on ', search.value, e)
+    console.log(selectedSearchSuggestions.value, searchSuggestions.value)
+    // find all expertises (lower case) who contain the search string
+    // add them to the list
+    searchSuggestions.value = []
+    searchSuggestionSelect.value.menu = false
+    // TODO remove all search suggestions that are not selected
+    if (search.value.length > 1) {
+
+        const filteredExpertise = []
+        appStore.getExpertise().value.expertise.filter(expertise => expertise.name.toLowerCase().includes(search.value.toLowerCase())).forEach(expertise => {
+            filteredExpertise.push(expertise)
+        })
+        console.log(filteredExpertise)
+        if (filteredExpertise.length > 0) {
+            searchSuggestions.value = filteredExpertise.map(expertise => { return { name: expertise.name, expertise: expertise, type: 'expertise' } })
+        }
+
+        const filteredTags = allTags.value.filter(tag => tag.toLowerCase().includes(search.value.toLowerCase()))
+
+        if (filteredTags.length > 0) {
+            searchSuggestions.value = searchSuggestions.value.concat(filteredTags.map(tag => { return { name: tag, type: 'tag', tag: tag } }))
+        }
+
+        searchSuggestionSelect.value.menu = true
+    }
+    
+}
+
+const initializeExpertiseStructureForExpertise = (expertise) => {
+    const expertiseStructure = {
+        name: expertise.name, count: 0,
+        children: [], expertise: expertise, type: 'expertiseClaim', logo: expertise.logoURL,  readOnly: appStore.getReadOnly()
+    }
+    const e = expertiseClaimMap[expertise.id]
+    if (e) {
+        expertiseStructure.count = e.count
+        expertiseStructure.claim = e.claim
+        expertiseStructure.ambition = e.claim.ambition
+
+    }
+
+    return expertiseStructure
+}
+
+const initializeExpertiseStructureForTag = (tag) =>{
+    const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag', readOnly: appStore.getReadOnly() }
         if (tagClaimMap[tag]) {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim:expertise.claim,  readOnly: appStore.getReadOnly() })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: []
+                        , logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertiseClaim', expertise: expertise.expertise
+                        , claim: expertise.claim, readOnly: appStore.getReadOnly(), ambition:expertise.claim.ambition })
                 }
                 newExpertiseNode.children.sort((a, b) => {
                     return b.count - a.count
-                })                
+                })
             }
         }
-        // TODO check if filter allows inclusion of this tag - depending on the tag, the total and the ( number of) children
+
+        return newExpertiseNode
+}
+
+
+const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
+    buildExpertiseClaimMap(organizationUnit)
+    // create childnodes for all tags - and set the count from the tagClaimMap
+    let tagsToProcess
+    if (selectedSearchSuggestions.value.length > 0) {
+        tagsToProcess =  selectedSearchSuggestions.value.filter(suggestion => suggestion.type === 'tag').map(suggestion => suggestion.tag)
+
+    } else {
+        tagsToProcess = allTags.value
+    }
+    
+
+    for (const tag of tagsToProcess) {
+        const newExpertiseNode = { name: tag, children: [], logo: null, count: 0, type: 'tag', readOnly: appStore.getReadOnly() }
+        if (tagClaimMap[tag]) {
+            newExpertiseNode.count = tagClaimMap[tag].total
+            if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
+                for (const expertise of tagClaimMap[tag].expertise) {
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim: expertise.claim, readOnly: appStore.getReadOnly() })
+                }
+                newExpertiseNode.children.sort((a, b) => {
+                    return b.count - a.count
+                })
+            }
+        }
+        // check if filter allows inclusion of this tag - depending on the tag, the total and the ( number of) children
         if (newExpertiseNode.count > 0 || showZeroCountTags.value) {
-            expertiseNode.children.push(newExpertiseNode)            
+            expertiseNode.children.push(newExpertiseNode)
         }
     }
     // sort 
     expertiseNode.children.sort((a, b) => {
-        return b.count - a.count    
+        return b.count - a.count
     })
 }
 
@@ -108,29 +229,28 @@ const buildExpertiseClaimMap = (organizationUnit) => {
     if (organizationUnit?.expertiseClaims && organizationUnit.expertiseClaims.length > 0) {
         for (const claim of organizationUnit?.expertiseClaims) {
             if (!expertiseClaimMap[claim.expertiseId]) {
-                expertiseClaimMap[claim.expertiseId] = claim.count
+                expertiseClaimMap[claim.expertiseId] = {count: ensureNumeric(claim.count), claim:claim}
             } else {
-                expertiseClaimMap[claim.expertiseId] = expertiseClaimMap[claim.expertiseId] + claim.count
+                console.error('Duplicate Expertise Claim for expertise ' + claim.expertiseId)
+                expertiseClaimMap[claim.expertiseId].count +=  ensureNumeric(claim.count)
             }
             if (!claim.expertise) {
                 const E = appStore.getExpertise()
                 const Exp = E.value.expertise
-                claim.expertise=  Exp.find(e => e.id === claim.expertiseId)
+                claim.expertise = Exp.find(e => e.id === claim.expertiseId)
             }
             if (claim.expertise.tags && claim.expertise.tags.length > 0) {
                 for (const tag of claim.expertise.tags) {
                     if (!tagClaimMap[tag]) {
-                        tagClaimMap[tag] = { total: claim.count, expertise: [{ expertise: claim.expertise, count: claim.count, claim:claim }] }
+                        tagClaimMap[tag] = { total: ensureNumeric(claim.count), expertise: [{ expertise: claim.expertise, count: ensureNumeric(claim.count), claim: claim , ambition: claim.ambition}] }
                     } else {
                         tagClaimMap[tag].total += claim.count
-                        tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: claim.count, claim:claim })
+                        tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: ensureNumeric(claim.count), claim: claim , ambition: claim.ambition})
                     }
                 }
             }
         }
     }
-    console.log('expertiseClaimMap', expertiseClaimMap)
-    console.log('tagClaimMap', tagClaimMap)
 }
 
 
@@ -152,6 +272,7 @@ const initializeExpertiseStructure = () => {
 }
 
 onMounted(() => {
+    allTags.value = [...appStore.expertiseTags]
     organizationUnit.value = props.organizationUnit
     initializeExpertiseStructure()
 
@@ -160,10 +281,10 @@ onMounted(() => {
 const handleShowExpertiseMapRequested = (e) => {
     console.log('handleShowExpertiseMapRequested', e)
     if (e.type == 'tag') {
-        router.push({ name: 'expertiseBrowseTag', params: { tag: e.name } });        
+        router.push({ name: 'expertiseBrowseTag', params: { tag: e.name } });
     } else if (e.type == 'expertise') {
         router.push({ name: 'expertiseBrowseSpecific', params: { expertiseId: e.expertise.id } });
-        
+
     }
 }
 
@@ -177,7 +298,7 @@ const handleEditOrganizationExpertiseRequested = (expertise) => {
 
         tagToEditExpertiseFor.value = expertise.name
         editOrganizationExpertiseDialog.value = true
-    } else if (expertise.type == 'expertise') {
+    } else if (expertise.type == 'expertise' ||expertise.type == 'expertiseClaim') {
         expertiseClaimToEdit.value = expertise.claim
         expertiseClaimToEdit.value.organization = organizationUnit.value
         openExpertiseClaimDialog.value = true
@@ -202,7 +323,7 @@ const handleExpertiseChanged = (newAndUpdatedClaims) => {
             }
         } else {
             if (!organizationUnit.value.expertiseClaims) {
-                organizationUnit.value.expertiseClaims=[]
+                organizationUnit.value.expertiseClaims = []
             }
             organizationUnit.value.expertiseClaims.push({ expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise })
         }
@@ -228,8 +349,8 @@ const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
         existingClaim.ambition = expertiseClaim.ambition
 
         emits('expertiseChanged', organizationUnit.value)
-    initializeExpertiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
-   }
+        initializeExpertiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
+    }
 }
 
 function ensureNumeric(value) {
@@ -244,4 +365,14 @@ function ensureNumeric(value) {
 
 
 </script>
-<style scoped></style>
+<style scoped>
+.always-open-select .v-input__control {
+    pointer-events: none;
+    /* Disable pointer events to prevent clicks */
+}
+
+.always-open-select .v-select__selections {
+    display: none;
+    /* Hide the default selection display */
+}
+</style>
