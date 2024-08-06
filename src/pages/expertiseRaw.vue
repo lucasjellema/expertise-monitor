@@ -48,6 +48,7 @@ onMounted(() => {
         if (org.expertiseClaims && org.expertiseClaims.length > 0) {
             for (const claim of org.expertiseClaims) {
                 delete claim.expertise
+                delete claim.organization
             }
         }
     }
