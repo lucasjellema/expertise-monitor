@@ -15,10 +15,16 @@
                 </v-toolbar>
             </template>
 
-            <template v-slot:item.count="{ item }">
+            <!-- <template v-slot:item.count="{ item }">
                 <v-text-field v-model="item.count" label="Count" type="number" dense class="small-text-field"
                     @change="update(item)"></v-text-field>
-            </template>
+            </template> -->
+
+            <template v-slot:item.count="{ item, index }">
+                    <v-text-field v-model="item.count" label="Count" dense class="small-text-field"
+                        @change="update(item)" @keydown.down="focusNextRow(index)" @keydown.up="focusPreviousRow(index)"
+                        :ref="(el) => (fields['field-' + index] = el)" </v-text-field>
+                </template>
             <template v-slot:item.notes="{ item }">
                 <v-text-field v-model="item.notes" label="Notes" @change="update(item)"></v-text-field>
             </template>
@@ -42,6 +48,7 @@ const props = defineProps({
 })
 
 const search = ref('')
+const fields = ref({})
 const
     headers = ref([
         { title: 'Expertise', value: 'name', sortable: true, width: '180px' },
@@ -65,6 +72,41 @@ const update = (item) => {
 }
 
 const eclaims = ref([])
+
+const focusNextRow = (index) => {
+    const nextIndex = index + 1;
+    const nextField = fields.value['field-' + nextIndex];
+    if (nextField) {
+        nextField.focus(); // Focus the next field
+        selectInputValue(nextIndex)
+    }
+}
+        /**
+         * Focuses the previous row in the table and selects its input field.
+         *
+         * @param {number} index - The index of the current row.
+         * @return {void} This function does not return anything.
+         */
+
+const focusPreviousRow = (index) => {
+    const nextIndex = index - 1;
+    const nextField = fields.value['field-' + nextIndex];
+    if (nextField) {
+        nextField.focus(); // Focus the next field
+        selectInputValue(nextIndex)        
+    }
+}
+
+const selectInputValue = (index) => {
+    nextTick(() => {
+        const field = fields.value['field-' + index];        
+        if (field && field.$el.querySelector('input')) {
+            setTimeout(() => {
+                field.$el.querySelector('input').select(); // Select the value in the input field
+            }, 100);
+        }
+    })
+};
 
 
 onMounted(() => {
@@ -94,8 +136,10 @@ onMounted(() => {
 
             eclaims.value.push(newClaim)
         }
+        
+        eclaims.value.sort((a, b) => b.count - a.count)
     }
-    // then update from the expertise claims for the organization unit for these expertises
+    
 
 })
 
