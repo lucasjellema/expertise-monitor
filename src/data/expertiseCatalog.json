@@ -23,7 +23,7 @@
       "tags": [
         "caching",
         "performance",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -35,8 +35,7 @@
       "logoURL": "https://ignite.apache.org/images/ignite_logo.svg",
       "tags": [
         "database",
-        "distributed",
-        "in-memory"
+        "distributed"
       ]
     },
     {
@@ -49,7 +48,7 @@
       "tags": [
         "identity management",
         "access management",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -75,7 +74,7 @@
       "tags": [
         "database",
         "RDBMS",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -127,7 +126,7 @@
       "tags": [
         "database",
         "multi-model",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -191,7 +190,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
       "tags": [
         "cloud development",
-        "IDE",
         "developer tools"
       ]
     },
@@ -204,7 +202,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Gitpod-logo.svg",
       "tags": [
         "cloud development",
-        "IDE",
         "automation"
       ]
     },
@@ -217,7 +214,6 @@
       "logoURL": "https://www.devpod.io/logo.png",
       "tags": [
         "cloud development",
-        "IDE",
         "developer tools"
       ]
     },
@@ -230,7 +226,6 @@
       "logoURL": "https://coder.com/assets/images/logo-light.svg",
       "tags": [
         "cloud development",
-        "IDE",
         "developer tools"
       ]
     },
@@ -256,7 +251,6 @@
       "logoURL": "https://d1.awsstatic.com/logos/aws-cloud.9b091e1d2b4c167ff7dc33d0dce63e7d.png",
       "tags": [
         "cloud development",
-        "IDE",
         "AWS"
       ]
     },
@@ -269,7 +263,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
       "tags": [
         "cloud development",
-        "IDE",
         "Azure"
       ]
     },
@@ -282,7 +275,6 @@
       "logoURL": "https://cloud.google.com/images/products/logos/workstations.svg",
       "tags": [
         "cloud development",
-        "IDE",
         "Google Cloud"
       ]
     },
@@ -295,7 +287,6 @@
       "logoURL": "https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png",
       "tags": [
         "programming language",
-        "3g",
         "object oriented"
       ]
     },
@@ -334,7 +325,7 @@
       "logoURL": "https://camel.apache.org/assets/img/logo-d5a4b527e0.png",
       "tags": [
         "integration",
-        "open-source",
+        "open source",
         "Apache"
       ]
     },
@@ -399,8 +390,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
       "tags": [
         "integration",
-        "SAP",
-        "enterprise"
+        "SAP"
       ]
     },
     {
@@ -438,8 +428,7 @@
       "logoURL": "https://www.intersystems.com/wp-content/themes/intersystems/images/logo.png",
       "tags": [
         "integration",
-        "data management",
-        "enterprise"
+        "data management"
       ]
     },
     {
@@ -491,7 +480,7 @@
       "tags": [
         "stream processing",
         "messaging",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -516,8 +505,7 @@
       "logoURL": "https://www.rabbitmq.com/img/logo-rabbitmq.svg",
       "tags": [
         "messaging",
-        "open-source",
-        "broker"
+        "open source"
       ]
     },
     {
@@ -529,8 +517,7 @@
       "logoURL": "https://activemq.apache.org/assets/img/logo.png",
       "tags": [
         "messaging",
-        "open-source",
-        "broker"
+        "open source"
       ]
     },
     {
@@ -710,7 +697,6 @@
       "webpage": "https://tribe.so",
       "logoURL": "https://tribe.so/static/images/tribe-logo.svg",
       "tags": [
-        "community",
         "engagement",
         "insights"
       ]
@@ -724,8 +710,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Shopify_logo_2018.svg",
       "tags": [
         "e-commerce",
-        "analytics",
-        "online store"
+        "analytics"
       ]
     },
     {
@@ -855,7 +840,7 @@
       "tags": [
         "big data",
         "analytics",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -868,7 +853,7 @@
       "tags": [
         "big data",
         "distributed computing",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -880,7 +865,7 @@
       "logoURL": "https://nifi.apache.org/assets/images/nifi-logo.png",
       "tags": [
         "data integration",
-        "open-source",
+        "open source",
         "data flow"
       ]
     },
@@ -894,7 +879,7 @@
       "tags": [
         "workflow",
         "scheduling",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -907,7 +892,7 @@
       "tags": [
         "data analysis",
         "Python",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -920,7 +905,7 @@
       "tags": [
         "parallel computing",
         "Python",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -1127,7 +1112,7 @@
       "logoURL": "https://superset.apache.org/images/superset-logo-horiz.png",
       "tags": [
         "data visualization",
-        "open-source",
+        "open source",
         "analytics"
       ]
     },
@@ -1296,7 +1281,7 @@
       "logoURL": "https://podman.io/images/podman-logo-source.svg",
       "tags": [
         "containerization",
-        "open-source",
+        "open source",
         "OCI"
       ]
     },
@@ -1309,7 +1294,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg",
       "tags": [
         "containerization",
-        "open-source",
+        "open source",
         "DevOps"
       ]
     },
@@ -1361,7 +1346,7 @@
       "logoURL": "https://tekton.dev/images/tekton-logo-dark.png",
       "tags": [
         "CI/CD",
-        "open-source",
+        "open source",
         "automation"
       ]
     },
@@ -1388,7 +1373,7 @@
       "tags": [
         "automation",
         "configuration management",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -1401,7 +1386,7 @@
       "tags": [
         "scripting language",
         "web development",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -1414,7 +1399,7 @@
       "tags": [
         "content management",
         "web development",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -1439,7 +1424,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/42/Microsoft_Dynamics_365_logo.svg",
       "tags": [
         "programming language",
-        "Microsoft Dynamics NAV",
         "business logic"
       ]
     },
@@ -1465,8 +1449,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
       "tags": [
         "programming language",
-        "Android development",
-        "JVM"
+        "Android development"
       ]
     },
     {
@@ -1492,7 +1475,7 @@
       "tags": [
         "programming language",
         "performance",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -1504,7 +1487,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Delphi_love.png",
       "tags": [
         "programming language",
-        "IDE",
         "rapid application development"
       ]
     },
@@ -1841,7 +1823,7 @@
       "webpage": "https://www.perplexity.ai",
       "logoURL": "https://www.perplexity.ai/logo.png",
       "tags": [
-        "AI",
+        "ai",
         "machine learning",
         "analytics"
       ]
@@ -1855,7 +1837,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Supabase_logo.png",
       "tags": [
         "database",
-        "open-source",
+        "open source",
         "backend"
       ]
     },
@@ -1893,7 +1875,7 @@
       "webpage": "https://copilot.github.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/66/GitHub_logo.svg",
       "tags": [
-        "AI",
+        "ai",
         "code completion",
         "developer tools"
       ]
@@ -1906,7 +1888,7 @@
       "webpage": "https://codeium.com",
       "logoURL": "https://codeium.com/logo.png",
       "tags": [
-        "AI",
+        "ai",
         "code generation",
         "developer tools"
       ]
@@ -1963,8 +1945,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/68/Mendix_logo.png",
       "tags": [
         "low code",
-        "application development",
-        "enterprise"
+        "application development"
       ]
     },
     {
@@ -1976,8 +1957,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/70/OutSystems_2018_logo.png",
       "tags": [
         "low code",
-        "application development",
-        "enterprise"
+        "application development"
       ]
     },
     {
@@ -2015,7 +1995,6 @@
       "logoURL": "https://www.thinkwisesoftware.com/hubfs/Thinkwise%20Logo.png",
       "tags": [
         "low code",
-        "enterprise",
         "application development"
       ]
     },
@@ -2028,7 +2007,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Oracle_logo.svg/1280px-Oracle_logo.svg.png",
       "tags": [
         "low code",
-        "enterprise",
         "application development"
       ]
     },
@@ -2041,8 +2019,7 @@
       "logoURL": "https://www.bettyblocks.com/hubfs/betty-blocks-logo.svg",
       "tags": [
         "no code",
-        "application development",
-        "enterprise"
+        "application development"
       ]
     },
     {
@@ -2118,7 +2095,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/SQL_Server_Logo.svg/1200px-SQL_Server_Logo.svg.png",
       "tags": [
         "database",
-        "sql",
         "rdbms",
         "relational"
       ]
@@ -2132,7 +2108,6 @@
       "logoURL": "https://duckdb.org/images/logo-dl/DuckDB_Logo.png",
       "tags": [
         "database",
-        "sql",
         "olap",
         "data analysis"
       ]
@@ -2146,7 +2121,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
       "tags": [
         "database",
-        "sql",
         "rdbms",
         "open source"
       ]
@@ -2160,7 +2134,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
       "tags": [
         "database",
-        "sql",
         "rdbms",
         "open source"
       ]
@@ -2175,8 +2148,7 @@
       "tags": [
         "database",
         "nosql",
-        "document",
-        "json"
+        "document"
       ]
     },
     {
@@ -2188,7 +2160,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Oracle_logo.svg/1200px-Oracle_logo.svg.png",
       "tags": [
         "database",
-        "sql",
         "rdbms",
         "multi model"
       ]
@@ -2216,7 +2187,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/IBM_DB2_logo.svg/1200px-IBM_DB2_logo.svg.png",
       "tags": [
         "database",
-        "sql",
         "rdbms",
         "ibm"
       ]
@@ -2230,7 +2200,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/SAP_Sybase_logo.svg/1200px-SAP_Sybase_logo.svg.png",
       "tags": [
         "database",
-        "sql",
         "rdbms",
         "sap"
       ]
@@ -2244,7 +2213,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png",
       "tags": [
         "database",
-        "sql",
         "data warehouse",
         "cloud"
       ]
@@ -2258,8 +2226,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/SAP2011.svg/1200px-SAP2011.svg.png",
       "tags": [
         "database",
-        "sql",
-        "in-memory",
         "sap"
       ]
     },
@@ -2272,7 +2238,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/220px-Snowflake_Logo.svg.png",
       "tags": [
         "database",
-        "sql",
         "cloud",
         "data warehouse"
       ]
@@ -2338,8 +2303,7 @@
       "logoURL": "https://cloud.google.com/images/products/logos/memorystore.svg",
       "tags": [
         "database",
-        "cloud",
-        "in-memory"
+        "cloud"
       ]
     },
     {
@@ -2403,8 +2367,7 @@
       "logoURL": "https://d1.awsstatic.com/ElastiCache/elasticache-icon.e6c37c5ab13b5e2b4113abf6f0a5c439ba346e4c.png",
       "tags": [
         "database",
-        "cloud",
-        "in-memory"
+        "cloud"
       ]
     },
     {
@@ -2533,8 +2496,7 @@
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/cache/hero-cache.svg",
       "tags": [
         "database",
-        "cloud",
-        "in-memory"
+        "cloud"
       ]
     },
     {
@@ -2585,8 +2547,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
       "tags": [
         "database",
-        "RDBMS",
-        "high-performance"
+        "RDBMS"
       ]
     },
     {
@@ -2598,8 +2559,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
       "tags": [
         "database",
-        "RDBMS",
-        "enterprise"
+        "RDBMS"
       ]
     },
     {
@@ -2612,7 +2572,7 @@
       "tags": [
         "monitoring",
         "observability",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -2624,8 +2584,7 @@
       "logoURL": "https://prometheus.io/assets/prometheus_logo_grey.svg",
       "tags": [
         "monitoring",
-        "alerting",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -2766,7 +2725,6 @@
       "webpage": "https://azure.microsoft.com/services/monitor",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/monitor/hero-monitor.svg",
       "tags": [
-        "APM",
         "monitoring",
         "Azure"
       ]
@@ -2818,9 +2776,8 @@
       "webpage": "https://arize.com",
       "logoURL": "https://arize.com/wp-content/uploads/2021/06/arize-logo.svg",
       "tags": [
-        "ML observability",
         "monitoring",
-        "AI"
+        "ai"
       ]
     },
     {
@@ -2832,8 +2789,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Splunk_logo_with_swoosh.png/220px-Splunk_logo_with_swoosh.png",
       "tags": [
         "monitoring",
-        "analytics",
-        "machine data"
+        "analytics"
       ]
     },
     {
@@ -2858,7 +2814,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Zabbix_logo.svg/320px-Zabbix_logo.svg.png",
       "tags": [
         "monitoring",
-        "open-source",
+        "open source",
         "IT infrastructure"
       ]
     },
@@ -2910,8 +2866,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Nagios.svg/1200px-Nagios.svg.png",
       "tags": [
         "monitoring",
-        "open-source",
-        "alerting"
+        "open source"
       ]
     },
     {
@@ -2950,7 +2905,7 @@
       "tags": [
         "monitoring",
         "IT infrastructure",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -2971,11 +2926,11 @@
       "name": "Kubernetes",
       "description": "Kubernetes is an open-source platform for automating the deployment, scaling, and management of containerized applications.",
       "icon": "mdi-kubernetes",
-       "webpage": "https://kubernetes.io/",
+      "webpage": "https://kubernetes.io/",
       "logoURL": "https://juststickers.in/wp-content/uploads/2018/11/kubernetes-wordmark.png",
       "tags": [
         "container orchestration",
-        "open-source",
+        "open source",
         "cloud-native"
       ]
     },
@@ -2987,9 +2942,7 @@
       "webpage": "https://en.wikipedia.org/wiki/Dynatrace",
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Dynatrace_logo.svg/220px-Dynatrace_logo.svg.png",
       "tags": [
-        "application performance management",
-        "cloud monitoring",
-        "digital transformation"
+        "application performance management"
       ]
     },
     {
@@ -3078,9 +3031,7 @@
       "webpage": "https://en.wikipedia.org/wiki/Optimizely",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Optimizely_logo.png",
       "tags": [
-        "A/B testing",
-        "personalization",
-        "digital experience"
+        "personalization"
       ]
     },
     {
@@ -3092,8 +3043,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Magento_Logo.svg",
       "tags": [
         "e-commerce",
-        "open-source",
-        "online store"
+        "open source"
       ]
     },
     {
@@ -3104,9 +3054,7 @@
       "webpage": "https://en.wikipedia.org/wiki/Commercetools",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Commercetools_logo.png",
       "tags": [
-        "headless commerce",
-        "API",
-        "cloud-based"
+        "API"
       ]
     },
     {
@@ -3116,11 +3064,7 @@
       "icon": "mdi-store",
       "webpage": "https://en.wikipedia.org/wiki/LS_Retail",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a9/LS_Retail_Logo.png",
-      "tags": [
-        "retail solutions",
-        "POS systems",
-        "end-to-end"
-      ]
+      "tags": []
     },
     {
       "id": "132",
@@ -3144,7 +3088,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/10/Umbraco_logo.svg",
       "tags": [
         "CMS",
-        "open-source",
+        "open source",
         "web development"
       ]
     },
@@ -3156,7 +3100,6 @@
       "webpage": "https://en.wikipedia.org/wiki/Sitecore",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Sitecore_logo.svg",
       "tags": [
-        "digital experience",
         "CMS",
         "marketing automation"
       ]
@@ -3182,7 +3125,6 @@
       "webpage": "https://en.wikipedia.org/wiki/Bloomreach",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bloomreach_logo.png",
       "tags": [
-        "digital experience",
         "content management",
         "personalization"
       ]
@@ -3250,8 +3192,7 @@
     {
       "name": "Azure SQL",
       "tags": [
-        "database",
-        "sql"
+        "database"
       ],
       "description": "The DBaaS offering based on SQL Server (technology)",
       "id": 1722574617657
@@ -3373,7 +3314,7 @@
       "tags": [
         "test automation",
         "web development",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3527,7 +3468,6 @@
       "webpage": "https://code.visualstudio.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Visual_Studio_Code_1.35_icon.svg",
       "tags": [
-        "IDE",
         "editor",
         "developer tools"
       ]
@@ -3540,7 +3480,6 @@
       "webpage": "https://visualstudio.microsoft.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_2013_Logo.svg",
       "tags": [
-        "IDE",
         "developer tools",
         "Microsoft"
       ]
@@ -3567,8 +3506,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Julia_Programming_Language_Logo.svg",
       "tags": [
         "programming language",
-        "technical computing",
-        "high-performance"
+        "technical computing"
       ]
     },
     {
@@ -3633,7 +3571,7 @@
       "tags": [
         "microservices",
         "runtime",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3646,7 +3584,7 @@
       "tags": [
         "logging",
         "Java",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3659,7 +3597,7 @@
       "tags": [
         "error tracking",
         "monitoring",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3670,9 +3608,8 @@
       "webpage": "https://signoz.io",
       "logoURL": "https://signoz.io/logo.svg",
       "tags": [
-        "APM",
         "monitoring",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3685,7 +3622,7 @@
       "tags": [
         "tracing",
         "monitoring",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3698,7 +3635,7 @@
       "tags": [
         "tracing",
         "monitoring",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3750,7 +3687,7 @@
       "tags": [
         "load testing",
         "performance",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3763,7 +3700,7 @@
       "tags": [
         "load testing",
         "performance",
-        "open-source"
+        "open source"
       ]
     },
     {
@@ -3775,8 +3712,9 @@
       "logoURL": "",
       "tags": [
         "CI/CD",
-        "pipeline",
-        "automation", "build","deploy"
+        "automation",
+        "build",
+        "deploy"
       ]
     },
     {
@@ -3787,7 +3725,9 @@
       "webpage": "https://en.wikipedia.org/wiki/Infrastructure_as_code",
       "logoURL": "",
       "tags": [
-        "IaC", "automation", "provisioning"
+        "IaC",
+        "automation",
+        "provisioning"
       ]
     },
     {
@@ -3798,7 +3738,10 @@
       "webpage": "https://aws.amazon.com/cloudformation/",
       "logoURL": "https://6104926.fs1.hubspotusercontent-na1.net/hubfs/6104926/Imported_Blog_Media/cloudformation-blog-header.jpeg",
       "tags": [
-        "IaC", "automation", "provisioning","aws"
+        "IaC",
+        "automation",
+        "provisioning",
+        "aws"
       ]
     },
     {
@@ -3809,8 +3752,432 @@
       "webpage": "",
       "logoURL": "",
       "tags": [
-        "sql", "database", "programming language"
+        "database",
+        "programming language"
+      ]
+    },
+    {
+      "id": "555",
+      "name": "Azure Service Fabric",
+      "description": "Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.",
+      "icon": "mdi-cloud",
+      "webpage": "https://azure.microsoft.com/services/service-fabric/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+      "tags": [
+        "microservices",
+        "distributed systems",
+        "Azure"
+      ]
+    },
+    {
+      "id": "556",
+      "name": "Apache Flink",
+      "description": "Apache Flink is an open-source stream-processing framework for distributed, high-performing, always-available, and accurate data streaming applications.",
+      "icon": "mdi-stream",
+      "webpage": "https://flink.apache.org",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Apache_Flink_logo.svg",
+      "tags": [
+        "stream processing",
+        "big data",
+        "open source"
+      ]
+    },
+    {
+      "id": "557",
+      "name": "SQL Server Integration Services (SSIS)",
+      "description": "SQL Server Integration Services (SSIS) is a platform for building high-performance data integration and workflow solutions, including data migration, transformation, and ETL processes.",
+      "icon": "mdi-database",
+      "webpage": "https://docs.microsoft.com/sql/integration-services",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Microsoft_SQL_Server_Logo.svg",
+      "tags": [
+        "data integration",
+        "ETL",
+        "Microsoft"
+      ]
+    },
+    {
+      "id": "558",
+      "name": "Alation",
+      "description": "Alation is a data catalog platform that empowers analysts and data scientists to find, understand, and trust data across the enterprise for better decision-making.",
+      "icon": "mdi-database-search",
+      "webpage": "https://www.alation.com",
+      "logoURL": "https://www.alation.com/wp-content/uploads/2020/11/Alation-Logo-Web-Color.png",
+      "tags": [
+        "data catalog",
+        "data governance",
+        "analytics"
+      ]
+    },
+    {
+      "id": "559",
+      "name": "Azure Purview",
+      "description": "Azure Purview is a unified data governance service that helps you manage and govern your on-premises, multi-cloud, and software-as-a-service (SaaS) data.",
+      "icon": "mdi-shield-check",
+      "webpage": "https://azure.microsoft.com/services/purview/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+      "tags": [
+        "data governance",
+        "cloud",
+        "Azure"
+      ]
+    },
+    {
+      "id": "560",
+      "name": "Collibra",
+      "description": "Collibra is a data intelligence company that accelerates trusted business outcomes by connecting the right data, insights, and algorithms to all data citizens.",
+      "icon": "mdi-graph",
+      "webpage": "https://www.collibra.com",
+      "logoURL": "https://www.collibra.com/hubfs/logo/collibra-logo.svg",
+      "tags": [
+        "data intelligence",
+        "data governance",
+        "analytics"
+      ]
+    },
+    {
+      "id": "95",
+      "name": "Data Visualization",
+      "description": "Turning data into effective images",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "data visualization"
+      ]
+    },
+    {
+      "id": "94",
+      "name": "Machine Learning",
+      "description": "Subset of AI",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "93",
+      "name": "Data Governance",
+      "description": "tbp",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "data governance",
+        "data management"
+      ]
+    },
+    {
+      "id": "92",
+      "name": "Data Lakes, Data Warehouses, Data Hub",
+      "description": "tbp",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "data lake",
+        "data warehouse"
+      ]
+    },
+    {
+      "id": "91",
+      "name": "ETL, Data Pipelines, Data Wrangling",
+      "description": "tbp",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "data pipeline",
+        "etl"
+      ]
+    },
+    {
+      "id": "90",
+      "name": "Generative AI",
+      "description": "tbp",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "89",
+      "name": "Event Driven",
+      "description": "tbp",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "event driven"
+      ]
+    },
+    {
+      "id": "88",
+      "name": "Monitoring",
+      "description": "Observability, logging, Infrastructure and Application",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "observability",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "87",
+      "name": "Application Integration",
+      "description": "Bringing data from an application to an application at the time and in the shape it is required",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "integration"
+      ]
+    },
+    {
+      "id": "86",
+      "name": "Overig",
+      "description": "APIGEE, Kong, Azure API Gateway, SAP integration Suite, Azure Fabric, Outsystems AI Agent Builder, OpenTelemetry, Blueconic, Raptor,Wordpress, Drupal, Prepr, Contentful, Piwik Pro, Google Analytics,BigCommerce,Sylius,ElasticPath,Microsoft D365 Customer Insights  ",
+      "icon": "",
+      "webpage": "",
+      "logoURL": "",
+      "tags": [
+        "integration"
+      ]
+    },
+    {
+      "id": "561",
+      "name": "Apigee",
+      "description": "Apigee is a full lifecycle API management platform that enables API providers to design, secure, deploy, monitor, and scale APIs.",
+      "icon": "mdi-api",
+      "webpage": "https://cloud.google.com/apigee",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/31/Apigee_logo.svg",
+      "tags": [
+        "API management",
+        "cloud",
+        "Google"
+      ]
+    },
+    {
+      "id": "562",
+      "name": "Kong",
+      "description": "Kong is an open-source API gateway and microservices management layer that provides API traffic control, authentication, and analytics.",
+      "icon": "mdi-api",
+      "webpage": "https://konghq.com",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Kong_logo.svg",
+      "tags": [
+        "API gateway",
+        "microservices",
+        "open source"
+      ]
+    },
+    {
+      "id": "563",
+      "name": "Azure API Gateway",
+      "description": "Azure API Management is a hybrid, multi-cloud management platform for APIs across all environments. It allows organizations to publish APIs more securely and reliably.",
+      "icon": "mdi-api",
+      "webpage": "https://azure.microsoft.com/services/api-management/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+      "tags": [
+        "API management",
+        "cloud",
+        "Azure"
+      ]
+    },
+    {
+      "id": "564",
+      "name": "SAP Integration Suite",
+      "description": "SAP Integration Suite is a comprehensive integration platform as a service (iPaaS) that connects on-premise and cloud-based applications and processes.",
+      "icon": "mdi-cloud-sync",
+      "webpage": "https://www.sap.com/products/integration-suite.html",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
+      "tags": [
+        "integration",
+        "SAP",
+        "iPaaS"
+      ]
+    },
+    {
+      "id": "565",
+      "name": "Azure Service Fabric",
+      "description": "Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.",
+      "icon": "mdi-cloud",
+      "webpage": "https://azure.microsoft.com/services/service-fabric/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+      "tags": [
+        "microservices",
+        "distributed systems",
+        "Azure"
+      ]
+    },
+    {
+      "id": "566",
+      "name": "Outsystems AI Agent Builder",
+      "description": "Outsystems AI Agent Builder is a low-code development platform that uses AI to accelerate application development and enhance user experiences.",
+      "icon": "mdi-robot",
+      "webpage": "https://www.outsystems.com",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0b/OutSystems-Logo.svg",
+      "tags": [
+        "low-code",
+        "AI",
+        "development"
+      ]
+    },
+    {
+      "id": "567",
+      "name": "OpenTelemetry",
+      "description": "OpenTelemetry is an open-source observability framework for cloud-native software, providing APIs, libraries, agents, and instrumentation to capture and export metrics, logs, and traces.",
+      "icon": "mdi-chart-line",
+      "webpage": "https://opentelemetry.io",
+      "logoURL": "https://opentelemetry.io/images/logos/opentelemetry-logo-color.svg",
+      "tags": [
+        "observability",
+        "open source",
+        "metrics"
+      ]
+    },
+    {
+      "id": "568",
+      "name": "BlueConic",
+      "description": "BlueConic is a customer data platform that liberates companies’ first-party data, making it accessible wherever and whenever it is required to transform customer relationships and drive business growth.",
+      "icon": "mdi-database",
+      "webpage": "https://www.blueconic.com",
+      "logoURL": "https://www.blueconic.com/wp-content/uploads/2020/10/BlueConicLogo.svg",
+      "tags": [
+        "customer data platform",
+        "data management",
+        "analytics"
+      ]
+    },
+    {
+      "id": "569",
+      "name": "Raptor",
+      "description": "Raptor is a data science platform that enables organizations to build, deploy, and manage machine learning models at scale.",
+      "icon": "mdi-brain",
+      "webpage": "https://www.raptor.com",
+      "logoURL": "https://www.raptor.com/logo.svg",
+      "tags": [
+        "data science",
+        "machine learning",
+        "analytics"
+      ]
+    },
+    {
+      "id": "570",
+      "name": "WordPress",
+      "description": "WordPress is an open-source content management system (CMS) that makes it easy to create and manage websites, blogs, and other types of web content.",
+      "icon": "mdi-web",
+      "webpage": "https://wordpress.org",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/WordPress_logo.svg",
+      "tags": [
+        "CMS",
+        "web development",
+        "open source"
+      ]
+    },
+    {
+      "id": "572",
+      "name": "Prepr",
+      "description": "Prepr is a content management system (CMS) and personalization platform that helps businesses deliver personalized content to their audiences.",
+      "icon": "mdi-web",
+      "webpage": "https://prepr.io",
+      "logoURL": "https://prepr.io/wp-content/uploads/2020/10/prepr-logo.png",
+      "tags": [
+        "CMS",
+        "personalization",
+        "content management"
+      ]
+    },
+    {
+      "id": "573",
+      "name": "Contentful",
+      "description": "Contentful is a headless content management system (CMS) that enables businesses to manage and deliver content across digital channels.",
+      "icon": "mdi-web",
+      "webpage": "https://www.contentful.com",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Contentful_logo.svg",
+      "tags": [
+        "CMS",
+        "headless CMS",
+        "content management"
+      ]
+    },
+    {
+      "id": "574",
+      "name": "Piwik PRO",
+      "description": "Piwik PRO is an analytics suite designed to ensure compliance with privacy laws and regulations, offering web analytics, tag management, customer data platform, and consent management.",
+      "icon": "mdi-chart-bar",
+      "webpage": "https://piwik.pro",
+      "logoURL": "https://piwik.pro/wp-content/uploads/2020/10/piwik-pro-logo.svg",
+      "tags": [
+        "analytics",
+        "privacy",
+        "data management"
+      ]
+    },
+    {
+      "id": "575",
+      "name": "Google Analytics",
+      "description": "Google Analytics is a web analytics service offered by Google that tracks and reports website traffic, providing insights into user behavior and marketing effectiveness.",
+      "icon": "mdi-chart-line",
+      "webpage": "https://analytics.google.com",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Google_Analytics_logo.svg",
+      "tags": [
+        "analytics",
+        "web development",
+        "Google"
+      ]
+    },
+    {
+      "id": "576",
+      "name": "BigCommerce",
+      "description": "BigCommerce is a leading cloud e-commerce platform for businesses of all sizes, providing a comprehensive solution for creating and managing online stores.",
+      "icon": "mdi-cart",
+      "webpage": "https://www.bigcommerce.com",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BigCommerce_logo.svg",
+      "tags": [
+        "e-commerce",
+        "online stores",
+        "cloud"
+      ]
+    },
+    {
+      "id": "577",
+      "name": "Sylius",
+      "description": "Sylius is an open-source e-commerce platform for PHP, built on top of Symfony, that provides a customizable and scalable solution for creating online stores.",
+      "icon": "mdi-cart",
+      "webpage": "https://sylius.com",
+      "logoURL": "https://sylius.com/assets/img/logo.svg",
+      "tags": [
+        "e-commerce",
+        "online stores",
+        "open source"
+      ]
+    },
+    {
+      "id": "578",
+      "name": "Elastic Path",
+      "description": "Elastic Path is a headless e-commerce platform that provides the tools and flexibility needed to build and deliver unique commerce experiences.",
+      "icon": "mdi-cart",
+      "webpage": "https://www.elasticpath.com",
+      "logoURL": "https://www.elasticpath.com/sites/default/files/2020-11/elastic-path-logo.png",
+      "tags": [
+        "e-commerce",
+        "cloud"
+      ]
+    },
+    {
+      "id": "580",
+      "name": "VWO",
+      "description": "VWO (Visual Website Optimizer) is a leading A/B testing and conversion optimization platform that helps businesses improve their website performance and user experience through experimentation and insights.",
+      "icon": "mdi-flask",
+      "webpage": "https://vwo.com",
+      "logoURL": "https://vwo.com/wp-content/uploads/2020/09/vwo-logo.svg",
+      "tags": [
+        "user experience"
       ]
     }
-   ]
+  ]
 }
