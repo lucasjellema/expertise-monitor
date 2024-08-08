@@ -5,7 +5,7 @@
 
                 <v-row>
                     <v-col cols="3">                        
-                        <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details
+                        <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details clearable @click:clear="clearSearch"
                             @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
 
                         <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
@@ -110,6 +110,10 @@ const checkedTagStrings = computed(() => {
     return checkedTags.value.map(key => allTags.value[key])
 
 })
+
+const clearSearch = () => {
+    search.value = ''    
+}
 
 const removeItem = (item, index) => {
     selectedSearchSuggestions.value.splice(index, 1)
@@ -417,7 +421,10 @@ const handleExpertiseClaimsChanged = (newAndUpdatedClaims) => {
             claim.organization.expertiseClaims.push(newClaim)
         } else {
             claim.originalClaim.count = ensureNumeric(claim.count)
-            claim.originalClaim.notes = claim.notes
+            claim.originalClaim.notes = claim.notes            
+            claim.originalClaim.author = claim.author
+            claim.originalClaim.ambition = claim.ambition
+            claim.originalClaim.asOf = claim.asOf
         }
     }
 

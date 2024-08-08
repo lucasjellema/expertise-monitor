@@ -25,8 +25,14 @@
                         @change="update(item)" @keydown.down="focusNextRow(index)" @keydown.up="focusPreviousRow(index)"
                         :ref="(el) => (fields['field-' + index] = el)" </v-text-field>
                 </template>
-            <template v-slot:item.notes="{ item }">
+                <template v-slot:item.notes="{ item }">
                 <v-text-field v-model="item.notes" label="Notes" @change="update(item)"></v-text-field>
+            </template>
+            <template v-slot:item.author="{ item }">
+                <v-text-field v-model="item.author" label="Author" @change="update(item)"></v-text-field>
+            </template>
+            <template v-slot:item.ambition="{ item }">
+                <v-text-field v-model="item.ambition" label="Ambition" @change="update(item)"></v-text-field>
             </template>
         </v-data-table>
     </v-container>
@@ -52,7 +58,9 @@ const fields = ref({})
 const
     headers = ref([
         { title: 'Expertise', value: 'name', sortable: true, width: '180px' },
-        { title: 'Count', value: 'count', width: '100px' , sortable: true },
+        { title: 'Count', value: 'count',sortable:true, width: '100px', text: '' },
+        { title: 'Author', value: 'author' , sortable: true},
+        { title: 'Ambition', value: 'ambition', sortable: true },
         { title: 'Notes', value: 'notes' }
     ])
 
@@ -129,6 +137,9 @@ onMounted(() => {
                 if (existingClaim) {
                     newClaim.count = existingClaim.count
                     newClaim.notes = existingClaim.notes
+                    newClaim.author = existingClaim.author
+                    newClaim.ambition = existingClaim.ambition
+                    newClaim.asOf = existingClaim.asOf
                     newClaim.new = false
                 }
             }

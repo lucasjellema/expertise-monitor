@@ -5,7 +5,8 @@
                 <v-row>
                     <v-col cols="10" offset="1">
                         <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details
-                            @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
+                            @click:clear="clearSearch" @change="handleSearchChange" @keyup="handleSearchChange"
+                            clearable></v-text-field>
 
                         <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
                             return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
@@ -108,7 +109,9 @@ const removeItem = (item, index) => {
     }
 }
 
-
+const clearSearch = () => {
+    search.value = ''
+}
 watch(selectedSearchSuggestions, (newValue, oldValue) => {
     if (oldValue.length > 0 && newValue.length == 0) {
         console.log('selectedSearchSuggestions has been cleared')
@@ -214,7 +217,7 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim: expertise.claim, readOnly: appStore.getReadOnly(),  ambition: expertise.claim.ambition })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim: expertise.claim, readOnly: appStore.getReadOnly(), ambition: expertise.claim.ambition })
                 }
                 newExpertiseNode.children.sort((a, b) => {
                     return b.count - a.count
@@ -312,7 +315,7 @@ const handleEditOrganizationExpertiseRequested = (expertise) => {
         tagToEditExpertiseFor.value = expertise.name
         editOrganizationExpertiseDialog.value = true
     } else if (expertise.type == 'expertise' || expertise.type == 'expertiseClaim') {
-        expertiseClaimToEdit.value = expertise.claim || {expertise: expertise}
+        expertiseClaimToEdit.value = expertise.claim || { expertise: expertise }
         expertiseClaimToEdit.value.organization = props.organizationUnit
         openExpertiseClaimDialog.value = true
     }
@@ -331,14 +334,28 @@ const handleExpertiseChanged = (newAndUpdatedClaims) => {
             if (existingClaim) {
                 existingClaim.count = ensureNumeric(item.count) // item.count
                 existingClaim.notes = item.notes
+                existingClaim.author = item.author
+                existingClaim.ambition = item.ambition
+                existingClaim.asOf = item.asOf
+
             } else {
-                organizationUnit.value.expertiseClaims.push({ expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise })
+                organizationUnit.value.expertiseClaims.push({
+                    expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise,
+                    author: item.author,
+                    ambition: item.ambition,
+                    asOf: item.asOf
+                })
             }
         } else {
             if (!organizationUnit.value.expertiseClaims) {
                 organizationUnit.value.expertiseClaims = []
             }
-            organizationUnit.value.expertiseClaims.push({ expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise })
+            organizationUnit.value.expertiseClaims.push({
+                expertiseId: item.expertiseId, count: ensureNumeric(item.count), notes: item.notes, expertise: item.expertise,
+                author: item.author,
+                ambition: item.ambition,
+                asOf: item.asOf
+            })
         }
     }
     // TODO update the expertiseClaimMap
@@ -353,8 +370,8 @@ const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
     openExpertiseClaimDialog.value = false
     console.log('handleSingleExpertiseClaimChanged', expertiseClaim)
     let theClaim
-    if (expertiseClaimToEdit.value.organization.expertiseClaims) { 
-    theClaim = expertiseClaimToEdit.value.organization.expertiseClaims.find(claim => claim.expertiseId === expertiseClaim.expertise.id)
+    if (expertiseClaimToEdit.value.organization.expertiseClaims) {
+        theClaim = expertiseClaimToEdit.value.organization.expertiseClaims.find(claim => claim.expertiseId === expertiseClaim.expertise.id)
     }
     // update existing claim from expertiseClaim
     if (!theClaim) {
@@ -368,7 +385,7 @@ const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
         }
         expertiseClaim.organization.expertiseClaims.push(theClaim)
     }
-    
+
     if (theClaim) {
         console.log(`found existing claim`, theClaim)
         theClaim.count = ensureNumeric(expertiseClaim.count)
