@@ -150,6 +150,7 @@ export const useAppStore = defineStore('app', () => {
     dataIsPrepared = false
     prepareData(expertiseJSON.value)
 
+    dataIsPrepared = true
 
     return expertiseJSON
   }
@@ -208,7 +209,7 @@ export const useAppStore = defineStore('app', () => {
         console.log("caught tags error", error)
       }
     }
-    console.log('tagExpertiseMap', tagExpertiseMap, tagExpertiseMap.value)
+    console.log('tagExpertiseMap',  tagExpertiseMap.value)
 
     expertiseTags.value = Array.from(expertiseTags.value).sort()
   }
