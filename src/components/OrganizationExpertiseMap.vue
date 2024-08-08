@@ -102,7 +102,19 @@ const allTags = ref([])
 
 const removeItem = (item, index) => {
     selectedSearchSuggestions.value.splice(index, 1)
+    if (selectedSearchSuggestions.value.length == 0) {
+        console.log('selectedSearchSuggestions has been cleared')
+        initializeExpertiseStructure()
+    }
 }
+
+
+watch(selectedSearchSuggestions, (newValue, oldValue) => {
+    if (oldValue.length > 0 && newValue.length == 0) {
+        console.log('selectedSearchSuggestions has been cleared')
+        initializeExpertiseStructure()
+    }
+})
 const toggle = () => {
     if (selectedSearchSuggestions.value.length > 0) {
         selectedSearchSuggestions.value = []
@@ -283,7 +295,7 @@ const handleShowExpertiseMapRequested = (e) => {
     console.log('handleShowExpertiseMapRequested', e)
     if (e.type == 'tag') {
         router.push({ name: 'expertiseBrowseTag', params: { tag: e.name } });
-    } else if (e.type == 'expertise') {
+    } else if (e.type == 'expertise' || e.type == 'expertiseClaim') {
         router.push({ name: 'expertiseBrowseSpecific', params: { expertiseId: e.expertise.id } });
 
     }
@@ -300,8 +312,8 @@ const handleEditOrganizationExpertiseRequested = (expertise) => {
         tagToEditExpertiseFor.value = expertise.name
         editOrganizationExpertiseDialog.value = true
     } else if (expertise.type == 'expertise' || expertise.type == 'expertiseClaim') {
-        expertiseClaimToEdit.value = expertise.claim
-        expertiseClaimToEdit.value.organization = organizationUnit.value
+        expertiseClaimToEdit.value = expertise.claim || {expertise: expertise}
+        expertiseClaimToEdit.value.organization = props.organizationUnit
         openExpertiseClaimDialog.value = true
     }
 
@@ -334,25 +346,42 @@ const handleExpertiseChanged = (newAndUpdatedClaims) => {
     // TODO emit the change in the organization unit
     emits('expertiseChanged', organizationUnit.value)
     initializeExpertiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
+    changeIndicator.value++
 }
 
 const handleSingleExpertiseClaimChanged = (expertiseClaim) => {
     openExpertiseClaimDialog.value = false
     console.log('handleSingleExpertiseClaimChanged', expertiseClaim)
-    const existingClaim = expertiseClaimToEdit.value.organization.expertiseClaims.find(claim => claim.expertiseId === expertiseClaim.expertise.id)
+    let theClaim
+    if (expertiseClaimToEdit.value.organization.expertiseClaims) { 
+    theClaim = expertiseClaimToEdit.value.organization.expertiseClaims.find(claim => claim.expertiseId === expertiseClaim.expertise.id)
+    }
     // update existing claim from expertiseClaim
-    if (existingClaim) {
-        console.log(`found existing claim`, existingClaim)
-        existingClaim.count = ensureNumeric(expertiseClaim.count)
-        existingClaim.notes = expertiseClaim.notes
-        existingClaim.author = expertiseClaim.author
-        if (expertiseClaim.asOf) {
-            existingClaim.asOf = expertiseClaim.asOf
+    if (!theClaim) {
+        // create new claim
+        theClaim = {
+            expertiseId: expertiseClaim.expertise.expertise.id,
+            expertise: expertiseClaim.expertise.expertise
         }
-        existingClaim.ambition = expertiseClaim.ambition
+        if (!expertiseClaim.organization.expertiseClaims) {
+            expertiseClaim.organization.expertiseClaims = []
+        }
+        expertiseClaim.organization.expertiseClaims.push(theClaim)
+    }
+    
+    if (theClaim) {
+        console.log(`found existing claim`, theClaim)
+        theClaim.count = ensureNumeric(expertiseClaim.count)
+        theClaim.notes = expertiseClaim.notes
+        theClaim.author = expertiseClaim.author
+        if (expertiseClaim.asOf) {
+            theClaim.asOf = expertiseClaim.asOf
+        }
+        theClaim.ambition = expertiseClaim.ambition
 
         emits('expertiseChanged', organizationUnit.value)
         initializeExpertiseStructure() // question: should we refresh? or leave it to the parent to rerender the child component?
+        changeIndicator.value++
     }
 }
 
