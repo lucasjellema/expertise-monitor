@@ -7,20 +7,21 @@ import expertiseCatalogDB from '../data/expertiseCatalog.json'
 
 export const useAppStore = defineStore('app', () => {
 
-  const expertiseTags = ref(new Set(['database']))
+  const expertiseTags = ref(new Set([]))
   const readOnly = ref(true)
 
   const toggleReadOnly = () => {
     readOnly.value = !readOnly.value
   }
-const getReadOnly = () => {
-  return readOnly.value
-}
+  const getReadOnly = () => {
+    return readOnly.value
+  }
 
   const preAuthenticatedRequestURL = ref(null)
 
   const setPAR = (par) => {
     preAuthenticatedRequestURL.value = par
+    console.log(`PAR = `, preAuthenticatedRequestURL.value)
     initializeExpertise()
   }
 
@@ -126,21 +127,30 @@ const getReadOnly = () => {
   }
 
   const MAIN_EXPERTISE_FILE = 'expertise.json'
+  const MAIN_DATA_FILE = 'expertiseMonitor.json'
 
   const initializeExpertise = async () => {
-
+// TODO create fresh expertiseJSON
     expertiseJSON.value = await getJSONFile(MAIN_EXPERTISE_FILE)
     console.log(expertiseJSON.value)
     // if not found, create it
     if (expertiseJSON.value == 1) {
       expertiseJSON.value = { organization: [], expertise: [] }
       // save it
-      saveFile(JSON.stringify(expertiseJSON.value), MAIN_EXPERTISE_FILE)
+      // saveFile(JSON.stringify(expertiseJSON.value), MAIN_EXPERTISE_FILE)
 
     } else {
 
-      await loadDeltaFiles()
+     // await loadDeltaFiles()
     }
+    if (expertiseCatalogDB) {
+      expertiseJSON.value.expertise =
+        expertiseJSON.value.expertise.concat(expertiseCatalogDB.expertise)
+    }
+    dataIsPrepared = false
+    prepareData(expertiseJSON.value)
+
+
     return expertiseJSON
   }
 
@@ -149,7 +159,7 @@ const getReadOnly = () => {
     // TODO - prepare data : create memberOrganizations under all organizations for the organizations that are members of them
     console.log('TODO prepare data : create memberOrganizations under all organizations for the organizations that are members of them')
     // loop over all organization units; if they have organizationMemberships, then create an entry in memberOrganizations under the organization they are a member of
-//    const expertiseObject = getExpertise().value
+    //    const expertiseObject = getExpertise().value
     const organization = expertiseJSON.value.organization
     for (const org of organization) {
       if (org.organizationMemberships && org.organizationMemberships.length > 0) {
@@ -159,10 +169,11 @@ const getReadOnly = () => {
           if (index > -1) {
             membership.organization = organization[index]
             if (!organization[index].memberOrganizations) {
-              organization[index].memberOrganizations=[]
+              organization[index].memberOrganizations = []
             }
             organization[index].memberOrganizations.push({
-              ...membership, organization: org})
+              ...membership, organization: org
+            })
           }
 
         }
@@ -198,19 +209,19 @@ const getReadOnly = () => {
       }
     }
     console.log('tagExpertiseMap', tagExpertiseMap, tagExpertiseMap.value)
-    
+
     expertiseTags.value = Array.from(expertiseTags.value).sort()
   }
 
   const getExpertise = () => {
     if (!dataIsPrepared) {
       dataIsPrepared = true
-      if (expertiseCatalogDB){
-        expertiseJSON.value.expertise = 
-         expertiseJSON.value.expertise.concat(expertiseCatalogDB.expertise) 
+      if (expertiseCatalogDB) {
+        expertiseJSON.value.expertise =
+          expertiseJSON.value.expertise.concat(expertiseCatalogDB.expertise)
       }
       prepareData(expertiseJSON.value)
-      
+
     }
     return expertiseJSON
   }
@@ -234,17 +245,7 @@ const getReadOnly = () => {
   }
 
 
-
-  // const removeTip = (tipId) => {
-  //   const index = expertiseJSON.value.tips.findIndex(t => t.id === tipId)
-  //   if (index > -1) {
-  //     expertiseJSON.value.tips.splice(index, 1)
-  //     bubbleChanged()
-  //   }
-  // }
   const DELTA_DIRECTORY = 'delta'
-
-
   const CONSOLIDATION_MARKER_FILE = 'lastExpertiseDeltaConsolidated.json'
 
   const consolideerDeltafiles = async () => {
@@ -264,6 +265,6 @@ const getReadOnly = () => {
   }
 
   return {
-    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap, getReadOnly,toggleReadOnly
+    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap, getReadOnly, toggleReadOnly
   }
 })
