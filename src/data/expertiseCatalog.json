@@ -4179,5 +4179,71 @@
         "user experience"
       ]
     }
+    ,  {
+          "id": "581",
+          "name": "Ember.js",
+          "description": "Ember.js is an open-source JavaScript web framework, based on the Model-View-ViewModel (MVVM) pattern. It allows developers to create scalable single-page web applications.",
+          "icon": "mdi-web",
+          "webpage": "https://emberjs.com",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/en/5/58/Ember.js_Logo_and_Mascot.png",
+          "tags": [
+            "web development",
+            "JavaScript",
+            "framework"
+          ]
+        },
+        {
+          "id": "582",
+          "name": "Blazor",
+          "description": "Blazor is a free and open-source web framework that enables developers to create web applications using C# and HTML. It is part of the ASP.NET Core framework.",
+          "icon": "mdi-dot-net",
+          "webpage": "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png",
+          "tags": [
+            "web development",
+            "C#",
+            "framework"
+          ]
+        },
+        {
+          "id": "583",
+          "name": "Razor",
+          "description": "Razor is a markup syntax for embedding server-based code into web pages, part of the ASP.NET Core framework. It provides a productive syntax for combining HTML with C#.",
+          "icon": "mdi-code-tags",
+          "webpage": "https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/ASP.NET_Core_Logo.svg",
+          "tags": [
+            "web development",
+            "C#",
+            "template engine"
+          ]
+        },
+        {
+          "id": "584",
+          "name": "Aurelia",
+          "description": "Aurelia is a modern, open-source UI framework for web and mobile app development. It leverages simple conventions and is built on a next-generation JavaScript model.",
+          "icon": "mdi-web",
+          "webpage": "https://aurelia.io",
+          "logoURL": "https://aurelia.io/styles/images/logos/aurelia-logo.svg",
+          "tags": [
+            "web development",
+            "JavaScript",
+            "framework"
+          ]
+        },
+        {
+          "id": "585",
+          "name": "JavaServer Faces (JSF)",
+          "description": "JavaServer Faces (JSF) is a Java specification for building component-based user interfaces for web applications. It simplifies the development integration of web-based user interfaces.",
+          "icon": "mdi-language-java",
+          "webpage": "https://javaee.github.io/javaserverfaces/",
+          "logoURL": "https://upload.wikimedia.org/wikipedia/en/1/1e/Java_Server_Faces_logo.png",
+          "tags": [
+            "web development",
+            "Java",
+            "framework"
+          ]
+        }
+    
   ]
 }
