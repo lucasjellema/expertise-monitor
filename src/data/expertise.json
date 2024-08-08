@@ -1,598 +1,12 @@
 {
-    "expertise": [
-
-        {
-            "id": "15",
-            "name": "C++",
-            "description": "3G general purpose programmeertaal (eerste release: 1985), initieel een OO extensie van C.",
-            "icon": "mdi-language-cpp",
-            "webpage": "https://en.wikipedia.org/wiki/C%2B%2B",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/C%2B%2B_logo.svg/1200px-C%2B%2B_logo.svg.png",
-            "tags": [
-                "programming language",
-                "3g",
-                "object oriented"
-            ]
-        },
-        {
-            "id": "14",
-            "name": "C#",
-            "description": "C# is een object-oriented programming taal. Het is de basis van de .NET Framework. ",
-            "icon": "mdi-language-csharp",
-            "webpage": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/C_Sharp_wordmark.svg/1200px-C_Sharp_wordmark.svg.png",
-            "tags": [
-                "programming language",
-                "object oriented", ".Net"
-            ]
-        },
-        {
-            "id": "13",
-            "name": "Java",
-            "description": "Java is een object-oriented programming taal. In mei 1995 verscheen de eerste release, vanuit Sun Microsystems.  ",
-            "icon": "mdi-language-java",
-            "webpage": "https://en.wikipedia.org/wiki/Java_(programming_language)",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/121px-Java_programming_language_logo.svg.png",
-            "tags": [
-                "programming language",
-                "object oriented"
-            ]
-        },
-        {
-            "id": "12",
-            "name": "Python",
-            "description": "Python is een general purpose programmeertaal - die vooral onder data scientists en data engineers wordt gebruikt en ook in Machine Learning en AI gerelateerde activiteiten veruit de meest gebruikte technologie is. In januari 1991 verscheen de eerste release, vanuit Python Software Foundation. ",
-            "icon": "mdi-language-python",
-            "webpage": "https://en.wikipedia.org/wiki/Python_(programming_language)",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png",
-            "tags": [
-                "programming language",
-                "ai",
-                "data science"
-            ]
-        },
-        {
-            "id": "11",
-            "name": "SQL Server",
-            "description": "SQL Server is a relational database management system. The first release appeared in January 1998, from Microsoft.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/SQL_Server",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/SQL_Server_Logo.svg/1200px-SQL_Server_Logo.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "rdbms",
-                "relational"
-            ]
-        },
-        {
-            "id": "10",
-            "name": "DuckDB",
-            "description": "DuckDB is an in-process analytical database. The first release appeared in January 2021 from DuckDB, a technology initiated in the Netherlands. V1.0 was released in June 2024.",
-            "icon": "mdi-database",
-            "webpage": "https://duckdb.org/",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/DuckDB_Logo.svg/1200px-DuckDB_Logo.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "olap",
-                "data analysis"
-            ]
-        },
-        {
-            "id": "9",
-            "name": "MySQL",
-            "description": "MySQL is an open-source relational database management system. The first release was in 1995 by MySQL AB.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/MySQL",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "rdbms",
-                "open source"
-            ]
-        },
-        {
-            "id": "8",
-            "name": "PostgreSQL",
-            "description": "PostgreSQL is an open-source relational database management system emphasizing extensibility and SQL compliance. It was initially released in 1996.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/PostgreSQL",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "rdbms",
-                "open source"
-            ]
-        },
-        {
-            "id": "7",
-            "name": "MongoDB",
-            "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, it uses JSON-like documents with optional schemas.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/MongoDB",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1200px-MongoDB-Logo.svg.png",
-            "tags": [
-                "database",
-                "nosql",
-                "document",
-                "json"
-            ]
-        },
-        {
-            "id": "6",
-            "name": "Oracle Database",
-            "description": "Oracle Database is a multi-model database management system produced and marketed by Oracle Corporation. It was first released in 1979.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/Oracle_Database",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Oracle_logo.svg/1200px-Oracle_logo.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "rdbms",
-                "multi model"
-            ]
-        },
-        {
-            "id": "5",
-            "name": "Cassandra",
-            "description": "Apache Cassandra is a free and open-source, distributed, wide column store, NoSQL database management system. It was initially released in 2008.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/Apache_Cassandra",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/1200px-Cassandra_logo.svg.png",
-            "tags": [
-                "database",
-                "nosql",
-                "distributed",
-                "wide column"
-            ]
-        },
-        {
-            "id": "4",
-            "name": "DB2",
-            "description": "IBM Db2 is a family of data management products, including database servers, developed by IBM. The first release was in 1983.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/IBM_Db2",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/IBM_DB2_logo.svg/1200px-IBM_DB2_logo.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "rdbms",
-                "ibm"
-            ]
-        },
-        {
-            "id": "3",
-            "name": "Sybase",
-            "description": "Sybase is a relational database management system, originally developed by Sybase Inc. The first release was in 1987.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/Sybase",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/44/SAP_Sybase_logo.svg/1200px-SAP_Sybase_logo.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "rdbms",
-                "sap"
-            ]
-        },
-        {
-            "id": "2",
-            "name": "Redshift",
-            "description": "Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud. It was first released in 2013.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/Amazon_Redshift",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "data warehouse",
-                "cloud"
-            ]
-        },
-        {
-            "id": "1",
-            "name": "HANA",
-            "description": "SAP HANA is an in-memory, column-oriented, relational database management system developed and marketed by SAP SE. It was first released in 2010.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/SAP_HANA",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/SAP2011.svg/1200px-SAP2011.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "in-memory",
-                "sap"
-            ]
-        },
-        {
-            "id": "21",
-            "name": "Snowflake",
-            "description": "Snowflake Inc. is a cloud computing–based data cloud company. The Snowflake data platform provides data warehouse-as-a-service and was first released in 2014.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/Snowflake_Inc.",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/220px-Snowflake_Logo.svg.png",
-            "tags": [
-                "database",
-                "sql",
-                "cloud",
-                "data warehouse"
-            ]
-        }  ,  {
-            "id": "116",
-            "name": "JavaScript",
-            "description": "JavaScript is a versatile programming language commonly used in web development for creating interactive effects within web browsers.",
-            "icon": "mdi-language-javascript",
-            "webpage": "https://en.wikipedia.org/wiki/JavaScript",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-            "tags": [
-                "programming language",
-                "web development",
-                "dynamic"
-            ]
-        },
-        {
-            "id": "117",
-            "name": "Kubernetes",
-            "description": "Kubernetes is an open-source platform for automating the deployment, scaling, and management of containerized applications.",
-            "icon": "mdi-kubernetes",
-            "webpage": "https://en.wikipedia.org/wiki/Kubernetes",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg",
-            "tags": [
-                "container orchestration",
-                "open-source",
-                "cloud-native"
-            ]
-        },
-        {
-            "id": "118",
-            "name": "OutSystems",
-            "description": "OutSystems is a modern application platform enabling organizations to build applications fast, right, and for the future.",
-            "icon": "mdi-application",
-            "webpage": "https://en.wikipedia.org/wiki/OutSystems",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/70/OutSystems_2018_logo.png",
-            "tags": [
-                "low-code",
-                "application development",
-                "enterprise"
-            ]
-        },
-        {
-            "id": "119",
-            "name": "Mendix",
-            "description": "Mendix is a low-code development platform that helps you build and continuously improve mobile and web applications at scale.",
-            "icon": "mdi-application",
-            "webpage": "https://en.wikipedia.org/wiki/Mendix",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/68/Mendix_logo.png",
-            "tags": [
-                "low-code",
-                "application development",
-                "enterprise"
-            ]
-        },
-        {
-            "id": "120",
-            "name": "Power Platform",
-            "description": "Microsoft Power Platform is a line of business intelligence, app development, and app connectivity software applications.",
-            "icon": "mdi-microsoft",
-            "webpage": "https://en.wikipedia.org/wiki/Microsoft_Power_Platform",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Power_Platform_logo.png",
-            "tags": [
-                "business intelligence",
-                "app development",
-                "microsoft"
-            ]
-        },
-        {
-            "id": "121",
-            "name": "Dynatrace",
-            "description": "Dynatrace provides software intelligence to simplify enterprise cloud complexity and accelerate digital transformation.",
-            "icon": "mdi-database",
-            "webpage": "https://en.wikipedia.org/wiki/Dynatrace",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Dynatrace_Logo.png",
-            "tags": [
-                "application performance management",
-                "cloud monitoring",
-                "digital transformation"
-            ]
-        },
-        {
-            "id": "122",
-            "name": "Elastic Stack",
-            "description": "Elastic Stack, also known as the ELK Stack, is a set of tools from Elastic for searching, analyzing, and visualizing data in real-time.",
-            "icon": "mdi-elastic",
-            "webpage": "https://en.wikipedia.org/wiki/ELK_Stack",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Elastic_Logo.png",
-            "tags": [
-                "data search",
-                "real-time analytics",
-                "log management"
-            ]
-        },
-        {
-            "id": "123",
-            "name": "Azure",
-            "description": "Microsoft Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.",
-            "icon": "mdi-microsoft-azure",
-            "webpage": "https://en.wikipedia.org/wiki/Microsoft_Azure",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
-            "tags": [
-                "cloud computing",
-                "microsoft",
-                "platform as a service"
-            ]
-        },
-        {
-            "id": "124",
-            "name": "AWS",
-            "description": "Amazon Web Services (AWS) is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.",
-            "icon": "mdi-aws",
-            "webpage": "https://en.wikipedia.org/wiki/Amazon_Web_Services",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
-            "tags": [
-                "cloud computing",
-                "amazon",
-                "infrastructure as a service"
-            ]
-        },
-        {
-            "id": "125",
-            "name": "GCP",
-            "description": "Google Cloud Platform (GCP) is a suite of cloud computing services offered by Google that runs on the same infrastructure that Google uses internally for its end-user products.",
-            "icon": "mdi-google-cloud",
-            "webpage": "https://en.wikipedia.org/wiki/Google_Cloud_Platform",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Cloud_Logo.png",
-            "tags": [
-                "cloud computing",
-                "google",
-                "platform as a service"
-            ]
-        },
-        {
-            "id": "126",
-            "name": "IBM Cloud",
-            "description": "IBM Cloud includes infrastructure as a service (IaaS), software as a service (SaaS), and platform as a service (PaaS) offered through public, private, and hybrid cloud delivery models.",
-            "icon": "mdi-ibm",
-            "webpage": "https://en.wikipedia.org/wiki/IBM_Cloud",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
-            "tags": [
-                "cloud computing",
-                "ibm",
-                "hybrid cloud"
-            ]
-        },
-        {
-            "id": "127",
-            "name": "Oracle Cloud Infrastructure",
-            "description": "Oracle Cloud Infrastructure (OCI) offers high-performance computing and low-cost cloud storage solutions.",
-            "icon": "mdi-oracle",
-            "webpage": "https://en.wikipedia.org/wiki/Oracle_Cloud",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Oracle_Logo.png",
-            "tags": [
-                "cloud computing",
-                "oracle",
-                "infrastructure as a service"
-            ]
-        },
-        {
-            "id": "128",
-            "name": "Optimizely",
-            "description": "Optimizely is a digital experience platform providing A/B testing and personalization for websites and mobile apps.",
-            "icon": "mdi-web",
-            "webpage": "https://en.wikipedia.org/wiki/Optimizely",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Optimizely_logo.png",
-            "tags": [
-                "A/B testing",
-                "personalization",
-                "digital experience"
-            ]
-        },
-        {
-            "id": "129",
-            "name": "Adobe Commerce (with Magento)",
-            "description": "Adobe Commerce, powered by Magento, is an open-source e-commerce platform for building and managing online stores.",
-            "icon": "mdi-shopping",
-            "webpage": "https://en.wikipedia.org/wiki/Magento",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Magento_Logo.svg",
-            "tags": [
-                "e-commerce",
-                "open-source",
-                "online store"
-            ]
-        },
-        {
-            "id": "130",
-            "name": "Commercetools",
-            "description": "Commercetools is a cloud-based headless commerce platform providing APIs for building custom e-commerce solutions.",
-            "icon": "mdi-cloud",
-            "webpage": "https://en.wikipedia.org/wiki/Commercetools",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Commercetools_logo.png",
-            "tags": [
-                "headless commerce",
-                "API",
-                "cloud-based"
-            ]
-        },
-        {
-            "id": "131",
-            "name": "LS Retail",
-            "description": "LS Retail offers end-to-end retail solutions and POS systems for managing retail, hospitality, and forecourt businesses.",
-            "icon": "mdi-store",
-            "webpage": "https://en.wikipedia.org/wiki/LS_Retail",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a9/LS_Retail_Logo.png",
-            "tags": [
-                "retail solutions",
-                "POS systems",
-                "end-to-end"
-            ]
-        },
-        {
-            "id": "132",
-            "name": "Salesforce",
-            "description": "Salesforce is a cloud-based customer relationship management (CRM) platform designed to manage customer interactions and business processes.",
-            "icon": "mdi-salesforce",
-            "webpage": "https://en.wikipedia.org/wiki/Salesforce",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Salesforce_logo.svg",
-            "tags": [
-                "CRM",
-                "cloud computing",
-                "customer management"
-            ]
-        },
-        {
-            "id": "133",
-            "name": "Umbraco",
-            "description": "Umbraco is an open-source content management system (CMS) built on the Microsoft .NET framework for creating and managing websites.",
-            "icon": "mdi-web",
-            "webpage": "https://en.wikipedia.org/wiki/Umbraco",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/10/Umbraco_logo.svg",
-            "tags": [
-                "CMS",
-                "open-source",
-                "web development"
-            ]
-        },
-        {
-            "id": "134",
-            "name": "Sitecore",
-            "description": "Sitecore is a digital experience platform that provides CMS and marketing automation software for managing personalized content and customer experiences.",
-            "icon": "mdi-web",
-            "webpage": "https://en.wikipedia.org/wiki/Sitecore",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Sitecore_logo.svg",
-            "tags": [
-                "digital experience",
-                "CMS",
-                "marketing automation"
-            ]
-        },
-        {
-            "id": "135",
-            "name": "HubSpot",
-            "description": "HubSpot is a developer and marketer of software products for inbound marketing, sales, and customer service.",
-            "icon": "mdi-hubspot",
-            "webpage": "https://en.wikipedia.org/wiki/HubSpot",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/HubSpot_Logo.svg",
-            "tags": [
-                "inbound marketing",
-                "sales",
-                "customer service"
-            ]
-        },
-        {
-            "id": "136",
-            "name": "Bloomreach",
-            "description": "Bloomreach is a digital experience platform that combines content management, site search, and personalization tools to drive business growth.",
-            "icon": "mdi-web",
-            "webpage": "https://en.wikipedia.org/wiki/Bloomreach",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bloomreach_logo.png",
-            "tags": [
-                "digital experience",
-                "content management",
-                "personalization"
-            ]
-        },
-        {
-            "id": "137",
-            "name": "SAP",
-            "description": "SAP is a multinational software corporation that makes enterprise software to manage business operations and customer relations.",
-            "icon": "mdi-sap",
-            "webpage": "https://en.wikipedia.org/wiki/SAP",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
-            "tags": [
-                "enterprise software",
-                "business operations",
-                "customer relations"
-            ]
-        },
-        {
-            "id": "138",
-            "name": "AFAS",
-            "description": "AFAS Software develops enterprise resource planning (ERP) software solutions for businesses to streamline their operations.",
-            "icon": "mdi-office",
-            "webpage": "https://en.wikipedia.org/wiki/AFAS_Software",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/55/AFAS_Software_logo.png",
-            "tags": [
-                "ERP",
-                "enterprise software",
-                "business operations"
-            ]
-        },
-        {
-            "id": "139",
-            "name": "Microsoft Dynamics",
-            "description": "Microsoft Dynamics is a line of enterprise resource planning (ERP) and customer relationship management (CRM) software applications.",
-            "icon": "mdi-microsoft",
-            "webpage": "https://en.wikipedia.org/wiki/Microsoft_Dynamics",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Microsoft_Dynamics_logo.svg",
-            "tags": [
-                "ERP",
-                "CRM",
-                "enterprise software"
-            ]
-        },
-        {
-            "id": "140",
-            "name": "Oracle ERP",
-            "description": "Oracle ERP Cloud is a complete, innovative, and proven solution suite that provides end-to-end ERP capabilities.",
-            "icon": "mdi-oracle",
-            "webpage": "https://en.wikipedia.org/wiki/Oracle_ERP",
-            "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Oracle_Logo.png",
-            "tags": [
-                "ERP",
-                "cloud computing",
-                "enterprise software"
-            ]
-        }
-    
-    
-    
-    ],
+    "expertise": [],
     "organization": [
         {
             "id": "1",
             "name": "Conclusion Low Code Company",
             "type": "company",
             "url": "https://www.conclusion.nl/en/low-code-company",
-            "expertiseClaims": [
-                {
-                    "expertiseId": "10",
-                    "description": "Toegepast in drie applicaties voor Klant A",
-                    "asOf": "2024-06-15",
-                    "count": 12
-                },
-                {
-                    "expertiseId": "11",
-                    "description": "Toegepast in twee applicaties voor Klant B",
-                    "asOf": "2024-04-15",
-                    "count": 9
-                },
-                {
-                    "expertiseId": "9",
-                    "description": "R&D",
-                    "asOf": "2024-07-15",
-                    "count": 3
-                },
-                {
-                    "expertiseId": "15",
-                    "count": 3,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "14",
-                    "count": 2,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "13",
-                    "count": 9,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "12",
-                    "count": 13,
-                    "notes": ""
-                }
-            ],
+            "expertiseClaims": [],
             "organizationMemberships": [
                 {
                     "organizationId": "6",
@@ -610,13 +24,15 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "3",
             "name": "Conclusion Experience",
             "type": "domain",
-            "url": "https://www.conclusion.nl/experience"
+            "url": "https://www.conclusion.nl/experience",
+            "expertiseClaims": []
         },
         {
             "id": "4",
@@ -628,61 +44,71 @@
                     "organizationId": "2",
                     "description": "onderdeel van company"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "5",
             "name": "Conclusion Intelligence",
             "type": "domain",
-            "url": "https://www.conclusion.nl/intelligence"
+            "url": "https://www.conclusion.nl/intelligence",
+            "expertiseClaims": []
         },
         {
             "id": "6",
             "name": "Enterprise Applications",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "7",
             "name": "Business Platforms",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "8",
             "name": "Strategy Enablement",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "9",
             "name": "Mission Critical",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "10",
             "name": "Cloud Native Enterprise",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "11",
             "name": "Custom Software & Integration",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "12",
             "name": "Smart Technology",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "13",
             "name": "Zorgdomein",
             "type": "domain",
-            "url": ""
+            "url": "",
+            "expertiseClaims": []
         },
         {
             "id": "20",
@@ -694,7 +120,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "21",
@@ -706,7 +133,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "22",
@@ -718,7 +146,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "30",
@@ -731,48 +160,7 @@
                     "description": "onderdeel van domein"
                 }
             ],
-            "expertiseClaims": [
-                {
-                    "expertiseId": "11",
-                    "count": 8,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "9",
-                    "count": 3,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "8",
-                    "count": 13,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "6",
-                    "count": 18,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "15",
-                    "count": "",
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "14",
-                    "count": 4,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "13",
-                    "count": 26,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "12",
-                    "count": 7,
-                    "notes": ""
-                }
-            ]
+            "expertiseClaims": []
         },
         {
             "id": "31",
@@ -785,43 +173,7 @@
                     "description": "onderdeel van domein"
                 }
             ],
-            "expertiseClaims": [
-                {
-                    "expertiseId": "11",
-                    "count": 45,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "9",
-                    "count": 4,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "8",
-                    "count": 56,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "6",
-                    "count": 6,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "14",
-                    "count": 5,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "13",
-                    "count": 8,
-                    "notes": ""
-                },
-                {
-                    "expertiseId": "12",
-                    "count": 31,
-                    "notes": ""
-                }
-            ]
+            "expertiseClaims": []
         },
         {
             "id": "33",
@@ -833,7 +185,8 @@
                     "organizationId": "10",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "34",
@@ -849,17 +202,21 @@
                     "organizationId": "8",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "35",
             "name": "Conclusion Mission Critical",
             "type": "company",
             "url": "",
-            "organizationMemberships": [ {
-                "organizationId": "9",
-                "description": "onderdeel van domein"
-            }]
+            "organizationMemberships": [
+                {
+                    "organizationId": "9",
+                    "description": "onderdeel van domein"
+                }
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "36",
@@ -875,7 +232,8 @@
                     "organizationId": "6",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "37",
@@ -891,47 +249,60 @@
                     "organizationId": "8",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "38",
             "name": "FutureFacts",
             "type": "company",
             "url": "",
-            "organizationMemberships": [ {
-                "organizationId": "5",
-                "description": "onderdeel van domein"
-            }]
+            "organizationMemberships": [
+                {
+                    "organizationId": "5",
+                    "description": "onderdeel van domein"
+                }
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "39",
             "name": "Mediaan",
             "type": "company",
             "url": "",
-            "organizationMemberships": [ {
-                "organizationId": "5",
-                "description": "onderdeel van domein"
-            }]
+            "organizationMemberships": [
+                {
+                    "organizationId": "5",
+                    "description": "onderdeel van domein"
+                }
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "40",
             "name": "First8",
             "type": "company",
             "url": "",
-            "organizationMemberships": [ {
-                "organizationId": "11",
-                "description": "onderdeel van domein"
-            }]
+            "organizationMemberships": [
+                {
+                    "organizationId": "11",
+                    "description": "onderdeel van domein"
+                }
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "41",
             "name": "Conclusion Xforce",
             "type": "company",
             "url": "",
-            "organizationMemberships": [ {
-                "organizationId": "10",
-                "description": "onderdeel van domein"
-            }]
+            "organizationMemberships": [
+                {
+                    "organizationId": "10",
+                    "description": "onderdeel van domein"
+                }
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "42",
@@ -943,7 +314,8 @@
                     "organizationId": "6",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "43",
@@ -955,17 +327,21 @@
                     "organizationId": "6",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "44",
             "name": "Conclusion ForeyeT",
             "type": "company",
             "url": "",
-            "organizationMemberships": [ {
-                "organizationId": "12",
-                "description": "onderdeel van domein"
-            }]
+            "organizationMemberships": [
+                {
+                    "organizationId": "12",
+                    "description": "onderdeel van domein"
+                }
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "45",
@@ -977,7 +353,8 @@
                     "organizationId": "8",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "46",
@@ -989,7 +366,8 @@
                     "organizationId": "6",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "47",
@@ -1001,7 +379,8 @@
                     "organizationId": "8",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "48",
@@ -1013,7 +392,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "49",
@@ -1025,7 +405,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "50",
@@ -1037,7 +418,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "51",
@@ -1049,7 +431,8 @@
                     "organizationId": "7",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "52",
@@ -1061,7 +444,8 @@
                     "organizationId": "7",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "53",
@@ -1073,7 +457,8 @@
                     "organizationId": "11",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "54",
@@ -1085,7 +470,8 @@
                     "organizationId": "53",
                     "description": "onderdeel van bedrijf?"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "55",
@@ -1097,7 +483,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "56",
@@ -1109,7 +496,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "57",
@@ -1121,7 +509,8 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
         },
         {
             "id": "58",
@@ -1133,7 +522,16 @@
                     "organizationId": "3",
                     "description": "onderdeel van domein"
                 }
-            ]
+            ],
+            "expertiseClaims": []
+        },
+        {
+            "id": "59",
+            "name": "Conclusion Business Services",
+            "type": "company",
+            "url": "",
+            "organizationMemberships": [],
+            "expertiseClaims": []
         }
     ]
 }
