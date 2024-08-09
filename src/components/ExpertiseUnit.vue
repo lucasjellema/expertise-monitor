@@ -11,7 +11,7 @@
           v-if="unit?.type">mdi-school</v-icon>
         <v-icon @click="(e) => { emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit"
           v-if="!unit.readOnly">mdi-pencil-outline</v-icon>
-        <div class="logoContainer"><v-img :src="unit.logo" @click="e => { if (unit?.type == 'expertise') { emit('showExpertiseDetailsRequested', unit); e.stopPropagation() } }"></v-img></div>
+        <div class="logoContainer"><v-img :src="unit.logo" @click="e => { if (unit?.type == 'expertise'||unit?.type == 'expertiseClaim') { emit('showExpertiseDetailsRequested', unit); e.stopPropagation() } }"></v-img></div>
 
       </span>
       <h3>{{ unit.count }}</h3> <span v-if="unit.children && unit.children.length > 0">(in {{ unit.children.length
@@ -22,7 +22,7 @@
       <div v-if="unit?.type == 'expertiseClaim'">
         <span v-if="unit.claim?.asOf">Per: {{ formatMonthYear(unit.claim.asOf) }}</span><br />
         <span v-if="unit.claim?.author">Door: {{ unit.claim.author }}</span><br />
-        {{ unit.claim.notes }}
+        {{ unit.claim?.notes }}
       </div>
       <ExpertiseUnit v-for="(child, index) in unit.children" :key="index" :unit="child"
         @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"

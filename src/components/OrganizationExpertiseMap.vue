@@ -26,13 +26,15 @@
                         <div id="app">
                             <ExpertiseUnit :unit="expertiseStructure" v-if="selectedSearchSuggestions.length == 0"
                                 @showExpertiseMapRequested="handleShowExpertiseMapRequested"
-                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" />
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
+                                @showExpertiseDetailsRequested="handleShowExpertiseDetailsRequested" />
 
                             <ExpertiseUnit v-if="selectedSearchSuggestions.length > 0"
                                 :unit="suggestion.type == 'expertise' ? initializeExpertiseStructureForExpertise(suggestion.expertise) : initializeExpertiseStructureForTag(suggestion.tag)"
                                 v-for="suggestion in selectedSearchSuggestions" :key="changeIndicator"
                                 @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
-                                @showExpertiseMapRequested="handleShowExpertiseMapRequested" />
+                                @showExpertiseMapRequested="handleShowExpertiseMapRequested" 
+                                @showExpertiseDetailsRequested="handleShowExpertiseDetailsRequested"/>
                         </div>
                     </v-col>
                 </v-row>
@@ -58,7 +60,17 @@
         </v-card>
     </v-dialog>
 
-
+    <v-dialog v-model="expertiseDialog" width="1000" @afterLeave="editExpertise = false">
+        <v-card>
+            <!-- <v-card-title>
+                <v-btn @click="editExpertise = true" v-if="!editExpertise && !appStore.getReadOnly()">Bewerken</v-btn>
+                <v-btn @click="saveExpertise" v-if="editExpertise">Opslaan</v-btn>
+            </v-card-title> -->
+            <ExpertiseDetails :expertise="expertiseToShow" v-if="!editExpertise" />
+            <!-- <EditExpertise :expertise="expertiseToShow" @expertiseChanged="handleExpertiseUpdate"
+                v-if="editExpertise" /> -->
+        </v-card>
+    </v-dialog>
 </template>
 
 
@@ -74,6 +86,18 @@ const tagToEditExpertiseFor = ref(null)
 const organizationUnit = ref(null)
 const openExpertiseClaimDialog = ref(false)
 const expertiseClaimToEdit = ref(null)
+
+const expertiseToShow = ref(null)
+const expertiseDialog = ref(false)
+const generateExpertiseDialog = (expertise) => {
+    expertiseToShow.value = { ...expertise }
+    expertiseDialog.value = true
+}
+const editExpertise = ref(false)
+const handleShowExpertiseDetailsRequested = (expertise) => {
+    console.log('handleShowExpertiseDetailsRequested - show popup with expertise details', expertise)
+    generateExpertiseDialog(expertise.expertise)
+}
 
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 import { readonly } from "vue";
@@ -217,7 +241,9 @@ const prepareExpertiseClaimData = (expertiseNode, organizationUnit) => {
             newExpertiseNode.count = tagClaimMap[tag].total
             if (tagClaimMap[tag].expertise && tagClaimMap[tag].expertise.length > 0) {
                 for (const expertise of tagClaimMap[tag].expertise) {
-                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL, count: expertise.count, type: 'expertise', expertise: expertise.expertise, claim: expertise.claim, readOnly: appStore.getReadOnly(), ambition: expertise.claim.ambition })
+                    newExpertiseNode.children.push({ name: expertise.expertise.name, children: [], logo: expertise.expertise.logoURL
+                        , count: expertise.count, type: 'expertiseClaim', expertise: expertise.expertise
+                        , claim: expertise.claim, readOnly: appStore.getReadOnly(), ambition: expertise.claim.ambition })
                 }
                 newExpertiseNode.children.sort((a, b) => {
                     return b.count - a.count
