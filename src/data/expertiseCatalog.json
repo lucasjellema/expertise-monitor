@@ -9,7 +9,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Neo4j-logo.png",
       "tags": [
         "database",
-        "graph",
         "NoSQL"
       ]
     },
@@ -21,7 +20,6 @@
       "webpage": "https://memcached.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Memcached_logo.png",
       "tags": [
-        "caching",
         "performance",
         "open source"
       ]
@@ -34,8 +32,7 @@
       "webpage": "https://ignite.apache.org",
       "logoURL": "https://ignite.apache.org/images/ignite_logo.svg",
       "tags": [
-        "database",
-        "distributed"
+        "database"
       ]
     },
     {
@@ -98,9 +95,7 @@
       "webpage": "https://www.sqlite.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg",
       "tags": [
-        "database",
-        "SQL",
-        "lightweight"
+        "database"
       ]
     },
     {
@@ -111,9 +106,7 @@
       "webpage": "https://www.yugabyte.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/eb/YugabyteDB_logo.svg",
       "tags": [
-        "database",
-        "distributed",
-        "SQL"
+        "database"
       ]
     },
     {
@@ -125,7 +118,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/f/fd/ArangoDB_logo.svg",
       "tags": [
         "database",
-        "multi-model",
         "open source"
       ]
     },
@@ -138,7 +130,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Orientdb_logo.png",
       "tags": [
         "database",
-        "multi-model",
         "NoSQL"
       ]
     },
@@ -151,8 +142,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
       "tags": [
         "version control",
-        "collaboration",
-        "developer tools"
+        "collaboration"
       ]
     },
     {
@@ -177,8 +167,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
       "tags": [
         "CI/CD",
-        "automation",
-        "developer tools"
+        "automation"
       ]
     },
     {
@@ -188,10 +177,7 @@
       "icon": "mdi-github",
       "webpage": "https://github.com/features/codespaces",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
-      "tags": [
-        "cloud development",
-        "developer tools"
-      ]
+      "tags": []
     },
     {
       "id": "510",
@@ -201,7 +187,6 @@
       "webpage": "https://www.gitpod.io",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Gitpod-logo.svg",
       "tags": [
-        "cloud development",
         "automation"
       ]
     },
@@ -212,10 +197,7 @@
       "icon": "mdi-laptop",
       "webpage": "https://www.devpod.io",
       "logoURL": "https://www.devpod.io/logo.png",
-      "tags": [
-        "cloud development",
-        "developer tools"
-      ]
+      "tags": []
     },
     {
       "id": "512",
@@ -224,10 +206,7 @@
       "icon": "mdi-code-tags",
       "webpage": "https://coder.com",
       "logoURL": "https://coder.com/assets/images/logo-light.svg",
-      "tags": [
-        "cloud development",
-        "developer tools"
-      ]
+      "tags": []
     },
     {
       "id": "513",
@@ -250,7 +229,6 @@
       "webpage": "https://aws.amazon.com/cloud9",
       "logoURL": "https://d1.awsstatic.com/logos/aws-cloud.9b091e1d2b4c167ff7dc33d0dce63e7d.png",
       "tags": [
-        "cloud development",
         "AWS"
       ]
     },
@@ -262,7 +240,6 @@
       "webpage": "https://azure.microsoft.com/services/dev-box",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
       "tags": [
-        "cloud development",
         "Azure"
       ]
     },
@@ -273,10 +250,7 @@
       "icon": "mdi-google-cloud",
       "webpage": "https://cloud.google.com/workstations",
       "logoURL": "https://cloud.google.com/images/products/logos/workstations.svg",
-      "tags": [
-        "cloud development",
-        "Google Cloud"
-      ]
+      "tags": []
     },
     {
       "id": "15",
@@ -286,8 +260,7 @@
       "webpage": "https://en.wikipedia.org/wiki/C%2B%2B",
       "logoURL": "https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png",
       "tags": [
-        "programming language",
-        "object oriented"
+        "programming language"
       ]
     },
     {
@@ -299,7 +272,6 @@
       "logoURL": "https://procoders.tech/wp-content/uploads/2023/05/png-clipart-c-programming-language-logo-microsoft-visual-studio-net-framework-javascript-icon-purple-logo-removebg-preview.png",
       "tags": [
         "programming language",
-        "object oriented",
         ".Net"
       ]
     },
@@ -325,8 +297,7 @@
       "logoURL": "https://camel.apache.org/assets/img/logo-d5a4b527e0.png",
       "tags": [
         "integration",
-        "open source",
-        "Apache"
+        "open source"
       ]
     },
     {
@@ -427,8 +398,7 @@
       "webpage": "https://www.intersystems.com/products/intersystems-iris/",
       "logoURL": "https://www.intersystems.com/wp-content/themes/intersystems/images/logo.png",
       "tags": [
-        "integration",
-        "data management"
+        "integration"
       ]
     },
     {
@@ -440,8 +410,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/56/Infor_logo.svg",
       "tags": [
         "integration",
-        "healthcare",
-        "data exchange"
+        "healthcare"
       ]
     },
     {
@@ -452,7 +421,6 @@
       "webpage": "https://databricks.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Databricks_Logo.png/320px-Databricks_Logo.png",
       "tags": [
-        "data analytics",
         "integration",
         "cloud"
       ]
@@ -479,7 +447,6 @@
       "logoURL": "https://kafka.apache.org/images/logo.png",
       "tags": [
         "stream processing",
-        "messaging",
         "open source"
       ]
     },
@@ -491,7 +458,6 @@
       "webpage": "https://azure.microsoft.com/services/event-hubs",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-374c5e1b0c2174e449db90d9f0fc5d0c0e9913d7d8f7d3a2a5a7517d8ee1ea03/images/page/services/event-hubs/hero-event-hubs.svg",
       "tags": [
-        "event streaming",
         "big data",
         "Azure"
       ]
@@ -504,7 +470,6 @@
       "webpage": "https://www.rabbitmq.com",
       "logoURL": "https://www.rabbitmq.com/img/logo-rabbitmq.svg",
       "tags": [
-        "messaging",
         "open source"
       ]
     },
@@ -516,7 +481,6 @@
       "webpage": "https://activemq.apache.org",
       "logoURL": "https://activemq.apache.org/assets/img/logo.png",
       "tags": [
-        "messaging",
         "open source"
       ]
     },
@@ -529,7 +493,6 @@
       "logoURL": "https://www.mendix.com/wp-content/uploads/2019/08/mendix_logo_600x315.png",
       "tags": [
         "integration",
-        "event-driven",
         "low-code"
       ]
     },
@@ -541,7 +504,6 @@
       "webpage": "https://cloud.google.com/pubsub",
       "logoURL": "https://cloud.google.com/images/products/logos/pubsub.svg",
       "tags": [
-        "messaging",
         "integration",
         "Google Cloud Platform"
       ]
@@ -555,7 +517,6 @@
       "logoURL": "https://cloud.google.com/images/products/logos/cloud-functions.svg",
       "tags": [
         "serverless",
-        "event-driven",
         "Google Cloud Platform"
       ]
     },
@@ -567,7 +528,6 @@
       "webpage": "https://cloud.google.com/eventarc",
       "logoURL": "https://cloud.google.com/images/products/logos/eventarc.svg",
       "tags": [
-        "event-driven",
         "integration",
         "Google Cloud Platform"
       ]
@@ -581,7 +541,6 @@
       "logoURL": "https://d1.awsstatic.com/Product-Page%20Marketing%20Hub/Category%20Card%20Assets/Serverless/aws-logo_serverless.36a1c5be35200b4c222b0c517b4d12f746e5d0fb.png",
       "tags": [
         "serverless",
-        "event-driven",
         "AWS"
       ]
     },
@@ -593,8 +552,6 @@
       "webpage": "https://aws.amazon.com/sns",
       "logoURL": "https://d1.awsstatic.com/Simple%20Notification%20Service/SNS_Logo.8ef7c317d51b4b52aa8a07d174d87dd85ae051d2.png",
       "tags": [
-        "messaging",
-        "notification",
         "AWS"
       ]
     },
@@ -606,8 +563,6 @@
       "webpage": "https://aws.amazon.com/sqs",
       "logoURL": "https://d1.awsstatic.com/Simple%20Queue%20Service/SQS_Logo.9b88b48e6321b6d05ab2128e378ed773aa08a9df.png",
       "tags": [
-        "messaging",
-        "queue",
         "AWS"
       ]
     },
@@ -619,7 +574,6 @@
       "webpage": "https://aws.amazon.com/eventbridge",
       "logoURL": "https://d1.awsstatic.com/EventBridge/EventBridge_Logo.33e8ad1c1907b4eaf87e2f1a94609cf81f3a53ab.png",
       "tags": [
-        "event-driven",
         "integration",
         "AWS"
       ]
@@ -633,7 +587,6 @@
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-59fdd1ec4c9f19964bb5a56351dd4151dcdbf054db166feabf75e6c526042903/images/page/services/functions/hero-functions.svg",
       "tags": [
         "serverless",
-        "event-driven",
         "Azure"
       ]
     },
@@ -645,7 +598,6 @@
       "webpage": "https://azure.microsoft.com/services/event-grid",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-3139d25be7d6e71dd3543b3db3b3f3815baf2af2e3ee7aee7ae2ecfa8390cba7/images/page/services/event-grid/hero-event-grid.svg",
       "tags": [
-        "event-driven",
         "integration",
         "Azure"
       ]
@@ -671,7 +623,6 @@
       "webpage": "https://azure.microsoft.com/services/service-bus",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-4209c7378204a6b0055ba32c86d1e2c0cd4933bc2ffbff59777016710928a70a/images/page/services/service-bus/hero-service-bus.svg",
       "tags": [
-        "messaging",
         "integration",
         "Azure"
       ]
@@ -696,10 +647,7 @@
       "icon": "mdi-account-group",
       "webpage": "https://tribe.so",
       "logoURL": "https://tribe.so/static/images/tribe-logo.svg",
-      "tags": [
-        "engagement",
-        "insights"
-      ]
+      "tags": []
     },
     {
       "id": "408",
@@ -709,8 +657,7 @@
       "webpage": "https://www.shopify.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Shopify_logo_2018.svg",
       "tags": [
-        "e-commerce",
-        "analytics"
+        "e-commerce"
       ]
     },
     {
@@ -720,11 +667,7 @@
       "icon": "mdi-calendar-check",
       "webpage": "https://www.momice.com",
       "logoURL": "https://www.momice.com/hubfs/logo.svg",
-      "tags": [
-        "event management",
-        "analytics",
-        "registration"
-      ]
+      "tags": []
     },
     {
       "id": "410",
@@ -734,8 +677,6 @@
       "webpage": "https://dynamics.microsoft.com/en-us/ai/customer-insights/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/42/Microsoft_Dynamics_365_logo.svg",
       "tags": [
-        "customer data",
-        "insights",
         "Microsoft"
       ]
     },
@@ -748,8 +689,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/71/Epic_Systems_logo.svg",
       "tags": [
         "healthcare",
-        "EHR",
-        "data analysis"
+        "EHR"
       ]
     },
     {
@@ -761,8 +701,7 @@
       "logoURL": "https://www.chipsoft.nl/sites/default/files/logo_chipsoft.png",
       "tags": [
         "healthcare",
-        "EHR",
-        "analytics"
+        "EHR"
       ]
     },
     {
@@ -786,9 +725,7 @@
       "webpage": "https://www.ortecfinance.com",
       "logoURL": "https://www.ortecfinance.com/media/hypbk43l/ortec-finance-logo-rgb.svg",
       "tags": [
-        "financial analytics",
-        "risk management",
-        "insights"
+        "risk management"
       ]
     },
     {
@@ -798,11 +735,7 @@
       "icon": "mdi-chart-donut",
       "webpage": "https://www.figlo.com",
       "logoURL": "https://www.figlo.com/wp-content/uploads/2020/03/figlo-logo.svg",
-      "tags": [
-        "financial planning",
-        "data visualization",
-        "analytics"
-      ]
+      "tags": []
     },
     {
       "id": "416",
@@ -812,8 +745,6 @@
       "webpage": "https://www.sap.com/products/technology-platform/data-warehousing.html",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
       "tags": [
-        "data warehousing",
-        "business intelligence",
         "SAP"
       ]
     },
@@ -825,7 +756,6 @@
       "webpage": "https://www.sap.com/products/technology-platform/analytics-cloud.html",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
       "tags": [
-        "analytics",
         "cloud",
         "SAP"
       ]
@@ -839,7 +769,6 @@
       "logoURL": "https://spark.apache.org/images/spark-logo-trademark.png",
       "tags": [
         "big data",
-        "analytics",
         "open source"
       ]
     },
@@ -852,7 +781,6 @@
       "logoURL": "https://hadoop.apache.org/images/hadoop-logo.jpg",
       "tags": [
         "big data",
-        "distributed computing",
         "open source"
       ]
     },
@@ -865,8 +793,7 @@
       "logoURL": "https://nifi.apache.org/assets/images/nifi-logo.png",
       "tags": [
         "data integration",
-        "open source",
-        "data flow"
+        "open source"
       ]
     },
     {
@@ -878,7 +805,6 @@
       "logoURL": "https://airflow.apache.org/docs/apache-airflow/stable/_images/pin_large.png",
       "tags": [
         "workflow",
-        "scheduling",
         "open source"
       ]
     },
@@ -890,7 +816,6 @@
       "webpage": "https://pandas.pydata.org",
       "logoURL": "https://pandas.pydata.org/static/img/pandas.svg",
       "tags": [
-        "data analysis",
         "Python",
         "open source"
       ]
@@ -903,7 +828,6 @@
       "webpage": "https://dask.org",
       "logoURL": "https://dask.org/_static/images/dask_horizontal.svg",
       "tags": [
-        "parallel computing",
         "Python",
         "open source"
       ]
@@ -915,11 +839,7 @@
       "icon": "mdi-database",
       "webpage": "https://databricks.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Databricks_Logo.png/320px-Databricks_Logo.png",
-      "tags": [
-        "data lake",
-        "data warehouse",
-        "analytics"
-      ]
+      "tags": []
     },
     {
       "id": "425",
@@ -929,7 +849,6 @@
       "webpage": "https://cloud.google.com/dataflow",
       "logoURL": "https://cloud.google.com/images/products/logos/dataflow.svg",
       "tags": [
-        "data processing",
         "cloud",
         "Google Cloud Platform"
       ]
@@ -942,7 +861,6 @@
       "webpage": "https://cloud.google.com/dataprep",
       "logoURL": "https://cloud.google.com/images/products/logos/dataprep.svg",
       "tags": [
-        "data preparation",
         "cloud",
         "Google Cloud Platform"
       ]
@@ -969,7 +887,6 @@
       "logoURL": "https://d1.awsstatic.com/glue/glue-logo.40c5b19b9cd15aa6ed9b9ce4b27a425dd3a3e150.png",
       "tags": [
         "ETL",
-        "data preparation",
         "AWS"
       ]
     },
@@ -1007,7 +924,6 @@
       "webpage": "https://aws.amazon.com/lake-formation",
       "logoURL": "https://d1.awsstatic.com/LakeFormation/LakeFormationLogo.58e219a77146a2e1c2359f5e3dc8b212b24f2832.png",
       "tags": [
-        "data lake",
         "cloud",
         "AWS"
       ]
@@ -1033,7 +949,6 @@
       "webpage": "https://azure.microsoft.com/services/synapse-analytics",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-1e0de59703c56831851266bb64615bfb682feee2a69f3273e982cf20f5d5a5ff/images/page/services/synapse-analytics/hero-synapse-analytics.svg",
       "tags": [
-        "analytics",
         "big data",
         "Azure"
       ]
@@ -1046,7 +961,6 @@
       "webpage": "https://azure.microsoft.com/services/databricks",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-06daedae6bc1930b8c90f82b78579f57927b367143ad15982dcdd9ef5b2d91f4/images/page/services/databricks/hero-databricks.svg",
       "tags": [
-        "analytics",
         "big data",
         "Azure"
       ]
@@ -1059,7 +973,6 @@
       "webpage": "https://azure.microsoft.com/services/stream-analytics",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-7132d91bc8212586b5f3b5e2f7d2fc7b87d270a2c2e83e22df7c4bdfd967b464/images/page/services/stream-analytics/hero-stream-analytics.svg",
       "tags": [
-        "real-time analytics",
         "stream processing",
         "Azure"
       ]
@@ -1072,8 +985,6 @@
       "webpage": "https://powerbi.microsoft.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
       "tags": [
-        "data visualization",
-        "business intelligence",
         "Microsoft"
       ]
     },
@@ -1084,11 +995,7 @@
       "icon": "mdi-chart-pie",
       "webpage": "https://www.qlik.com/us/products/qlikview",
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Qlik_logo.svg/320px-Qlik_logo.svg.png",
-      "tags": [
-        "data visualization",
-        "business intelligence",
-        "self-service BI"
-      ]
+      "tags": []
     },
     {
       "id": "401",
@@ -1097,11 +1004,7 @@
       "icon": "mdi-chart-areaspline",
       "webpage": "https://www.tableau.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png",
-      "tags": [
-        "data visualization",
-        "analytics",
-        "self-service BI"
-      ]
+      "tags": []
     },
     {
       "id": "402",
@@ -1111,9 +1014,7 @@
       "webpage": "https://superset.apache.org",
       "logoURL": "https://superset.apache.org/images/superset-logo-horiz.png",
       "tags": [
-        "data visualization",
-        "open source",
-        "analytics"
+        "open source"
       ]
     },
     {
@@ -1124,8 +1025,6 @@
       "webpage": "https://bokeh.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Bokeh_logo.png",
       "tags": [
-        "data visualization",
-        "interactive",
         "Python"
       ]
     },
@@ -1137,8 +1036,6 @@
       "webpage": "https://seaborn.pydata.org",
       "logoURL": "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg",
       "tags": [
-        "data visualization",
-        "statistical graphics",
         "Python"
       ]
     },
@@ -1150,8 +1047,6 @@
       "webpage": "https://plotly.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Plotly-logo-01-square.png/800px-Plotly-logo-01-square.png",
       "tags": [
-        "data visualization",
-        "interactive",
         "Python"
       ]
     },
@@ -1189,7 +1084,6 @@
       "webpage": "https://www.terraform.io",
       "logoURL": "https://www.terraform.io/assets/images/og-image-8b3e4f7d.png",
       "tags": [
-        "infrastructure as code",
         "cloud",
         "automation"
       ]
@@ -1202,9 +1096,7 @@
       "webpage": "https://docs.microsoft.com/azure/azure-resource-manager/bicep",
       "logoURL": "https://bicep.dev/assets/img/logo-light.svg",
       "tags": [
-        "infrastructure as code",
-        "Azure",
-        "DSL"
+        "Azure"
       ]
     },
     {
@@ -1215,7 +1107,6 @@
       "webpage": "https://azure.microsoft.com/features/resource-manager/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
       "tags": [
-        "cloud management",
         "Azure",
         "automation"
       ]
@@ -1228,7 +1119,6 @@
       "webpage": "https://aws.amazon.com/cdk/",
       "logoURL": "https://d1.awsstatic.com/cdk-logo.d77b4e18e10ac56815b2a0cf9b1bf99c08ebbc6d.png",
       "tags": [
-        "infrastructure as code",
         "AWS",
         "automation"
       ]
@@ -1241,7 +1131,6 @@
       "webpage": "https://www.openshift.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/35/OpenShift-LogoType.svg",
       "tags": [
-        "containerization",
         "Kubernetes",
         "Red Hat"
       ]
@@ -1280,7 +1169,6 @@
       "webpage": "https://podman.io",
       "logoURL": "https://podman.io/images/podman-logo-source.svg",
       "tags": [
-        "containerization",
         "open source",
         "OCI"
       ]
@@ -1293,7 +1181,6 @@
       "webpage": "https://www.docker.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg",
       "tags": [
-        "containerization",
         "open source",
         "DevOps"
       ]
@@ -1358,8 +1245,6 @@
       "webpage": "https://argoproj.github.io/cd/",
       "logoURL": "https://argoproj.github.io/argo-cd/assets/logo.png",
       "tags": [
-        "GitOps",
-        "continuous delivery",
         "Kubernetes"
       ]
     },
@@ -1372,7 +1257,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg",
       "tags": [
         "automation",
-        "configuration management",
         "open source"
       ]
     },
@@ -1384,7 +1268,6 @@
       "webpage": "https://www.php.net",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
       "tags": [
-        "scripting language",
         "web development",
         "open source"
       ]
@@ -1397,7 +1280,6 @@
       "webpage": "https://www.drupal.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/DrupalCon_logo.svg/1280px-DrupalCon_logo.svg.png",
       "tags": [
-        "content management",
         "web development",
         "open source"
       ]
@@ -1410,9 +1292,7 @@
       "webpage": "https://docs.microsoft.com/dynamics365/fin-ops-core/dev-itpro/dev-tools/programming-xpp",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/42/Microsoft_Dynamics_365_logo.svg",
       "tags": [
-        "programming language",
-        "Microsoft Dynamics AX",
-        "business logic"
+        "programming language"
       ]
     },
     {
@@ -1423,8 +1303,7 @@
       "webpage": "https://docs.microsoft.com/dynamics-nav/cal",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/42/Microsoft_Dynamics_365_logo.svg",
       "tags": [
-        "programming language",
-        "business logic"
+        "programming language"
       ]
     },
     {
@@ -1436,8 +1315,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
       "tags": [
         "programming language",
-        "SAP",
-        "business applications"
+        "SAP"
       ]
     },
     {
@@ -1448,8 +1326,7 @@
       "webpage": "https://kotlinlang.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg",
       "tags": [
-        "programming language",
-        "Android development"
+        "programming language"
       ]
     },
     {
@@ -1461,8 +1338,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg",
       "tags": [
         "programming language",
-        "performance",
-        "concurrency"
+        "performance"
       ]
     },
     {
@@ -1486,8 +1362,7 @@
       "webpage": "https://www.embarcadero.com/products/delphi",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Delphi_love.png",
       "tags": [
-        "programming language",
-        "rapid application development"
+        "programming language"
       ]
     },
     {
@@ -1499,8 +1374,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg",
       "tags": [
         "programming language",
-        "iOS development",
-        "Apple"
+        "iOS development"
       ]
     },
     {
@@ -1537,9 +1411,7 @@
       "webpage": "https://angular.io",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg",
       "tags": [
-        "web development",
-        "framework",
-        "JavaScript"
+        "web development"
       ]
     },
     {
@@ -1550,9 +1422,7 @@
       "webpage": "https://vuejs.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
       "tags": [
-        "web development",
-        "framework",
-        "JavaScript"
+        "web development"
       ]
     },
     {
@@ -1563,9 +1433,7 @@
       "webpage": "https://svelte.dev",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg",
       "tags": [
-        "web development",
-        "framework",
-        "JavaScript"
+        "web development"
       ]
     },
     {
@@ -1576,9 +1444,7 @@
       "webpage": "https://reactjs.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
       "tags": [
-        "web development",
-        "library",
-        "JavaScript"
+        "web development"
       ]
     },
     {
@@ -1590,7 +1456,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
       "tags": [
         "web development",
-        "markup language",
         "frontend"
       ]
     },
@@ -1603,7 +1468,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
       "tags": [
         "web development",
-        "style sheet language",
         "frontend"
       ]
     },
@@ -1629,7 +1493,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Google_Material_Design_Logo.svg",
       "tags": [
         "web development",
-        "design language",
         "Google"
       ]
     },
@@ -1642,7 +1505,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
       "tags": [
         "web development",
-        "UI design",
         "collaboration"
       ]
     },
@@ -1654,9 +1516,7 @@
       "webpage": "https://getbootstrap.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
       "tags": [
-        "web development",
-        "CSS framework",
-        "responsive design"
+        "web development"
       ]
     },
     {
@@ -1667,9 +1527,7 @@
       "webpage": "https://tailwindcss.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
       "tags": [
-        "web development",
-        "CSS framework",
-        "utility-first"
+        "web development"
       ]
     },
     {
@@ -1681,8 +1539,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
       "tags": [
         "web development",
-        "programming language",
-        "JavaScript"
+        "programming language"
       ]
     },
     {
@@ -1693,9 +1550,7 @@
       "webpage": "https://nodejs.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
       "tags": [
-        "web development",
-        "runtime environment",
-        "JavaScript"
+        "web development"
       ]
     },
     {
@@ -1706,9 +1561,7 @@
       "webpage": "https://expressjs.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
       "tags": [
-        "web development",
-        "framework",
-        "Node.js"
+        "web development"
       ]
     },
     {
@@ -1719,9 +1572,7 @@
       "webpage": "https://webpack.js.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/94/Webpack.svg",
       "tags": [
-        "web development",
-        "module bundler",
-        "JavaScript"
+        "web development"
       ]
     },
     {
@@ -1733,8 +1584,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Jest_Logo.svg",
       "tags": [
         "web development",
-        "testing",
-        "JavaScript"
+        "testing"
       ]
     },
     {
@@ -1746,7 +1596,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/36/Storybook.png",
       "tags": [
         "web development",
-        "UI components",
         "testing"
       ]
     },
@@ -1758,9 +1607,7 @@
       "webpage": "https://www.gatsbyjs.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Gatsby_Logo.svg",
       "tags": [
-        "web development",
-        "static sites",
-        "React"
+        "web development"
       ]
     },
     {
@@ -1771,9 +1618,7 @@
       "webpage": "https://nuxtjs.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Nuxt_logo.svg",
       "tags": [
-        "web development",
-        "universal apps",
-        "Vue"
+        "web development"
       ]
     },
     {
@@ -1785,8 +1630,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
       "tags": [
         "web development",
-        "API",
-        "query language"
+        "API"
       ]
     },
     {
@@ -1798,8 +1642,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Apollo_GraphQL_logo.svg",
       "tags": [
         "web development",
-        "API",
-        "GraphQL"
+        "API"
       ]
     },
     {
@@ -1810,7 +1653,6 @@
       "webpage": "https://vercel.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Vercel_logo.svg",
       "tags": [
-        "web hosting",
         "serverless",
         "cloud"
       ]
@@ -1824,8 +1666,7 @@
       "logoURL": "https://www.perplexity.ai/logo.png",
       "tags": [
         "ai",
-        "machine learning",
-        "analytics"
+        "machine learning"
       ]
     },
     {
@@ -1837,8 +1678,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Supabase_logo.png",
       "tags": [
         "database",
-        "open source",
-        "backend"
+        "open source"
       ]
     },
     {
@@ -1849,9 +1689,7 @@
       "webpage": "https://nextjs.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
       "tags": [
-        "web development",
-        "server-side rendering",
-        "React"
+        "web development"
       ]
     },
     {
@@ -1875,9 +1713,7 @@
       "webpage": "https://copilot.github.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/66/GitHub_logo.svg",
       "tags": [
-        "ai",
-        "code completion",
-        "developer tools"
+        "ai"
       ]
     },
     {
@@ -1888,9 +1724,7 @@
       "webpage": "https://codeium.com",
       "logoURL": "https://codeium.com/logo.png",
       "tags": [
-        "ai",
-        "code generation",
-        "developer tools"
+        "ai"
       ]
     },
     {
@@ -1902,7 +1736,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Microsoft_Power_Platform_logo.png",
       "tags": [
         "low code",
-        "app development",
         "microsoft",
         "RPA"
       ]
@@ -1916,7 +1749,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Pegasystems_logo.svg",
       "tags": [
         "CRM",
-        "DPA",
         "BPM",
         "RPA",
         "low code"
@@ -1932,7 +1764,6 @@
       "tags": [
         "low code",
         "automation",
-        "app development",
         "RPA"
       ]
     },
@@ -1969,7 +1800,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1e/ServiceNow_logo.svg",
       "tags": [
         "low code",
-        "workflow automation",
         "cloud"
       ]
     },
@@ -1982,8 +1812,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Lightning_Experience_Logo.png",
       "tags": [
         "low code",
-        "CRM",
-        "app development"
+        "CRM"
       ]
     },
     {
@@ -2043,9 +1872,7 @@
       "webpage": "https://retool.com/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Retool_Logo.png",
       "tags": [
-        "low code",
-        "internal tools",
-        "app development"
+        "low code"
       ]
     },
     {
@@ -2056,9 +1883,7 @@
       "webpage": "https://www.zoho.com/creator/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/44/Zoho-logo.png",
       "tags": [
-        "low code",
-        "app development",
-        "mobile-ready"
+        "low code"
       ]
     },
     {
@@ -2069,8 +1894,7 @@
       "webpage": "https://en.wikipedia.org/wiki/Java_(programming_language)",
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/121px-Java_programming_language_logo.svg.png",
       "tags": [
-        "programming language",
-        "object oriented"
+        "programming language"
       ]
     },
     {
@@ -2095,8 +1919,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/SQL_Server_Logo.svg/1200px-SQL_Server_Logo.svg.png",
       "tags": [
         "database",
-        "rdbms",
-        "relational"
+        "rdbms"
       ]
     },
     {
@@ -2108,8 +1931,7 @@
       "logoURL": "https://duckdb.org/images/logo-dl/DuckDB_Logo.png",
       "tags": [
         "database",
-        "olap",
-        "data analysis"
+        "olap"
       ]
     },
     {
@@ -2147,8 +1969,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1200px-MongoDB-Logo.svg.png",
       "tags": [
         "database",
-        "nosql",
-        "document"
+        "nosql"
       ]
     },
     {
@@ -2173,9 +1994,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/1200px-Cassandra_logo.svg.png",
       "tags": [
         "database",
-        "nosql",
-        "distributed",
-        "wide column"
+        "nosql"
       ]
     },
     {
@@ -2213,7 +2032,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png",
       "tags": [
         "database",
-        "data warehouse",
         "cloud"
       ]
     },
@@ -2238,8 +2056,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/220px-Snowflake_Logo.svg.png",
       "tags": [
         "database",
-        "cloud",
-        "data warehouse"
+        "cloud"
       ]
     },
     {
@@ -2251,8 +2068,7 @@
       "logoURL": "https://cloud.google.com/images/products/logos/sql.svg",
       "tags": [
         "database",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2314,9 +2130,7 @@
       "webpage": "https://cloud.google.com/bigquery",
       "logoURL": "https://cloud.google.com/images/products/logos/bigquery.svg",
       "tags": [
-        "data warehouse",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2341,8 +2155,7 @@
       "logoURL": "https://d1.awsstatic.com/rds-icons/rds-icon-2020.dce40d1b994b4111c5698ac4c86b89f7cd8a27d0.png",
       "tags": [
         "database",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2378,9 +2191,7 @@
       "webpage": "https://aws.amazon.com/redshift",
       "logoURL": "https://d1.awsstatic.com/Redshift/redshift-icon.c029a4ba4a4387ecbbbf7ec34541874d4a3db5f1.png",
       "tags": [
-        "data warehouse",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2392,8 +2203,7 @@
       "logoURL": "https://d1.awsstatic.com/Aurora/aurora-icon.b6e0f3d4e8493b32feee2d2c635cc7aa02064bdb.png",
       "tags": [
         "database",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2405,8 +2215,7 @@
       "logoURL": "https://d1.awsstatic.com/Neptune/neptune-icon.79cc1e41e5abaf85b78b197dbf96ff248578b8e0.png",
       "tags": [
         "database",
-        "cloud",
-        "graph"
+        "cloud"
       ]
     },
     {
@@ -2418,8 +2227,7 @@
       "logoURL": "https://d1.awsstatic.com/DocumentDB/documentdb-logo.a5b7c64f91a79e9c1773b97a5bfe6004d77b5f16.png",
       "tags": [
         "database",
-        "cloud",
-        "document"
+        "cloud"
       ]
     },
     {
@@ -2457,8 +2265,7 @@
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/mysql/hero-mysql.svg",
       "tags": [
         "database",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2470,8 +2277,7 @@
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/postgresql/hero-postgresql.svg",
       "tags": [
         "database",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2483,8 +2289,7 @@
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/sql-database/sql-managed-instance.svg",
       "tags": [
         "database",
-        "cloud",
-        "SQL"
+        "cloud"
       ]
     },
     {
@@ -2521,8 +2326,7 @@
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/storage/blobs.svg",
       "tags": [
         "storage",
-        "cloud",
-        "unstructured data"
+        "cloud"
       ]
     },
     {
@@ -2533,9 +2337,7 @@
       "webpage": "https://azure.microsoft.com/services/storage/data-lake-storage",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/storage/data-lake-storage.svg",
       "tags": [
-        "data lake",
-        "cloud",
-        "analytics"
+        "cloud"
       ]
     },
     {
@@ -2608,7 +2410,6 @@
       "webpage": "https://cloud.google.com/logging",
       "logoURL": "https://cloud.google.com/images/products/logos/cloud-logging.svg",
       "tags": [
-        "logging",
         "cloud",
         "Google Cloud Platform"
       ]
@@ -2634,7 +2435,6 @@
       "webpage": "https://cloud.google.com/profiler",
       "logoURL": "https://cloud.google.com/images/products/logos/cloud-profiler.svg",
       "tags": [
-        "profiling",
         "cloud",
         "Google Cloud Platform"
       ]
@@ -2647,7 +2447,6 @@
       "webpage": "https://cloud.google.com/debugger",
       "logoURL": "https://cloud.google.com/images/products/logos/cloud-debugger.svg",
       "tags": [
-        "debugging",
         "cloud",
         "Google Cloud Platform"
       ]
@@ -2673,8 +2472,6 @@
       "webpage": "https://aws.amazon.com/cloudtrail",
       "logoURL": "https://d1.awsstatic.com/CloudTrail/cloudtrail-logo.d70e0b96bd889843e3c4695cf91a7c09a1c76d9a.png",
       "tags": [
-        "logging",
-        "auditing",
         "AWS"
       ]
     },
@@ -2687,7 +2484,6 @@
       "logoURL": "https://d1.awsstatic.com/X-Ray/xray-logo.6a0d95b3c1e66bfb19c989b301096c68d4e6e1b2.png",
       "tags": [
         "tracing",
-        "debugging",
         "AWS"
       ]
     },
@@ -2699,8 +2495,6 @@
       "webpage": "https://aws.amazon.com/config",
       "logoURL": "https://d1.awsstatic.com/Config/config-logo.f198840e3deed7a1e1d4c0e5e7762a19db8e9a4e.png",
       "tags": [
-        "configuration",
-        "auditing",
         "AWS"
       ]
     },
@@ -2737,8 +2531,6 @@
       "webpage": "https://azure.microsoft.com/services/monitor",
       "logoURL": "https://azurecomcdn.azureedge.net/cvt-378fa3e7f3fa7c6b468eaa0db24d0c1296e613d8f9d616227fe2b1b1e9e3d7b7/images/page/services/monitor/hero-monitor.svg",
       "tags": [
-        "logging",
-        "analytics",
         "Azure"
       ]
     },
@@ -2788,8 +2580,7 @@
       "webpage": "https://www.splunk.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Splunk_logo_with_swoosh.png/220px-Splunk_logo_with_swoosh.png",
       "tags": [
-        "monitoring",
-        "analytics"
+        "monitoring"
       ]
     },
     {
@@ -2814,8 +2605,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Zabbix_logo.svg/320px-Zabbix_logo.svg.png",
       "tags": [
         "monitoring",
-        "open source",
-        "IT infrastructure"
+        "open source"
       ]
     },
     {
@@ -2827,8 +2617,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/System_Center_Operations_Manager_2012_logo.png/250px-System_Center_Operations_Manager_2012_logo.png",
       "tags": [
         "monitoring",
-        "Microsoft",
-        "IT infrastructure"
+        "Microsoft"
       ]
     },
     {
@@ -2840,8 +2629,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/SAP_2011_logo.svg",
       "tags": [
         "monitoring",
-        "SAP",
-        "IT operations"
+        "SAP"
       ]
     },
     {
@@ -2853,7 +2641,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Datadog_logo.png/320px-Datadog_logo.png",
       "tags": [
         "monitoring",
-        "analytics",
         "observability"
       ]
     },
@@ -2891,8 +2678,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/LogicMonitor_Logo.png/320px-LogicMonitor_Logo.png",
       "tags": [
         "monitoring",
-        "cloud",
-        "IT infrastructure"
+        "cloud"
       ]
     },
     {
@@ -2904,7 +2690,6 @@
       "logoURL": "https://checkmk.com/logo.svg",
       "tags": [
         "monitoring",
-        "IT infrastructure",
         "open source"
       ]
     },
@@ -2930,8 +2715,7 @@
       "logoURL": "https://juststickers.in/wp-content/uploads/2018/11/kubernetes-wordmark.png",
       "tags": [
         "container orchestration",
-        "open source",
-        "cloud-native"
+        "open source"
       ]
     },
     {
@@ -2941,9 +2725,7 @@
       "icon": "mdi-database",
       "webpage": "https://en.wikipedia.org/wiki/Dynatrace",
       "logoURL": "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Dynatrace_logo.svg/220px-Dynatrace_logo.svg.png",
-      "tags": [
-        "application performance management"
-      ]
+      "tags": []
     },
     {
       "id": "122",
@@ -2952,11 +2734,7 @@
       "icon": "mdi-elastic",
       "webpage": "https://en.wikipedia.org/wiki/ELK_Stack",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Elastic_Logo.png",
-      "tags": [
-        "data search",
-        "real-time analytics",
-        "log management"
-      ]
+      "tags": []
     },
     {
       "id": "123",
@@ -2966,7 +2744,6 @@
       "webpage": "https://en.wikipedia.org/wiki/Microsoft_Azure",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
       "tags": [
-        "cloud computing",
         "microsoft",
         "platform as a service"
       ]
@@ -2979,7 +2756,6 @@
       "webpage": "https://en.wikipedia.org/wiki/Amazon_Web_Services",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
       "tags": [
-        "cloud computing",
         "amazon",
         "infrastructure as a service"
       ]
@@ -2992,7 +2768,6 @@
       "webpage": "https://en.wikipedia.org/wiki/Google_Cloud_Platform",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Cloud_Logo.png",
       "tags": [
-        "cloud computing",
         "google",
         "platform as a service"
       ]
@@ -3005,9 +2780,7 @@
       "webpage": "https://en.wikipedia.org/wiki/IBM_Cloud",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
       "tags": [
-        "cloud computing",
-        "ibm",
-        "hybrid cloud"
+        "ibm"
       ]
     },
     {
@@ -3018,7 +2791,6 @@
       "webpage": "https://en.wikipedia.org/wiki/Oracle_Cloud",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Oracle_Logo.png",
       "tags": [
-        "cloud computing",
         "oracle",
         "infrastructure as a service"
       ]
@@ -3030,9 +2802,7 @@
       "icon": "mdi-web",
       "webpage": "https://en.wikipedia.org/wiki/Optimizely",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/76/Optimizely_logo.png",
-      "tags": [
-        "personalization"
-      ]
+      "tags": []
     },
     {
       "id": "129",
@@ -3074,9 +2844,7 @@
       "webpage": "https://en.wikipedia.org/wiki/Salesforce",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Salesforce_logo.svg",
       "tags": [
-        "CRM",
-        "cloud computing",
-        "customer management"
+        "CRM"
       ]
     },
     {
@@ -3112,9 +2880,7 @@
       "webpage": "https://en.wikipedia.org/wiki/HubSpot",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/HubSpot_Logo.svg",
       "tags": [
-        "inbound marketing",
-        "sales",
-        "customer service"
+        "inbound marketing"
       ]
     },
     {
@@ -3124,10 +2890,7 @@
       "icon": "mdi-web",
       "webpage": "https://en.wikipedia.org/wiki/Bloomreach",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/db/Bloomreach_logo.png",
-      "tags": [
-        "content management",
-        "personalization"
-      ]
+      "tags": []
     },
     {
       "id": "137",
@@ -3136,11 +2899,7 @@
       "icon": "mdi-sap",
       "webpage": "https://en.wikipedia.org/wiki/SAP",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
-      "tags": [
-        "enterprise software",
-        "business operations",
-        "customer relations"
-      ]
+      "tags": []
     },
     {
       "id": "138",
@@ -3150,9 +2909,7 @@
       "webpage": "https://en.wikipedia.org/wiki/AFAS_Software",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/55/AFAS_Software_logo.png",
       "tags": [
-        "ERP",
-        "enterprise software",
-        "business operations"
+        "ERP"
       ]
     },
     {
@@ -3164,8 +2921,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Microsoft_Dynamics_logo.svg",
       "tags": [
         "ERP",
-        "CRM",
-        "enterprise software"
+        "CRM"
       ]
     },
     {
@@ -3176,9 +2932,7 @@
       "webpage": "https://en.wikipedia.org/wiki/Oracle_ERP",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Oracle_Logo.png",
       "tags": [
-        "ERP",
-        "cloud computing",
-        "enterprise software"
+        "ERP"
       ]
     },
     {
@@ -3221,8 +2975,6 @@
       "webpage": "https://maven.apache.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg",
       "tags": [
-        "build automation",
-        "Java",
         "project management"
       ]
     },
@@ -3261,7 +3013,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/8/85/Atlassian_Confluence_logo.png",
       "tags": [
         "collaboration",
-        "documentation",
         "project management"
       ]
     },
@@ -3272,11 +3023,7 @@
       "icon": "mdi-hammer",
       "webpage": "https://ant.apache.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/75/Apache_Ant_logo.svg",
-      "tags": [
-        "build automation",
-        "Java",
-        "XML"
-      ]
+      "tags": []
     },
     {
       "id": "522",
@@ -3286,8 +3033,6 @@
       "webpage": "https://www.gnu.org/software/bash/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/39/Bash_Logo_Colored.svg",
       "tags": [
-        "shell",
-        "scripting",
         "Linux"
       ]
     },
@@ -3300,7 +3045,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/26/JUnit_Logo.png",
       "tags": [
         "unit testing",
-        "Java",
         "automation"
       ]
     },
@@ -3312,7 +3056,6 @@
       "webpage": "https://www.selenium.dev",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png",
       "tags": [
-        "test automation",
         "web development",
         "open source"
       ]
@@ -3324,11 +3067,7 @@
       "icon": "mdi-database-search",
       "webpage": "https://www.w3.org/XML/Query/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
-      "tags": [
-        "query language",
-        "XML",
-        "data transformation"
-      ]
+      "tags": []
     },
     {
       "id": "526",
@@ -3337,11 +3076,7 @@
       "icon": "mdi-file-code",
       "webpage": "https://www.w3.org/TR/xslt/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
-      "tags": [
-        "transformation",
-        "XML",
-        "formatting"
-      ]
+      "tags": []
     },
     {
       "id": "527",
@@ -3350,11 +3085,7 @@
       "icon": "mdi-file-code",
       "webpage": "https://www.w3.org/XML/Schema",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
-      "tags": [
-        "schema",
-        "XML",
-        "validation"
-      ]
+      "tags": []
     },
     {
       "id": "528",
@@ -3363,11 +3094,7 @@
       "icon": "mdi-file-code",
       "webpage": "https://www.w3.org/TR/wsdl/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5e/XML.svg",
-      "tags": [
-        "web services",
-        "XML",
-        "interface"
-      ]
+      "tags": []
     },
     {
       "id": "529",
@@ -3378,7 +3105,6 @@
       "logoURL": "https://www.w3.org/favicon.ico",
       "tags": [
         "web development",
-        "analytics",
         "monitoring"
       ]
     },
@@ -3389,11 +3115,7 @@
       "icon": "mdi-blockchain",
       "webpage": "https://www.blockchain.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/64/Blockchain_logo.png",
-      "tags": [
-        "distributed ledger",
-        "cryptocurrency",
-        "decentralization"
-      ]
+      "tags": []
     },
     {
       "id": "531",
@@ -3403,7 +3125,6 @@
       "webpage": "https://cucumber.io/docs/gherkin/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cucumber_Logo.svg",
       "tags": [
-        "BDD",
         "testing",
         "automation"
       ]
@@ -3416,7 +3137,6 @@
       "webpage": "https://jfrog.com/artifactory/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Logo_Jfrog.png",
       "tags": [
-        "repository management",
         "DevOps",
         "CI/CD"
       ]
@@ -3429,7 +3149,6 @@
       "webpage": "https://quay.io",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/29/Quay_Logo.svg",
       "tags": [
-        "container registry",
         "DevOps",
         "automation"
       ]
@@ -3442,7 +3161,6 @@
       "webpage": "https://cucumber.io",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cucumber_Logo.svg",
       "tags": [
-        "BDD",
         "testing",
         "automation"
       ]
@@ -3467,10 +3185,7 @@
       "icon": "mdi-microsoft-visual-studio-code",
       "webpage": "https://code.visualstudio.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Visual_Studio_Code_1.35_icon.svg",
-      "tags": [
-        "editor",
-        "developer tools"
-      ]
+      "tags": []
     },
     {
       "id": "537",
@@ -3480,7 +3195,6 @@
       "webpage": "https://visualstudio.microsoft.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Visual_Studio_2013_Logo.svg",
       "tags": [
-        "developer tools",
         "Microsoft"
       ]
     },
@@ -3493,7 +3207,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg",
       "tags": [
         "data science",
-        "notebooks",
         "Python"
       ]
     },
@@ -3505,8 +3218,7 @@
       "webpage": "https://julialang.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Julia_Programming_Language_Logo.svg",
       "tags": [
-        "programming language",
-        "technical computing"
+        "programming language"
       ]
     },
     {
@@ -3517,9 +3229,7 @@
       "webpage": "https://www.r-project.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg",
       "tags": [
-        "programming language",
-        "statistics",
-        "data analysis"
+        "programming language"
       ]
     },
     {
@@ -3530,7 +3240,6 @@
       "webpage": "https://docs.microsoft.com/windows-server/identity/active-directory",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Azure_Logo.svg",
       "tags": [
-        "directory service",
         "Microsoft",
         "identity management"
       ]
@@ -3557,7 +3266,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
       "tags": [
         "security",
-        "key management",
         "cloud"
       ]
     },
@@ -3569,8 +3277,6 @@
       "webpage": "https://dapr.io",
       "logoURL": "https://dapr.io/images/logo.svg",
       "tags": [
-        "microservices",
-        "runtime",
         "open source"
       ]
     },
@@ -3582,8 +3288,6 @@
       "webpage": "https://logging.apache.org/log4j/2.x/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Apache_Log4j_Logo.svg",
       "tags": [
-        "logging",
-        "Java",
         "open source"
       ]
     },
@@ -3595,7 +3299,6 @@
       "webpage": "https://sentry.io",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Sentry_Logo.svg",
       "tags": [
-        "error tracking",
         "monitoring",
         "open source"
       ]
@@ -3647,7 +3350,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d4/New_Relic_Logo.png",
       "tags": [
         "monitoring",
-        "analytics",
         "performance"
       ]
     },
@@ -3685,7 +3387,6 @@
       "webpage": "https://k6.io",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/ab/K6_logo.svg",
       "tags": [
-        "load testing",
         "performance",
         "open source"
       ]
@@ -3698,7 +3399,6 @@
       "webpage": "https://jmeter.apache.org",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e5/JMeter.png",
       "tags": [
-        "load testing",
         "performance",
         "open source"
       ]
@@ -3712,9 +3412,7 @@
       "logoURL": "",
       "tags": [
         "CI/CD",
-        "automation",
-        "build",
-        "deploy"
+        "automation"
       ]
     },
     {
@@ -3764,8 +3462,6 @@
       "webpage": "https://azure.microsoft.com/services/service-fabric/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
       "tags": [
-        "microservices",
-        "distributed systems",
         "Azure"
       ]
     },
@@ -3803,9 +3499,7 @@
       "webpage": "https://www.alation.com",
       "logoURL": "https://www.alation.com/wp-content/uploads/2020/11/Alation-Logo-Web-Color.png",
       "tags": [
-        "data catalog",
-        "data governance",
-        "analytics"
+        "data governance"
       ]
     },
     {
@@ -3829,9 +3523,7 @@
       "webpage": "https://www.collibra.com",
       "logoURL": "https://www.collibra.com/hubfs/logo/collibra-logo.svg",
       "tags": [
-        "data intelligence",
-        "data governance",
-        "analytics"
+        "data governance"
       ]
     },
     {
@@ -3841,9 +3533,7 @@
       "icon": "",
       "webpage": "",
       "logoURL": "",
-      "tags": [
-        "data visualization"
-      ]
+      "tags": []
     },
     {
       "id": "94",
@@ -3864,8 +3554,7 @@
       "webpage": "",
       "logoURL": "",
       "tags": [
-        "data governance",
-        "data management"
+        "data governance"
       ]
     },
     {
@@ -3875,10 +3564,7 @@
       "icon": "",
       "webpage": "",
       "logoURL": "",
-      "tags": [
-        "data lake",
-        "data warehouse"
-      ]
+      "tags": []
     },
     {
       "id": "91",
@@ -3888,7 +3574,6 @@
       "webpage": "",
       "logoURL": "",
       "tags": [
-        "data pipeline",
         "etl"
       ]
     },
@@ -3956,7 +3641,6 @@
       "webpage": "https://cloud.google.com/apigee",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/3/31/Apigee_logo.svg",
       "tags": [
-        "API management",
         "cloud",
         "Google"
       ]
@@ -3969,8 +3653,6 @@
       "webpage": "https://konghq.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Kong_logo.svg",
       "tags": [
-        "API gateway",
-        "microservices",
         "open source"
       ]
     },
@@ -3982,7 +3664,6 @@
       "webpage": "https://azure.microsoft.com/services/api-management/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
       "tags": [
-        "API management",
         "cloud",
         "Azure"
       ]
@@ -4008,8 +3689,6 @@
       "webpage": "https://azure.microsoft.com/services/service-fabric/",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
       "tags": [
-        "microservices",
-        "distributed systems",
         "Azure"
       ]
     },
@@ -4021,9 +3700,8 @@
       "webpage": "https://www.outsystems.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0b/OutSystems-Logo.svg",
       "tags": [
-        "low-code",
-        "AI",
-        "development"
+        "low code",
+        "AI"
       ]
     },
     {
@@ -4035,8 +3713,7 @@
       "logoURL": "https://opentelemetry.io/images/logos/opentelemetry-logo-color.svg",
       "tags": [
         "observability",
-        "open source",
-        "metrics"
+        "open source"
       ]
     },
     {
@@ -4047,9 +3724,7 @@
       "webpage": "https://www.blueconic.com",
       "logoURL": "https://www.blueconic.com/wp-content/uploads/2020/10/BlueConicLogo.svg",
       "tags": [
-        "customer data platform",
-        "data management",
-        "analytics"
+        "customer data platform"
       ]
     },
     {
@@ -4061,8 +3736,7 @@
       "logoURL": "https://www.raptor.com/logo.svg",
       "tags": [
         "data science",
-        "machine learning",
-        "analytics"
+        "machine learning"
       ]
     },
     {
@@ -4086,9 +3760,7 @@
       "webpage": "https://prepr.io",
       "logoURL": "https://prepr.io/wp-content/uploads/2020/10/prepr-logo.png",
       "tags": [
-        "CMS",
-        "personalization",
-        "content management"
+        "CMS"
       ]
     },
     {
@@ -4100,8 +3772,7 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Contentful_logo.svg",
       "tags": [
         "CMS",
-        "headless CMS",
-        "content management"
+        "headless CMS"
       ]
     },
     {
@@ -4111,11 +3782,7 @@
       "icon": "mdi-chart-bar",
       "webpage": "https://piwik.pro",
       "logoURL": "https://piwik.pro/wp-content/uploads/2020/10/piwik-pro-logo.svg",
-      "tags": [
-        "analytics",
-        "privacy",
-        "data management"
-      ]
+      "tags": []
     },
     {
       "id": "575",
@@ -4125,7 +3792,6 @@
       "webpage": "https://analytics.google.com",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Google_Analytics_logo.svg",
       "tags": [
-        "analytics",
         "web development",
         "Google"
       ]
@@ -4139,7 +3805,6 @@
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/0/0e/BigCommerce_logo.svg",
       "tags": [
         "e-commerce",
-        "online stores",
         "cloud"
       ]
     },
@@ -4152,7 +3817,6 @@
       "logoURL": "https://sylius.com/assets/img/logo.svg",
       "tags": [
         "e-commerce",
-        "online stores",
         "open source"
       ]
     },
@@ -4178,72 +3842,61 @@
       "tags": [
         "user experience"
       ]
+    },
+    {
+      "id": "581",
+      "name": "Ember.js",
+      "description": "Ember.js is an open-source JavaScript web framework, based on the Model-View-ViewModel (MVVM) pattern. It allows developers to create scalable single-page web applications.",
+      "icon": "mdi-web",
+      "webpage": "https://emberjs.com",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/en/5/58/Ember.js_Logo_and_Mascot.png",
+      "tags": [
+        "web development"
+      ]
+    },
+    {
+      "id": "582",
+      "name": "Blazor",
+      "description": "Blazor is a free and open-source web framework that enables developers to create web applications using C# and HTML. It is part of the ASP.NET Core framework.",
+      "icon": "mdi-dot-net",
+      "webpage": "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png",
+      "tags": [
+        "web development"
+      ]
+    },
+    {
+      "id": "583",
+      "name": "Razor",
+      "description": "Razor is a markup syntax for embedding server-based code into web pages, part of the ASP.NET Core framework. It provides a productive syntax for combining HTML with C#.",
+      "icon": "mdi-code-tags",
+      "webpage": "https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/ASP.NET_Core_Logo.svg",
+      "tags": [
+        "web development"
+      ]
+    },
+    {
+      "id": "584",
+      "name": "Aurelia",
+      "description": "Aurelia is a modern, open-source UI framework for web and mobile app development. It leverages simple conventions and is built on a next-generation JavaScript model.",
+      "icon": "mdi-web",
+      "webpage": "https://aurelia.io",
+      "logoURL": "https://aurelia.io/styles/images/logos/aurelia-logo.svg",
+      "tags": [
+        "web development"
+      ]
+    },
+    {
+      "id": "585",
+      "name": "JavaServer Faces (JSF)",
+      "description": "JavaServer Faces (JSF) is a Java specification for building component-based user interfaces for web applications. It simplifies the development integration of web-based user interfaces.",
+      "icon": "mdi-language-java",
+      "webpage": "https://javaee.github.io/javaserverfaces/",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/en/1/1e/Java_Server_Faces_logo.png",
+      "tags": [
+        "web development"
+      ]
     }
-    ,  {
-          "id": "581",
-          "name": "Ember.js",
-          "description": "Ember.js is an open-source JavaScript web framework, based on the Model-View-ViewModel (MVVM) pattern. It allows developers to create scalable single-page web applications.",
-          "icon": "mdi-web",
-          "webpage": "https://emberjs.com",
-          "logoURL": "https://upload.wikimedia.org/wikipedia/en/5/58/Ember.js_Logo_and_Mascot.png",
-          "tags": [
-            "web development",
-            "JavaScript",
-            "framework"
-          ]
-        },
-        {
-          "id": "582",
-          "name": "Blazor",
-          "description": "Blazor is a free and open-source web framework that enables developers to create web applications using C# and HTML. It is part of the ASP.NET Core framework.",
-          "icon": "mdi-dot-net",
-          "webpage": "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
-          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png",
-          "tags": [
-            "web development",
-            "C#",
-            "framework"
-          ]
-        },
-        {
-          "id": "583",
-          "name": "Razor",
-          "description": "Razor is a markup syntax for embedding server-based code into web pages, part of the ASP.NET Core framework. It provides a productive syntax for combining HTML with C#.",
-          "icon": "mdi-code-tags",
-          "webpage": "https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor",
-          "logoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/ASP.NET_Core_Logo.svg",
-          "tags": [
-            "web development",
-            "C#",
-            "template engine"
-          ]
-        },
-        {
-          "id": "584",
-          "name": "Aurelia",
-          "description": "Aurelia is a modern, open-source UI framework for web and mobile app development. It leverages simple conventions and is built on a next-generation JavaScript model.",
-          "icon": "mdi-web",
-          "webpage": "https://aurelia.io",
-          "logoURL": "https://aurelia.io/styles/images/logos/aurelia-logo.svg",
-          "tags": [
-            "web development",
-            "JavaScript",
-            "framework"
-          ]
-        },
-        {
-          "id": "585",
-          "name": "JavaServer Faces (JSF)",
-          "description": "JavaServer Faces (JSF) is a Java specification for building component-based user interfaces for web applications. It simplifies the development integration of web-based user interfaces.",
-          "icon": "mdi-language-java",
-          "webpage": "https://javaee.github.io/javaserverfaces/",
-          "logoURL": "https://upload.wikimedia.org/wikipedia/en/1/1e/Java_Server_Faces_logo.png",
-          "tags": [
-            "web development",
-            "Java",
-            "framework"
-          ]
-        }
-    
   ]
 }
