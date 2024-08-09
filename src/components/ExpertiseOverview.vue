@@ -49,7 +49,7 @@
     <v-dialog v-model="expertiseDialog" width="1000" @afterLeave="editExpertise = false">
         <v-card>
             <v-card-title>
-                <v-btn @click="editExpertise = true" v-if="!editExpertise && !appStore.readOnly">Bewerken</v-btn>
+                <v-btn @click="editExpertise = true" v-if="!editExpertise && !appStore.getReadOnly()">Bewerken</v-btn>
                 <v-btn @click="saveExpertise" v-if="editExpertise">Opslaan</v-btn>
             </v-card-title>
             <ExpertiseDetails :expertise="expertiseToShow" v-if="!editExpertise" />
