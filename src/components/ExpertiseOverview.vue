@@ -5,8 +5,7 @@
                 <v-row>
                     <v-col cols="6" offset="1">
                         <v-container fluid>
-                            <v-row>
-                                <v-col>
+                            <v-row>                                
                                     <v-data-table :headers="expertiseHeaders" :items="props.expertise" :search="search">
                                         <template v-slot:top>
                                             <v-toolbar flat>
@@ -16,7 +15,7 @@
                                                     prepend-inner-icon="mdi-magnify" variant="solo-filled" flat
                                                     hide-details single-line></v-text-field>
                                                 <v-spacer ></v-spacer>
-                                                <v-btn color="primary" @click="addExpertise" v-if="!appStore.readOnly">Add Expertise</v-btn>
+                                                <v-btn color="primary" @click="addExpertise" v-if="!appStore.getReadOnly()">Add Expertise</v-btn>
                                             </v-toolbar>
                                         </template>
                                         <template v-slot:item.name="{ item, index }">
