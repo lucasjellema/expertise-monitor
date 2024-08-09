@@ -87,6 +87,11 @@
                 v-if="editExpertise" /> -->
         </v-card>
     </v-dialog>
+    <v-dialog v-model="organizationDialog" width="1000">
+        <v-card>
+            <OrganizationDetails :organization="organizationToShow" />
+        </v-card>
+    </v-dialog>
 </template>
 
 
@@ -120,6 +125,9 @@ const generateExpertiseDialog = (expertise) => {
 }
 const editExpertise = ref(false)
 
+
+const organizationToShow = ref(null)
+const organizationDialog = ref(false)
 
 
 const availableTags = computed(() => {
@@ -264,7 +272,13 @@ const handleEditOrganizationExpertiseRequested = (e) => {
 
 const handleShowExpertiseDetailsRequested = (expertise) => {
     console.log('handleShowExpertiseDetailsRequested - show popup with expertise details', expertise)
-    generateExpertiseDialog(expertise.expertise)
+    if (expertise.organization) {
+        console.log('details for org', expertise.organization)
+        organizationToShow.value = expertise.organization
+        organizationDialog.value = true
+    } else { // details for expertise
+        generateExpertiseDialog(expertise.expertise)
+    }
 }
 
 
