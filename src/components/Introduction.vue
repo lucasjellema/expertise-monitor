@@ -15,7 +15,7 @@
                                         <br /><br />
 
 
-                                        Het is de intentie om ook partners en certificeringen in de applicatie op te nemen.
+                                        Het is de intentie om ook partners en certificeringen in de applicatie op te nemen. Mogelijk ook Technology Radars per tag en per bedrijf. 
 
                                     <p class="text-caption" style="color: red">Deze applicatie is nog in ontwikkeling.
                                         Je kunt tegen fouten
