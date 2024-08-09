@@ -9,8 +9,13 @@
                         <v-container fluid>
                             <v-row>
                                 <v-col cols="6">
-                                    <p>Deze applicatie geeft een overzicht van de expertise in het ecosysteem, per organisatieeenheid (zowel bedrijven als domeinen).
-                                        <br />
+                                    <p>Deze applicatie geeft een overzicht van de expertise in het ecosysteem, per organisatieeenheid (zowel bedrijven als domeinen). Bedrijven kunnen "expertiseclaims" maken: aangeven dat ze op een bepaalde expertise (een technologie of product, een rol, methode, vakgebied of standaard) een zeker aantal collega's hebben. Met een notitie kan nader worden geduid wat de claim inhoudt.
+                                        <br /><br />
+                                        Bij een claim worden ook de ambitie van een bedrijf ten aanzien van een expertise vastgelegd: wil het bedrijf hierin groeien of zich handhaven, starten met een verkenning of juist de expertise loslaten en afbouwen.
+                                        <br /><br />
+
+
+                                        Het is de intentie om ook partners en certificeringen in de applicatie op te nemen.
 
                                     <p class="text-caption" style="color: red">Deze applicatie is nog in ontwikkeling.
                                         Je kunt tegen fouten
