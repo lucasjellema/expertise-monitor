@@ -2,13 +2,16 @@
   <div class="expertise-unit">
     <div class="header" @click="toggle">
 
-      <span>{{ unit.name }}
+      <span>
+        <p
+          @click="e => { if (unit?.type == 'expertise') { emit('showExpertiseDetailsRequested', unit); e.stopPropagation() } }">
+          {{ unit.name }}</p>
         <v-icon v-if="unit?.type == 'expertiseClaim' || unit.ambition">{{ ambitionIconMap[unit.ambition] }}</v-icon>
         <v-icon @click="(e) => { emit('showExpertiseMapRequested', unit); e.stopPropagation() }" small class="ml-2"
           v-if="unit?.type">mdi-school</v-icon>
         <v-icon @click="(e) => { emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit"
           v-if="!unit.readOnly">mdi-pencil-outline</v-icon>
-        <div class="logoContainer"><v-img :src="unit.logo"></v-img></div>
+        <div class="logoContainer"><v-img :src="unit.logo" @click="e => { if (unit?.type == 'expertise') { emit('showExpertiseDetailsRequested', unit); e.stopPropagation() } }"></v-img></div>
 
       </span>
       <h3>{{ unit.count }}</h3> <span v-if="unit.children && unit.children.length > 0">(in {{ unit.children.length
@@ -17,13 +20,14 @@
     </div>
     <div class="children" v-show="expanded">
       <div v-if="unit?.type == 'expertiseClaim'">
-        <span v-if="unit.claim?.asOf">Per: {{ formatMonthYear(unit.claim.asOf) }}</span><br/>
-        <span v-if="unit.claim?.author">Door: {{ unit.claim.author }}</span><br/>        
+        <span v-if="unit.claim?.asOf">Per: {{ formatMonthYear(unit.claim.asOf) }}</span><br />
+        <span v-if="unit.claim?.author">Door: {{ unit.claim.author }}</span><br />
         {{ unit.claim.notes }}
       </div>
       <ExpertiseUnit v-for="(child, index) in unit.children" :key="index" :unit="child"
         @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
-        @showExpertiseMapRequested="handleShowExpertiseMapRequested" />
+        @showExpertiseMapRequested="handleShowExpertiseMapRequested"
+        @showExpertiseDetailsRequested="handleShowExpertiseDetailsRequested" />
     </div>
   </div>
 </template>
@@ -39,7 +43,7 @@ const { companyLogos, ambitionIconMap } = useIconsLibrary();
 import { useDateLibrary } from '@/composables/useDateLibrary';
 const { formatMonthYear } = useDateLibrary();
 
-const emit = defineEmits(['editOrganizationExpertiseRequested', 'showExpertiseMapRequested'])
+const emit = defineEmits(['editOrganizationExpertiseRequested', 'showExpertiseMapRequested', 'showExpertiseDetailsRequested'])
 const expanded = ref(false)
 const hasChildren = computed(() => {
   return props.unit.children && props.unit.children.length > 0;
@@ -57,6 +61,11 @@ const handleEditOrganizationExpertiseRequested = (expertise) => {
 const handleShowExpertiseMapRequested = (expertise) => {
   emit('showExpertiseMapRequested', expertise)
 }
+
+const handleShowExpertiseDetailsRequested = (expertise) => {
+  emit('showExpertiseDetailsRequested', expertise)
+}
+
 
 
 </script>

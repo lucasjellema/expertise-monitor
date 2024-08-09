@@ -4,16 +4,17 @@
             <v-main>
 
                 <v-row>
-                    <v-col cols="3">                        
-                        <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details clearable @click:clear="clearSearch"
-                            @change="handleSearchChange" @keyup="handleSearchChange"></v-text-field>
+                    <v-col cols="3">
+                        <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details
+                            clearable @click:clear="clearSearch" @change="handleSearchChange"
+                            @keyup="handleSearchChange"></v-text-field>
 
                         <v-select v-model="selectedSearchSuggestions" :items="searchSuggestions" item-title="name"
                             return-object label="Show expertise for" multiple clearable ref="searchSuggestionSelect"
                             :item-props="selectItemProps" @click:chip="removeItem">
                             <template v-slot:selection="{ item, index }">
                                 <v-chip @click.stop="removeItem(item, index)">
-                                    {{ item.title }} 
+                                    {{ item.title }}
                                 </v-chip>
                             </template>
                             <template v-slot:prepend-item>
@@ -33,10 +34,9 @@
                         <!-- TODO add toggle: AND / OR (at least one tag must apply or all selected tags must apply) -->
                         <v-chip-group v-model="checkedTags" column multiple>
                             <div v-for="tag in availableTags">
-                                <v-chip :key="tag" :text="tag" filter 
-                                    variant="outlined"
+                                <v-chip :key="tag" :text="tag" filter variant="outlined"
                                     :size="tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? 'default' : 'small') : (checkedTagStrings.includes(tag) ? 'large' : 'x-small')"
-                                    :style="!showZeroCountTags && !(tagClaimMap[tag]?.companyCount > 0)?'display:none':   tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? '' : '') : (checkedTagStrings.includes(tag) ? '' : 'display:none')"></v-chip>
+                                    :style="!showZeroCountTags && !(tagClaimMap[tag]?.companyCount > 0) ? 'display:none' : tag.toLowerCase().includes(search.toLowerCase()) ? (search.length > 0 ? '' : '') : (checkedTagStrings.includes(tag) ? '' : 'display:none')"></v-chip>
                             </div>
                         </v-chip-group>
                         <v-btn @click="checkedTags = []" icon="mdi-cancel" title="Clear all tags"></v-btn> </v-col>
@@ -48,9 +48,9 @@
                             <ExpertiseUnit
                                 :unit="suggestion.type == 'expertise' ? initializeExpertiseStructureForExpertise(suggestion.expertise) : initializeExpertiseStructureForTag(suggestion.tag)"
                                 v-for="suggestion in selectedSearchSuggestions" :key="changeIndicator"
-                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested" 
+                                @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
                                 @showExpertiseMapRequested="handleShowExpertiseMapRequested"
-                                />
+                                @showExpertiseDetailsRequested="handleShowExpertiseDetailsRequested" />
                         </div>
                     </v-col>
                 </v-row>
@@ -76,7 +76,17 @@
                 @singleExpertiseClaimChanged="handleSingleExpertiseClaimChanged" />
         </v-card>
     </v-dialog>
-
+    <v-dialog v-model="expertiseDialog" width="1000" @afterLeave="editExpertise = false">
+        <v-card>
+            <!-- <v-card-title>
+                <v-btn @click="editExpertise = true" v-if="!editExpertise && !appStore.getReadOnly()">Bewerken</v-btn>
+                <v-btn @click="saveExpertise" v-if="editExpertise">Opslaan</v-btn>
+            </v-card-title> -->
+            <ExpertiseDetails :expertise="expertiseToShow" v-if="!editExpertise" />
+            <!-- <EditExpertise :expertise="expertiseToShow" @expertiseChanged="handleExpertiseUpdate"
+                v-if="editExpertise" /> -->
+        </v-card>
+    </v-dialog>
 </template>
 
 
@@ -102,6 +112,16 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
+const expertiseToShow = ref(null)
+const expertiseDialog = ref(false)
+const generateExpertiseDialog = (expertise) => {
+    expertiseToShow.value = { ...expertise }
+    expertiseDialog.value = true
+}
+const editExpertise = ref(false)
+
+
+
 const availableTags = computed(() => {
     return allTags.value //.filter(tag =>  tag.toLowerCase().includes(search.value.toLowerCase())) 
 })
@@ -112,7 +132,7 @@ const checkedTagStrings = computed(() => {
 })
 
 const clearSearch = () => {
-    search.value = ''    
+    search.value = ''
 }
 
 const removeItem = (item, index) => {
@@ -242,10 +262,16 @@ const handleEditOrganizationExpertiseRequested = (e) => {
 
 }
 
+const handleShowExpertiseDetailsRequested = (expertise) => {
+    console.log('handleShowExpertiseDetailsRequested - show popup with expertise details', expertise)
+    generateExpertiseDialog(expertise.expertise)
+}
+
+
 const handleSearchChange = (e) => {
-    console.log('new search on ', search.value, e)
-    console.log(selectedSearchSuggestions.value, searchSuggestions.value)
-    // find all expertises (lower case) who contain the search string
+    // console.log('new search on ', search.value, e)
+    // console.log(selectedSearchSuggestions.value, searchSuggestions.value)
+    // // find all expertises (lower case) who contain the search string
     // add them to the list
     searchSuggestions.value = []
     searchSuggestionSelect.value.menu = false
@@ -289,10 +315,10 @@ const buildExpertiseClaimMap = () => {
                 if (claim.expertise.tags && claim.expertise.tags.length > 0) {
                     for (const tag of claim.expertise.tags) {
                         if (!tagClaimMap[tag]) {
-                            tagClaimMap[tag] = { total: claim.count, companyCount:1, expertise: [{ expertise: claim.expertise, count: claim.count }] }
+                            tagClaimMap[tag] = { total: claim.count, companyCount: 1, expertise: [{ expertise: claim.expertise, count: claim.count }] }
                         } else {
                             tagClaimMap[tag].total += claim.count
-                            tagClaimMap[tag].companyCount++                            
+                            tagClaimMap[tag].companyCount++
                             tagClaimMap[tag].expertise.push({ expertise: claim.expertise, count: claim.count })
                         }
                     }
@@ -337,13 +363,13 @@ const initializeExpertiseStructureForTag = (tag) => {
         for (const expertise of expertisesUnderTag) {
             const e = expertiseClaimMap.value[expertise.id]
             if (e) {
-                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise, logo: expertise.logoURL , readOnly: appStore.getReadOnly()}
+                const node = { name: expertise.name, children: [], count: e.total, type: 'expertise', expertise: expertise, logo: expertise.logoURL, readOnly: appStore.getReadOnly() }
                 countForTag += ensureNumeric(e.total)
                 expertiseStructure.children.push(node)
                 for (const claim of e.expertise) {
                     const orgNode = {
-                        name: claim.organization.name , children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
-                        , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly(), ambition:claim.ambition
+                        name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
+                        , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly(), ambition: claim.ambition
 
                     }
                     node.children.push(orgNode)
@@ -369,7 +395,7 @@ const initializeExpertiseStructureForTag = (tag) => {
 const initializeExpertiseStructureForExpertise = (expertise) => {
     const expertiseStructure = {
         name: expertise.name, count: 0,
-        children: [], expertise: expertise, type: 'expertise', logo: expertise.logoURL,  readOnly: appStore.getReadOnly()
+        children: [], expertise: expertise, type: 'expertise', logo: expertise.logoURL, readOnly: appStore.getReadOnly()
     }
     const e = expertiseClaimMap.value[expertise.id]
     if (e) {
@@ -377,7 +403,7 @@ const initializeExpertiseStructureForExpertise = (expertise) => {
         for (const claim of e.expertise) {
             const orgNode = {
                 name: claim.organization.name, children: [], count: claim.count, type: 'expertiseClaim', expertise: expertise, organization: claim.organization
-                , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly(), ambition:claim.ambition
+                , logo: companyLogos[claim.organization.name], claim: claim, readOnly: appStore.getReadOnly(), ambition: claim.ambition
             }
             expertiseStructure.children.push(orgNode)
         }
@@ -394,11 +420,11 @@ onMounted(() => {
     allTags.value = [...appStore.expertiseTags]
     buildExpertiseClaimMap()
     if (props.initialTag) {
-        selectedSearchSuggestions.value.push({ name: props.initialTag, type: 'tag', tag: props.initialTag })        
+        selectedSearchSuggestions.value.push({ name: props.initialTag, type: 'tag', tag: props.initialTag })
         synchronizeSelectedSearchSuggestionsToCheckedTags(selectedSearchSuggestions.value)
     }
     if (props.initialExpertise) {
-        const ex =appStore.getExpertise().value.expertise
+        const ex = appStore.getExpertise().value.expertise
         const expertise = appStore.getExpertise().value.expertise.find(e => e.id === props.initialExpertise)
         if (expertise) selectedSearchSuggestions.value.push({ name: expertise.name, expertise: expertise, type: 'expertise' })
     }
@@ -421,7 +447,7 @@ const handleExpertiseClaimsChanged = (newAndUpdatedClaims) => {
             claim.organization.expertiseClaims.push(newClaim)
         } else {
             claim.originalClaim.count = ensureNumeric(claim.count)
-            claim.originalClaim.notes = claim.notes            
+            claim.originalClaim.notes = claim.notes
             claim.originalClaim.author = claim.author
             claim.originalClaim.ambition = claim.ambition
             claim.originalClaim.asOf = claim.asOf
@@ -435,8 +461,8 @@ const handleExpertiseClaimsChanged = (newAndUpdatedClaims) => {
 
 const handleShowExpertiseMapRequested = (expertise) => {
     console.log('handleShowExpertiseMapRequested', expertise)
-    if (expertise.type==='expertiseClaim') 
-    router.push({ name: 'organizationExpertise', params: { organizationId: expertise.organization.id } })
+    if (expertise.type === 'expertiseClaim')
+        router.push({ name: 'organizationExpertise', params: { organizationId: expertise.organization.id } })
 }
 
 
