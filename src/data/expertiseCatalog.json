@@ -1982,7 +1982,8 @@
       "tags": [
         "database",
         "rdbms",
-        "multi model"
+        "multi model",
+        "Oracle"
       ]
     },
     {
@@ -2880,7 +2881,8 @@
       "webpage": "https://en.wikipedia.org/wiki/HubSpot",
       "logoURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/HubSpot_Logo.svg",
       "tags": [
-        "inbound marketing"
+        "inbound marketing",
+        "CRM"
       ]
     },
     {

@@ -35,7 +35,7 @@ import blauweMonstersLogo from '@/assets/blauwe-monstersLogo.png'
 
 import possibilitLogo from '@/assets/possibilitLogo.png'
 import bikkelhartLogo from '@/assets/bikkelhartLogo.png'
-
+import ai360Logo from '@/assets/ai360.png'
 
 
 export function useIconsLibrary() {
@@ -45,6 +45,7 @@ export function useIconsLibrary() {
     , 'Conclusion Experience': conclusionExperienceLogo
     , 'Conclusion Low Code Company': conclusionLowCodeCompanyLogo
     , 'AMIS': amisLogo
+    , 'Conclusion AI360': ai360Logo
     , 'Conclusion Enablement': conclusionEnablementLogo
 
     , 'Accelerate!': accelerateLogo
