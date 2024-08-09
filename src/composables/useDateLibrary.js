@@ -24,5 +24,12 @@ const formatDate = (date) => {
   
   ]
 
-  return { formatDate,months };
+
+  const formatMonthYear = (monthYearString) => {
+    const year = '20' + monthYearString.substring(0,2)
+    const month = months[parseInt(monthYearString.substring(2)) - 1]
+    return `${month.name} ${year}`
+  }
+
+  return { formatDate,months, formatMonthYear };
 }

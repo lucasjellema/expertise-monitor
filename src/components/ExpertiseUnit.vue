@@ -1,31 +1,34 @@
 <template>
-    <div class="expertise-unit">
-      <div class="header" @click="toggle">
-        
-        <span>{{ unit.name }}
-          <v-icon v-if="unit?.type=='expertiseClaim' || unit.ambition" >{{ambitionIconMap[unit.ambition]}}</v-icon>
-          <v-icon @click="(e) => {emit('showExpertiseMapRequested',unit); e.stopPropagation() }" small class="ml-2" v-if="unit?.type">mdi-school</v-icon>
-          <v-icon @click="(e) => {emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit"  v-if="!unit.readOnly" >mdi-pencil-outline</v-icon>
-           <div class="logoContainer"><v-img :src="unit.logo" ></v-img></div>
+  <div class="expertise-unit">
+    <div class="header" @click="toggle">
 
-        </span>
-        <h3 >{{ unit.count }}</h3> <span v-if="unit.children && unit.children.length > 0">(in {{ unit.children.length }})</span>  
-        <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
-      </div>
-      <div class="children" v-show="expanded">
-        <ExpertiseUnit
-          v-for="(child, index) in unit.children"
-          :key="index"
-          :unit="child"
-          @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
-          @showExpertiseMapRequested="handleShowExpertiseMapRequested"
-          
-        />
-      </div>
+      <span>{{ unit.name }}
+        <v-icon v-if="unit?.type == 'expertiseClaim' || unit.ambition">{{ ambitionIconMap[unit.ambition] }}</v-icon>
+        <v-icon @click="(e) => { emit('showExpertiseMapRequested', unit); e.stopPropagation() }" small class="ml-2"
+          v-if="unit?.type">mdi-school</v-icon>
+        <v-icon @click="(e) => { emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit"
+          v-if="!unit.readOnly">mdi-pencil-outline</v-icon>
+        <div class="logoContainer"><v-img :src="unit.logo"></v-img></div>
+
+      </span>
+      <h3>{{ unit.count }}</h3> <span v-if="unit.children && unit.children.length > 0">(in {{ unit.children.length
+        }})</span>
+      <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
     </div>
-  </template>
-  
-  <script setup>
+    <div class="children" v-show="expanded">
+      <div v-if="unit?.type == 'expertiseClaim'">
+        <span v-if="unit.claim?.asOf">Per: {{ formatMonthYear(unit.claim.asOf) }}</span><br/>
+        <span v-if="unit.claim?.author">Door: {{ unit.claim.author }}</span><br/>        
+        {{ unit.claim.notes }}
+      </div>
+      <ExpertiseUnit v-for="(child, index) in unit.children" :key="index" :unit="child"
+        @editOrganizationExpertiseRequested="handleEditOrganizationExpertiseRequested"
+        @showExpertiseMapRequested="handleShowExpertiseMapRequested" />
+    </div>
+  </div>
+</template>
+
+<script setup>
 
 const props = defineProps({
   unit: Object,
@@ -33,6 +36,8 @@ const props = defineProps({
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos, ambitionIconMap } = useIconsLibrary();
 
+import { useDateLibrary } from '@/composables/useDateLibrary';
+const { formatMonthYear } = useDateLibrary();
 
 const emit = defineEmits(['editOrganizationExpertiseRequested', 'showExpertiseMapRequested'])
 const expanded = ref(false)
@@ -45,36 +50,39 @@ const toggle = () => {
 }
 
 const handleEditOrganizationExpertiseRequested = (expertise) => {
-    emit('editOrganizationExpertiseRequested', expertise)
+  emit('editOrganizationExpertiseRequested', expertise)
 }
 
 
 const handleShowExpertiseMapRequested = (expertise) => {
-    emit('showExpertiseMapRequested', expertise)
+  emit('showExpertiseMapRequested', expertise)
 }
 
 
 </script>
-  <style scoped>
-  .expertise-unit {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  .children {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  .logoContainer {
-    height: 50px;
-    width: 150px;
-  }
-  </style>
+<style scoped>
+.expertise-unit {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.children {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.logoContainer {
+  height: 50px;
+  width: 150px;
+}
+</style>

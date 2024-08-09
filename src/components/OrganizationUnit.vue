@@ -9,7 +9,13 @@
       </span>
       <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
     </div>
-    <div class="children" v-show="expanded">
+    <div class="children" v-show="expanded">{{ unit.type }}
+      <div v-if="unit?.type == 'expertiseClaim'">
+        <span v-if="unit.claim?.asOf">Per: {{ formatMonthYear(unit.claim.asOf) }}</span><br/>
+        <span v-if="unit.claim?.author">Door: {{ unit.claim.author }}</span><br/>        
+        {{ unit.claim.notes }}
+      </div>
+
       <OrganizationUnit v-for="(child, index) in unit.children" :key="index" :unit="child" @organizationExpertiseRequested="handleOrganizationExpertiseRequested"/>
     </div>
   </div>
@@ -25,6 +31,8 @@ const props = defineProps({
 
 import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos, ambitionIconMap } = useIconsLibrary();
+import { useDateLibrary } from '@/composables/useDateLibrary';
+const { formatMonthYear } = useDateLibrary();
 
 const emit = defineEmits(['organizationExpertiseRequested'])
 const expanded = ref(false)
