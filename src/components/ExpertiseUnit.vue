@@ -4,12 +4,12 @@
 
       <span>
         <p
-          @click="e => { if (unit?.type == 'expertise') { emit('showExpertiseDetailsRequested', unit); e.stopPropagation() } }">
+          @click="e => { if (unit?.type == 'expertise' ||unit?.type == 'expertiseClaim') { emit('showExpertiseDetailsRequested', unit); e.stopPropagation() } }">
           {{ unit.name }}</p>
-        <v-icon v-if="unit?.type == 'expertiseClaim' || unit.ambition">{{ ambitionIconMap[unit.ambition] }}</v-icon>
-        <v-icon @click="(e) => { emit('showExpertiseMapRequested', unit); e.stopPropagation() }" small class="ml-2"
+        <v-icon title="Ambition Indicator (explore, grow, retain, discard, ignore)" v-if="unit?.type == 'expertiseClaim' || unit.ambition">{{ ambitionIconMap[unit.ambition] }}</v-icon>
+        <v-icon title="Show all knowledge" @click="(e) => { emit('showExpertiseMapRequested', unit); e.stopPropagation() }" small class="ml-2"
           v-if="unit?.type">mdi-school</v-icon>
-        <v-icon @click="(e) => { emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" title="Edit"
+        <v-icon title="Edit the organization's expertise" @click="(e) => { emit('editOrganizationExpertiseRequested', unit); e.stopPropagation() }" 
           v-if="!unit.readOnly">mdi-pencil-outline</v-icon>
         <div class="logoContainer"><v-img :src="unit.logo" @click="e => { if (unit?.type == 'expertise'||unit?.type == 'expertiseClaim') { emit('showExpertiseDetailsRequested', unit); e.stopPropagation() } }"></v-img></div>
 
@@ -19,7 +19,7 @@
       <button v-if="hasChildren" @click.stop="toggle">{{ expanded ? '-' : '+' }}</button>
     </div>
     <div class="children" v-show="expanded">
-      <div v-if="unit?.type == 'expertiseClaim'">
+      <div v-if="unit?.claim">
         <span v-if="unit.claim?.asOf">Per: {{ formatMonthYear(unit.claim.asOf) }}</span><br />
         <span v-if="unit.claim?.author">Door: {{ unit.claim.author }}</span><br />
         {{ unit.claim?.notes }}
