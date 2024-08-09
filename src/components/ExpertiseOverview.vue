@@ -5,7 +5,8 @@
                 <v-row>
                     <v-col cols="6" offset="1">
                         <v-container fluid>
-                            <v-row>                                
+                            <v-row>
+                                <v-col>
                                     <v-data-table :headers="expertiseHeaders" :items="props.expertise" :search="search">
                                         <template v-slot:top>
                                             <v-toolbar flat>
