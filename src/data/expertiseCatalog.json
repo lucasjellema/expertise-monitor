@@ -4016,6 +4016,138 @@
         "project management"
       ]
     }
+,    {
+  "id": "596",
+  "name": "LangGraph",
+  "description": "LangGraph is a tool for building and visualizing complex language models and their interactions in a graphical interface.",
+  "webpage": "https://langgraph.com",
+  "logoURL": "https://langgraph.com/logo.svg",
+  "tags": [
+    "language models",
+    "visualization"
+  ]
+},
+{
+  "id": "597",
+  "name": "LangChain",
+  "description": "LangChain is a framework for developing applications powered by language models, focusing on connecting LLMs with external data.",
+  "webpage": "https://langchain.com",
+  "logoURL": "https://langchain.com/logo.svg",
+  "tags": [
+    "language models",
+    "framework"
+  ]
+},
+{
+  "id": "598",
+  "name": "HeyGen",
+  "description": "HeyGen is a platform that leverages AI to generate realistic human avatars for video content, enhancing digital communication.",
+  "webpage": "https://heygen.com",
+  "logoURL": "https://heygen.com/logo.png",
+  "tags": [
+    "ai",
+    "video generation"
+  ]
+},
+{
+  "id": "599",
+  "name": "Autogen",
+  "description": "Autogen is a tool that automates the generation of content, code, and data using advanced AI algorithms.",
+  "webpage": "https://autogen.com",
+  "logoURL": "https://autogen.com/logo.png",
+  "tags": [
+    "ai",
+    "automation"
+  ]
+},
+{
+  "id": "600",
+  "name": "LM Studio",
+  "description": "LM Studio is an integrated development environment for working with large language models, providing tools for training, testing, and deployment.",
+  "webpage": "https://lmstudio.com",
+  "logoURL": "https://lmstudio.com/logo.svg",
+  "tags": [
+    "ai"
+  ]
+},
+{
+  "id": "601",
+  "name": "Ollama",
+  "description": "Ollama is an AI-driven platform that specializes in natural language processing to enhance communication and automate tasks.",
+  "webpage": "https://ollama.com",
+  "logoURL": "https://ollama.com/logo.svg",
+  "tags": [
+    "ai",
+    "nlp"
+  ]
+},
+{
+  "id": "602",
+  "name": "Auto-GPT",
+  "description": "Auto-GPT is an experimental open-source application that showcases the capabilities of GPT models in performing autonomous tasks.",
+  "webpage": "https://github.com/Auto-GPT",
+  "logoURL": "https://github.com/Auto-GPT/logo.png",
+  "tags": [
+    "ai",
+    "automation"
+  ]
+},
+{
+  "id": "603",
+  "name": "Devin",
+  "description": "Devin is an AI-powered tool designed to assist developers by generating code snippets, optimizing workflows, and automating repetitive tasks.",
+  "webpage": "https://devin.com",
+  "logoURL": "https://devin.com/logo.png",
+  "tags": [
+    "ai",
+    "developer tools"
+  ]
+},
+{
+  "id": "604",
+  "name": "Pinecone",
+  "description": "Pinecone is a vector database designed to power AI and machine learning applications by enabling fast and scalable similarity search.",
+  "webpage": "https://pinecone.io",
+  "logoURL": "https://mma.prnewswire.com/media/2418074/Pinecone_Systems_Inc_Logo.jpg",
+  "tags": [
+    "vector database",
+    "ai"
+  ]
+},
+{
+  "id": "605",
+  "name": "Chroma",
+  "description": "Chroma is a vector database built for AI applications, allowing developers to store and query embeddings efficiently.",
+  "webpage": "https://www.trychroma.com/",
+  "logoURL": "https://www.trychroma.com/img/chroma.png",
+  "tags": [
+    "vector database",
+    "ai"
+  ]
+},
+{
+  "id": "606",
+  "name": "Weaviate",
+  "description": "Weaviate is an open-source vector search engine that enables developers to build applications using AI-driven semantic search.",
+  "webpage": "https://weaviate.io",
+  "logoURL": "https://weaviate.io/logo.png",
+  "tags": [
+    "vector database",
+    "open source"
+  ]
+},
+{
+  "id": "607",
+  "name": "Faiss",
+  "description": "Faiss is a library developed by Facebook AI Research for efficient similarity search and clustering of dense vectors.",
+  "webpage": "https://github.com/facebookresearch/faiss",
+  "logoURL": "https://github.com/facebookresearch/faiss/logo.png",
+  "tags": [
+    "vector database",
+    "ai"
+  ]
+}
+
 
   ]
 }
