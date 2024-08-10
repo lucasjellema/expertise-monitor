@@ -4147,7 +4147,14 @@
     "ai"
   ]
 }
-
-
+,
+{
+  "id": "1001",
+  "name": "Inbisco",
+  "description": "Management Systemen - voor controle over organisaties. ",
+  "webpage": "https://www.inbisco.nl/",
+  "logoURL": "https://hidelta.nl/wp-content/uploads/2022/04/INBISCO_logo_RGB_koraalrood-1024x334-1.png",
+  "tags": ["risk management"]
+}
   ]
 }
