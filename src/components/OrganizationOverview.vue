@@ -44,7 +44,7 @@
                                             </div>
                                         </template>
                                         <template v-slot:item.logoURL="{ item, index }">
-                                            <v-img :src="item.logoURL" height="50"></v-img>
+                                            <v-img :src="companyLogos[item.name]" height="50"></v-img>
                                         </template>
                                     </v-data-table>
                                 </v-col>
@@ -58,14 +58,15 @@
     <v-dialog v-model="organizationDialog" width="1000" @afterLeave="editOrganization = false">
         <v-card>
             <v-card-title>
-                <v-btn @click="editOrganization = true" v-if="!editOrganization">Bewerken</v-btn>
-                <v-btn @click="saveorganization" v-if="editOrganization">Opslaan</v-btn>
+                <v-btn @click="goEditOrganization" v-if="!editOrganization">Bewerken</v-btn>
+                <v-btn @click="saveOrganization" v-if="editOrganization">Opslaan</v-btn>
             </v-card-title>
-            <!-- <OrganizationDetails :organization="organizationToShow" v-if="!editOrganization" />
-            <Editorganization :organization="organizationToShow" @organizationChanged="handleorganizationUpdate"
-                v-if="editOrganization" /> -->
+            <OrganizationDetails :organization="organizationToShow" v-if="!editOrganization" />
+            <EditOrganization :organization="organizationInProgress" @organizationChanged="handleOrganizationUpdate"
+                v-if="editOrganization" />
         </v-card>
     </v-dialog>
+
 </template>
 
 
@@ -74,10 +75,12 @@ import { useAppStore } from "@/stores/app";
 const appStore = useAppStore()
 
 import { useRoute } from 'vue-router';
-
 const route = useRoute();
-
 const router = useRouter()
+
+
+import { useIconsLibrary } from '@/composables/useIconsLibrary';
+const { companyLogos } = useIconsLibrary();
 
 const props = defineProps({
     organization: {
@@ -88,22 +91,27 @@ const props = defineProps({
 const search = ref('')
 const organizationToShow = ref(null)
 const organizationDialog = ref(false)
-const generateorganizationDialog = (organization) => {
+const generateOrganizationDialog = (organization) => {
     organizationToShow.value = { ...organization }
     organizationDialog.value = true
 }
 const editOrganization = ref(false)
 
 const organizationInProgress = ref(null)
-const handleorganizationUpdate = (e) => {
+const handleOrganizationUpdate = (e) => {
     console.log("organization updated", e)
     organizationInProgress.value = e.value
 }
 
-const saveorganization = () => {
+
+const goEditOrganization = () => {
+    editOrganization.value = true
+    organizationInProgress.value ={...organizationToShow.value}
+}
+const saveOrganization = () => {
     editOrganization.value = false
     organizationDialog.value = false
-    appStore.saveorganization(organizationInProgress.value)
+    appStore.saveOrganization(organizationInProgress.value)
 }
 
 const organizationExpertise = (organization) => {
@@ -115,7 +123,7 @@ const organizationHeaders = [
     {
         title: 'Name',
         key: 'name'
-    }, { title: 'Details', key: 'details', sortable: false }
+    }, { title: 'Expertise', key: 'details', sortable: false }
     , { title: 'Type', key: 'type', sortable: true }
     , { title: 'Onderdeel van', key: 'organizationMemberships' }
     , { title: 'Logo', key: 'logoURL', sortable: false }

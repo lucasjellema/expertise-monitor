@@ -245,6 +245,26 @@ export const useAppStore = defineStore('app', () => {
     initializeTags()
   }
 
+  const saveOrganization = (organization) => {
+    const expertiseData = getExpertise()
+    if (organization.id) {
+      const index = expertiseData.value.organization.findIndex(o => o.id === organization.id)
+      if (index > -1) {
+        for (let prop in organization) {
+          if (organization.hasOwnProperty(prop) && prop !== 'expertiseClaims' && prop !== 'id') {
+            expertiseData.value.organization[index][prop] = organization[prop]
+          }
+        }
+
+      } else {
+        // weird: id is set but organiztion is not found. TODO error
+      }
+    } else {
+      organization.id = new Date().getTime()
+      organization.expertiseClaims = []
+      expertiseData.value.organization.push(organization)
+    }
+  }
 
   const DELTA_DIRECTORY = 'delta'
   const CONSOLIDATION_MARKER_FILE = 'lastExpertiseDeltaConsolidated.json'
@@ -266,6 +286,6 @@ export const useAppStore = defineStore('app', () => {
   }
 
   return {
-    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap, getReadOnly, toggleReadOnly
+    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap, saveOrganization, getReadOnly, toggleReadOnly
   }
 })
