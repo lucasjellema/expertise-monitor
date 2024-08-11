@@ -1,4 +1,234 @@
 {
+"vendors": 
+[
+ 
+  {
+    "id": "2",
+    "name": "Apple",
+    "description": "Apple is an American multinational technology company that designs, manufactures, and markets consumer electronics, computer software, and online services. ",
+    "homepage": "https://www.apple.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/apple-logo-red-rgb-1500x1500.png"
+  },
+  {
+    "id": "3",
+    "name": "Adobe",
+    "description": "Adobe Systems Incorporated is an American multinational corporation that specializes in creating software for digital imaging, publishing, and web design.",
+    "homepage": "https://www.adobe.com",
+    "logoUrl": "https://www.adobe.com/content/dam/cc/us/en/brand/logos/logo-adobe-systems-color-lockup-blue-rgb.png"
+  },
+  {
+    "id": "4",
+    "name": "SAP",
+    "description": "SAP SE is a German multinational technology company that specializes in software for enterprise applications.",
+    "homepage": "https://www.sap.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/11/sap-logo-rgb-1500x1500.png"
+  },
+  {
+    "id": "5",
+    "name": "IBM",
+    "description": "IBM is an American multinational technology company that provides a range of computer hardware, software and services.",
+    "homepage": "https://www.ibm.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/10/ibm-logo-rgb-1500x1500.png"
+  },
+  {
+    "id": "6",
+    "name": "Microsoft",
+    "description": "Microsoft is an American multinational technology company headquartered in Redmond, Washington.",
+    "homepage": "https://www.microsoft.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/05/microsoft-logo-rgb-1500x1500.png"
+  },
+  {
+    "id": "7",
+    "name": "Oracle",
+    "description": "Oracle Corporation is an American multinational computer technology corporation that develops, manufactures, and sells computer hardware, software, and services.",
+    "homepage": "https://www.oracle.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/oracle-logo-rgb-1500x1500.png"
+  },
+  {
+    "id": "8",
+    "name": "Dell",
+    "description": "Dell Technologies is an American multinational technology company that provides a range of computer hardware, software, and services.",
+    "homepage": "https://www.dell.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/dell-logo-rgb-1500x1500.png"
+  },
+  {
+    "id": "9",
+    "name": "AWS",
+    "description": "Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to users.",
+    "homepage": "https://aws.amazon.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/05/amazon-web-services-logo-rgb-1500x1500.png"
+  },
+  {
+    "id": "10",
+    "name": "Google",
+    "description": "Google LLC is an American multinational technology company that specializes in Internet-related services and products.",
+    "homepage": "https://www.google.com",
+    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/google-logo-rgb-1500x1500.png"
+  },
+  {
+    "id": "11",
+    "name": "Dynatrace",
+    "description": "Dynatrace provides software intelligence to simplify enterprise cloud complexity and accelerate digital transformation.",
+    "homepage": "https://www.dynatrace.com",
+    "logoUrl": "https://www.dynatrace.com/wp-content/themes/dynatrace/assets/images/logo-dynatrace-rgb.png"
+  },
+  {
+    "id": "12",
+    "name": "Chipsoft",
+    "description": "Samen naar betere zorg! Dát is waar we met ChipSoft voor staan én gaan! Wij willen de zorg verbeteren met slimme en innovatieve ICT, die zoveel mogelijk zorgverleners op een veilige en efficiënte manier ondersteunt en faciliteert om op het juiste moment de juiste zorg te leveren.",
+    "homepage": "https://www.chipsoft.com",
+    "logoUrl": "https://www.chipsoft.com/wp-content/uploads/2023/05/logo_chipsoft_rgb.png"
+  },
+  {
+    "id": "13",
+    "name": "Oracle",
+    "description": "Oracle Corporation is an American multinational computer technology corporation that develops, manufactures, and sells computer hardware, software, and services.",
+    "homepage": "https://www.oracle.com",
+    "logoUrl": "https://www.oracle.com/a/sales/resources/images/logo_horiz_blue_rgb.png"
+  },
+  {
+    "id": "14",
+    "name": "AFAS",
+    "description": "AFAS is a Dutch financial services company that provides various financial products and services.",
+    "homepage": "https://www.afas.nl",
+    "logoUrl": "https://www.afas.nl/themes/custom/afas/logo.png"
+  },{
+    "id": "35",
+    "name": "Mendix",
+    "description": "Mendix is a low-code development platform that allows users to create and continuously improve mobile and web applications at scale.",
+    "homepage": "https://www.mendix.com",
+    "logoUrl": "https://images.squarespace-cdn.com/content/v1/5dfa2c39017ba35b991218b8/0f7d6d54-1b09-4a81-afe6-6b8571ca0c5a/Mendix-Primary-Logo-RGB-Blue-Large.png?format=750w"
+},
+{
+    "id": "36",
+    "name": "OutSystems",
+    "description": "OutSystems is a modern application platform that enables organizations to rapidly build and deploy complex applications using a low-code approach.",
+    "homepage": "https://www.outsystems.com",
+    "logoUrl": "https://success.outsystems.com/documentation/11/building_apps/user_interface/images/logo_outsystems.png"
+},
+{
+    "id": "37",
+    "name": "Databricks",
+    "description": "Databricks is an enterprise software company founded by the creators of Apache Spark. It provides a unified analytics platform for big data and machine learning.",
+    "homepage": "https://databricks.com",
+    "logoUrl": "https://databricks.com/wp-content/uploads/2019/03/Databricks-Logo.png"
+},
+{
+    "id": "38",
+    "name": "MuleSoft",
+    "description": "MuleSoft provides a platform for building application networks that connect apps, data, and devices with APIs.",
+    "homepage": "https://www.mulesoft.com",
+    "logoUrl": "https://www.mulesoft.com/sites/default/files/inline-images/mulesoft-logo.svg"
+},
+{
+    "id": "39",
+    "name": "Figlo",
+    "description": "Figlo is a financial planning software provider offering tools for advisors to create personalized financial plans for their clients.",
+    "homepage": "https://www.figlo.com",
+    "logoUrl": "https://www.figlo.com/assets/images/figlo-logo.png"
+},
+{
+    "id": "40",
+    "name": "Ortec",
+    "description": "Ortec is a leading provider of advanced analytics and optimization solutions for logistics, supply chain, and workforce management.",
+    "homepage": "https://ortec.com",
+    "logoUrl": "https://ortec.com/assets/images/ortec-logo.png"
+},
+{
+    "id": "41",
+    "name": "Boomi",
+    "description": "Boomi is a cloud integration platform that connects applications, data, and people across your organization with speed and ease.",
+    "homepage": "https://boomi.com",
+    "logoUrl": "https://boomi.com/assets/images/boomi-logo.svg"
+},
+{
+    "id": "42",
+    "name": "Solace",
+    "description": "Solace provides event streaming and management technology, helping organizations to integrate their cloud, IoT, and on-premise systems.",
+    "homepage": "https://solace.com",
+    "logoUrl": "https://solace.com/assets/images/solace-logo.svg"
+},
+{
+    "id": "43",
+    "name": "HPE",
+    "description": "Hewlett Packard Enterprise (HPE) is an edge-to-cloud platform-as-a-service company that helps organizations accelerate outcomes by unlocking value from all of their data.",
+    "homepage": "https://www.hpe.com",
+    "logoUrl": "https://www.hpe.com/images/hpe-logo.png"
+},
+{
+    "id": "44",
+    "name": "Atlassian",
+    "description": "Atlassian is a provider of collaboration, software development, and issue-tracking software for teams, including popular products like Jira and Confluence.",
+    "homepage": "https://www.atlassian.com",
+    "logoUrl": "https://www.atlassian.com/dam/jcr:64a45f47-1db0-4b6a-a92c-7a8b4e4b5f3b/atlassian-logo-blue-small.png"
+},
+{
+    "id": "15",
+    "name": "Pluralsight",
+    "description": "Pluralsight is an online technology skills platform that provides courses for software developers, IT administrators, and creative professionals.",
+    "homepage": "https://www.pluralsight.com",
+    "logoUrl": "https://www.pluralsight.com/content/pluralsight/en/etc/designs/pluralsight/ui/images/logos/pluralsight-logo.png"
+},
+{
+    "id": "16",
+    "name": "Companial",
+    "description": "Companial (formerly QBS group) provides services and solutions to Microsoft Dynamics Partners, helping them to accelerate their business.",
+    "homepage": "https://www.companial.com",
+    "logoUrl": "https://www.companial.com/images/companial-logo.svg"
+},
+{
+    "id": "17",
+    "name": "Collibra",
+    "description": "Collibra is a data intelligence company that helps organizations maximize the value of their data with a cloud-based platform for data governance and cataloging.",
+    "homepage": "https://www.collibra.com",
+    "logoUrl": "https://www.collibra.com/images/collibra-logo.png"
+},
+{
+    "id": "18",
+    "name": "Snowflake",
+    "description": "Snowflake is a cloud-based data warehousing company that offers a platform for storing and analyzing large volumes of data.",
+    "homepage": "https://www.snowflake.com",
+    "logoUrl": "https://www.snowflake.com/wp-content/uploads/2021/01/snowflake-logo.png"
+},
+{
+    "id": "19",
+    "name": "Informatica",
+    "description": "Informatica is an enterprise cloud data management leader that accelerates data-driven digital transformation.",
+    "homepage": "https://www.informatica.com",
+    "logoUrl": "https://www.informatica.com/content/dam/informatica-com/global/images/logos/informatica-logo.png"
+},
+{
+    "id": "20",
+    "name": "Qlik",
+    "description": "Qlik provides an end-to-end data management and analytics platform that helps companies turn raw data into actionable insights.",
+    "homepage": "https://www.qlik.com",
+    "logoUrl": "https://www.qlik.com/content/dam/qlik/branding/logos/qlik-logo.svg"
+},
+{
+    "id": "21",
+    "name": "Salesforce",
+    "description": "Salesforce is a cloud computing company known for its customer relationship management (CRM) system.",
+    "homepage": "https://www.salesforce.com",
+    "logoUrl": "https://www.salesforce.com/content/dam/web/en_us/www/images/home/salesforce-logo.svg"
+},
+{
+    "id": "22",
+    "name": "Confluence",
+    "description": "Confluence is a collaboration tool by Atlassian that helps teams organize, create, and share work across teams and departments.",
+    "homepage": "https://www.atlassian.com/software/confluence",
+    "logoUrl": "https://wac-cdn.atlassian.com/dam/jcr:e9b8205e-152a-4f6c-b9be-20914ae0bc77/confluence-page-header.svg"
+},
+{
+    "id": "23",
+    "name": "Red Hat",
+    "description": "Red Hat is a software company that provides open-source software products to enterprises, including operating systems, cloud computing, and middleware.",
+    "homepage": "https://www.redhat.com",
+    "logoUrl": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo/logo.svg"
+}
+
+]
+
+,
   "expertise": [
     {
       "id": "494",
