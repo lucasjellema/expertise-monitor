@@ -26,6 +26,7 @@ const formatDate = (date) => {
 
 
   const formatMonthYear = (monthYearString) => {
+    if (!monthYearString) return ''
     const year = '20' + monthYearString.substring(0,2)
     const month = months[parseInt(monthYearString.substring(2)) - 1]
     return `${month.name} ${year}`
