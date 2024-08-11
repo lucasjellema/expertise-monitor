@@ -58,7 +58,7 @@
     <v-dialog v-model="organizationDialog" width="1000" @afterLeave="editOrganization = false">
         <v-card>
             <v-card-title>
-                <v-btn @click="goEditOrganization" v-if="!editOrganization">Bewerken</v-btn>
+                <v-btn @click="goEditOrganization" v-if="!editOrganization && !appStore.getReadOnly()">Bewerken</v-btn>
                 <v-btn @click="saveOrganization" v-if="editOrganization">Opslaan</v-btn>
             </v-card-title>
             <OrganizationDetails :organization="organizationToShow" v-if="!editOrganization" />
