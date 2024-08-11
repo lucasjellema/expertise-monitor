@@ -8,7 +8,7 @@ import expertiseCatalogDB from '../data/expertiseCatalog.json'
 export const useAppStore = defineStore('app', () => {
 
   const expertiseTags = ref(new Set([]))
-  const readOnly = ref(true)
+  const readOnly = ref(true)  // TODO Default should be true!
 
   const toggleReadOnly = () => {
     readOnly.value = !readOnly.value
@@ -184,6 +184,15 @@ export const useAppStore = defineStore('app', () => {
           claim.expertise = expertiseJSON.value.expertise.find(e => e.id === claim.expertiseId)
         }
       }
+      
+      if (org.vendorRelations && org.vendorRelations.length > 0) {
+        for (const relation of org.vendorRelations) {
+          const vendor = expertiseJSON.value.vendors.find(v => v.id === relation.vendorId)
+          if (vendor) {
+            relation.vendor = vendor
+          }
+        }
+      }
     }
 
     initializeTags()
@@ -220,6 +229,7 @@ export const useAppStore = defineStore('app', () => {
       if (expertiseCatalogDB) {
         expertiseJSON.value.expertise =
           expertiseJSON.value.expertise.concat(expertiseCatalogDB.expertise)
+          expertiseJSON.value.vendors = expertiseCatalogDB.vendors
       }
       prepareData(expertiseJSON.value)
 
