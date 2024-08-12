@@ -23,6 +23,7 @@
                                         }}) for more details.
                                 </v-col>
                             </v-row>
+                            
                             <v-row>
                                 <v-col class="py-2" cols="11">
                                     <br/> <br/>
