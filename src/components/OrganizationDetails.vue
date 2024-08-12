@@ -4,22 +4,20 @@
             <v-main>
                 <v-row>
                     <v-col cols="10" offset="1">
-                        <h1>{{ organization.name }}</h1>
+                        <v-img :src="companyLogos[organization.name]" height="100"
+                            v-if="companyLogos[organization.name]"></v-img>
+                        <h1 v-if="!companyLogos[organization.name]">{{ organization.name }}</h1>
                         <v-container fluid>
                             <v-row>
                                 <v-col>
-
-                                    <span v-if="organization.address"><br /> <br />Adres:
-                                        {{ organization.address }}</span>
-                                    <span v-if="organization.url">Website: <a :href="organization.url"
-                                            target="_blank">{{ organization.url }}</a></span>
-                                    <br /> <br />
+                                    <p v-if="organization.address"><br /> <br />Adres:
+                                        {{ organization.address }}</p>
+                                    <p v-if="organization.url">Website: <a :href="organization.url"
+                                            target="_blank">{{ organization.url }}</a></p>
                                     <p>Aantal expertiseclaims: {{ organization.expertiseClaims?.length }}</p>
                                     <p>Bijdragen van: {{ uniqueAuthors.join(', ') }}</p>
                                     <p>Meest recente bijdrage: {{ formatMonthYear(maxAsOf) }}</p>
-                                    <br /> <br />
-                                    <v-img :src="companyLogos[organization.name]" height="200"
-                                        v-if="companyLogos[organization.name]"></v-img>
+
 
                                 </v-col>
                             </v-row>
@@ -114,7 +112,7 @@ const handleVendorRelationshipUpdate = (e) => {
 
 const saveVendorRelationship = () => {
     Object.assign(vendorRelationshipToShow.value, vendorRelationshipInProgress.value)
-    
+
 
     // TODO if new, add to list 
     if (vendorRelationshipToShow.value.new) {
