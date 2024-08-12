@@ -37,13 +37,7 @@
     "homepage": "https://www.microsoft.com",
     "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/05/microsoft-logo-rgb-1500x1500.png"
   },
-  {
-    "id": "7",
-    "name": "Oracle",
-    "description": "Oracle Corporation is an American multinational computer technology corporation that develops, manufactures, and sells computer hardware, software, and services.",
-    "homepage": "https://www.oracle.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/oracle-logo-rgb-1500x1500.png"
-  },
+
   {
     "id": "8",
     "name": "Dell",
