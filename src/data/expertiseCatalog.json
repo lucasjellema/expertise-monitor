@@ -1,7 +1,13 @@
 {
 "vendors": 
 [
- 
+  {
+    "id": "1",
+    "name": "Axual",
+    "description": "Utrecht based: Streaming made simple, that is our goal. Every day, we work to make this a reality. Axual provides mission-critical data infrastructure, enabling billions of events per day for our customers. ",
+    "homepage": "https://axual.com/",
+    "logoUrl": "https://connect.redhat.com/hydra/prm/v1/companies/fd5442c8e86511ea98b3001a4a0b7d49/logo"
+  }, 
   {
     "id": "2",
     "name": "Apple",
@@ -218,8 +224,14 @@
     "description": "Red Hat is a software company that provides open-source software products to enterprises, including operating systems, cloud computing, and middleware.",
     "homepage": "https://www.redhat.com",
     "logoUrl": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo/logo.svg"
+},
+{
+  "id": "99",
+  "name": "Other/Overig",
+  "description": "Als de specifieke leverancier/partner niet in de lijst staat, kies deze - en geef in de titel/omchrijving de naam van de partij.",
+  "homepage": "",
+  "logoUrl": "https://cultureguerillaz.com/index.php?media/880-the-other-logo-jpg"
 }
-
 ]
 
 ,
