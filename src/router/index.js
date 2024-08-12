@@ -14,6 +14,7 @@ import expertise from '@/pages/expertise.vue';
 import expertiseBrowse from '@/pages/expertiseBrowse.vue';
 import expertiseRaw from '@/pages/expertiseRaw.vue';
 import organization from '@/pages/organization.vue';
+import partners from '@/pages/partners.vue';
 import organizationExpertise from '@/pages/organizationExpertise.vue';
 
 const createRoutes = () => {
@@ -27,6 +28,7 @@ const createRoutes = () => {
   r.push({ path: '/expertiseBrowseTag/:tag',name: 'expertiseBrowseTag', component: expertiseBrowse })
   r.push({ path: '/expertiseRaw',name: 'expertiseRaw', component: expertiseRaw })
   r.push({ path: '/organization',name: 'organization', component: organization })
+  r.push({ path: '/partners',name: 'partners', component: partners })
   //r.push({ path: '/editTip/:tipId',name: 'editTip', component: editTip })
   return r
 }
