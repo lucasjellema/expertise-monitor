@@ -25,7 +25,7 @@
                             </v-row>
                             <v-row>
                                 <v-col>
-                                    
+
                                     <v-data-table :headers="partnerTableHeaders" :items="organization.vendorRelations"
                                         :hide-default-footer="true">
                                         <template v-slot:top>
@@ -113,8 +113,19 @@ const handleVendorRelationshipUpdate = (e) => {
 }
 
 const saveVendorRelationship = () => {
-    vendorRelationshipToShow.value = vendorRelationshipInProgress.value
+    Object.assign(vendorRelationshipToShow.value, vendorRelationshipInProgress.value)
+    
+
+    // TODO if new, add to list 
+    if (vendorRelationshipToShow.value.new) {
+        delete vendorRelationshipToShow.value.new
+        props.organization.vendorRelations.push(vendorRelationshipToShow.value)
+    }
+
+    showVendorRelationship.value = false
+
     editVendorRelationship.value = false
+
 }
 
 const addVendorRelationship = () => {
@@ -125,7 +136,7 @@ const addVendorRelationship = () => {
         new: true
     }
     editVendorRelationship.value = true
-    
+
     showVendorRelationship.value = true
 
 }

@@ -8,30 +8,22 @@
                         <v-container fluid>
                             <v-row>
                                 <v-col>
-                                    <p>{{ vendorRelationshipToEdit.description }}</p>
+                                    <v-select v-model="vendorRelationshipToEdit.vendor" :items="vendors" return-object
+                                        item-title="name" item-value="id" label="Kies een leverancier"
+                                        v-if="vendorRelationshipToEdit.new" />
                                     <v-text-field label="Title" v-model="vendorRelationshipToEdit.title"></v-text-field>
                                     <v-textarea label="Description"
                                         v-model="vendorRelationshipToEdit.description"></v-textarea>
-                                    <v-text-field label="Van" type="date"
-                                        v-model="vendorRelationshipToEdit.from"></v-text-field>
-                                    <v-text-field label="Tot" type="date"
-                                        v-model="vendorRelationshipToEdit.until"></v-text-field>
 
 
                                 </v-col>
                             </v-row>
                             <v-row>
                                 <v-col cols="7">
-                                    {{ fromYear }} {{ fromMonth }}
-                                    <v-radio-group v-model="fromYear" row mandatory inline dense label="From year"
-                                        hint="Partner relationship starts in this year">
-                                        <v-radio v-for="year in [2023, 2024, 2025, 2026, 2027]" :key="year"
-                                            :value="year">
-                                            <template v-slot:label>
-                                                {{ year }}
-                                            </template>
-                                        </v-radio>
-                                    </v-radio-group>
+
+                                    <v-text-field label="From year" type="number" v-model="fromYear" :rules="[
+                                        v => v >= 1980 || 'Year must be greater than 1980',
+                                        v => v <= 2030 || 'Year must be less than 2030']"></v-text-field>
                                 </v-col>
                                 <v-col cols="5">
                                     <v-select v-model="fromMonth" :items="months" item-value="index" label="Month" dense
@@ -39,8 +31,19 @@
                                 </v-col>
                             </v-row>
                             <v-row>
+                                <v-col cols="7">
+                                    <v-text-field label="Until year" type="number" v-model="untilYear" :rules="[
+                                        v => v >= 1980 || 'Year must be greater than 1980',
+                                        v => v <= 2030 || 'Year must be less than 2030']"></v-text-field>
+                                </v-col>
+                                <v-col cols="5">
+                                    <v-select v-model="untilMonth" :items="months" item-value="index" label="Month"
+                                        dense
+                                        hint="Until which month in the selected year did/does this relationship continue"></v-select>
+                                </v-col>
+                            </v-row>
+                            <v-row>
                                 <v-col>
-
                                     <p v-if="vendorRelationshipToEdit.from">Vanaf: {{
                                         formatMonthYear(vendorRelationshipToEdit.from)
                                     }}</p>
@@ -48,9 +51,7 @@
                                         formatMonthYear(vendorRelationshipToEdit.until)
                                     }}</p>
                                     <br />
-                                    <v-select v-model="vendorRelationshipToEdit.vendor" :items="vendors" return-object
-                                        item-title="name" item-value="id" label="Kies een leverancier"
-                                        v-if="vendorRelationshipToEdit.new" />
+
                                     {{ vendorRelationshipToEdit.vendor?.description }}
                                     <br />
                                     <p v-if="vendorRelationshipToEdit.vendor?.homepage">Details: <a
@@ -87,22 +88,54 @@ import { useDateLibrary } from '@/composables/useDateLibrary';
 const { formatMonthYear } = useDateLibrary();
 const vendorRelationshipToEdit = ref({ ...props.vendorRelationship })
 
-
+const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+]
 const vendors = computed(() => {
     const e = appStore.getExpertise()
     return appStore.getExpertise().value.vendors.sort((a, b) => a.name.localeCompare(b.name))
 })
-watch(() => vendorRelationshipToEdit
-    , async (newValue, oldValue) => {
-        console.log("edit vendorRelationship vendorRelationship changed", newValue)
-        vendorRelationshipToEdit.value.vendorId = newValue.value.vendor.id
-        emit('vendorRelationshipChanged', newValue)
-    }, { deep: true })
 
 const fromMonth = ref(null)
 const fromYear = ref(null)
 const untilMonth = ref(null)
-const untilfYear = ref(null)
+const untilYear = ref(null)
+
+watch(() =>[fromYear.value, fromMonth.value], ([newFromYear, newFromMonth], [oldFromYear, oldFromMonth]) => {
+    if (newFromYear !== null ) {
+        const month = fromMonth.value ? months.indexOf(fromMonth.value) + 1 : 1
+        vendorRelationshipToEdit.value.from = `${newFromYear - 2000}${month}`
+    }
+})
+
+
+watch(() => [untilYear.value, untilMonth.value], ([newUntilYear, newUntilMonth], [oldUntilYear, oldUntilMonth]) => {
+    if (newUntilYear !== null ) {
+        const month = untilMonth.value ? months.indexOf(untilMonth.value) + 1 : 1
+        vendorRelationshipToEdit.value.until = `${newUntilYear - 2000}${month}`
+    }
+})
+
+watch(() => vendorRelationshipToEdit
+    , async (newValue, oldValue) => {
+        console.log("edit vendorRelationship vendorRelationship changed", newValue)
+        vendorRelationshipToEdit.value.vendorId = newValue.value.vendor.id
+
+        emit('vendorRelationshipChanged', newValue)
+    }, { deep: true })
+
+
 
 
 onMounted(() => {
@@ -112,10 +145,20 @@ onMounted(() => {
     }
     if (vendorRelationshipToEdit.value?.until) {
 
-        untilfYear.value = 2000 + ensureNumeric(vendorRelationshipToEdit.value.until.substring(0, 2))
+        untilYear.value = 2000 + ensureNumeric(vendorRelationshipToEdit.value.until.substring(0, 2))
         untilMonth.value = months[vendorRelationshipToEdit.value.until.substring(2) - 1]
     }
 })
+
+function ensureNumeric(value) {
+    // Check if the value is a string and if it represents a valid number
+    if (typeof value === 'string' && !isNaN(value) && !isNaN(parseFloat(value))) {
+        // Convert the string to a number
+        return Number(value);
+    }
+    // If the value is already a number, or it's not a valid number string, return it as is
+    return value;
+}
 
 
 
