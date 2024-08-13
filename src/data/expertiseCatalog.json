@@ -225,6 +225,42 @@
     "homepage": "https://www.redhat.com",
     "logoUrl": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo/logo.svg"
 },
+{ "id": "54",
+"name": "Make",
+"description":"no-code workflow automation: From tasks and workflows to apps and systems, build and automate anything in one powerful visual platform.",
+"homepage":"https://www.make.com/en",
+"logoUrl":"https://pageflows.imgix.net/media/logos/make.jpg"
+
+},{
+  "id": "55",
+  "name": "Nagios",
+  "description": "Nagios is an open-source software application that monitors systems, networks, and infrastructure. It alerts users when something goes wrong and when it gets better.",
+  "homepage": "https://www.nagios.org",
+  "logoUrl": "https://www.nagios.org/images/logos/nagios-logo.png"
+},
+{
+  "id": "56",
+  "name": "Checkmk",
+  "description": "Checkmk is a comprehensive IT monitoring solution that allows users to monitor the performance and health of their entire IT infrastructure, from networks to servers and applications.",
+  "homepage": "https://checkmk.com",
+  "logoUrl": "https://checkmk.com/wp-content/uploads/2021/02/checkmk_logo.svg"
+},
+{
+  "id": "58",
+  "name": "Nvidia",
+  "description": "Nvidia is a technology company known for designing and manufacturing GPUs for gaming and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive markets.",
+  "homepage": "https://www.nvidia.com",
+  "logoUrl": "https://www.nvidia.com/content/dam/en-zz/Solutions/GTX-1080-Ti/nvidia-logo.png"
+},
+{
+  "id": "59",
+  "name": "Thinkwise",
+  "description": "Thinkwise is a software company that provides a low-code platform for building and maintaining enterprise applications, enabling rapid development and deployment of business software.",
+  "homepage": "https://www.thinkwisesoftware.com",
+  "logoUrl": "https://www.thinkwisesoftware.com/hubfs/thinkwise-software-logo.svg"
+}
+
+,
 {
   "id": "99",
   "name": "Other/Overig",
