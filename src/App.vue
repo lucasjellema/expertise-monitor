@@ -7,6 +7,7 @@
       <v-btn  text prepend-icon="mdi-account-group" to="/organization" >Organization & Expertise</v-btn>
       <v-btn  text prepend-icon="mdi-brain" to="/expertise" >Expertise Catalog</v-btn>
       <v-btn  text prepend-icon="mdi-handshake" to="/partners" >Partners</v-btn>
+      <v-btn  text prepend-icon="mdi-certificate" to="/certifications" >Certifications</v-btn>
       <v-btn  text prepend-icon="mdi-export" to="/expertiseRaw" v-if="!appStore.getReadOnly()" >Expertise Raw Dump</v-btn>
       <!-- <v-btn prepend-icon="mdi-star-plus-outline" text to="/newtip" v-if="appStore.ingechecktLid != null">Nieuwe Tip</v-btn>
       <v-btn  text @click="appStore.ingechecktLid=null" v-if="appStore.ingechecktLid != null">Checkout</v-btn>
