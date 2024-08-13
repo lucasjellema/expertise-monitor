@@ -53,6 +53,36 @@
                                     </v-data-table>
                                 </v-col>
                             </v-row>
+                            <v-row>
+                                <v-col>
+
+                                    <v-data-table :headers="certificationTableHeaders" :items="organization.certifications"
+                                        :hide-default-footer="true">
+                                        <template v-slot:top>
+                                            <v-toolbar flat>
+                                                <v-toolbar-title>Certifications</v-toolbar-title>
+                                                <v-divider class="mx-4" inset vertical></v-divider>
+                                                <v-btn color="primary" @click="addCertification"
+                                                    v-if="!appStore.getReadOnly()">Add Certification</v-btn>
+                                            </v-toolbar>
+                                        </template>
+
+                                        <template v-slot:item.icon="{ item }">
+                                            <v-icon
+                                                @click="showCertificationDetails(item)">mdi-information-outline</v-icon>
+                                        </template>
+                                        <template v-slot:item.vendor="{ item }">
+                                            {{ item.vendor.name }}
+                                            <v-img v-if="item.vendor.logoUrl" :src="item.vendor.logoUrl"
+                                                max-height="25"></v-img>
+                                        </template>
+                                        <template v-slot:item.asOf="{ item }">
+                                            {{ formatMonthYear(item.asOf) }}
+                                        </template>
+
+                                    </v-data-table>
+                                </v-col>
+                            </v-row>
                         </v-container>
                     </v-col>
                 </v-row>
@@ -70,6 +100,18 @@
             <VendorRelationshipDetails :vendorRelationship="vendorRelationshipToShow" v-if="!editVendorRelationship" />
             <EditVendorRelationship :vendorRelationship="vendorRelationshipToShow"
                 @vendorRelationshipChanged="handleVendorRelationshipUpdate" v-if="editVendorRelationship" />
+        </v-card>
+    </v-dialog>
+    <v-dialog width="800" v-model="showCertification">
+        <v-card>
+            <!-- <v-card-title>
+                <v-btn @click="editVendorRelationship = true"
+                    v-if="!editVendorRelationship && !appStore.getReadOnly()">Bewerken</v-btn>
+                <v-btn @click="saveVendorRelationship" v-if="editVendorRelationship">Opslaan</v-btn>
+            </v-card-title> -->
+            <CertificationDetails :certification="certificationToShow" v-if="!editCertification" />
+            <!-- <EditVendorRelationship :vendorRelationship="vendorRelationshipToShow"
+                @vendorRelationshipChanged="handleVendorRelationshipUpdate" v-if="editVendorRelationship" /> -->
         </v-card>
     </v-dialog>
 
@@ -91,6 +133,7 @@ import { useIconsLibrary } from '@/composables/useIconsLibrary';
 const { companyLogos } = useIconsLibrary();
 import { useDateLibrary } from '@/composables/useDateLibrary';
 import EditVendorRelationship from './EditVendorRelationship.vue';
+
 const { formatMonthYear } = useDateLibrary();
 
 const showVendorRelationship = ref(false)
@@ -145,6 +188,27 @@ const partnerTableHeaders = [
     { title: 'Omschrijving', value: 'description' },
     { title: 'Van', value: 'from', sortable: true },
     { title: 'Tot', value: 'until', sortable: true },
+    { title: 'Actions', value: 'icon' }
+]
+
+
+const showCertification = ref(false)
+const certificationToShow = ref(null)
+const editCertification = ref(false)
+
+const showCertificationDetails = (item) => {
+    editCertification.value = false
+    showCertification.value = true
+    certificationToShow.value = item
+}
+
+
+const certificationTableHeaders = [
+    { title: 'Partner', value: 'vendor', sortable: true },
+    { title: 'Titel', value: 'title', sortable: true },
+    { title: 'Omschrijving', value: 'description' },
+    { title: 'Per', value: 'asOf', sortable: true },
+    { title: 'Aantal', value: 'count', sortable: true },
     { title: 'Actions', value: 'icon' }
 ]
 

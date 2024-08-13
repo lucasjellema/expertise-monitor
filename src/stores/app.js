@@ -193,6 +193,14 @@ export const useAppStore = defineStore('app', () => {
           }
         }
       }
+      if (org.certifications && org.certifications.length > 0) {
+        for (const certification of org.certifications) {
+          const vendor = expertiseJSON.value.vendors.find(v => v.id === certification.vendorId)
+          if (vendor) {
+            certification.vendor = vendor
+          }
+        }
+      }
     }
 
     initializeTags()
