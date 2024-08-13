@@ -94,8 +94,8 @@ const vendorRelationshipsHeaders = [
     , { title: 'Bedrijf', key: 'organization.name', sortable: true }
     , { title: 'Partner Homepage', key: 'vendor.homepage', sortable: true }
     , { title: 'Logo', key: 'vendor.logoURL', sortable: false }
-    , { title: 'From', key: 'from', sortable: false }
-    , { title: 'Until', key: 'until', sortable: false }
+    , { title: 'Vanaf', key: 'from', sortable: false }
+    , { title: 'Tot', key: 'until', sortable: false }
 
 ]
 
