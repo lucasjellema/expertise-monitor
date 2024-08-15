@@ -104,14 +104,14 @@
     </v-dialog>
     <v-dialog width="800" v-model="showCertification">
         <v-card>
-            <!-- <v-card-title>
-                <v-btn @click="editVendorRelationship = true"
-                    v-if="!editVendorRelationship && !appStore.getReadOnly()">Bewerken</v-btn>
-                <v-btn @click="saveVendorRelationship" v-if="editVendorRelationship">Opslaan</v-btn>
-            </v-card-title> -->
+            <v-card-title>
+                <v-btn @click="editCertification = true"
+                    v-if="!editCertification && !appStore.getReadOnly()">Bewerken</v-btn>
+                <v-btn @click="saveCertification" v-if="editCertification">Opslaan</v-btn>
+            </v-card-title>
             <CertificationDetails :certification="certificationToShow" v-if="!editCertification" />
-            <!-- <EditVendorRelationship :vendorRelationship="vendorRelationshipToShow"
-                @vendorRelationshipChanged="handleVendorRelationshipUpdate" v-if="editVendorRelationship" /> -->
+            <EditCertification :certification="certificationToShow"
+                @certificationChanged="handleCertificationUpdate" v-if="editCertification" />
         </v-card>
     </v-dialog>
 
@@ -155,18 +155,13 @@ const handleVendorRelationshipUpdate = (e) => {
 
 const saveVendorRelationship = () => {
     Object.assign(vendorRelationshipToShow.value, vendorRelationshipInProgress.value)
-
-
     // TODO if new, add to list 
     if (vendorRelationshipToShow.value.new) {
         delete vendorRelationshipToShow.value.new
         props.organization.vendorRelations.push(vendorRelationshipToShow.value)
     }
-
     showVendorRelationship.value = false
-
     editVendorRelationship.value = false
-
 }
 
 const addVendorRelationship = () => {
@@ -177,9 +172,7 @@ const addVendorRelationship = () => {
         new: true
     }
     editVendorRelationship.value = true
-
     showVendorRelationship.value = true
-
 }
 
 const partnerTableHeaders = [
@@ -195,6 +188,7 @@ const partnerTableHeaders = [
 const showCertification = ref(false)
 const certificationToShow = ref(null)
 const editCertification = ref(false)
+const certificationInProgress = ref(null)
 
 const showCertificationDetails = (item) => {
     editCertification.value = false
@@ -211,6 +205,35 @@ const certificationTableHeaders = [
     { title: 'Aantal', value: 'count', sortable: true },
     { title: 'Actions', value: 'icon' }
 ]
+
+const addCertification = () => {
+    certificationToShow.value = {
+        title: "...",
+        description: "",
+        vendorId: "",
+        count:1,
+        new: true
+    }
+    editCertification.value = true
+    showCertification.value = true
+}
+
+const handleCertificationUpdate = (e) => {
+    console.log("certificate updated", e)
+    certificationInProgress.value = e.value
+}
+
+const saveCertification = () => {
+    Object.assign(certificationToShow.value, certificationInProgress.value)
+    // TODO if new, add to list 
+    if (certificationToShow.value.new) {
+        delete certificationToShow.value.new
+        props.organization.certifications.push(certificationToShow.value)
+    }
+    showCertification.value = false
+    editCertification.value = false
+}
+
 
 // create a   computed property for the list of unique authors in the expertise claims for the organization 
 const uniqueAuthors = computed(() => {
