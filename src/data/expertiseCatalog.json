@@ -4275,17 +4275,6 @@
       ]
     },
     {
-      "id": "595",
-      "name": "Project Management",
-      "description": "Project management involves planning, executing, and overseeing projects to achieve specific goals within a specified timeline and budget. It includes methodologies, tools, and techniques to manage project activities.",
-      "icon": "mdi-calendar-check",
-      "webpage": "https://www.pmi.org/",
-      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/e/e1/PMI_logo.svg",
-      "tags": [
-        "project management"
-      ]
-    },
-    {
       "id": "596",
       "name": "LangGraph",
       "description": "LangGraph is a tool for building and visualizing complex language models and their interactions in a graphical interface.",
