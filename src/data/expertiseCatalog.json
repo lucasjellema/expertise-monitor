@@ -1,276 +1,272 @@
 {
-"vendors": 
-[
-  {
-    "id": "1",
-    "name": "Axual",
-    "description": "Utrecht based: Streaming made simple, that is our goal. Every day, we work to make this a reality. Axual provides mission-critical data infrastructure, enabling billions of events per day for our customers. ",
-    "homepage": "https://axual.com/",
-    "logoUrl": "https://connect.redhat.com/hydra/prm/v1/companies/fd5442c8e86511ea98b3001a4a0b7d49/logo"
-  }, 
-  {
-    "id": "2",
-    "name": "Apple",
-    "description": "Apple is an American multinational technology company that designs, manufactures, and markets consumer electronics, computer software, and online services. ",
-    "homepage": "https://www.apple.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/apple-logo-red-rgb-1500x1500.png"
-  },
-  {
-    "id": "3",
-    "name": "Adobe",
-    "description": "Adobe Systems Incorporated is an American multinational corporation that specializes in creating software for digital imaging, publishing, and web design.",
-    "homepage": "https://www.adobe.com",
-    "logoUrl": "https://www.adobe.com/content/dam/cc/us/en/brand/logos/logo-adobe-systems-color-lockup-blue-rgb.png"
-  },
-  {
-    "id": "4",
-    "name": "SAP",
-    "description": "SAP SE is a German multinational technology company that specializes in software for enterprise applications.",
-    "homepage": "https://www.sap.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/11/sap-logo-rgb-1500x1500.png"
-  },
-  {
-    "id": "5",
-    "name": "IBM",
-    "description": "IBM is an American multinational technology company that provides a range of computer hardware, software and services.",
-    "homepage": "https://www.ibm.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/10/ibm-logo-rgb-1500x1500.png"
-  },
-  {
-    "id": "6",
-    "name": "Microsoft",
-    "description": "Microsoft is an American multinational technology company headquartered in Redmond, Washington.",
-    "homepage": "https://www.microsoft.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/05/microsoft-logo-rgb-1500x1500.png"
-  },
-
-  {
-    "id": "8",
-    "name": "Dell",
-    "description": "Dell Technologies is an American multinational technology company that provides a range of computer hardware, software, and services.",
-    "homepage": "https://www.dell.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/dell-logo-rgb-1500x1500.png"
-  },
-  {
-    "id": "9",
-    "name": "AWS",
-    "description": "Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to users.",
-    "homepage": "https://aws.amazon.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/05/amazon-web-services-logo-rgb-1500x1500.png"
-  },
-  {
-    "id": "10",
-    "name": "Google",
-    "description": "Google LLC is an American multinational technology company that specializes in Internet-related services and products.",
-    "homepage": "https://www.google.com",
-    "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/google-logo-rgb-1500x1500.png"
-  },
-  {
-    "id": "11",
-    "name": "Dynatrace",
-    "description": "Dynatrace provides software intelligence to simplify enterprise cloud complexity and accelerate digital transformation.",
-    "homepage": "https://www.dynatrace.com",
-    "logoUrl": "https://www.dynatrace.com/wp-content/themes/dynatrace/assets/images/logo-dynatrace-rgb.png"
-  },
-  {
-    "id": "12",
-    "name": "Chipsoft",
-    "description": "Samen naar betere zorg! Dát is waar we met ChipSoft voor staan én gaan! Wij willen de zorg verbeteren met slimme en innovatieve ICT, die zoveel mogelijk zorgverleners op een veilige en efficiënte manier ondersteunt en faciliteert om op het juiste moment de juiste zorg te leveren.",
-    "homepage": "https://www.chipsoft.com",
-    "logoUrl": "https://www.chipsoft.com/wp-content/uploads/2023/05/logo_chipsoft_rgb.png"
-  },
-  {
-    "id": "13",
-    "name": "Oracle",
-    "description": "Oracle Corporation is an American multinational computer technology corporation that develops, manufactures, and sells computer hardware, software, and services.",
-    "homepage": "https://www.oracle.com",
-    "logoUrl": "https://www.oracle.com/a/sales/resources/images/logo_horiz_blue_rgb.png"
-  },
-  {
-    "id": "14",
-    "name": "AFAS",
-    "description": "AFAS is a Dutch financial services company that provides various financial products and services.",
-    "homepage": "https://www.afas.nl",
-    "logoUrl": "https://www.afas.nl/themes/custom/afas/logo.png"
-  },{
-    "id": "35",
-    "name": "Mendix",
-    "description": "Mendix is a low-code development platform that allows users to create and continuously improve mobile and web applications at scale.",
-    "homepage": "https://www.mendix.com",
-    "logoUrl": "https://images.squarespace-cdn.com/content/v1/5dfa2c39017ba35b991218b8/0f7d6d54-1b09-4a81-afe6-6b8571ca0c5a/Mendix-Primary-Logo-RGB-Blue-Large.png?format=750w"
-},
-{
-    "id": "36",
-    "name": "OutSystems",
-    "description": "OutSystems is a modern application platform that enables organizations to rapidly build and deploy complex applications using a low-code approach.",
-    "homepage": "https://www.outsystems.com",
-    "logoUrl": "https://success.outsystems.com/documentation/11/building_apps/user_interface/images/logo_outsystems.png"
-},
-{
-    "id": "37",
-    "name": "Databricks",
-    "description": "Databricks is an enterprise software company founded by the creators of Apache Spark. It provides a unified analytics platform for big data and machine learning.",
-    "homepage": "https://databricks.com",
-    "logoUrl": "https://databricks.com/wp-content/uploads/2019/03/Databricks-Logo.png"
-},
-{
-    "id": "38",
-    "name": "MuleSoft",
-    "description": "MuleSoft provides a platform for building application networks that connect apps, data, and devices with APIs.",
-    "homepage": "https://www.mulesoft.com",
-    "logoUrl": "https://www.mulesoft.com/sites/default/files/inline-images/mulesoft-logo.svg"
-},
-{
-    "id": "39",
-    "name": "Figlo",
-    "description": "Figlo is a financial planning software provider offering tools for advisors to create personalized financial plans for their clients.",
-    "homepage": "https://www.figlo.com",
-    "logoUrl": "https://www.figlo.com/assets/images/figlo-logo.png"
-},
-{
-    "id": "40",
-    "name": "Ortec",
-    "description": "Ortec is a leading provider of advanced analytics and optimization solutions for logistics, supply chain, and workforce management.",
-    "homepage": "https://ortec.com",
-    "logoUrl": "https://ortec.com/assets/images/ortec-logo.png"
-},
-{
-    "id": "41",
-    "name": "Boomi",
-    "description": "Boomi is a cloud integration platform that connects applications, data, and people across your organization with speed and ease.",
-    "homepage": "https://boomi.com",
-    "logoUrl": "https://boomi.com/assets/images/boomi-logo.svg"
-},
-{
-    "id": "42",
-    "name": "Solace",
-    "description": "Solace provides event streaming and management technology, helping organizations to integrate their cloud, IoT, and on-premise systems.",
-    "homepage": "https://solace.com",
-    "logoUrl": "https://solace.com/assets/images/solace-logo.svg"
-},
-{
-    "id": "43",
-    "name": "HPE",
-    "description": "Hewlett Packard Enterprise (HPE) is an edge-to-cloud platform-as-a-service company that helps organizations accelerate outcomes by unlocking value from all of their data.",
-    "homepage": "https://www.hpe.com",
-    "logoUrl": "https://www.hpe.com/images/hpe-logo.png"
-},
-{
-    "id": "44",
-    "name": "Atlassian",
-    "description": "Atlassian is a provider of collaboration, software development, and issue-tracking software for teams, including popular products like Jira and Confluence.",
-    "homepage": "https://www.atlassian.com",
-    "logoUrl": "https://www.atlassian.com/dam/jcr:64a45f47-1db0-4b6a-a92c-7a8b4e4b5f3b/atlassian-logo-blue-small.png"
-},
-{
-    "id": "15",
-    "name": "Pluralsight",
-    "description": "Pluralsight is an online technology skills platform that provides courses for software developers, IT administrators, and creative professionals.",
-    "homepage": "https://www.pluralsight.com",
-    "logoUrl": "https://www.pluralsight.com/content/pluralsight/en/etc/designs/pluralsight/ui/images/logos/pluralsight-logo.png"
-},
-{
-    "id": "16",
-    "name": "Companial",
-    "description": "Companial (formerly QBS group) provides services and solutions to Microsoft Dynamics Partners, helping them to accelerate their business.",
-    "homepage": "https://www.companial.com",
-    "logoUrl": "https://www.companial.com/images/companial-logo.svg"
-},
-{
-    "id": "17",
-    "name": "Collibra",
-    "description": "Collibra is a data intelligence company that helps organizations maximize the value of their data with a cloud-based platform for data governance and cataloging.",
-    "homepage": "https://www.collibra.com",
-    "logoUrl": "https://www.collibra.com/images/collibra-logo.png"
-},
-{
-    "id": "18",
-    "name": "Snowflake",
-    "description": "Snowflake is a cloud-based data warehousing company that offers a platform for storing and analyzing large volumes of data.",
-    "homepage": "https://www.snowflake.com",
-    "logoUrl": "https://www.snowflake.com/wp-content/uploads/2021/01/snowflake-logo.png"
-},
-{
-    "id": "19",
-    "name": "Informatica",
-    "description": "Informatica is an enterprise cloud data management leader that accelerates data-driven digital transformation.",
-    "homepage": "https://www.informatica.com",
-    "logoUrl": "https://www.informatica.com/content/dam/informatica-com/global/images/logos/informatica-logo.png"
-},
-{
-    "id": "20",
-    "name": "Qlik",
-    "description": "Qlik provides an end-to-end data management and analytics platform that helps companies turn raw data into actionable insights.",
-    "homepage": "https://www.qlik.com",
-    "logoUrl": "https://www.qlik.com/content/dam/qlik/branding/logos/qlik-logo.svg"
-},
-{
-    "id": "21",
-    "name": "Salesforce",
-    "description": "Salesforce is a cloud computing company known for its customer relationship management (CRM) system.",
-    "homepage": "https://www.salesforce.com",
-    "logoUrl": "https://www.salesforce.com/content/dam/web/en_us/www/images/home/salesforce-logo.svg"
-},
-{
-    "id": "22",
-    "name": "Confluence",
-    "description": "Confluence is a collaboration tool by Atlassian that helps teams organize, create, and share work across teams and departments.",
-    "homepage": "https://www.atlassian.com/software/confluence",
-    "logoUrl": "https://wac-cdn.atlassian.com/dam/jcr:e9b8205e-152a-4f6c-b9be-20914ae0bc77/confluence-page-header.svg"
-},
-{
-    "id": "23",
-    "name": "Red Hat",
-    "description": "Red Hat is a software company that provides open-source software products to enterprises, including operating systems, cloud computing, and middleware.",
-    "homepage": "https://www.redhat.com",
-    "logoUrl": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo/logo.svg"
-},
-{ "id": "54",
-"name": "Make",
-"description":"no-code workflow automation: From tasks and workflows to apps and systems, build and automate anything in one powerful visual platform.",
-"homepage":"https://www.make.com/en",
-"logoUrl":"https://pageflows.imgix.net/media/logos/make.jpg"
-
-},{
-  "id": "55",
-  "name": "Nagios",
-  "description": "Nagios is an open-source software application that monitors systems, networks, and infrastructure. It alerts users when something goes wrong and when it gets better.",
-  "homepage": "https://www.nagios.org",
-  "logoUrl": "https://www.nagios.org/images/logos/nagios-logo.png"
-},
-{
-  "id": "56",
-  "name": "Checkmk",
-  "description": "Checkmk is a comprehensive IT monitoring solution that allows users to monitor the performance and health of their entire IT infrastructure, from networks to servers and applications.",
-  "homepage": "https://checkmk.com",
-  "logoUrl": "https://checkmk.com/wp-content/uploads/2021/02/checkmk_logo.svg"
-},
-{
-  "id": "58",
-  "name": "Nvidia",
-  "description": "Nvidia is a technology company known for designing and manufacturing GPUs for gaming and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive markets.",
-  "homepage": "https://www.nvidia.com",
-  "logoUrl": "https://www.nvidia.com/content/dam/en-zz/Solutions/GTX-1080-Ti/nvidia-logo.png"
-},
-{
-  "id": "59",
-  "name": "Thinkwise",
-  "description": "Thinkwise is a software company that provides a low-code platform for building and maintaining enterprise applications, enabling rapid development and deployment of business software.",
-  "homepage": "https://www.thinkwisesoftware.com",
-  "logoUrl": "https://www.thinkwisesoftware.com/hubfs/thinkwise-software-logo.svg"
-}
-
-,
-{
-  "id": "99",
-  "name": "Other/Overig",
-  "description": "Als de specifieke leverancier/partner niet in de lijst staat, kies deze - en geef in de titel/omchrijving de naam van de partij.",
-  "homepage": "",
-  "logoUrl": "https://cultureguerillaz.com/index.php?media/880-the-other-logo-jpg"
-}
-]
-
-,
+  "vendors": [
+    {
+      "id": "1",
+      "name": "Axual",
+      "description": "Utrecht based: Streaming made simple, that is our goal. Every day, we work to make this a reality. Axual provides mission-critical data infrastructure, enabling billions of events per day for our customers. ",
+      "homepage": "https://axual.com/",
+      "logoUrl": "https://connect.redhat.com/hydra/prm/v1/companies/fd5442c8e86511ea98b3001a4a0b7d49/logo"
+    },
+    {
+      "id": "2",
+      "name": "Apple",
+      "description": "Apple is an American multinational technology company that designs, manufactures, and markets consumer electronics, computer software, and online services. ",
+      "homepage": "https://www.apple.com",
+      "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/apple-logo-red-rgb-1500x1500.png"
+    },
+    {
+      "id": "3",
+      "name": "Adobe",
+      "description": "Adobe Systems Incorporated is an American multinational corporation that specializes in creating software for digital imaging, publishing, and web design.",
+      "homepage": "https://www.adobe.com",
+      "logoUrl": "https://www.adobe.com/content/dam/cc/us/en/brand/logos/logo-adobe-systems-color-lockup-blue-rgb.png"
+    },
+    {
+      "id": "4",
+      "name": "SAP",
+      "description": "SAP SE is a German multinational technology company that specializes in software for enterprise applications.",
+      "homepage": "https://www.sap.com",
+      "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/11/sap-logo-rgb-1500x1500.png"
+    },
+    {
+      "id": "5",
+      "name": "IBM",
+      "description": "IBM is an American multinational technology company that provides a range of computer hardware, software and services.",
+      "homepage": "https://www.ibm.com",
+      "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/10/ibm-logo-rgb-1500x1500.png"
+    },
+    {
+      "id": "6",
+      "name": "Microsoft",
+      "description": "Microsoft is an American multinational technology company headquartered in Redmond, Washington.",
+      "homepage": "https://www.microsoft.com",
+      "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/05/microsoft-logo-rgb-1500x1500.png"
+    },
+    {
+      "id": "8",
+      "name": "Dell",
+      "description": "Dell Technologies is an American multinational technology company that provides a range of computer hardware, software, and services.",
+      "homepage": "https://www.dell.com",
+      "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/dell-logo-rgb-1500x1500.png"
+    },
+    {
+      "id": "9",
+      "name": "AWS",
+      "description": "Amazon Web Services (AWS) is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to users.",
+      "homepage": "https://aws.amazon.com",
+      "logoUrl": "https://www.pcmag.com/wp-content/uploads/2019/05/amazon-web-services-logo-rgb-1500x1500.png"
+    },
+    {
+      "id": "10",
+      "name": "Google",
+      "description": "Google LLC is an American multinational technology company that specializes in Internet-related services and products.",
+      "homepage": "https://www.google.com",
+      "logoUrl": "https://www.pcmag.com/wp-content/uploads/2018/08/google-logo-rgb-1500x1500.png"
+    },
+    {
+      "id": "11",
+      "name": "Dynatrace",
+      "description": "Dynatrace provides software intelligence to simplify enterprise cloud complexity and accelerate digital transformation.",
+      "homepage": "https://www.dynatrace.com",
+      "logoUrl": "https://www.dynatrace.com/wp-content/themes/dynatrace/assets/images/logo-dynatrace-rgb.png"
+    },
+    {
+      "id": "12",
+      "name": "Chipsoft",
+      "description": "Samen naar betere zorg! Dát is waar we met ChipSoft voor staan én gaan! Wij willen de zorg verbeteren met slimme en innovatieve ICT, die zoveel mogelijk zorgverleners op een veilige en efficiënte manier ondersteunt en faciliteert om op het juiste moment de juiste zorg te leveren.",
+      "homepage": "https://www.chipsoft.com",
+      "logoUrl": "https://www.chipsoft.com/wp-content/uploads/2023/05/logo_chipsoft_rgb.png"
+    },
+    {
+      "id": "13",
+      "name": "Oracle",
+      "description": "Oracle Corporation is an American multinational computer technology corporation that develops, manufactures, and sells computer hardware, software, and services.",
+      "homepage": "https://www.oracle.com",
+      "logoUrl": "https://www.oracle.com/a/sales/resources/images/logo_horiz_blue_rgb.png"
+    },
+    {
+      "id": "14",
+      "name": "AFAS",
+      "description": "AFAS is a Dutch financial services company that provides various financial products and services.",
+      "homepage": "https://www.afas.nl",
+      "logoUrl": "https://www.afas.nl/themes/custom/afas/logo.png"
+    },
+    {
+      "id": "35",
+      "name": "Mendix",
+      "description": "Mendix is a low-code development platform that allows users to create and continuously improve mobile and web applications at scale.",
+      "homepage": "https://www.mendix.com",
+      "logoUrl": "https://images.squarespace-cdn.com/content/v1/5dfa2c39017ba35b991218b8/0f7d6d54-1b09-4a81-afe6-6b8571ca0c5a/Mendix-Primary-Logo-RGB-Blue-Large.png?format=750w"
+    },
+    {
+      "id": "36",
+      "name": "OutSystems",
+      "description": "OutSystems is a modern application platform that enables organizations to rapidly build and deploy complex applications using a low-code approach.",
+      "homepage": "https://www.outsystems.com",
+      "logoUrl": "https://success.outsystems.com/documentation/11/building_apps/user_interface/images/logo_outsystems.png"
+    },
+    {
+      "id": "37",
+      "name": "Databricks",
+      "description": "Databricks is an enterprise software company founded by the creators of Apache Spark. It provides a unified analytics platform for big data and machine learning.",
+      "homepage": "https://databricks.com",
+      "logoUrl": "https://databricks.com/wp-content/uploads/2019/03/Databricks-Logo.png"
+    },
+    {
+      "id": "38",
+      "name": "MuleSoft",
+      "description": "MuleSoft provides a platform for building application networks that connect apps, data, and devices with APIs.",
+      "homepage": "https://www.mulesoft.com",
+      "logoUrl": "https://www.mulesoft.com/sites/default/files/inline-images/mulesoft-logo.svg"
+    },
+    {
+      "id": "39",
+      "name": "Figlo",
+      "description": "Figlo is a financial planning software provider offering tools for advisors to create personalized financial plans for their clients.",
+      "homepage": "https://www.figlo.com",
+      "logoUrl": "https://www.figlo.com/assets/images/figlo-logo.png"
+    },
+    {
+      "id": "40",
+      "name": "Ortec",
+      "description": "Ortec is a leading provider of advanced analytics and optimization solutions for logistics, supply chain, and workforce management.",
+      "homepage": "https://ortec.com",
+      "logoUrl": "https://ortec.com/assets/images/ortec-logo.png"
+    },
+    {
+      "id": "41",
+      "name": "Boomi",
+      "description": "Boomi is a cloud integration platform that connects applications, data, and people across your organization with speed and ease.",
+      "homepage": "https://boomi.com",
+      "logoUrl": "https://boomi.com/assets/images/boomi-logo.svg"
+    },
+    {
+      "id": "42",
+      "name": "Solace",
+      "description": "Solace provides event streaming and management technology, helping organizations to integrate their cloud, IoT, and on-premise systems.",
+      "homepage": "https://solace.com",
+      "logoUrl": "https://solace.com/assets/images/solace-logo.svg"
+    },
+    {
+      "id": "43",
+      "name": "HPE",
+      "description": "Hewlett Packard Enterprise (HPE) is an edge-to-cloud platform-as-a-service company that helps organizations accelerate outcomes by unlocking value from all of their data.",
+      "homepage": "https://www.hpe.com",
+      "logoUrl": "https://www.hpe.com/images/hpe-logo.png"
+    },
+    {
+      "id": "44",
+      "name": "Atlassian",
+      "description": "Atlassian is a provider of collaboration, software development, and issue-tracking software for teams, including popular products like Jira and Confluence.",
+      "homepage": "https://www.atlassian.com",
+      "logoUrl": "https://www.atlassian.com/dam/jcr:64a45f47-1db0-4b6a-a92c-7a8b4e4b5f3b/atlassian-logo-blue-small.png"
+    },
+    {
+      "id": "15",
+      "name": "Pluralsight",
+      "description": "Pluralsight is an online technology skills platform that provides courses for software developers, IT administrators, and creative professionals.",
+      "homepage": "https://www.pluralsight.com",
+      "logoUrl": "https://www.pluralsight.com/content/pluralsight/en/etc/designs/pluralsight/ui/images/logos/pluralsight-logo.png"
+    },
+    {
+      "id": "16",
+      "name": "Companial",
+      "description": "Companial (formerly QBS group) provides services and solutions to Microsoft Dynamics Partners, helping them to accelerate their business.",
+      "homepage": "https://www.companial.com",
+      "logoUrl": "https://www.companial.com/images/companial-logo.svg"
+    },
+    {
+      "id": "17",
+      "name": "Collibra",
+      "description": "Collibra is a data intelligence company that helps organizations maximize the value of their data with a cloud-based platform for data governance and cataloging.",
+      "homepage": "https://www.collibra.com",
+      "logoUrl": "https://www.collibra.com/images/collibra-logo.png"
+    },
+    {
+      "id": "18",
+      "name": "Snowflake",
+      "description": "Snowflake is a cloud-based data warehousing company that offers a platform for storing and analyzing large volumes of data.",
+      "homepage": "https://www.snowflake.com",
+      "logoUrl": "https://www.snowflake.com/wp-content/uploads/2021/01/snowflake-logo.png"
+    },
+    {
+      "id": "19",
+      "name": "Informatica",
+      "description": "Informatica is an enterprise cloud data management leader that accelerates data-driven digital transformation.",
+      "homepage": "https://www.informatica.com",
+      "logoUrl": "https://www.informatica.com/content/dam/informatica-com/global/images/logos/informatica-logo.png"
+    },
+    {
+      "id": "20",
+      "name": "Qlik",
+      "description": "Qlik provides an end-to-end data management and analytics platform that helps companies turn raw data into actionable insights.",
+      "homepage": "https://www.qlik.com",
+      "logoUrl": "https://www.qlik.com/content/dam/qlik/branding/logos/qlik-logo.svg"
+    },
+    {
+      "id": "21",
+      "name": "Salesforce",
+      "description": "Salesforce is a cloud computing company known for its customer relationship management (CRM) system.",
+      "homepage": "https://www.salesforce.com",
+      "logoUrl": "https://www.salesforce.com/content/dam/web/en_us/www/images/home/salesforce-logo.svg"
+    },
+    {
+      "id": "22",
+      "name": "Confluence",
+      "description": "Confluence is a collaboration tool by Atlassian that helps teams organize, create, and share work across teams and departments.",
+      "homepage": "https://www.atlassian.com/software/confluence",
+      "logoUrl": "https://wac-cdn.atlassian.com/dam/jcr:e9b8205e-152a-4f6c-b9be-20914ae0bc77/confluence-page-header.svg"
+    },
+    {
+      "id": "23",
+      "name": "Red Hat",
+      "description": "Red Hat is a software company that provides open-source software products to enterprises, including operating systems, cloud computing, and middleware.",
+      "homepage": "https://www.redhat.com",
+      "logoUrl": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo/logo.svg"
+    },
+    {
+      "id": "54",
+      "name": "Make",
+      "description": "no-code workflow automation: From tasks and workflows to apps and systems, build and automate anything in one powerful visual platform.",
+      "homepage": "https://www.make.com/en",
+      "logoUrl": "https://pageflows.imgix.net/media/logos/make.jpg"
+    },
+    {
+      "id": "55",
+      "name": "Nagios",
+      "description": "Nagios is an open-source software application that monitors systems, networks, and infrastructure. It alerts users when something goes wrong and when it gets better.",
+      "homepage": "https://www.nagios.org",
+      "logoUrl": "https://www.nagios.org/images/logos/nagios-logo.png"
+    },
+    {
+      "id": "56",
+      "name": "Checkmk",
+      "description": "Checkmk is a comprehensive IT monitoring solution that allows users to monitor the performance and health of their entire IT infrastructure, from networks to servers and applications.",
+      "homepage": "https://checkmk.com",
+      "logoUrl": "https://checkmk.com/wp-content/uploads/2021/02/checkmk_logo.svg"
+    },
+    {
+      "id": "58",
+      "name": "Nvidia",
+      "description": "Nvidia is a technology company known for designing and manufacturing GPUs for gaming and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive markets.",
+      "homepage": "https://www.nvidia.com",
+      "logoUrl": "https://www.nvidia.com/content/dam/en-zz/Solutions/GTX-1080-Ti/nvidia-logo.png"
+    },
+    {
+      "id": "59",
+      "name": "Thinkwise",
+      "description": "Thinkwise is a software company that provides a low-code platform for building and maintaining enterprise applications, enabling rapid development and deployment of business software.",
+      "homepage": "https://www.thinkwisesoftware.com",
+      "logoUrl": "https://www.thinkwisesoftware.com/hubfs/thinkwise-software-logo.svg"
+    },
+    {
+      "id": "99",
+      "name": "Other/Overig",
+      "description": "Als de specifieke leverancier/partner niet in de lijst staat, kies deze - en geef in de titel/omchrijving de naam van de partij.",
+      "homepage": "",
+      "logoUrl": "https://cultureguerillaz.com/index.php?media/880-the-other-logo-jpg"
+    }
+  ],
   "expertise": [
     {
       "id": "494",
@@ -4171,7 +4167,8 @@
       "tags": [
         "web development"
       ]
-    },    {
+    },
+    {
       "id": "586",
       "name": "Lean",
       "description": "Lean is a systematic method for waste minimization within a manufacturing system without sacrificing productivity. It is widely applied in various industries to improve efficiency and value.",
@@ -4287,376 +4284,543 @@
       "tags": [
         "project management"
       ]
+    },
+    {
+      "id": "596",
+      "name": "LangGraph",
+      "description": "LangGraph is a tool for building and visualizing complex language models and their interactions in a graphical interface.",
+      "webpage": "https://langgraph.com",
+      "logoURL": "https://langgraph.com/logo.svg",
+      "tags": [
+        "language models",
+        "visualization"
+      ]
+    },
+    {
+      "id": "597",
+      "name": "LangChain",
+      "description": "LangChain is a framework for developing applications powered by language models, focusing on connecting LLMs with external data.",
+      "webpage": "https://langchain.com",
+      "logoURL": "https://langchain.com/logo.svg",
+      "tags": [
+        "language models",
+        "framework"
+      ]
+    },
+    {
+      "id": "598",
+      "name": "HeyGen",
+      "description": "HeyGen is a platform that leverages AI to generate realistic human avatars for video content, enhancing digital communication.",
+      "webpage": "https://heygen.com",
+      "logoURL": "https://heygen.com/logo.png",
+      "tags": [
+        "ai",
+        "video generation"
+      ]
+    },
+    {
+      "id": "599",
+      "name": "Autogen",
+      "description": "Autogen is a tool that automates the generation of content, code, and data using advanced AI algorithms.",
+      "webpage": "https://autogen.com",
+      "logoURL": "https://autogen.com/logo.png",
+      "tags": [
+        "ai",
+        "automation"
+      ]
+    },
+    {
+      "id": "600",
+      "name": "LM Studio",
+      "description": "LM Studio is an integrated development environment for working with large language models, providing tools for training, testing, and deployment.",
+      "webpage": "https://lmstudio.com",
+      "logoURL": "https://lmstudio.com/logo.svg",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "id": "601",
+      "name": "Ollama",
+      "description": "Ollama is an AI-driven platform that specializes in natural language processing to enhance communication and automate tasks.",
+      "webpage": "https://ollama.com",
+      "logoURL": "https://ollama.com/logo.svg",
+      "tags": [
+        "ai",
+        "nlp"
+      ]
+    },
+    {
+      "id": "602",
+      "name": "Auto-GPT",
+      "description": "Auto-GPT is an experimental open-source application that showcases the capabilities of GPT models in performing autonomous tasks.",
+      "webpage": "https://github.com/Auto-GPT",
+      "logoURL": "https://github.com/Auto-GPT/logo.png",
+      "tags": [
+        "ai",
+        "automation"
+      ]
+    },
+    {
+      "id": "603",
+      "name": "Devin",
+      "description": "Devin is an AI-powered tool designed to assist developers by generating code snippets, optimizing workflows, and automating repetitive tasks.",
+      "webpage": "https://devin.com",
+      "logoURL": "https://devin.com/logo.png",
+      "tags": [
+        "ai",
+        "developer tools"
+      ]
+    },
+    {
+      "id": "604",
+      "name": "Pinecone",
+      "description": "Pinecone is a vector database designed to power AI and machine learning applications by enabling fast and scalable similarity search.",
+      "webpage": "https://pinecone.io",
+      "logoURL": "https://mma.prnewswire.com/media/2418074/Pinecone_Systems_Inc_Logo.jpg",
+      "tags": [
+        "vector database",
+        "ai"
+      ]
+    },
+    {
+      "id": "605",
+      "name": "Chroma",
+      "description": "Chroma is a vector database built for AI applications, allowing developers to store and query embeddings efficiently.",
+      "webpage": "https://www.trychroma.com/",
+      "logoURL": "https://www.trychroma.com/img/chroma.png",
+      "tags": [
+        "vector database",
+        "ai"
+      ]
+    },
+    {
+      "id": "606",
+      "name": "Weaviate",
+      "description": "Weaviate is an open-source vector search engine that enables developers to build applications using AI-driven semantic search.",
+      "webpage": "https://weaviate.io",
+      "logoURL": "https://weaviate.io/logo.png",
+      "tags": [
+        "vector database",
+        "open source"
+      ]
+    },
+    {
+      "id": "607",
+      "name": "Faiss",
+      "description": "Faiss is a library developed by Facebook AI Research for efficient similarity search and clustering of dense vectors.",
+      "webpage": "https://github.com/facebookresearch/faiss",
+      "logoURL": "https://github.com/facebookresearch/faiss/logo.png",
+      "tags": [
+        "vector database",
+        "ai"
+      ]
+    },
+    {
+      "id": "608",
+      "name": "RedHat Advanced Container Security",
+      "description": "RedHat Advanced Container Security provides security and compliance for containerized applications running on RedHat's OpenShift platform.",
+      "webpage": "https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-container-security",
+      "logoURL": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/red-hat-logo.png",
+      "tags": [
+        "container security",
+        "redhat",
+        "openshift"
+      ]
+    },
+    {
+      "id": "609",
+      "name": "SaSe",
+      "description": "Secure Access Service Edge (SASE) is a network architecture that combines wide-area networking (WAN) and network security into a single, cloud-delivered service model.",
+      "webpage": "https://www.gartner.com/en/documents/3987035-the-future-of-network-security-is-in-the-cloud",
+      "logoURL": "https://www.gartner.com/images/logos/logo-gartner.png",
+      "tags": [
+        "network security",
+        "cloud security",
+        "sase"
+      ]
+    },
+    {
+      "id": "610",
+      "name": "ZTNA",
+      "description": "Zero Trust Network Access (ZTNA) is a security model that requires strict identity verification for every person and device trying to access resources on a private network.",
+      "webpage": "https://www.paloaltonetworks.com/cyberpedia/what-is-zero-trust",
+      "logoURL": "https://www.paloaltonetworks.com/etc/designs/pan/corporate/favicon.ico",
+      "tags": [
+        "zero trust",
+        "network security",
+        "ztna"
+      ]
+    },
+    {
+      "id": "611",
+      "name": "Palo Alto",
+      "description": "Palo Alto Networks provides a suite of cybersecurity solutions designed to protect networks, endpoints, and cloud environments.",
+      "webpage": "https://www.paloaltonetworks.com/",
+      "logoURL": "https://www.paloaltonetworks.com/etc/designs/pan/corporate/favicon.ico",
+      "tags": [
+        "cybersecurity",
+        "firewall",
+        "network security"
+      ]
+    },
+    {
+      "id": "612",
+      "name": "Network Design & Operations",
+      "description": "Network design and operations involve planning, implementing, managing, and maintaining network infrastructure to ensure optimal performance and security.",
+      "webpage": "https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-network-architecture.html",
+      "logoURL": "https://www.cisco.com/c/en/us/about/brand-center-official-logos/_jcr_content/Grid/category_atl_1155/layout-category-atl/blade_image.img.png/1533209374410.png",
+      "tags": [
+        "network architecture",
+        "network operations",
+        "cisco"
+      ]
+    },
+    {
+      "id": "613",
+      "name": "Business & Process Analysis",
+      "description": "Business and process analysis involves evaluating and improving business processes to enhance efficiency, effectiveness, and alignment with organizational goals.",
+      "webpage": "https://www.iiba.org/business-analysis-competencies/business-analysis-core-concept-model-baccm/",
+      "logoURL": "https://www.iiba.org/media/1439/iiba-logo.png",
+      "tags": [
+        "business analysis",
+        "process improvement",
+        "efficiency"
+      ]
+    },
+    {
+      "id": "614",
+      "name": "PKI",
+      "description": "Public Key Infrastructure (PKI) is a framework for managing digital certificates and public-key encryption to secure communications and verify identity over networks.",
+      "webpage": "https://www.digicert.com/what-is-pki",
+      "logoURL": "https://www.digicert.com/etc/designs/digicert2017/images/digicert-logo.png",
+      "tags": [
+        "encryption",
+        "security",
+        "pki"
+      ]
+    },
+    {
+      "id": "615",
+      "name": "Docusaurus",
+      "description": "Docusaurus is an open-source static site generator designed for creating documentation websites using Markdown and React.",
+      "webpage": "https://docusaurus.io/",
+      "logoURL": "https://docusaurus.io/img/docusaurus.svg",
+      "tags": [
+        "documentation",
+        "static site generator",
+        "open source"
+      ]
+    },
+    {
+      "id": "616",
+      "name": "Scribe",
+      "description": "Scribe is a documentation tool that allows users to capture and generate step-by-step guides and process documentation automatically.",
+      "webpage": "https://scribehow.com/",
+      "logoURL": "https://scribehow.com/static/images/favicon.ico",
+      "tags": [
+        "documentation",
+        "process documentation",
+        "guide"
+      ]
+    },
+    {
+      "id": "617",
+      "name": "MkDocs",
+      "description": "MkDocs is a fast and simple static site generator that's geared towards building project documentation. It uses Markdown and YAML for content and configuration.",
+      "webpage": "https://www.mkdocs.org/",
+      "logoURL": "https://www.mkdocs.org/img/favicon.png",
+      "tags": [
+        "documentation",
+        "static site generator",
+        "markdown"
+      ]
+    },
+    {
+      "id": "618",
+      "name": "Hugo",
+      "description": "Hugo is a fast and flexible static site generator written in Go. It is well-suited for building blogs, portfolios, and documentation sites.",
+      "webpage": "https://gohugo.io/",
+      "logoURL": "https://gohugo.io/images/hugo-logo-wide.svg",
+      "tags": [
+        "static site generator",
+        "blog",
+        "documentation"
+      ]
+    },
+    {
+      "id": "619",
+      "name": "Jekyll",
+      "description": "Jekyll is a simple, blog-aware static site generator for personal, project, or organizational sites. It transforms your plain text into static websites and blogs.",
+      "webpage": "https://jekyllrb.com/",
+      "logoURL": "https://jekyllrb.com/img/logo-2x.png",
+      "tags": [
+        "static site generator",
+        "blog",
+        "open source"
+      ]
+    },
+    {
+      "id": "620",
+      "name": "Notion",
+      "description": "Notion is an all-in-one workspace for note-taking, project management, and task management. It is used for personal and team productivity.",
+      "webpage": "https://www.notion.so/",
+      "logoURL": "https://www.notion.so/front-static/favicon.ico",
+      "tags": [
+        "productivity",
+        "note-taking",
+        "project management"
+      ]
+    },
+    {
+      "id": "621",
+      "name": "GitBook",
+      "description": "GitBook is a modern documentation platform that allows teams to collaborate on and publish content using Markdown and a powerful editor.",
+      "webpage": "https://www.gitbook.com/",
+      "logoURL": "https://www.gitbook.com/assets/images/logo/favicon.ico",
+      "tags": [
+        "documentation",
+        "collaboration",
+        "static site generator"
+      ]
+    },
+    {
+      "id": "622",
+      "name": "Sphinx",
+      "description": "Sphinx is a documentation generator that converts reStructuredText files into HTML websites, LaTeX documents, and more. It is widely used for Python projects.",
+      "webpage": "https://www.sphinx-doc.org/",
+      "logoURL": "https://www.sphinx-doc.org/en/master/_static/sphinxlogo.png",
+      "tags": [
+        "documentation",
+        "python",
+        "static site generator"
+      ]
+    },
+    {
+      "id": "623",
+      "name": "Doxygen",
+      "description": "Doxygen is a documentation generator for C++, C, and other programming languages. It extracts comments from source code and generates documentation in various formats.",
+      "webpage": "http://www.doxygen.nl/",
+      "logoURL": "http://www.doxygen.nl/images/doxygen_logo.png",
+      "tags": [
+        "documentation",
+        "c++",
+        "static site generator"
+      ]
+    },
+    {
+      "id": "624",
+      "name": "Postman",
+      "description": "Postman is a collaboration platform for API development. It allows developers to design, test, and document APIs with an intuitive interface.",
+      "webpage": "https://www.postman.com/",
+      "logoURL": "https://www.postman.com/assets/logos/postman-logo-stacked.svg",
+      "tags": [
+        "api testing",
+        "collaboration",
+        "documentation"
+      ]
+    },
+    {
+      "id": "625",
+      "name": "Swimm",
+      "description": "Swimm is a tool that allows developers to create documentation that stays up-to-date as the code evolves, using smart syncing and code snippets.",
+      "webpage": "https://swimm.io/",
+      "logoURL": "https://swimm.io/favicon-32x32.png",
+      "tags": [
+        "documentation",
+        "developer tools",
+        "code snippets"
+      ]
+    },
+    {
+      "id": "626",
+      "name": "AsciiDoc",
+      "description": "AsciiDoc is a lightweight markup language for authoring notes, documentation, articles, books, and UNIX man pages. It can be converted to many formats, including HTML, PDF, and EPUB.",
+      "webpage": "https://asciidoc.org/",
+      "logoURL": "https://asciidoc.org/images/asciidoc-logo.png",
+      "tags": [
+        "documentation",
+        "markup language",
+        "open source"
+      ]
+    },
+    {
+      "id": "627",
+      "name": "Application Operations",
+      "description": "Application Operations (AppOps) involves the deployment, management, and maintenance of software applications, ensuring they run smoothly and efficiently in production environments.",
+      "webpage": "https://en.wikipedia.org/wiki/IT_operations",
+      "logoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/ITIL-logo.svg/1200px-ITIL-logo.svg.png",
+      "tags": [
+        "operations",
+        "application management",
+        "production"
+      ]
+    },
+    {
+      "id": "628",
+      "name": "Design",
+      "description": "Design in the context of software involves creating the architecture, components, interfaces, and user experience for applications and systems.",
+      "webpage": "https://www.interaction-design.org/literature/topics/software-design",
+      "logoURL": "https://www.interaction-design.org/static/logo.png",
+      "tags": [
+        "software design",
+        "ux",
+        "architecture"
+      ]
+    },
+    {
+      "id": "629",
+      "name": "Change Management & Implementation",
+      "description": "Change Management & Implementation is the process of managing and controlling changes to systems, applications, and processes in a structured manner.",
+      "webpage": "https://www.prosci.com/resources/articles/what-is-change-management",
+      "logoURL": "https://www.prosci.com/hubfs/Prosci_logo_updated_2021.svg",
+      "tags": [
+        "change management",
+        "implementation",
+        "process management"
+      ]
+    },
+    {
+      "id": "630",
+      "name": "Security",
+      "description": "Security involves protecting systems, networks, and data from unauthorized access, vulnerabilities, and attacks, ensuring confidentiality, integrity, and availability.",
+      "webpage": "https://www.cisa.gov/cybersecurity",
+      "logoURL": "https://www.cisa.gov/sites/default/files/styles/thumbnail/public/cisa-favicon.png",
+      "tags": [
+        "cybersecurity",
+        "data protection",
+        "network security"
+      ]
+    },
+    {
+      "id": "631",
+      "name": "Architecture",
+      "description": "Architecture in software refers to the high-level structure of a system, including the organization of its components and their interactions.",
+      "webpage": "https://martinfowler.com/architecture/",
+      "logoURL": "https://martinfowler.com/logo.png",
+      "tags": [
+        "software architecture",
+        "system design",
+        "component interaction"
+      ]
+    },
+    {
+      "id": "632",
+      "name": "Project & Program Management",
+      "description": "Project & Program Management involves planning, executing, and overseeing projects or programs to achieve specific goals within constraints such as time, budget, and resources.",
+      "webpage": "https://www.pmi.org/about/learn-about-pmi/what-is-project-management",
+      "logoURL": "https://www.pmi.org/-/media/pmi/images/logo/pmi_main_logo_black.svg",
+      "tags": [
+        "project management",
+        "program management",
+        "planning"
+      ]
+    },
+    {
+      "id": "633",
+      "name": "OpenZiti",
+      "description": "OpenZiti is an open-source project that provides zero-trust networking solutions, enabling secure and private application access without the need for traditional VPNs.",
+      "webpage": "https://openziti.github.io/",
+      "logoURL": "https://openziti.github.io/images/logos/openziti.png",
+      "tags": [
+        "zero trust",
+        "network security",
+        "open source"
+      ]
+    },
+    {
+      "id": "634",
+      "name": "Zscaler",
+      "description": "Zscaler is a cloud security company that provides Internet security, web security, firewalls, and secure access service edge (SASE) solutions.",
+      "webpage": "https://www.zscaler.com/",
+      "logoURL": "https://www.zscaler.com/sites/default/files/favicon.ico",
+      "tags": [
+        "cloud security",
+        "sase",
+        "network security"
+      ]
+    },
+    {
+      "id": "635",
+      "name": "Fortinet",
+      "description": "Fortinet is a global cybersecurity company that provides a wide range of products and services, including firewalls, anti-virus, intrusion prevention, and endpoint security.",
+      "webpage": "https://www.fortinet.com/",
+      "logoURL": "https://www.fortinet.com/content/dam/fortinet/images/global/logos/fortinet-logo.svg",
+      "tags": [
+        "cybersecurity",
+        "network security",
+        "firewall"
+      ]
+    },
+    {
+      "id": "636",
+      "name": "Tailscale",
+      "description": "Tailscale is a zero-config VPN service that securely connects devices and services using WireGuard, enabling private networking across various environments.",
+      "webpage": "https://tailscale.com/",
+      "logoURL": "https://tailscale.com/static/images/logos/tailscale-logo.png",
+      "tags": [
+        "vpn",
+        "network security",
+        "wireguard"
+      ]
+    },
+    {
+      "id": "637",
+      "name": "Akamai",
+      "description": "Akamai is a content delivery network (CDN) and cloud service provider that offers solutions for delivering secure, high-performing user experiences across devices.",
+      "webpage": "https://www.akamai.com/",
+      "logoURL": "https://www.akamai.com/siteicons/favicon-32x32.png",
+      "tags": [
+        "cdn",
+        "cloud services",
+        "web performance"
+      ]
+    },
+    {
+      "id": "638",
+      "name": "Privileged Access Management",
+      "description": "Privileged Access Management (PAM) involves securing, managing, and monitoring access to critical systems and sensitive data by privileged users to prevent breaches.",
+      "webpage": "https://www.centrify.com/solutions/privileged-access-management/",
+      "logoURL": "https://www.centrify.com/sites/all/themes/custom/centrify/images/logo.svg",
+      "tags": [
+        "security",
+        "access management",
+        "privileged accounts"
+      ]
+    },
+    {
+      "id": "639",
+      "name": "NetFoundry",
+      "description": "NetFoundry is a platform that enables secure and optimized networking over the Internet without the need for traditional VPNs or private networks, supporting zero-trust architectures.",
+      "webpage": "https://netfoundry.io/",
+      "logoURL": "https://netfoundry.io/wp-content/uploads/2020/04/netfoundry-logo.png",
+      "tags": [
+        "zero trust",
+        "networking",
+        "cloud networking"
+      ]
+    },
+    {
+      "id": "640",
+      "name": "Netskope",
+      "description": "Netskope provides cloud security solutions, including CASB, secure web gateway, and zero trust network access, to protect data and users across cloud services and applications.",
+      "webpage": "https://www.netskope.com/",
+      "logoURL": "https://www.netskope.com/favicon.ico",
+      "tags": [
+        "cloud security",
+        "casb",
+        "zero trust"
+      ]
+    },
+    {
+      "id": "1001",
+      "name": "Inbisco",
+      "description": "Management Systemen - voor controle over organisaties. ",
+      "webpage": "https://www.inbisco.nl/",
+      "logoURL": "https://hidelta.nl/wp-content/uploads/2022/04/INBISCO_logo_RGB_koraalrood-1024x334-1.png",
+      "tags": [
+        "risk management"
+      ]
     }
-,    {
-  "id": "596",
-  "name": "LangGraph",
-  "description": "LangGraph is a tool for building and visualizing complex language models and their interactions in a graphical interface.",
-  "webpage": "https://langgraph.com",
-  "logoURL": "https://langgraph.com/logo.svg",
-  "tags": [
-    "language models",
-    "visualization"
-  ]
-},
-{
-  "id": "597",
-  "name": "LangChain",
-  "description": "LangChain is a framework for developing applications powered by language models, focusing on connecting LLMs with external data.",
-  "webpage": "https://langchain.com",
-  "logoURL": "https://langchain.com/logo.svg",
-  "tags": [
-    "language models",
-    "framework"
-  ]
-},
-{
-  "id": "598",
-  "name": "HeyGen",
-  "description": "HeyGen is a platform that leverages AI to generate realistic human avatars for video content, enhancing digital communication.",
-  "webpage": "https://heygen.com",
-  "logoURL": "https://heygen.com/logo.png",
-  "tags": [
-    "ai",
-    "video generation"
-  ]
-},
-{
-  "id": "599",
-  "name": "Autogen",
-  "description": "Autogen is a tool that automates the generation of content, code, and data using advanced AI algorithms.",
-  "webpage": "https://autogen.com",
-  "logoURL": "https://autogen.com/logo.png",
-  "tags": [
-    "ai",
-    "automation"
-  ]
-},
-{
-  "id": "600",
-  "name": "LM Studio",
-  "description": "LM Studio is an integrated development environment for working with large language models, providing tools for training, testing, and deployment.",
-  "webpage": "https://lmstudio.com",
-  "logoURL": "https://lmstudio.com/logo.svg",
-  "tags": [
-    "ai"
-  ]
-},
-{
-  "id": "601",
-  "name": "Ollama",
-  "description": "Ollama is an AI-driven platform that specializes in natural language processing to enhance communication and automate tasks.",
-  "webpage": "https://ollama.com",
-  "logoURL": "https://ollama.com/logo.svg",
-  "tags": [
-    "ai",
-    "nlp"
-  ]
-},
-{
-  "id": "602",
-  "name": "Auto-GPT",
-  "description": "Auto-GPT is an experimental open-source application that showcases the capabilities of GPT models in performing autonomous tasks.",
-  "webpage": "https://github.com/Auto-GPT",
-  "logoURL": "https://github.com/Auto-GPT/logo.png",
-  "tags": [
-    "ai",
-    "automation"
-  ]
-},
-{
-  "id": "603",
-  "name": "Devin",
-  "description": "Devin is an AI-powered tool designed to assist developers by generating code snippets, optimizing workflows, and automating repetitive tasks.",
-  "webpage": "https://devin.com",
-  "logoURL": "https://devin.com/logo.png",
-  "tags": [
-    "ai",
-    "developer tools"
-  ]
-},
-{
-  "id": "604",
-  "name": "Pinecone",
-  "description": "Pinecone is a vector database designed to power AI and machine learning applications by enabling fast and scalable similarity search.",
-  "webpage": "https://pinecone.io",
-  "logoURL": "https://mma.prnewswire.com/media/2418074/Pinecone_Systems_Inc_Logo.jpg",
-  "tags": [
-    "vector database",
-    "ai"
-  ]
-},
-{
-  "id": "605",
-  "name": "Chroma",
-  "description": "Chroma is a vector database built for AI applications, allowing developers to store and query embeddings efficiently.",
-  "webpage": "https://www.trychroma.com/",
-  "logoURL": "https://www.trychroma.com/img/chroma.png",
-  "tags": [
-    "vector database",
-    "ai"
-  ]
-},
-{
-  "id": "606",
-  "name": "Weaviate",
-  "description": "Weaviate is an open-source vector search engine that enables developers to build applications using AI-driven semantic search.",
-  "webpage": "https://weaviate.io",
-  "logoURL": "https://weaviate.io/logo.png",
-  "tags": [
-    "vector database",
-    "open source"
-  ]
-},
-{
-  "id": "607",
-  "name": "Faiss",
-  "description": "Faiss is a library developed by Facebook AI Research for efficient similarity search and clustering of dense vectors.",
-  "webpage": "https://github.com/facebookresearch/faiss",
-  "logoURL": "https://github.com/facebookresearch/faiss/logo.png",
-  "tags": [
-    "vector database",
-    "ai"
-  ]
-}
-,
-  {
-    "id": "608",
-    "name": "RedHat Advanced Container Security",
-    "description": "RedHat Advanced Container Security provides security and compliance for containerized applications running on RedHat's OpenShift platform.",
-    "webpage": "https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-container-security",
-    "logoURL": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/red-hat-logo.png",
-    "tags": [
-      "container security",
-      "redhat",
-      "openshift"
-    ]
-  },
-  {
-    "id": "609",
-    "name": "SaSe",
-    "description": "Secure Access Service Edge (SASE) is a network architecture that combines wide-area networking (WAN) and network security into a single, cloud-delivered service model.",
-    "webpage": "https://www.gartner.com/en/documents/3987035-the-future-of-network-security-is-in-the-cloud",
-    "logoURL": "https://www.gartner.com/images/logos/logo-gartner.png",
-    "tags": [
-      "network security",
-      "cloud security",
-      "sase"
-    ]
-  },
-  {
-    "id": "610",
-    "name": "ZTNA",
-    "description": "Zero Trust Network Access (ZTNA) is a security model that requires strict identity verification for every person and device trying to access resources on a private network.",
-    "webpage": "https://www.paloaltonetworks.com/cyberpedia/what-is-zero-trust",
-    "logoURL": "https://www.paloaltonetworks.com/etc/designs/pan/corporate/favicon.ico",
-    "tags": [
-      "zero trust",
-      "network security",
-      "ztna"
-    ]
-  },
-  {
-    "id": "611",
-    "name": "Palo Alto",
-    "description": "Palo Alto Networks provides a suite of cybersecurity solutions designed to protect networks, endpoints, and cloud environments.",
-    "webpage": "https://www.paloaltonetworks.com/",
-    "logoURL": "https://www.paloaltonetworks.com/etc/designs/pan/corporate/favicon.ico",
-    "tags": [
-      "cybersecurity",
-      "firewall",
-      "network security"
-    ]
-  },
-  {
-    "id": "612",
-    "name": "Network Design & Operations",
-    "description": "Network design and operations involve planning, implementing, managing, and maintaining network infrastructure to ensure optimal performance and security.",
-    "webpage": "https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-network-architecture.html",
-    "logoURL": "https://www.cisco.com/c/en/us/about/brand-center-official-logos/_jcr_content/Grid/category_atl_1155/layout-category-atl/blade_image.img.png/1533209374410.png",
-    "tags": [
-      "network architecture",
-      "network operations",
-      "cisco"
-    ]
-  },
-  {
-    "id": "613",
-    "name": "Business & Process Analysis",
-    "description": "Business and process analysis involves evaluating and improving business processes to enhance efficiency, effectiveness, and alignment with organizational goals.",
-    "webpage": "https://www.iiba.org/business-analysis-competencies/business-analysis-core-concept-model-baccm/",
-    "logoURL": "https://www.iiba.org/media/1439/iiba-logo.png",
-    "tags": [
-      "business analysis",
-      "process improvement",
-      "efficiency"
-    ]
-  },
-  {
-    "id": "614",
-    "name": "PKI",
-    "description": "Public Key Infrastructure (PKI) is a framework for managing digital certificates and public-key encryption to secure communications and verify identity over networks.",
-    "webpage": "https://www.digicert.com/what-is-pki",
-    "logoURL": "https://www.digicert.com/etc/designs/digicert2017/images/digicert-logo.png",
-    "tags": [
-      "encryption",
-      "security",
-      "pki"
-    ]
-  },
-  {
-    "id": "615",
-    "name": "Docusaurus",
-    "description": "Docusaurus is an open-source static site generator designed for creating documentation websites using Markdown and React.",
-    "webpage": "https://docusaurus.io/",
-    "logoURL": "https://docusaurus.io/img/docusaurus.svg",
-    "tags": [
-      "documentation",
-      "static site generator",
-      "open source"
-    ]
-  },
-  {
-    "id": "616",
-    "name": "Scribe",
-    "description": "Scribe is a documentation tool that allows users to capture and generate step-by-step guides and process documentation automatically.",
-    "webpage": "https://scribehow.com/",
-    "logoURL": "https://scribehow.com/static/images/favicon.ico",
-    "tags": [
-      "documentation",
-      "process documentation",
-      "guide"
-    ]
-  },
-  {
-    "id": "617",
-    "name": "MkDocs",
-    "description": "MkDocs is a fast and simple static site generator that's geared towards building project documentation. It uses Markdown and YAML for content and configuration.",
-    "webpage": "https://www.mkdocs.org/",
-    "logoURL": "https://www.mkdocs.org/img/favicon.png",
-    "tags": [
-      "documentation",
-      "static site generator",
-      "markdown"
-    ]
-  },
-  {
-    "id": "618",
-    "name": "Hugo",
-    "description": "Hugo is a fast and flexible static site generator written in Go. It is well-suited for building blogs, portfolios, and documentation sites.",
-    "webpage": "https://gohugo.io/",
-    "logoURL": "https://gohugo.io/images/hugo-logo-wide.svg",
-    "tags": [
-      "static site generator",
-      "blog",
-      "documentation"
-    ]
-  },
-  {
-    "id": "619",
-    "name": "Jekyll",
-    "description": "Jekyll is a simple, blog-aware static site generator for personal, project, or organizational sites. It transforms your plain text into static websites and blogs.",
-    "webpage": "https://jekyllrb.com/",
-    "logoURL": "https://jekyllrb.com/img/logo-2x.png",
-    "tags": [
-      "static site generator",
-      "blog",
-      "open source"
-    ]
-  },
-  {
-    "id": "620",
-    "name": "Notion",
-    "description": "Notion is an all-in-one workspace for note-taking, project management, and task management. It is used for personal and team productivity.",
-    "webpage": "https://www.notion.so/",
-    "logoURL": "https://www.notion.so/front-static/favicon.ico",
-    "tags": [
-      "productivity",
-      "note-taking",
-      "project management"
-    ]
-  },
-  {
-    "id": "621",
-    "name": "GitBook",
-    "description": "GitBook is a modern documentation platform that allows teams to collaborate on and publish content using Markdown and a powerful editor.",
-    "webpage": "https://www.gitbook.com/",
-    "logoURL": "https://www.gitbook.com/assets/images/logo/favicon.ico",
-    "tags": [
-      "documentation",
-      "collaboration",
-      "static site generator"
-    ]
-  },
-  {
-    "id": "622",
-    "name": "Sphinx",
-    "description": "Sphinx is a documentation generator that converts reStructuredText files into HTML websites, LaTeX documents, and more. It is widely used for Python projects.",
-    "webpage": "https://www.sphinx-doc.org/",
-    "logoURL": "https://www.sphinx-doc.org/en/master/_static/sphinxlogo.png",
-    "tags": [
-      "documentation",
-      "python",
-      "static site generator"
-    ]
-  },
-  {
-    "id": "623",
-    "name": "Doxygen",
-    "description": "Doxygen is a documentation generator for C++, C, and other programming languages. It extracts comments from source code and generates documentation in various formats.",
-    "webpage": "http://www.doxygen.nl/",
-    "logoURL": "http://www.doxygen.nl/images/doxygen_logo.png",
-    "tags": [
-      "documentation",
-      "c++",
-      "static site generator"
-    ]
-  },
-  {
-    "id": "624",
-    "name": "Postman",
-    "description": "Postman is a collaboration platform for API development. It allows developers to design, test, and document APIs with an intuitive interface.",
-    "webpage": "https://www.postman.com/",
-    "logoURL": "https://www.postman.com/assets/logos/postman-logo-stacked.svg",
-    "tags": [
-      "api testing",
-      "collaboration",
-      "documentation"
-    ]
-  },
-  {
-    "id": "625",
-    "name": "Swimm",
-    "description": "Swimm is a tool that allows developers to create documentation that stays up-to-date as the code evolves, using smart syncing and code snippets.",
-    "webpage": "https://swimm.io/",
-    "logoURL": "https://swimm.io/favicon-32x32.png",
-    "tags": [
-      "documentation",
-      "developer tools",
-      "code snippets"
-    ]
-  },
-  {
-    "id": "626",
-    "name": "AsciiDoc",
-    "description": "AsciiDoc is a lightweight markup language for authoring notes, documentation, articles, books, and UNIX man pages. It can be converted to many formats, including HTML, PDF, and EPUB.",
-    "webpage": "https://asciidoc.org/",
-    "logoURL": "https://asciidoc.org/images/asciidoc-logo.png",
-    "tags": [
-      "documentation",
-      "markup language",
-      "open source"
-    ]
-  }
-
-,
-{
-  "id": "1001",
-  "name": "Inbisco",
-  "description": "Management Systemen - voor controle over organisaties. ",
-  "webpage": "https://www.inbisco.nl/",
-  "logoURL": "https://hidelta.nl/wp-content/uploads/2022/04/INBISCO_logo_RGB_koraalrood-1024x334-1.png",
-  "tags": ["risk management"]
-}
   ]
 }
