@@ -4420,6 +4420,236 @@
   ]
 }
 ,
+  {
+    "id": "608",
+    "name": "RedHat Advanced Container Security",
+    "description": "RedHat Advanced Container Security provides security and compliance for containerized applications running on RedHat's OpenShift platform.",
+    "webpage": "https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-container-security",
+    "logoURL": "https://www.redhat.com/profiles/rh/themes/redhatdotcom/img/red-hat-logo.png",
+    "tags": [
+      "container security",
+      "redhat",
+      "openshift"
+    ]
+  },
+  {
+    "id": "609",
+    "name": "SaSe",
+    "description": "Secure Access Service Edge (SASE) is a network architecture that combines wide-area networking (WAN) and network security into a single, cloud-delivered service model.",
+    "webpage": "https://www.gartner.com/en/documents/3987035-the-future-of-network-security-is-in-the-cloud",
+    "logoURL": "https://www.gartner.com/images/logos/logo-gartner.png",
+    "tags": [
+      "network security",
+      "cloud security",
+      "sase"
+    ]
+  },
+  {
+    "id": "610",
+    "name": "ZTNA",
+    "description": "Zero Trust Network Access (ZTNA) is a security model that requires strict identity verification for every person and device trying to access resources on a private network.",
+    "webpage": "https://www.paloaltonetworks.com/cyberpedia/what-is-zero-trust",
+    "logoURL": "https://www.paloaltonetworks.com/etc/designs/pan/corporate/favicon.ico",
+    "tags": [
+      "zero trust",
+      "network security",
+      "ztna"
+    ]
+  },
+  {
+    "id": "611",
+    "name": "Palo Alto",
+    "description": "Palo Alto Networks provides a suite of cybersecurity solutions designed to protect networks, endpoints, and cloud environments.",
+    "webpage": "https://www.paloaltonetworks.com/",
+    "logoURL": "https://www.paloaltonetworks.com/etc/designs/pan/corporate/favicon.ico",
+    "tags": [
+      "cybersecurity",
+      "firewall",
+      "network security"
+    ]
+  },
+  {
+    "id": "612",
+    "name": "Network Design & Operations",
+    "description": "Network design and operations involve planning, implementing, managing, and maintaining network infrastructure to ensure optimal performance and security.",
+    "webpage": "https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-network-architecture.html",
+    "logoURL": "https://www.cisco.com/c/en/us/about/brand-center-official-logos/_jcr_content/Grid/category_atl_1155/layout-category-atl/blade_image.img.png/1533209374410.png",
+    "tags": [
+      "network architecture",
+      "network operations",
+      "cisco"
+    ]
+  },
+  {
+    "id": "613",
+    "name": "Business & Process Analysis",
+    "description": "Business and process analysis involves evaluating and improving business processes to enhance efficiency, effectiveness, and alignment with organizational goals.",
+    "webpage": "https://www.iiba.org/business-analysis-competencies/business-analysis-core-concept-model-baccm/",
+    "logoURL": "https://www.iiba.org/media/1439/iiba-logo.png",
+    "tags": [
+      "business analysis",
+      "process improvement",
+      "efficiency"
+    ]
+  },
+  {
+    "id": "614",
+    "name": "PKI",
+    "description": "Public Key Infrastructure (PKI) is a framework for managing digital certificates and public-key encryption to secure communications and verify identity over networks.",
+    "webpage": "https://www.digicert.com/what-is-pki",
+    "logoURL": "https://www.digicert.com/etc/designs/digicert2017/images/digicert-logo.png",
+    "tags": [
+      "encryption",
+      "security",
+      "pki"
+    ]
+  },
+  {
+    "id": "615",
+    "name": "Docusaurus",
+    "description": "Docusaurus is an open-source static site generator designed for creating documentation websites using Markdown and React.",
+    "webpage": "https://docusaurus.io/",
+    "logoURL": "https://docusaurus.io/img/docusaurus.svg",
+    "tags": [
+      "documentation",
+      "static site generator",
+      "open source"
+    ]
+  },
+  {
+    "id": "616",
+    "name": "Scribe",
+    "description": "Scribe is a documentation tool that allows users to capture and generate step-by-step guides and process documentation automatically.",
+    "webpage": "https://scribehow.com/",
+    "logoURL": "https://scribehow.com/static/images/favicon.ico",
+    "tags": [
+      "documentation",
+      "process documentation",
+      "guide"
+    ]
+  },
+  {
+    "id": "617",
+    "name": "MkDocs",
+    "description": "MkDocs is a fast and simple static site generator that's geared towards building project documentation. It uses Markdown and YAML for content and configuration.",
+    "webpage": "https://www.mkdocs.org/",
+    "logoURL": "https://www.mkdocs.org/img/favicon.png",
+    "tags": [
+      "documentation",
+      "static site generator",
+      "markdown"
+    ]
+  },
+  {
+    "id": "618",
+    "name": "Hugo",
+    "description": "Hugo is a fast and flexible static site generator written in Go. It is well-suited for building blogs, portfolios, and documentation sites.",
+    "webpage": "https://gohugo.io/",
+    "logoURL": "https://gohugo.io/images/hugo-logo-wide.svg",
+    "tags": [
+      "static site generator",
+      "blog",
+      "documentation"
+    ]
+  },
+  {
+    "id": "619",
+    "name": "Jekyll",
+    "description": "Jekyll is a simple, blog-aware static site generator for personal, project, or organizational sites. It transforms your plain text into static websites and blogs.",
+    "webpage": "https://jekyllrb.com/",
+    "logoURL": "https://jekyllrb.com/img/logo-2x.png",
+    "tags": [
+      "static site generator",
+      "blog",
+      "open source"
+    ]
+  },
+  {
+    "id": "620",
+    "name": "Notion",
+    "description": "Notion is an all-in-one workspace for note-taking, project management, and task management. It is used for personal and team productivity.",
+    "webpage": "https://www.notion.so/",
+    "logoURL": "https://www.notion.so/front-static/favicon.ico",
+    "tags": [
+      "productivity",
+      "note-taking",
+      "project management"
+    ]
+  },
+  {
+    "id": "621",
+    "name": "GitBook",
+    "description": "GitBook is a modern documentation platform that allows teams to collaborate on and publish content using Markdown and a powerful editor.",
+    "webpage": "https://www.gitbook.com/",
+    "logoURL": "https://www.gitbook.com/assets/images/logo/favicon.ico",
+    "tags": [
+      "documentation",
+      "collaboration",
+      "static site generator"
+    ]
+  },
+  {
+    "id": "622",
+    "name": "Sphinx",
+    "description": "Sphinx is a documentation generator that converts reStructuredText files into HTML websites, LaTeX documents, and more. It is widely used for Python projects.",
+    "webpage": "https://www.sphinx-doc.org/",
+    "logoURL": "https://www.sphinx-doc.org/en/master/_static/sphinxlogo.png",
+    "tags": [
+      "documentation",
+      "python",
+      "static site generator"
+    ]
+  },
+  {
+    "id": "623",
+    "name": "Doxygen",
+    "description": "Doxygen is a documentation generator for C++, C, and other programming languages. It extracts comments from source code and generates documentation in various formats.",
+    "webpage": "http://www.doxygen.nl/",
+    "logoURL": "http://www.doxygen.nl/images/doxygen_logo.png",
+    "tags": [
+      "documentation",
+      "c++",
+      "static site generator"
+    ]
+  },
+  {
+    "id": "624",
+    "name": "Postman",
+    "description": "Postman is a collaboration platform for API development. It allows developers to design, test, and document APIs with an intuitive interface.",
+    "webpage": "https://www.postman.com/",
+    "logoURL": "https://www.postman.com/assets/logos/postman-logo-stacked.svg",
+    "tags": [
+      "api testing",
+      "collaboration",
+      "documentation"
+    ]
+  },
+  {
+    "id": "625",
+    "name": "Swimm",
+    "description": "Swimm is a tool that allows developers to create documentation that stays up-to-date as the code evolves, using smart syncing and code snippets.",
+    "webpage": "https://swimm.io/",
+    "logoURL": "https://swimm.io/favicon-32x32.png",
+    "tags": [
+      "documentation",
+      "developer tools",
+      "code snippets"
+    ]
+  },
+  {
+    "id": "626",
+    "name": "AsciiDoc",
+    "description": "AsciiDoc is a lightweight markup language for authoring notes, documentation, articles, books, and UNIX man pages. It can be converted to many formats, including HTML, PDF, and EPUB.",
+    "webpage": "https://asciidoc.org/",
+    "logoURL": "https://asciidoc.org/images/asciidoc-logo.png",
+    "tags": [
+      "documentation",
+      "markup language",
+      "open source"
+    ]
+  }
+
+,
 {
   "id": "1001",
   "name": "Inbisco",
