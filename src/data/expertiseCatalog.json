@@ -4802,6 +4802,198 @@
       ]
     },
     {
+      "id": "641",
+      "name": "Jira",
+      "description": "Jira is a project management tool developed by Atlassian, used for issue tracking, project management, and bug tracking, widely used in software development.",
+      "webpage": "https://www.atlassian.com/software/jira",
+      "logoURL": "https://wac-cdn.atlassian.com/dam/jcr:1aa42016-fd6b-4f98-82cd-a1cfea7ea29d/Jira%20Software%20blue.svg",
+      "tags": [
+        "project management",
+        "issue tracking",
+        "agile"
+      ]
+    },
+    {
+      "id": "642",
+      "name": "Jira Service Management",
+      "description": "Jira Service Management is an IT service management (ITSM) solution by Atlassian that enables IT and support teams to manage requests, incidents, and changes.",
+      "webpage": "https://www.atlassian.com/software/jira/service-management",
+      "logoURL": "https://wac-cdn.atlassian.com/dam/jcr:5f88133a-1ccf-4f80-b9e7-6458eadd1076/JSM%20blue.svg",
+      "tags": [
+        "itsm",
+        "service management",
+        "support"
+      ]
+    },
+    {
+      "id": "643",
+      "name": "Zendesk",
+      "description": "Zendesk is a customer service software and support ticketing system that helps businesses manage customer support and improve customer satisfaction.",
+      "webpage": "https://www.zendesk.com/",
+      "logoURL": "https://www.zendesk.com/assets/images/logos/zendesk_logo_favicon.png",
+      "tags": [
+        "customer support",
+        "ticketing system",
+        "crm"
+      ]
+    },
+    {
+      "id": "644",
+      "name": "ServiceNow",
+      "description": "ServiceNow is a cloud-based platform that provides enterprise service management (ESM) solutions, including IT service management, HR service delivery, and more.",
+      "webpage": "https://www.servicenow.com/",
+      "logoURL": "https://www.servicenow.com/content/dam/servicenow-assets/images/logos/ServiceNow-logo.svg",
+      "tags": [
+        "enterprise service management",
+        "itsm",
+        "cloud"
+      ]
+    },
+    {
+      "id": "645",
+      "name": "TOPdesk",
+      "description": "TOPdesk is a service management software that helps organizations manage their IT services, facilities, and customer service, with a focus on self-service and process optimization.",
+      "webpage": "https://www.topdesk.com/",
+      "logoURL": "https://www.topdesk.com/favicon.ico",
+      "tags": [
+        "service management",
+        "itsm",
+        "facilities management"
+      ]
+    },
+    {
+      "id": "646",
+      "name": "Confluence",
+      "description": "Confluence is a collaboration software developed by Atlassian that helps teams create, share, and collaborate on content and projects in one place.",
+      "webpage": "https://www.atlassian.com/software/confluence",
+      "logoURL": "https://wac-cdn.atlassian.com/dam/jcr:a1ae2a28-68ad-4201-b29d-e0e7eae0f4d6/Confluence%20blue.svg",
+      "tags": [
+        "collaboration",
+        "documentation",
+        "wiki"
+      ]
+    },
+    {
+      "id": "647",
+      "name": "SolarWinds",
+      "description": "SolarWinds is a provider of IT management software, offering solutions for network management, system monitoring, IT security, and database management.",
+      "webpage": "https://www.solarwinds.com/",
+      "logoURL": "https://cdn.solarwinds.com/general/solarwinds-logo.png",
+      "tags": [
+        "it management",
+        "network monitoring",
+        "system monitoring"
+      ]
+    },
+    {
+      "id": "648",
+      "name": "OTRS",
+      "description": "OTRS is a service management suite that offers IT service management, help desk, and customer service solutions, with a focus on process automation and ticketing.",
+      "webpage": "https://otrs.com/",
+      "logoURL": "https://otrs.com/wp-content/uploads/2020/04/cropped-otrs_favicon_500x500-192x192.png",
+      "tags": [
+        "service management",
+        "ticketing system",
+        "itsm"
+      ]
+    },
+    {
+      "id": "649",
+      "name": "Photoshop",
+      "description": "Photoshop is a powerful image editing software developed by Adobe, widely used for photo editing, graphic design, digital art, and more.",
+      "webpage": "https://www.adobe.com/products/photoshop.html",
+      "logoURL": "https://www.adobe.com/content/dam/cc/icons/photoshop-mobile.svg",
+      "tags": [
+        "image editing",
+        "graphic design",
+        "digital art"
+      ]
+    },
+    {
+      "id": "650",
+      "name": "MidJourney",
+      "description": "MidJourney is an AI-powered platform for generating art, allowing users to create high-quality images through text-based prompts.",
+      "webpage": "https://www.midjourney.com/",
+      "logoURL": "https://www.midjourney.com/favicon-32x32.png",
+      "tags": [
+        "ai art",
+        "image generation",
+        "creative tools"
+      ]
+    },
+    {
+      "id": "651",
+      "name": "Runway",
+      "description": "Runway is a creative toolkit that leverages machine learning to offer video editing, motion tracking, and content generation tools for creators and artists.",
+      "webpage": "https://runwayml.com/",
+      "logoURL": "https://runwayml.com/favicon.ico",
+      "tags": [
+        "machine learning",
+        "video editing",
+        "content creation"
+      ]
+    },
+    {
+      "id": "652",
+      "name": "After Effects",
+      "description": "After Effects is a digital visual effects, motion graphics, and compositing software developed by Adobe, used in post-production for film, TV, and web content.",
+      "webpage": "https://www.adobe.com/products/aftereffects.html",
+      "logoURL": "https://www.adobe.com/content/dam/cc/icons/aftereffects-mobile.svg",
+      "tags": [
+        "motion graphics",
+        "visual effects",
+        "compositing"
+      ]
+    },
+    {
+      "id": "653",
+      "name": "Magnific AI",
+      "description": "Magnific AI is a platform that uses artificial intelligence to enhance and optimize digital content, including automated photo editing and content generation.",
+      "webpage": "https://www.magnific-ai.com/",
+      "logoURL": "https://www.magnific-ai.com/favicon.ico",
+      "tags": [
+        "ai",
+        "content optimization",
+        "photo editing"
+      ]
+    },
+    {
+      "id": "654",
+      "name": "Flowise",
+      "description": "Flowise is a tool designed to simplify the creation of data workflows, enabling users to build and deploy machine learning models with ease.",
+      "webpage": "https://flowise.ai/",
+      "logoURL": "https://flowise.ai/favicon.ico",
+      "tags": [
+        "machine learning",
+        "data workflows",
+        "automation"
+      ]
+    },
+    {
+      "id": "655",
+      "name": "Cursor AI IDE",
+      "description": "Cursor AI IDE is an integrated development environment that leverages AI to assist developers with coding, debugging, and optimizing software projects.",
+      "webpage": "https://www.cursor.so/",
+      "logoURL": "https://www.cursor.so/favicon.ico",
+      "tags": [
+        "ai",
+        "ide",
+        "software development"
+      ]
+    },
+    {
+      "id": "656",
+      "name": "Flux",
+      "description": "the next-gen image generator rivaling MidJourney Powered by Flux.1 Pro, Flux.1 Dev and Flux.1 Schnell models. Turn text and images into stunning videos with Flux.",
+      "webpage": "https://flux-ai.io/",
+      "logoURL": "https://flux-ai.io/images/logo.png",
+      "tags": [
+        "ai",
+        "image generation",
+        "video generation"
+      ]
+    },
+    {
       "id": "1001",
       "name": "Inbisco",
       "description": "Management Systemen - voor controle over organisaties. ",
