@@ -1,7 +1,7 @@
 // Utilities
 import { defineStore } from 'pinia'
 
-import expertiseDB from '../data/expertise.json'
+//import expertiseDB from '../data/expertise.json'
 import expertiseCatalogDB from '../data/expertiseCatalog.json'
 import {getData} from './dataService.js'
 
@@ -82,7 +82,8 @@ export const useAppStore = defineStore('app', () => {
       });
   }
 
-  const expertiseJSON = ref(expertiseDB)
+  //const expertiseJSON = ref(expertiseDB)
+const expertiseJSON = ref(null)
 
 
   const loadDeltaFiles = async () => {
