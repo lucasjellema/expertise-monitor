@@ -13,6 +13,9 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+   build: {
+    target: "esnext", // allows top-level await
+  },
   base: "/expertise-monitor/",
   plugins: [
     VueRouter(),
