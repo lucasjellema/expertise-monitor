@@ -127,12 +127,13 @@ export const useAppStore = defineStore('app', () => {
     return deltaFiles
   }
 
-  const MAIN_EXPERTISE_FILE = 'expertise.json'
-  const MAIN_DATA_FILE = 'expertiseMonitor.json'
+  //const MAIN_EXPERTISE_FILE = 'expertise.json'
+  //const MAIN_DATA_FILE = 'expertiseMonitor.json'
 
+  // assume that expertiseJSON  already has been loaded when this function is called
   const initializeExpertise = async () => {
 // TODO create fresh expertiseJSON
-    expertiseJSON.value = await getJSONFile(MAIN_EXPERTISE_FILE)
+//    expertiseJSON.value = await getJSONFile(MAIN_EXPERTISE_FILE)
     console.log(expertiseJSON.value)
     // if not found, create it
     if (expertiseJSON.value == 1) {
@@ -291,7 +292,7 @@ export const useAppStore = defineStore('app', () => {
   const consolideerDeltafiles = async () => {
     console.log('consolidating delta files in appstore')
 
-    expertiseJSON.value = await getJSONFile(MAIN_EXPERTISE_FILE)
+   // expertiseJSON.value = await getJSONFile(MAIN_EXPERTISE_FILE)
     const deltaFiles = await loadDeltaFiles()
 
     // write lastDeltaConsolidated.json with fileid/timestamp of most recent delta that was processed
@@ -299,16 +300,22 @@ export const useAppStore = defineStore('app', () => {
     const timestamp = lastDeltaFileProcessed.name.substring(0, lastDeltaFileProcessed.name.length - 5).substring(DELTA_DIRECTORY.length + 1) // strip .json at the end and strip delta/ at the beginning
     const lastConsolidation = { consolidationTimestamp: new Date().getTime(), lastDeltaTimestamp: timestamp }
     expertiseJSON.value.lastConsolidation = lastConsolidation
-    const _ = await saveFile(JSON.stringify(expertiseJSON.value), MAIN_EXPERTISE_FILE)
+   // const _ = await saveFile(JSON.stringify(expertiseJSON.value), MAIN_EXPERTISE_FILE)
 
     saveFile(JSON.stringify(lastConsolidation), CONSOLIDATION_MARKER_FILE)
   }
 
+/**
+ * Fetch data using the account info (like email) to get the PAR URL from a backend service
+ * @param {Object} account - The account object to fetch data with
+ */
 const fetchDataUsingAccount = (account)=> {
   // TODO fetch data using the account info (like email) to get the PAR URL from a backend service
   console.log('TODO fetch data using the account info (like email) to get the PAR URL from a backend service', account)
   getData(account).then( data => {
     console.log('fetched', data)
+    expertiseJSON.value = data
+    initializeExpertise(expertiseJSON.value)
   })
 };
 
