@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 
 import expertiseDB from '../data/expertise.json'
 import expertiseCatalogDB from '../data/expertiseCatalog.json'
+import {getData} from './dataService.js'
 
 
 export const useAppStore = defineStore('app', () => {
@@ -303,7 +304,15 @@ export const useAppStore = defineStore('app', () => {
     saveFile(JSON.stringify(lastConsolidation), CONSOLIDATION_MARKER_FILE)
   }
 
+const fetchDataUsingAccount = (account)=> {
+  // TODO fetch data using the account info (like email) to get the PAR URL from a backend service
+  console.log('TODO fetch data using the account info (like email) to get the PAR URL from a backend service', account)
+  getData(account).then( data => {
+    console.log('fetched', data)
+  })
+};
+
   return {
-    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap, saveOrganization, getReadOnly, toggleReadOnly
+    setPAR, getExpertise, consolideerDeltafiles, saveExpertise, expertiseTags, tagExpertiseMap, saveOrganization, getReadOnly, toggleReadOnly, fetchDataUsingAccount
   }
 })
