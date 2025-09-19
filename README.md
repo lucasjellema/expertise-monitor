@@ -18,8 +18,9 @@ npm run deploy
 
 to run on GitHub Pages:
 
-https://lucasjellema.github.io/expertise-monitor/?par=https://idtwlqf2hanz.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tIleodbWobbc0mSVd9bKCpPPJwMb90Up6i3zDFkKh5zwJMaGcFmOEaoHWp_7wcuV/n/idtwlqf2hanz/b/conclusion-expertise-monitor/o/
+https://lucasjellema.github.io/expertise-monitor/
 
-the par refers to a bucket that contains the file expertise.json
-and has read privs.
 
+
+Compartment FotoMapp
+https://cloud.oracle.com/object-storage/buckets/idtwlqf2hanz/conclusion-expertise-monitor/objects?region=us-ashburn-1
