@@ -1,0 +1,9 @@
+https://idtwlqf2hanz.objectstorage.eu-amsterdam-1.oci.customer-oci.com/p/WpssUGxGzj_ZhZ53TaNEc73eox2bkvZ3kFQ2ikeeupXHHHM-qDO2GdG0s3sDTxWX/n/idtwlqf2hanz/b/conclusion-ecosystem-expertise-monitor/o/
+(read only)
+
+https://objectstorage.eu-amsterdam-1.oraclecloud.com/p/WpssUGxGzj_ZhZ53TaNEc73eox2bkvZ3kFQ2ikeeupXHHHM-qDO2GdG0s3sDTxWX/n/idtwlqf2hanz/b/conclusion-ecosystem-expertise-monitor/o/
+
+http://localhost:3000/expertise-monitor/?par=https://idtwlqf2hanz.objectstorage.eu-amsterdam-1.oci.customer-oci.com/p/WpssUGxGzj_ZhZ53TaNEc73eox2bkvZ3kFQ2ikeeupXHHHM-qDO2GdG0s3sDTxWX/n/idtwlqf2hanz/b/conclusion-ecosystem-expertise-monitor/o/
+Region amsterdam
+Compartment ConclusionExpertiseMonitor
+
