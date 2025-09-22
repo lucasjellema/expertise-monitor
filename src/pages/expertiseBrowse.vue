@@ -1,6 +1,6 @@
 <template>
     <h1>Expertise & Ecosystem</h1>   
-    <ExpertiseMap :organization="expertise.organization"  :initialExpertise="expertiseId" :initialTag="tag"/>
+    <ExpertiseMap :organization="expertise?.organization"  :initialExpertise="expertiseId" :initialTag="tag"/>
 
 </template>
 

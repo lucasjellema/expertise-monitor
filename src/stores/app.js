@@ -83,7 +83,7 @@ export const useAppStore = defineStore('app', () => {
   }
 
   //const expertiseJSON = ref(expertiseDB)
-const expertiseJSON = ref(null)
+const expertiseJSON = ref({organization: [], expertise: []})
 
 
   const loadDeltaFiles = async () => {
@@ -160,6 +160,7 @@ const expertiseJSON = ref(null)
 
   let dataIsPrepared = false
   const prepareData = () => {
+    if (expertiseJSON.value == null) return
     // TODO - prepare data : create memberOrganizations under all organizations for the organizations that are members of them
     console.log('TODO prepare data : create memberOrganizations under all organizations for the organizations that are members of them')
     // loop over all organization units; if they have organizationMemberships, then create an entry in memberOrganizations under the organization they are a member of
